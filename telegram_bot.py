@@ -24,6 +24,7 @@ import sys
 import json
 import random
 import asyncio
+from aiohttp import web
 import logging
 from typing import Dict, Any, List
 
@@ -46,7 +47,52 @@ logger = logging.getLogger(__name__)
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "9117993446:AAE4Uf-uMKFdoqVwxE17BxTzOXu1Xuuhr08")
 WEBAPP_URL = os.environ.get("WEBAPP_URL", "")
 
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+AUTH_FILE = os.path.join(BASE_DIR, "authorized_students.json")
+PENDING_PDF: Dict[int, str] = {}
+
+def get_authorized_users() -> Dict[str, Any]:
+    if os.path.exists(AUTH_FILE):
+        try:
+            with open(AUTH_FILE, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            return {}
+    return {}
+
+def save_authorized_user(user_id: int, student_data: Dict[str, Any]):
+    users = get_authorized_users()
+    users[str(user_id)] = student_data
+    try:
+        with open(AUTH_FILE, "w", encoding="utf-8") as f:
+            json.dump(users, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        logger.error(f"Error saving auth: {e}")
+
+
+# ==================== MNG25-102 ROSTER ====================
+MNG_STUDENTS_ROSTER = [
+    {"id": "mng_01", "num": 1, "name": "Axmadov Shaxzod", "key": "SHAXZOD-MNG102", "pin": "102011"},
+    {"id": "mng_02", "num": 2, "name": "Homidjonov Sardorbek", "key": "SARDOR-MNG102", "pin": "102022"},
+    {"id": "mng_03", "num": 3, "name": "Ilhomjonov Jamshid", "key": "JAMSHID-MNG102", "pin": "102033"},
+    {"id": "mng_04", "num": 4, "name": "Mirobidova Fotima", "key": "FOTIMA-MNG102", "pin": "102044"},
+    {"id": "mng_05", "num": 5, "name": "Mirzayev Quvonch", "key": "QUVONCH-7777", "pin": "777705", "role": "admin"},
+    {"id": "mng_06", "num": 6, "name": "Musurmonov Abdulaziz", "key": "ABDULAZIZ-MNG102", "pin": "102066"},
+    {"id": "mng_07", "num": 7, "name": "Muhammadjonov Otabek", "key": "OTABEK-MNG102", "pin": "102070"},
+    {"id": "mng_08", "num": 8, "name": "Narimbetov Islombek", "key": "ISLOM-MNG102", "pin": "102077"},
+    {"id": "mng_09", "num": 9, "name": "Ochilova Sadoqat", "key": "SADOQAT-MNG102", "pin": "102088"},
+    {"id": "mng_10", "num": 10, "name": "Tirkashev Ravshan", "key": "RAVSHAN-MNG102", "pin": "102100"},
+    {"id": "mng_11", "num": 11, "name": "Urolov Daler", "key": "DALER-MNG102", "pin": "102111"},
+    {"id": "mng_12", "num": 12, "name": "Xoliqulova Gulsevar", "key": "GULSEVAR-MNG102", "pin": "102122"},
+    {"id": "mng_13", "num": 13, "name": "Xolmatov Sherali", "key": "SHERALI-MNG102", "pin": "102133"},
+    {"id": "mng_14", "num": 14, "name": "Shaydullayev Asadbek", "key": "ASADBEK-MNG102", "pin": "102099"},
+]
+
+def is_user_authorized(user_id: int) -> bool:
+    users = get_authorized_users()
+    return str(user_id) in users
+
 
 def load_json(filename):
     p = os.path.join(BASE_DIR, filename)
@@ -251,487 +297,26 @@ def format_question_text(q_data: dict, current_num: int, total_num: int, mode_la
 # --- DISPATCHER VA HANDLERLAR ---
 dp = Dispatcher()
 
-@dp.message(Command("start"))
-async def cmd_start(message: Message):
-    welcome_text = (
-        f"👋 **Assalomu alaykum, {message.from_user.first_name}!**\n\n"
-        f"🏛️ **Cyber University • Oraliq Nazorat Mega Platformasi (Barcha 6 ta Fan)**ga xush kelibsiz!\n\n"
-        f"📅 **Oraliq nazorat imtihonlari jadvali:**\n"
-        f"1. 📊 **Statistika (STAT-201)** — 16-noyabr (Dushanba)\n"
-        f"2. 🎯 **Marketing (MNG)** — 16-noyabr (Dushanba)\n"
-        f"3. 📑 **Buxgalteriya hisobi va audit (ACC-201)** — 17-noyabr (Seshanba)\n"
-        f"4. 🏛️ **O'zbekistonning eng yangi tarixi (HIS-201)** — 17-noyabr (Seshanba)\n"
-        f"5. 📈 **Mikroiqtisodiyot (ECO-201)** — 18-noyabr (Chorshanba)\n"
-        f"6. 🔒 **Kiberxavfsizlik asoslari (CYB-201)** — 19-noyabr (Payshanba)\n\n"
-        f"🎯 **IMTIHON STANDARTI:**\n"
-        f"Har bir fandan 200 tadan (jami 1,200 ta) test, 25 talik Real Imtihon Simulyatori, Shaxsiy Diagnostika va 54 ta mavzu nazariyasi mavjud.\n\n"
-        f"Kerakli bo'limni tanlang:"
-    )
-    await message.answer(welcome_text, reply_markup=get_main_menu_keyboard(), parse_mode="Markdown")
-
-@dp.callback_query(F.data == "main_menu")
-async def cb_main_menu(callback: CallbackQuery):
-    await callback.message.edit_text(
-        "🏛️ **Asosiy Bosh Menyu**\nO'zingizga kerakli bo'limni tanlang:",
-        reply_markup=get_main_menu_keyboard(),
-        parse_mode="Markdown"
-    )
-    await callback.answer()
-
-@dp.callback_query(F.data == "webapp_info")
-async def cb_webapp_info(callback: CallbackQuery):
-    info_text = (
-        "🚀 **Interaktiv Web App (\"Open App\") Haqida:**\n\n"
-        "Platformaning to'liq interaktiv versiyasi (rang-barang grafiklar, 6 ta fan boshqaruvi, 25 talik imtihon taymeri, testlar tarixi) **`index.html`** faylida joylashgan!\n\n"
-        "💻 **Noutbuk / Kompyuterda ochish:**\n"
-        "Ish stolidagi `index.html` faylini brauzerda oching. 100% oflayn ishlaydi!\n\n"
-        "📱 **Telefonda 24/7 ishlatish:**\n"
-        "`index.html` ni GitHub Pages ga joylab, havolani bot sozlamasiga (`WEBAPP_URL`) qo'ysangiz, Telegram ichida 'Open App' tugmasi orqali doim ochiladi!"
-    )
+# ==================== PDF QO'LLANMALARNI BOTDAN YUBORISH ====================
+def get_pdf_selection_keyboard():
     builder = InlineKeyboardBuilder()
-    builder.button(text="⬅️ Bosh Menyu", callback_data="main_menu")
-    await callback.message.edit_text(info_text, reply_markup=builder.as_markup(), parse_mode="Markdown")
-    await callback.answer()
+    builder.button(text="📊 Statistika (35 bet)", callback_data="get_pdf:stat")
+    builder.button(text="🎯 Marketing (36 bet)", callback_data="get_pdf:mkt")
+    builder.button(text="📑 Buxgalteriya hisobi (35 bet)", callback_data="get_pdf:bux")
+    builder.button(text="🏛️ O'zbekiston tarixi (35 bet)", callback_data="get_pdf:tar")
+    builder.button(text="📈 Mikroiqtisodiyot (35 bet)", callback_data="get_pdf:mikro")
+    builder.button(text="🔒 Kiberxavfsizlik (35 bet)", callback_data="get_pdf:cyb")
+    builder.adjust(2, 2, 2)
+    return builder.as_markup()
 
-# --- MENYU BO'YICHA TANLASH ---
-@dp.callback_query(F.data == "menu_choose_exam")
-async def cb_menu_choose_exam(callback: CallbackQuery):
-    await callback.message.edit_text(
-        "⏱️ **Qaysi fandan 25 talik Imtihon topshirasiz?**\n"
-        "Har safar barcha 9 ta mavzudan 25 ta yangi savol tanlanadi:",
-        reply_markup=get_subject_picker_keyboard("start_exam"),
-        parse_mode="Markdown"
-    )
-    await callback.answer()
-
-@dp.callback_query(F.data == "menu_choose_practice")
-async def cb_menu_choose_practice(callback: CallbackQuery):
-    await callback.message.edit_text(
-        "📖 **Qaysi fandan 200 talik Mashq rejimini boshlaysiz?**\n"
-        "Barcha savollar, chiroq maslahatlari va batafsil tahlil:",
-        reply_markup=get_subject_picker_keyboard("start_practice"),
-        parse_mode="Markdown"
-    )
-    await callback.answer()
-
-@dp.callback_query(F.data == "menu_choose_theory")
-async def cb_menu_choose_theory(callback: CallbackQuery):
-    await callback.message.edit_text(
-        "📚 **Qaysi fanning 9 ta mavzu nazariyasi va keyslarini o'rganmoqchisiz?**",
-        reply_markup=get_subject_picker_keyboard("view_topics"),
-        parse_mode="Markdown"
-    )
-    await callback.answer()
-
-@dp.callback_query(F.data == "menu_choose_pdf")
-async def cb_menu_choose_pdf(callback: CallbackQuery):
-    await callback.message.edit_text(
-        "📄 **Qaysi fanning to'liq PDF qo'llanmasini yuklab olmoqchisiz?**",
-        reply_markup=get_subject_picker_keyboard("get_pdf"),
-        parse_mode="Markdown"
-    )
-    await callback.answer()
-
-# --- ⏱️ 25 TALIK IMTIHON BOSHLASH ---
-@dp.callback_query(F.data.startswith("start_exam:"))
-async def cb_start_exam(callback: CallbackQuery):
-    subject = callback.data.split(":")[1]
-    if subject not in SUBJECTS:
-        subject = "stat"
-    conf = SUBJECTS[subject]
-    
-    st = get_user_state(callback.from_user.id)
-    st["mode"] = "exam"
-    st["subject"] = subject
-    st["q_idx"] = 0
-    st["exam_questions"] = generate_25_exam_questions(conf["db"])
-    st["exam_answers"] = {}
-    st["eliminated"] = set()
-    
-    await callback.answer(f"{conf['name']} bo'yicha yangi 25 talik imtihon boshlandi!", show_alert=False)
-    await send_exam_question(callback.message, callback.from_user.id, edit=True)
-
-async def send_exam_question(message: Message, user_id: int, edit: bool = False):
-    st = get_user_state(user_id)
-    subject = st["subject"]
+async def send_pdf_document(target, subject: str):
     conf = SUBJECTS.get(subject, SUBJECTS["stat"])
-    questions = st["exam_questions"]
-    q_idx = st["q_idx"]
-    
-    if q_idx >= len(questions):
-        await show_exam_results(message, user_id, edit=edit)
-        return
-        
-    q_data = questions[q_idx]
-    mode_label = f"⏱️ **REAL IMTIHON REJIMI ({conf['badge']})**"
-    
-    text = format_question_text(q_data, q_idx + 1, 25, mode_label, conf["name"])
-    
-    if q_idx in st["exam_answers"]:
-        letters = ["A", "B", "C", "D"]
-        chosen_l = letters[st["exam_answers"][q_idx]]
-        text += f"\n\n🟢 _Siz tanlagan javob: **{chosen_l}** (O'zgartirish uchun boshqa variantni bosing)_"
-        
-    kb = get_question_keyboard("exam", subject, q_idx, st["eliminated"])
-    
-    try:
-        if edit:
-            await message.edit_text(text, reply_markup=kb, parse_mode="Markdown")
-        else:
-            await message.answer(text, reply_markup=kb, parse_mode="Markdown")
-    except Exception:
-        await message.answer(text, reply_markup=kb, parse_mode="Markdown")
-
-@dp.callback_query(F.data.startswith("nav_exam:"))
-async def cb_nav_exam(callback: CallbackQuery):
-    target_idx = int(callback.data.split(":")[2])
-    st = get_user_state(callback.from_user.id)
-    st["q_idx"] = target_idx
-    st["eliminated"] = set()
-    await send_exam_question(callback.message, callback.from_user.id, edit=True)
-    await callback.answer()
-
-# --- JAVOBNI QABUL QILISH ---
-@dp.callback_query(F.data.startswith("ans:"))
-async def cb_ans(callback: CallbackQuery):
-    parts = callback.data.split(":")
-    mode = parts[1]
-    subject = parts[2]
-    q_idx = int(parts[3])
-    chosen_idx = int(parts[4])
-    
-    st = get_user_state(callback.from_user.id)
-    
-    if mode == "exam":
-        st["exam_answers"][q_idx] = chosen_idx
-        await callback.answer(f"Tanlandi: {['A','B','C','D'][chosen_idx]}", show_alert=False)
-        
-        if q_idx < 24:
-            st["q_idx"] = q_idx + 1
-            st["eliminated"] = set()
-            await send_exam_question(callback.message, callback.from_user.id, edit=True)
-        else:
-            await show_exam_results(callback.message, callback.from_user.id, edit=True)
-    else:
-        conf = SUBJECTS.get(subject, SUBJECTS["stat"])
-        db = conf["db"]
-        q_data = db[q_idx]
-        is_corr = chosen_idx == q_data.get("correct_index", 0)
-        letters = ["A", "B", "C", "D"]
-        options = q_data.get("options_uz", [])
-        
-        builder = InlineKeyboardBuilder()
-        builder.button(text="➡️ Keyingi savol", callback_data=f"next_practice:{subject}:{q_idx}")
-        builder.button(text="🏠 Bosh Menyu", callback_data="main_menu")
-        builder.adjust(1, 1)
-        
-        if is_corr:
-            res_text = (
-                f"🎉 **TO'G'RI JAVOB!** (+1 ball)\n\n"
-                f"✅ **Siz tanladingiz:** {letters[chosen_idx]}) {options[chosen_idx]}\n\n"
-                f"💡 **NEGA TO'G'RI? (Mantiqiy asos):**\n{q_data.get('why_right', '')}"
-            )
-        else:
-            corr_idx = q_data.get("correct_index", 0)
-            wrong_reason = "Ushbu variant chalg'ituvchi bo'lib, fanning asosiy qoidalariga zid keladi."
-            why_wrongs = q_data.get("why_wrongs", {})
-            if isinstance(why_wrongs, dict):
-                wrong_reason = why_wrongs.get(letters[chosen_idx], wrong_reason)
-            elif isinstance(why_wrongs, list):
-                found = next((w for w in why_wrongs if w.get("letter") == letters[chosen_idx]), None)
-                if found:
-                    wrong_reason = found.get("reason", wrong_reason)
-                    
-            res_text = (
-                f"❌ **NOTO'G'RI JAVOB! Birgalikda tahlil qilamiz:**\n\n"
-                f"🛑 **Siz tanladingiz:** {letters[chosen_idx]}) {options[chosen_idx]}\n"
-                f"🟢 **To'g'ri javob:** {letters[corr_idx]}) {options[corr_idx]}\n\n"
-                f"✅ **NEGA TO'G'RI?:**\n{q_data.get('why_right', '')}\n\n"
-                f"⚠️ **NEGA SIZ TANLAGAN VARIANT XATO?:**\n{wrong_reason}"
-            )
-        await callback.message.edit_text(res_text, reply_markup=builder.as_markup(), parse_mode="Markdown")
-        await callback.answer()
-
-# --- 💡 CHIROQ (HINT) VA ✂️ 50:50 ---
-@dp.callback_query(F.data.startswith("hint:"))
-async def cb_hint(callback: CallbackQuery):
-    parts = callback.data.split(":")
-    mode, subject, q_idx = parts[1], parts[2], int(parts[3])
-    st = get_user_state(callback.from_user.id)
-    
-    if mode == "exam":
-        q_data = st["exam_questions"][q_idx]
-    else:
-        q_data = SUBJECTS[subject]["db"][q_idx]
-        
-    hint_text = q_data.get("hint", "Ushbu savol bo'yicha asosiy tushunchalarni diqqat bilan solishtiring.")
-    await callback.answer(f"💡 Maslahat: {hint_text}", show_alert=True)
-
-@dp.callback_query(F.data.startswith("fifty:"))
-async def cb_fifty(callback: CallbackQuery):
-    parts = callback.data.split(":")
-    mode, subject, q_idx = parts[1], parts[2], int(parts[3])
-    st = get_user_state(callback.from_user.id)
-    
-    if mode == "exam":
-        q_data = st["exam_questions"][q_idx]
-    else:
-        q_data = SUBJECTS[subject]["db"][q_idx]
-        
-    correct_idx = q_data.get("correct_index", 0)
-    wrongs = [i for i in range(4) if i != correct_idx]
-    to_eliminate = set(random.sample(wrongs, 2))
-    st["eliminated"] = to_eliminate
-    
-    await callback.answer("✂️ 50:50: Ikkita noto'g'ri variant olib tashlandi!", show_alert=False)
-    if mode == "exam":
-        await send_exam_question(callback.message, callback.from_user.id, edit=True)
-    else:
-        await send_practice_question(callback.message, callback.from_user.id, edit=True)
-
-# --- 🏁 IMTIHON YAKUNI VA SHAXSIY DIAGNOSTIKA ---
-@dp.callback_query(F.data.startswith("finish_exam:"))
-async def cb_finish_exam(callback: CallbackQuery):
-    await show_exam_results(callback.message, callback.from_user.id, edit=True)
-    await callback.answer()
-
-async def show_exam_results(message: Message, user_id: int, edit: bool = False):
-    st = get_user_state(user_id)
-    questions = st["exam_questions"]
-    answers = st["exam_answers"]
-    subject = st["subject"]
-    conf = SUBJECTS.get(subject, SUBJECTS["stat"])
-    
-    correct_count = 0
-    mistakes_by_topic = {}
-    diff_stats = {"oson": [0,0], "orta": [0,0], "qiyin": [0,0]}
-    
-    for idx, q in enumerate(questions):
-        diff = q.get("difficulty", "orta")
-        if diff not in diff_stats:
-            diff = "orta"
-        diff_stats[diff][1] += 1
-        
-        chosen = answers.get(idx)
-        if chosen is not None and chosen == q.get("correct_index", 0):
-            correct_count += 1
-            diff_stats[diff][0] += 1
-        else:
-            tid = q.get("topic_id", 1)
-            mistakes_by_topic.setdefault(tid, []).append((q, chosen))
-            
-    pct = round((correct_count / 25) * 100, 1)
-    grade = "5 (A'LO) 🌟" if pct >= 86 else ("4 (YAXSHI) 👍" if pct >= 71 else ("3 (QONIQARLI) ⚠️" if pct >= 56 else "2 (QONIQARSIZ) 🛑"))
-    
-    st["history"].append({
-        "subject": conf["name"],
-        "score": correct_count,
-        "pct": pct,
-        "grade": grade
-    })
-    
-    report = (
-        f"🎓 **CYBER UNIVERSITY — ORALIQ NAZORAT NATIJASI**\n"
-        f"━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
-        f"📚 **Fan:** {conf['name']}\n"
-        f"📅 **Imtihon sanasi:** {conf['badge']}\n"
-        f"📊 **Natija:** **{correct_count} / 25** ({pct}%)\n"
-        f"🏆 **Baho:** **{grade}**\n\n"
-        f"📈 **Qiyinlik darajalari bo'yicha:**\n"
-        f"• 🟢 Oson: {diff_stats['oson'][0]}/{diff_stats['oson'][1]}\n"
-        f"• 🟡 O'rta: {diff_stats['orta'][0]}/{diff_stats['orta'][1]}\n"
-        f"• 🔴 Qiyin: {diff_stats['qiyin'][0]}/{diff_stats['qiyin'][1]}\n"
-        f"━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
-    )
-    
-    if mistakes_by_topic:
-        report += f"🎯 **SHAXSIY DIAGNOSTIKA VA TAVSIYALAR:**\n"
-        report += f"_Siz quyidagi mavzulardan xatoga yo'l qo'ydingiz. Mana ularni tuzatish bo'yicha ko'rsatma:_\n\n"
-        
-        subject_topics = TOPICS_DATA.get(conf["topic_key"], [])
-        for tid, items in list(mistakes_by_topic.items())[:3]:
-            t_obj = next((t for t in subject_topics if t.get("id") == tid), None)
-            t_title = t_obj.get("title_uz", f"{tid}-mavzu") if t_obj else f"{tid}-mavzu"
-            advice = t_obj.get("improvement_guide", "Ushbu mavzu bo'yicha asosiy qoidalarni takrorlang.") if t_obj else "Nazariyani takrorlang."
-            
-            report += f"📌 **{t_title}** ({len(items)} ta xato):\n"
-            report += f"💡 **Tavsiya:** {advice}\n"
-            
-            if t_obj and t_obj.get("videos"):
-                v = t_obj["videos"][0]
-                report += f"🎬 **Video darslik:** [{v['title']}]({v['url']})\n"
-            report += "\n"
-    else:
-        report += f"🌟 **MUKAMMAL NATIJA!**\nSiz barcha 25 ta savolga 100% to'g'ri javob berdingiz. Siz oraliq nazoratga to'liq tayyorsiz!\n\n"
-        
-    builder = InlineKeyboardBuilder()
-    builder.button(text="🔄 Yangi 25 talik Variant Boshlash", callback_data=f"start_exam:{subject}")
-    builder.button(text="📖 200 talik Mashqqa O'tish", callback_data=f"start_practice:{subject}")
-    builder.button(text="🏠 Bosh Menyu", callback_data="main_menu")
-    builder.adjust(1, 1, 1)
-    
-    try:
-        if edit:
-            await message.edit_text(report, reply_markup=builder.as_markup(), parse_mode="Markdown", disable_web_page_preview=True)
-        else:
-            await message.answer(report, reply_markup=builder.as_markup(), parse_mode="Markdown", disable_web_page_preview=True)
-    except Exception:
-        await message.answer(report, reply_markup=builder.as_markup(), parse_mode="Markdown", disable_web_page_preview=True)
-
-# --- 📖 200 TALIK MASHQ REJIMI ---
-@dp.callback_query(F.data.startswith("start_practice:"))
-async def cb_start_practice(callback: CallbackQuery):
-    subject = callback.data.split(":")[1]
-    if subject not in SUBJECTS:
-        subject = "stat"
-        
-    st = get_user_state(callback.from_user.id)
-    st["mode"] = "practice"
-    st["subject"] = subject
-    st["q_idx"] = 0
-    st["eliminated"] = set()
-    
-    await callback.answer(f"{SUBJECTS[subject]['name']} bo'yicha mashq boshlandi!", show_alert=False)
-    await send_practice_question(callback.message, callback.from_user.id, edit=True)
-
-async def send_practice_question(message: Message, user_id: int, edit: bool = False):
-    st = get_user_state(user_id)
-    subject = st["subject"]
-    conf = SUBJECTS.get(subject, SUBJECTS["stat"])
-    db = conf["db"]
-    q_idx = st["q_idx"]
-    
-    if q_idx >= len(db):
-        st["q_idx"] = 0
-        q_idx = 0
-        
-    q_data = db[q_idx]
-    mode_label = "📖 **O'RGANISH VA MASHQ REJIMI (200 TALIK BAZA)**"
-    text = format_question_text(q_data, q_idx + 1, len(db), mode_label, conf["name"])
-    
-    kb = get_question_keyboard("practice", subject, q_idx, st["eliminated"])
-    
-    try:
-        if edit:
-            await message.edit_text(text, reply_markup=kb, parse_mode="Markdown")
-        else:
-            await message.answer(text, reply_markup=kb, parse_mode="Markdown")
-    except Exception:
-        await message.answer(text, reply_markup=kb, parse_mode="Markdown")
-
-@dp.callback_query(F.data.startswith("next_practice:"))
-async def cb_next_practice(callback: CallbackQuery):
-    parts = callback.data.split(":")
-    subject = parts[1]
-    cur_idx = int(parts[2])
-    
-    st = get_user_state(callback.from_user.id)
-    st["subject"] = subject
-    st["mode"] = "practice"
-    st["q_idx"] = cur_idx + 1
-    st["eliminated"] = set()
-    
-    await send_practice_question(callback.message, callback.from_user.id, edit=True)
-    await callback.answer()
-
-# --- 📜 IMTIHONLAR TARIXI ---
-@dp.callback_query(F.data == "my_history")
-async def cb_my_history(callback: CallbackQuery):
-    st = get_user_state(callback.from_user.id)
-    history = st["history"]
-    
-    if not history:
-        text = "📜 **Siz hali biror marta imtihon topshirmagansiz.**\n\n'⏱️ 25 talik Imtihon' tugmasi orqali o'zingizni sinab ko'ring!"
-    else:
-        text = "📜 **SIZNING IMTIHONLAR TARIXINGIZ:**\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
-        for idx, h in enumerate(reversed(history[-10:]), 1):
-            text += f"**{idx}. {h['subject']}**\n"
-            text += f"   • Natija: **{h['score']} / 25** ({h['pct']}%)\n"
-            text += f"   • Baho: **{h['grade']}**\n\n"
-        text += "_Oxirgi 10 ta urinish ko'rsatildi._"
-        
-    builder = InlineKeyboardBuilder()
-    builder.button(text="⬅️ Bosh Menyu", callback_data="main_menu")
-    await callback.message.edit_text(text, reply_markup=builder.as_markup(), parse_mode="Markdown")
-    await callback.answer()
-
-# --- 📚 MAVZULAR ENSIKLOPEDIYASI ---
-@dp.callback_query(F.data.startswith("view_topics:"))
-async def cb_view_topics(callback: CallbackQuery):
-    subject = callback.data.split(":")[1]
-    conf = SUBJECTS.get(subject, SUBJECTS["stat"])
-    topics = TOPICS_DATA.get(conf["topic_key"], [])
-    
-    builder = InlineKeyboardBuilder()
-    for t in topics:
-        builder.button(
-            text=f"📌 {t['title_uz'][:35]}...",
-            callback_data=f"read_topic:{subject}:{t['id']}"
-        )
-    builder.button(text="⬅️ Fan tanlash", callback_data="menu_choose_theory")
-    builder.button(text="🏠 Bosh Menyu", callback_data="main_menu")
-    builder.adjust(1)
-    
-    await callback.message.edit_text(
-        f"📚 **{conf['name']} — 9 ta Mavzu Ensiklopediyasi:**\nKerakli mavzuni tanlang:",
-        reply_markup=builder.as_markup(),
-        parse_mode="Markdown"
-    )
-    await callback.answer()
-
-@dp.callback_query(F.data.startswith("read_topic:"))
-async def cb_read_topic(callback: CallbackQuery):
-    parts = callback.data.split(":")
-    subject = parts[1]
-    t_id = int(parts[2])
-    
-    conf = SUBJECTS.get(subject, SUBJECTS["stat"])
-    topics = TOPICS_DATA.get(conf["topic_key"], [])
-    t = next((item for item in topics if item["id"] == t_id), None)
-    
-    if not t:
-        await callback.answer("Mavzu topilmadi!", show_alert=True)
-        return
-        
-    text = (
-        f"📖 **{t['title_uz']}**\n"
-        f"🇬🇧 _{t.get('title_en', '')}_\n"
-        f"━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
-        f"📘 **CHUQUR NAZARIYA:**\n{t.get('summary_deep', '')}\n\n"
-        f"🏢 **REAL BIZNES / HAYOTIY KEYSI:**\n{t.get('case_study_extended', '')}\n\n"
-        f"📐 **ASOSIY FORMULALAR VA QOIDALAR:**\n"
-    )
-    for f_item in t.get("formulas_detailed", []):
-        text += f"• {f_item}\n"
-        
-    text += f"\n⚠️ **IMTIHONDAGI TUZOQLAR:**\n"
-    for trap in t.get("exam_traps", []):
-        text += f"• {trap}\n"
-        
-    if t.get("videos"):
-        text += f"\n🎬 **FOYDALI VIDEO DARSLIKLAR:**\n"
-        for v in t["videos"]:
-            text += f"• [{v['title']}]({v['url']})\n  _{v.get('takeaway', '')}_\n"
-            
-    builder = InlineKeyboardBuilder()
-    builder.button(text="⬅️ Mavzular ro'yxatiga qaytish", callback_data=f"view_topics:{subject}")
-    builder.button(text="🏠 Bosh Menyu", callback_data="main_menu")
-    builder.adjust(1, 1)
-    
-    await callback.message.edit_text(text, reply_markup=builder.as_markup(), parse_mode="Markdown", disable_web_page_preview=True)
-    await callback.answer()
-
-# --- 📄 PDF YUKLASH ---
-@dp.callback_query(F.data.startswith("get_pdf:"))
-async def cb_get_pdf(callback: CallbackQuery):
-    subject = callback.data.split(":")[1]
-    conf = SUBJECTS.get(subject, SUBJECTS["stat"])
-    
-    # Try finding PDF in scratch, desktop or D drive
     pdf_filename = conf["pdf_name"]
     candidate_paths = [
         os.path.join(BASE_DIR, pdf_filename),
+        os.path.join(r"C:\Users\user\Desktop\SARALANGAN_HUJJATLAR\INTERAKTIV_IMTIHON_PLATFORMASI", pdf_filename),
         os.path.join(r"C:\Users\user\Desktop\SARALANGAN_HUJJATLAR", pdf_filename),
+        os.path.join(r"D:\cyber fan\00_ORALIQ_NAZORAT_TOLIQ_QOLLANMALAR\INTERAKTIV_IMTIHON_PLATFORMASI", pdf_filename),
         os.path.join(r"D:\cyber fan\00_ORALIQ_NAZORAT_TOLIQ_QOLLANMALAR", pdf_filename)
     ]
     
@@ -742,40 +327,85 @@ async def cb_get_pdf(callback: CallbackQuery):
             break
             
     if found_path:
-        await callback.answer("PDF yuklanmoqda, iltimos kuting...", show_alert=False)
+        chat_id = target.chat.id
+        try:
+            await target.bot.send_chat_action(chat_id=chat_id, action="upload_document")
+        except Exception:
+            pass
         doc = FSInputFile(found_path)
-        await callback.message.answer_document(
+        await target.bot.send_document(
+            chat_id=chat_id,
             document=doc,
-            caption=f"📄 **{conf['name']} — Oraliq Nazorat To'liq Qo'llanmasi**\nCyber University • MNG25-102 guruhi uchun maxsus.",
-            parse_mode="Markdown"
+            caption=(
+                f"📄 <b>{conf['name']} — Oraliq Nazorat To'liq Qo'llanmasi</b>\n"
+                f"📅 Imtihon sanasi: {conf['badge']}\n"
+                f"📚 Cyber University • MNG25-102 guruhi uchun rasmiy 45 betlik konspekt.\n\n"
+                f"Creator: Mirzayev Quvonchbek (@kuvnch)"
+            ),
+            parse_mode="HTML"
         )
     else:
-        await callback.answer(f"PDF fayl tayyorlanmoqda yoki serverda saqlanmagan: {pdf_filename}", show_alert=True)
+        await target.answer(f"Kechirasiz, {pdf_filename} fayli serverda topilmadi.")
 
-# --- BOTNI ISHGA TUSHIRISH ---
-async def main():
-    logger.info("Bot ishga tushmoqda...")
-    bot = Bot(token=BOT_TOKEN)
-    await dp.start_polling(bot)
+@dp.message(Command("start"))
+async def cmd_start(message: Message):
+    # Check for deep linking: /start pdf_stat etc.
+    args = message.text.split(maxsplit=1)
+    if len(args) > 1 and args[1].startswith("pdf_"):
+        subj = args[1].replace("pdf_", "")
+        await send_pdf_document(message, subj)
+        return
 
+    webapp_url = "https://quvonchbekeditz-ux.github.io/mng102/"
+    kb = InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(text="🚀 Ilovani Ochish (Open App)", web_app=WebAppInfo(url=webapp_url))],
+        [InlineKeyboardButton(text="📄 6 ta Fan PDF Qo'llanmalarini Olish", callback_data="show_pdf_menu")]
+    ])
+    welcome_text = (
+        f"Assalomu alaykum, <b>{message.from_user.first_name}</b>!\n\n"
+        f"🏛️ <b>Cyber University · MNG25-102 Oraliq Nazorat Platformasi</b>ga xush kelibsiz.\n\n"
+        f"Oraliq nazorat testlarini ishlash va konspektlarni ko'rish uchun <b>'Open App'</b> tugmasini bosing, "
+        f"yoki kerakli fan bo'yicha to'liq PDF qo'llanmani to'g'ridan-to'g'ri bot orqali yuklab oling:"
+    )
+    await message.answer(welcome_text, reply_markup=kb, parse_mode="HTML")
 
-# ==================== MNG25-102 14 TALABA RO'YXATI VA KALITLARI ====================
-MNG_STUDENTS_ROSTER = [
-    {"num": 1, "name": "Axmadov Shaxzod", "key": "SHAXZOD-MNG102", "pin": "102011"},
-    {"num": 2, "name": "Homidjonov Sardorbek", "key": "SARDOR-MNG102", "pin": "102022"},
-    {"num": 3, "name": "Ilhomjonov Jamshid", "key": "JAMSHID-MNG102", "pin": "102033"},
-    {"num": 4, "name": "Mirobidova Fotima", "key": "FOTIMA-MNG102", "pin": "102044"},
-    {"num": 5, "name": "Mirzayev Quvonch", "key": "QUVONCH-7777", "pin": "777705", "role": "admin"},
-    {"num": 6, "name": "Musurmonov Abdulaziz", "key": "ABDULAZIZ-MNG102", "pin": "102066"},
-    {"num": 7, "name": "Muhammadjonov Otabek", "key": "OTABEK-MNG102", "pin": "102070"},
-    {"num": 8, "name": "Narimbetov Islombek", "key": "ISLOM-MNG102", "pin": "102077"},
-    {"num": 9, "name": "Ochilova Sadoqat", "key": "SADOQAT-MNG102", "pin": "102088"},
-    {"num": 10, "name": "Tirkashev Ravshan", "key": "RAVSHAN-MNG102", "pin": "102100"},
-    {"num": 11, "name": "Urolov Daler", "key": "DALER-MNG102", "pin": "102111"},
-    {"num": 12, "name": "Xoliqulova Gulsevar", "key": "GULSEVAR-MNG102", "pin": "102122"},
-    {"num": 13, "name": "Xolmatov Sherali", "key": "SHERALI-MNG102", "pin": "102133"},
-    {"num": 14, "name": "Shaydullayev Asadbek", "key": "ASADBEK-MNG102", "pin": "102099"}
-]
+@dp.message(Command("pdf"))
+async def cmd_pdf(message: Message):
+    text = (
+        "📄 <b>ORALIQ NAZORAT RASMIY PDF QO'LLANMALARI:</b>\n\n"
+        "Qaysi fanning 45 betlik chuqur tahliliy qo'llanmasi kerak? Fanni tanlang, bot sizga darhol PDF faylni yuboradi:"
+    )
+    await message.answer(text, reply_markup=get_pdf_selection_keyboard(), parse_mode="HTML")
+
+@dp.callback_query(F.data == "show_pdf_menu")
+async def cb_show_pdf_menu(callback: CallbackQuery):
+    text = (
+        "📄 <b>ORALIQ NAZORAT RASMIY PDF QO'LLANMALARI:</b>\n\n"
+        "Qaysi fanning 45 betlik chuqur tahliliy qo'llanmasi kerak? Fanni tanlang, bot sizga darhol PDF faylni yuboradi:"
+    )
+    await callback.message.answer(text, reply_markup=get_pdf_selection_keyboard(), parse_mode="HTML")
+    await callback.answer()
+
+@dp.callback_query(F.data.startswith("get_pdf:"))
+async def cb_get_pdf(callback: CallbackQuery):
+    subject = callback.data.split(":")[1]
+    user_id = callback.from_user.id
+    
+    if not is_user_authorized(user_id):
+        PENDING_PDF[user_id] = subject
+        await callback.answer("🔒 Kirish kaliti talab qilinadi!", show_alert=True)
+        text = (
+            "🔒 <b>DIQQAT: Yopiq Guruh Tizimi!</b>\n\n"
+            "Ushbu PDF qo'llanmalar faqat <b>Cyber University MNG25-102 guruhi</b> talabalari uchun mo'ljallangan.\n\n"
+            "PDF faylni yuklab olish uchun o'zingizning <b>Shaxsiy Kirish Kalitingizni</b> yoki <b>6 xonali PIN kodingizni</b> shu yerga yozib yuboring:\n\n"
+            "<i>Misol: TALABA-MNG102 yoki 6 xonali PIN: 102XXX</i>\n\n"
+            "⚠️ Agar shaxsiy kalitingiz bo'lmasa, bot yaratuvchisi Mirzayev Quvonchbekga (@kuvnch) murojaat qiling."
+        )
+        await callback.message.answer(text, parse_mode="HTML")
+        return
+
+    await callback.answer("PDF yuborilmoqda, iltimos kuting...", show_alert=False)
+    await send_pdf_document(callback.message, subject)
 
 @dp.message(Command("jadval"))
 async def cmd_jadval(message: Message):
@@ -798,6 +428,11 @@ async def cmd_jadval(message: Message):
 
 @dp.message(Command("kalitlar"))
 async def cmd_kalitlar(message: Message):
+    user_id = message.from_user.id
+    auth = get_authorized_users().get(str(user_id), {})
+    if auth.get("role") != "admin":
+        await message.answer("🔒 Bu buyruq faqat Dasturchi / Bot Creator Mirzayev Quvonchbek uchun ochiq!")
+        return
     text = "🔑 <b>MNG25-102 GURUHI TALABALARINING KIRISH KALITLARI:</b>\n\n"
     for s in MNG_STUDENTS_ROSTER:
         if s.get("role") == "admin":
@@ -824,6 +459,68 @@ async def cmd_creator(message: Message):
         "<i>Web platformadagi 'Creator Paneli' orqali barcha talabalarning oraliq nazorat ballarini kiritishingiz va Excel hisobotini yuklab olishingiz mumkin!</i>"
     )
     await message.answer(text, parse_mode="HTML")
+
+@dp.message(F.text & ~F.text.startswith("/"))
+async def handle_user_text_key(message: Message):
+    raw = message.text.strip().upper()
+    tokens = raw.split()
+    user_id = message.from_user.id
+    
+    matched = None
+    for s in MNG_STUDENTS_ROSTER:
+        k = s["key"].upper()
+        p = s["pin"]
+        if k in raw or p in raw or any(t == k or t == p for t in tokens):
+            matched = s
+            break
+        if s.get("role") == "admin" and any(adm in raw for adm in ["QUVONCH", "7777", "CREATOR"]):
+            matched = s
+            break
+            
+    if matched:
+        save_authorized_user(user_id, matched)
+        is_creator = matched.get("role") == "admin"
+        creator_badge = "👑 <i>Siz Bot va Tizim Yaratuvchisi (Creator) sifatida kirdingiz!</i>\n" if is_creator else ""
+        welcome_msg = (
+            f"🎉 <b>Xush kelibsiz, {matched['name']}!</b>\n\n"
+            f"✅ MNG25-102 guruhi a'zosi sifatida shaxsiy profilingiz muvaffaqiyatli tasdiqlandi.\n"
+            f"{creator_badge}"
+            f"Endi barcha 6 ta fanning to'liq 45 betlik PDF qo'llanmalarini bemalol yuklab olishingiz mumkin!"
+        )
+        await message.answer(welcome_msg, parse_mode="HTML")
+        
+        if user_id in PENDING_PDF:
+            pending_subj = PENDING_PDF.pop(user_id)
+            await send_pdf_document(message, pending_subj)
+        else:
+            await message.answer("Qaysi fanning PDF qo'llanmasi kerak? Fanni tanlang:", reply_markup=get_pdf_selection_keyboard())
+    else:
+        await message.answer(
+            "❌ <b>Kiritilgan kalit yoki PIN-kod noto'g'ri!</b>\n\n"
+            "Ushbu platforma va PDF konspektlar faqat <b>MNG25-102 guruhi</b> talabalari uchun mo'ljallangan yopiq tizimdir.\n\n"
+            "Shaxsiy kalitingizni bilmasangiz, bot yaratuvchisi <b>Mirzayev Quvonchbek</b>ga (@kuvnch) murojaat qiling.",
+            parse_mode="HTML"
+        )
+
+async def start_web_server():
+    port = int(os.environ.get("PORT", 8080))
+    app = web.Application()
+    async def health(request):
+        return web.Response(text="Cyber University MNG102 Bot is Running 24/7!")
+    app.router.add_get("/", health)
+    app.router.add_get("/health", health)
+    runner = web.AppRunner(app)
+    await runner.setup()
+    site = web.TCPSite(runner, "0.0.0.0", port)
+    await site.start()
+    logger.info(f"🌐 Cloud web health server active on port {port}")
+
+async def main():
+    if "PORT" in os.environ or os.environ.get("RENDER"):
+        await start_web_server()
+    bot = Bot(token=BOT_TOKEN)
+    logger.info("🚀 Cyber University Telegram boti muvaffaqiyatli ishga tushdi va xabarlarni tinglamoqda...")
+    await dp.start_polling(bot)
 
 if __name__ == "__main__":
     if BOT_TOKEN == "YOUR_BOT_TOKEN_HERE":
