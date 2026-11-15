@@ -821,7 +821,7 @@
     <div id="studentGateModal" class="hidden fixed inset-0 z-[99999] flex items-center justify-center p-4 bg-slate-950/90 backdrop-blur-xl transition-all duration-300">
         <div class="w-full max-w-md bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden transform transition-all p-6 sm:p-8 text-center relative animate-fade-in">
             <!-- Close Button (X) -->
-            <button type="button" onclick="hideGateModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-800 flex items-center justify-center transition-all cursor-pointer shadow-xs" title="Yopish (Bekor qilish)">
+            <button type="button" id="gateCloseBtnX" onclick="hideGateModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-800 flex items-center justify-center transition-all cursor-pointer shadow-xs" title="Yopish (Bekor qilish)">
                 <i class="fa-solid fa-xmark text-sm"></i>
             </button>
             <!-- University Badge -->
@@ -891,10 +891,10 @@
                 </div>
 
                 <div class="flex items-center space-x-2 pt-1">
-                    <button type="button" onclick="hideGateModal()" class="w-1/3 py-3 rounded-xl border border-slate-200 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs transition-all cursor-pointer">
+                    <button type="button" id="gateCloseBtnBottom" onclick="hideGateModal()" class="w-1/3 py-3 rounded-xl border border-slate-200 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs transition-all cursor-pointer">
                         Yopish
                     </button>
-                    <button type="button" onclick="attemptStudentLogin()" class="w-2/3 py-3 rounded-xl bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white font-extrabold text-xs shadow-lg shadow-indigo-600/30 transition-all flex items-center justify-center space-x-2 cursor-pointer active:scale-[0.99]">
+                    <button type="button" id="gateSubmitBtn" onclick="attemptStudentLogin()" class="w-2/3 py-3 rounded-xl bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white font-extrabold text-xs shadow-lg shadow-indigo-600/30 transition-all flex items-center justify-center space-x-2 cursor-pointer active:scale-[0.99]">
                         <span>Tizimga Kirish</span>
                         <i class="fa-solid fa-arrow-right text-xs"></i>
                     </button>
@@ -2203,11 +2203,30 @@ Holat: Tizimga muvaffaqiyatli ulangan.`);
         const MASTER_ADMIN_KEY = "CYBER-MNG-ADMIN-2026";
         let currentStudent = null;
 
+        function getTgUser() {
+            try {
+                if (window.Telegram && window.Telegram.WebApp && window.Telegram.WebApp.initDataUnsafe && window.Telegram.WebApp.initDataUnsafe.user) {
+                    return window.Telegram.WebApp.initDataUnsafe.user;
+                }
+            } catch (e) {}
+            return null;
+        }
+
+        function getStudentSessionKey() {
+            const tgUser = getTgUser();
+            return (tgUser && tgUser.id) ? "mng_student_tg_" + tgUser.id : "mng_active_student_id";
+        }
+
         function getHistoryKey() {
             return currentStudent ? "cyber_exam_history_" + currentStudent.id : "cyber_exam_history_guest";
         }
 
         function initStudentGate() {
+            // Delete any stored raw passwords from older versions
+            try {
+                localStorage.removeItem("mng_saved_key");
+            } catch (e) {}
+
             // Populate Keys Table in Admin Modal
             const tblBody = document.getElementById("keysTableBody");
             if (tblBody) {
@@ -2226,24 +2245,19 @@ Holat: Tizimga muvaffaqiyatli ulangan.`);
                 `).join("");
             }
 
-            // Check if student is already logged in (Remember Me)
-            const savedStudentId = localStorage.getItem("mng_active_student_id");
+            // Check if student is logged in for THIS specific Telegram account or browser
+            const sessionKey = getStudentSessionKey();
+            const savedStudentId = localStorage.getItem(sessionKey);
             if (savedStudentId) {
                 const found = MNG_STUDENTS.find(s => s.id === savedStudentId);
                 if (found) {
-                    const sel = document.getElementById("gateStudentSelect");
-                    if (sel) sel.value = found.id;
-                    const inp = document.getElementById("gateKeyInput");
-                    const savedKey = localStorage.getItem("mng_saved_key");
-                    if (inp && savedKey) inp.value = savedKey;
-                    
                     applyStudentLogin(found, false);
-                    hideGateModal();
                     return;
                 }
             }
 
-            // If not logged in, prompt with login modal
+            // If not logged in, enforce strict lock and show modal
+            currentStudent = null;
             showGateModal();
         }
 
@@ -2253,18 +2267,61 @@ Holat: Tizimga muvaffaqiyatli ulangan.`);
                 modal.classList.remove("hidden");
                 modal.classList.add("flex");
             }
+
+            // Security: Never prefill the password field!
+            const inp = document.getElementById("gateKeyInput");
+            if (inp) inp.value = "";
+
+            const sel = document.getElementById("gateStudentSelect");
+            if (sel) {
+                sel.value = currentStudent ? currentStudent.id : "";
+            }
+
             const errBox = document.getElementById("gateErrorBox");
             const errText = document.getElementById("gateErrorText");
             if (customMsg && errBox && errText) {
                 errText.textContent = customMsg;
                 errBox.className = "p-3 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 text-xs font-semibold flex items-center space-x-2";
                 errBox.classList.remove("hidden");
-            } else if (errBox && !customMsg) {
+            } else if (errBox) {
                 errBox.classList.add("hidden");
+            }
+
+            // If not logged in, do not allow closing the modal!
+            const closeX = document.getElementById("gateCloseBtnX");
+            const closeBottom = document.getElementById("gateCloseBtnBottom");
+            const submitBtn = document.getElementById("gateSubmitBtn");
+
+            if (!currentStudent) {
+                if (closeX) closeX.classList.add("hidden");
+                if (closeBottom) closeBottom.classList.add("hidden");
+                if (submitBtn) {
+                    submitBtn.classList.remove("w-2/3");
+                    submitBtn.classList.add("w-full");
+                }
+                const app = document.getElementById("appContainer");
+                if (app) app.classList.add("filter", "blur-md", "pointer-events-none", "select-none");
+            } else {
+                if (closeX) closeX.classList.remove("hidden");
+                if (closeBottom) closeBottom.classList.remove("hidden");
+                if (submitBtn) {
+                    submitBtn.classList.remove("w-full");
+                    submitBtn.classList.add("w-2/3");
+                }
             }
         }
 
         function hideGateModal() {
+            if (!currentStudent) {
+                const errBox = document.getElementById("gateErrorBox");
+                const errText = document.getElementById("gateErrorText");
+                if (errBox && errText) {
+                    errText.textContent = "Platformadan foydalanish uchun tizimga kirish majburiy!";
+                    errBox.className = "p-3 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-xs font-semibold flex items-center space-x-2";
+                    errBox.classList.remove("hidden");
+                }
+                return;
+            }
             const modal = document.getElementById("studentGateModal");
             if (modal) {
                 modal.classList.add("hidden");
@@ -2274,6 +2331,8 @@ Holat: Tizimga muvaffaqiyatli ulangan.`);
             if (app) {
                 app.classList.remove("filter", "blur-md", "pointer-events-none", "select-none");
             }
+            const inp = document.getElementById("gateKeyInput");
+            if (inp) inp.value = "";
         }
 
         function toggleGateKeyVisibility() {
@@ -2302,6 +2361,7 @@ Holat: Tizimga muvaffaqiyatli ulangan.`);
             if (!studentId) {
                 if (errBox && errText) {
                     errText.textContent = "Iltimos, avval ro'yxatdan o'z ism-familiyangizni tanlang!";
+                    errBox.className = "p-3 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-xs font-semibold flex items-center space-x-2";
                     errBox.classList.remove("hidden");
                 }
                 return;
@@ -2320,17 +2380,21 @@ Holat: Tizimga muvaffaqiyatli ulangan.`);
 
             if (isKeyValid) {
                 if (errBox) errBox.classList.add("hidden");
+                const sessionKey = getStudentSessionKey();
                 if (rememberMe) {
-                    localStorage.setItem("mng_active_student_id", student.id);
-                    localStorage.setItem("mng_saved_key", enteredKey);
+                    localStorage.setItem(sessionKey, student.id);
                 } else {
-                    localStorage.removeItem("mng_active_student_id");
-                    localStorage.removeItem("mng_saved_key");
+                    localStorage.removeItem(sessionKey);
                 }
+                // Security: ensure no password is ever saved to storage
+                localStorage.removeItem("mng_saved_key");
+
+                if (inp) inp.value = "";
                 applyStudentLogin(student, true);
             } else {
                 if (errBox && errText) {
                     errText.textContent = "Kiritilgan kalit noto'g'ri! Bot yaratuvchisi Quvonchbekdan kalitingizni so'rang.";
+                    errBox.className = "p-3 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-xs font-semibold flex items-center space-x-2";
                     errBox.classList.remove("hidden");
                 }
             }
@@ -2339,6 +2403,17 @@ Holat: Tizimga muvaffaqiyatli ulangan.`);
         function applyStudentLogin(student, isNewLogin) {
             currentStudent = student;
             hideGateModal();
+
+            // Toggle header login / logout buttons
+            const btnLogin = document.getElementById("btnLoginGateHeader");
+            if (btnLogin) btnLogin.classList.add("hidden");
+            const btnLogout = document.getElementById("btnLogoutHeader");
+            if (btnLogout) btnLogout.classList.remove("hidden");
+            const btnKeys = document.getElementById("btnKeysHeader");
+            if (btnKeys) {
+                if (student.role === "admin") btnKeys.classList.remove("hidden");
+                else btnKeys.classList.add("hidden");
+            }
 
             // Update UI elements in Header
             const avatar = document.getElementById("userAvatarCircle");
@@ -2366,12 +2441,24 @@ Holat: Tizimga muvaffaqiyatli ulangan.`);
                 }
             }
 
+            // Un-blur main application container
+            const app = document.getElementById("appContainer");
+            if (app) {
+                app.classList.remove("filter", "blur-md", "pointer-events-none", "select-none");
+            }
+
+            // Clear password input
+            const inp = document.getElementById("gateKeyInput");
+            if (inp) inp.value = "";
+
             // Load student's own private test history
             loadAndRenderHistory();
         }
 
         function logoutStudent() {
+            localStorage.removeItem(getStudentSessionKey());
             localStorage.removeItem("mng_active_student_id");
+            localStorage.removeItem("mng_saved_key");
             currentStudent = null;
             
             const avatar = document.getElementById("userAvatarCircle");
@@ -2395,8 +2482,14 @@ Holat: Tizimga muvaffaqiyatli ulangan.`);
             if (tabSardor) tabSardor.classList.add("hidden");
             if (currentMode === "sardor") setMode("exam");
 
+            const sel = document.getElementById("gateStudentSelect");
+            if (sel) sel.value = "";
             const inp = document.getElementById("gateKeyInput");
             if (inp) inp.value = "";
+
+            loadAndRenderHistory();
+            showGateModal("🔒 Tizimdan muvaffaqiyatli chiqdingiz. Qaytadan kirish uchun o'z ismingizni tanlang va kalitni kiriting.");
+        }
             const errBox = document.getElementById("gateErrorBox");
             if (errBox) errBox.classList.add("hidden");
 
