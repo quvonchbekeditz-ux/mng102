@@ -818,7 +818,7 @@
     </div><!-- END #appContainer -->
 
     <!-- ==================== STUDENT GATE MODAL ==================== -->
-    <div id="studentGateModal" class="fixed inset-0 z-[99999] flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md transition-all duration-300" style="display: flex;">
+    <div id="studentGateModal" class="fixed inset-0 z-[99999] flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md transition-all duration-300 pointer-events-auto select-auto" style="display: flex;">
         <div class="w-full max-w-md bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden transform transition-all p-6 sm:p-8 text-center relative animate-fade-in">
             <!-- Close Button (X) -->
             <button type="button" id="gateCloseBtnX" onclick="hideGateModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-800 flex items-center justify-center transition-all cursor-pointer shadow-xs" title="Yopish (Bekor qilish)">
@@ -2492,11 +2492,6 @@ Holat: Tizimga muvaffaqiyatli ulangan.`);
             loadAndRenderHistory();
             showGateModal("🔒 Tizimdan muvaffaqiyatli chiqdingiz. Qaytadan kirish uchun o'z ismingizni tanlang va kalitni kiriting.");
         }
-            const errBox = document.getElementById("gateErrorBox");
-            if (errBox) errBox.classList.add("hidden");
-
-            showGateModal();
-        }
 
         function openKeysModal() {
             if (!currentStudent || currentStudent.role !== "admin") {
@@ -2743,6 +2738,22 @@ Holat: Tizimga muvaffaqiyatli ulangan.`);
                 }
             });
         }
+
+        // Explicitly attach interactive functions to window for rock-solid mobile button support
+        window.attemptStudentLogin = attemptStudentLogin;
+        window.hideGateModal = hideGateModal;
+        window.showGateModal = showGateModal;
+        window.toggleGateKeyVisibility = toggleGateKeyVisibility;
+        window.logoutStudent = logoutStudent;
+        window.openKeysModal = openKeysModal;
+        window.closeKeysModal = closeKeysModal;
+        window.copySingleStudentKey = copySingleStudentKey;
+        window.cancelSubjectSwitch = cancelSubjectSwitch;
+        window.confirmSubjectSwitch = confirmSubjectSwitch;
+        window.setSubject = setSubject;
+        window.setMode = setMode;
+        window.startExam = startExam;
+        window.finalizeExam = finalizeExam;
 
         initGroupGradesTable();
         initStudentGate();
