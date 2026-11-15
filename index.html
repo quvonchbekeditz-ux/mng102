@@ -812,6 +812,142 @@
     </main>
     </div><!-- END #appContainer -->
 
+    <!-- ==================== STUDENT GATE MODAL ==================== -->
+    <div id="studentGateModal" class="hidden fixed inset-0 z-[99999] flex items-center justify-center p-4 bg-slate-950/90 backdrop-blur-xl transition-all duration-300">
+        <div class="w-full max-w-md bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden transform transition-all p-6 sm:p-8 text-center relative animate-fade-in">
+            <!-- Close Button (X) -->
+            <button type="button" onclick="hideGateModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-800 flex items-center justify-center transition-all cursor-pointer shadow-xs" title="Yopish (Bekor qilish)">
+                <i class="fa-solid fa-xmark text-sm"></i>
+            </button>
+            <!-- University Badge -->
+            <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 text-xs font-extrabold mb-4">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span>CYBER UNIVERSITY · MNG25-102</span>
+            </div>
+            
+            <div class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-tr from-indigo-600 to-blue-500 text-white flex items-center justify-center text-2xl font-black shadow-lg shadow-indigo-500/30 mb-4">
+                <i class="fa-solid fa-lock"></i>
+            </div>
+
+            <h2 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight mb-2">Guruh Talabalari Kirish Tizimi</h2>
+            <p class="text-xs text-slate-600 leading-relaxed mb-6 font-medium">
+                🔒 Ushbu platforma faqat <strong>MNG25-102 guruhi</strong> talabalari uchun qat'iy yopiq tizimdir. <b>Login va kalitsiz tizimga kirish yoki testlarni ko'rish mutlaqo mumkin emas!</b> O'z ismingizni tanlab, shaxsiy kalit/PIN kodingizni kiriting.
+            </p>
+
+            <!-- Form -->
+            <div class="space-y-4 text-left">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Talaba (F.I.Sh):</label>
+                    <div class="relative">
+                        <select id="gateStudentSelect" class="w-full pl-3.5 pr-10 py-3 rounded-xl border border-slate-300 bg-slate-50 text-slate-800 text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition-all appearance-none cursor-pointer">
+                            <option value="">— Ism-familiyangizni tanlang —</option>
+                            <option value="mng_01">1. Axmadov Shaxzod</option>
+                            <option value="mng_02">2. Homidjonov Sardorbek</option>
+                            <option value="mng_03">3. Ilhomjonov Jamshid</option>
+                            <option value="mng_04">4. Mirobidova Fotima</option>
+                            <option value="mng_05">5. Mirzayev Quvonch (Dasturchi / Creator)</option>
+                            <option value="mng_06">6. Musurmonov Abdulaziz</option>
+                            <option value="mng_07">7. Muhammadjonov Otabek</option>
+                            <option value="mng_08">8. Narimbetov Islombek</option>
+                            <option value="mng_09">9. Ochilova Sadoqat</option>
+                            <option value="mng_10">10. Tirkashev Ravshan</option>
+                            <option value="mng_11">11. Urolov Daler</option>
+                            <option value="mng_12">12. Xoliqulova Gulsevar</option>
+                            <option value="mng_13">13. Xolmatov Sherali</option>
+                            <option value="mng_14">14. Shaydullayev Asadbek</option>
+                        </select>
+                        <div class="absolute inset-y-0 right-0 flex items-center pr-3.5 pointer-events-none text-slate-400">
+                            <i class="fa-solid fa-chevron-down text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Shaxsiy Kirish Kaliti / PIN:</label>
+                    <div class="relative">
+                        <input type="password" id="gateKeyInput" placeholder="Shaxsiy kalit yoki 6 xonali PIN kodni kiriting" class="w-full pl-3.5 pr-10 py-3 rounded-xl border border-slate-300 bg-slate-50 text-slate-800 text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition-all tracking-wider" onkeydown="if(event.key==='Enter') attemptStudentLogin()">
+                        <button type="button" onclick="toggleGateKeyVisibility()" class="absolute inset-y-0 right-0 flex items-center pr-3.5 text-slate-400 hover:text-slate-600 transition-colors">
+                            <i id="gateKeyEyeIcon" class="fa-solid fa-eye text-sm"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-between text-xs text-slate-500 pt-1">
+                    <label class="flex items-center space-x-2 cursor-pointer">
+                        <input type="checkbox" id="gateRememberMe" checked class="rounded border-slate-300 text-indigo-600 focus:ring-indigo-500">
+                        <span class="font-medium text-slate-600">Meni ushbu qurilmada eslab qolish</span>
+                    </label>
+                </div>
+
+                <!-- Error Banner -->
+                <div id="gateErrorBox" class="hidden p-3 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-xs font-semibold flex items-center space-x-2">
+                    <i class="fa-solid fa-triangle-exclamation text-rose-500 text-sm flex-shrink-0"></i>
+                    <span id="gateErrorText">Kiritilgan kalit noto'g'ri!</span>
+                </div>
+
+                <div class="flex items-center space-x-2 pt-1">
+                    <button type="button" onclick="hideGateModal()" class="w-1/3 py-3 rounded-xl border border-slate-200 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs transition-all cursor-pointer">
+                        Yopish
+                    </button>
+                    <button type="button" onclick="attemptStudentLogin()" class="w-2/3 py-3 rounded-xl bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white font-extrabold text-xs shadow-lg shadow-indigo-600/30 transition-all flex items-center justify-center space-x-2 cursor-pointer active:scale-[0.99]">
+                        <span>Tizimga Kirish</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-slate-100 text-[11px] text-slate-400">
+                Kalit olmadingizmi? Bot & Tizim yaratuvchisi <strong>Mirzayev Quvonchbek</strong>ga murojaat qiling.
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== KEYS MANAGER MODAL ==================== -->
+    <div id="keysManagerModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
+        <div class="w-full max-w-2xl bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden p-6 sm:p-8 relative max-h-[90vh] flex flex-col">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500 text-white flex items-center justify-center text-lg font-bold shadow-md">
+                        <i class="fa-solid fa-key"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-base sm:text-lg font-black text-slate-900">MNG25-102 Guruh Talabalari Kirish Kalitlari</h3>
+                        <p class="text-xs text-slate-500">Guruhdoshlarga shaxsiy kalitlarini Telegram orqali yuborish paneli</p>
+                    </div>
+                </div>
+                <button onclick="closeKeysModal()" class="w-8 h-8 rounded-lg bg-slate-100 text-slate-500 hover:bg-slate-200 flex items-center justify-center transition-colors">
+                    <i class="fa-solid fa-xmark text-sm"></i>
+                </button>
+            </div>
+
+            <div class="my-4 flex items-center justify-between gap-2">
+                <button onclick="copyAllKeysForTelegram()" class="px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold shadow-sm transition-all flex items-center space-x-2 cursor-pointer">
+                    <i class="fa-solid fa-copy"></i>
+                    <span>Barcha 13 ta Kalitni Telegram Uchun Nusxalash</span>
+                </button>
+                <span id="copyFeedback" class="text-xs font-bold text-emerald-600 opacity-0 transition-opacity">Nusxalandi! ✓</span>
+            </div>
+
+            <div class="overflow-y-auto flex-1 border border-slate-200 rounded-xl">
+                <table class="w-full text-left border-collapse text-xs">
+                    <thead>
+                        <tr class="bg-slate-100 border-b border-slate-200 text-slate-700 font-extrabold uppercase">
+                            <th class="p-2.5">№</th>
+                            <th class="p-2.5">Talaba (F.I.Sh)</th>
+                            <th class="p-2.5">Shaxsiy Kalit</th>
+                            <th class="p-2.5">PIN</th>
+                            <th class="p-2.5 text-right">Harakat</th>
+                        </tr>
+                    </thead>
+                    <tbody id="keysTableBody" class="divide-y divide-slate-100 text-slate-800">
+                        <!-- Populated dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
     <!-- CONFIRM FINISH MODAL -->
     <div id="confirmModal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
         <div class="bg-white rounded-2xl max-w-sm w-full p-6 space-y-4 shadow-2xl border border-slate-100 text-center">
@@ -936,6 +1072,7 @@
             setSubject("stat");
             setMode("exam");
             loadAndRenderHistory();
+            if (student.role === "admin") initGroupGradesTable();
         });
 
         function initTelegramWebApp() {
@@ -1000,8 +1137,13 @@
 
         // --- TAB NAVIGATION ---
         function setMode(mode) {
-            if (!currentStudent) {
-                showGateModal();
+            if (mode === "sardor" && (!currentStudent || currentStudent.role !== "admin")) {
+                alert("🔒 Creator Paneli faqat Dasturchi Mirzayev Quvonchbek uchun ochiq!");
+                setMode("exam");
+                return;
+            }
+            if (mode !== "exam" && !currentStudent) {
+                showGateModal("⚠️ Ushbu bo'limni ko'rish uchun avval tizimga kiring!");
                 return;
             }
             currentMode = mode;
@@ -1888,15 +2030,18 @@
 
         function handleProfileBadgeClick() {
             if (!currentStudent) {
-                // Header Buttons: Show Login, Hide Logout
-            const btnLogin = document.getElementById("btnLoginGateHeader");
-            if (btnLogin) btnLogin.classList.remove("hidden");
-            const btnLogout = document.getElementById("btnLogoutHeader");
-            if (btnLogout) btnLogout.classList.add("hidden");
-
-            showGateModal();
-            } else {
+                showGateModal("Iltimos, avval tizimga kiring!");
+            } else if (currentStudent.role === "admin") {
                 openKeysModal();
+            } else {
+                alert(`🎓 TALABA PROFILI:
+
+👤 F.I.Sh: ${currentStudent.name}
+🔑 Shaxsiy kalit: ${currentStudent.key}
+🔢 PIN-kod: ${currentStudent.pin}
+🏫 Guruh: MNG25-102 (Cyber University)
+
+Holat: Tizimga muvaffaqiyatli ulangan.`);
             }
         }
 
@@ -1955,13 +2100,6 @@
         }
 
         function initStudentGate() {
-            // Populate select dropdown
-            const sel = document.getElementById("gateStudentSelect");
-            if (sel) {
-                sel.innerHTML = '<option value="">— Ism-familiyangizni tanlang —</option>' +
-                    MNG_STUDENTS.map(s => `<option value="${s.id}">${s.name}</option>`).join("");
-            }
-
             // Populate Keys Table in Admin Modal
             const tblBody = document.getElementById("keysTableBody");
             if (tblBody) {
@@ -1980,16 +2118,24 @@
                 `).join("");
             }
 
-            // Check if student is already logged in
+            // Check if student is already logged in (Remember Me)
             const savedStudentId = localStorage.getItem("mng_active_student_id");
             if (savedStudentId) {
                 const found = MNG_STUDENTS.find(s => s.id === savedStudentId);
                 if (found) {
+                    const sel = document.getElementById("gateStudentSelect");
+                    if (sel) sel.value = found.id;
+                    const inp = document.getElementById("gateKeyInput");
+                    const savedKey = localStorage.getItem("mng_saved_key");
+                    if (inp && savedKey) inp.value = savedKey;
+                    
                     applyStudentLogin(found, false);
+                    hideGateModal();
                     return;
                 }
             }
-            // Show gate modal
+
+            // If not logged in, prompt with login modal
             showGateModal();
         }
 
@@ -2068,6 +2214,10 @@
                 if (errBox) errBox.classList.add("hidden");
                 if (rememberMe) {
                     localStorage.setItem("mng_active_student_id", student.id);
+                    localStorage.setItem("mng_saved_key", enteredKey);
+                } else {
+                    localStorage.removeItem("mng_active_student_id");
+                    localStorage.removeItem("mng_saved_key");
                 }
                 applyStudentLogin(student, true);
             } else {
@@ -2146,6 +2296,10 @@
         }
 
         function openKeysModal() {
+            if (!currentStudent || currentStudent.role !== "admin") {
+                alert("🔒 Bu bo'lim faqat Dasturchi / Bot Creator Mirzayev Quvonchbek uchun ochiq!");
+                return;
+            }
             const m = document.getElementById("keysManagerModal");
             if (m) {
                 m.classList.remove("hidden");
@@ -2391,139 +2545,5 @@
         initStudentGate();
     </script>
 
-    <!-- ==================== STUDENT GATE MODAL ==================== -->
-    <div id="studentGateModal" class="fixed inset-0 z-[99999] flex items-center justify-center p-4 bg-slate-950/90 backdrop-blur-xl transition-all duration-300">
-        <div class="w-full max-w-md bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden transform transition-all p-6 sm:p-8 text-center relative animate-fade-in">
-            <!-- Close Button (X) -->
-            <button type="button" onclick="hideGateModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-800 flex items-center justify-center transition-all cursor-pointer shadow-xs" title="Yopish (Bekor qilish)">
-                <i class="fa-solid fa-xmark text-sm"></i>
-            </button>
-            <!-- University Badge -->
-            <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 text-xs font-extrabold mb-4">
-                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                <span>CYBER UNIVERSITY · MNG25-102</span>
-            </div>
-            
-            <div class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-tr from-indigo-600 to-blue-500 text-white flex items-center justify-center text-2xl font-black shadow-lg shadow-indigo-500/30 mb-4">
-                <i class="fa-solid fa-lock"></i>
-            </div>
-
-            <h2 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight mb-2">Guruh Talabalari Kirish Tizimi</h2>
-            <p class="text-xs text-slate-600 leading-relaxed mb-6 font-medium">
-                🔒 Ushbu platforma faqat <strong>MNG25-102 guruhi</strong> talabalari uchun qat'iy yopiq tizimdir. <b>Login va kalitsiz tizimga kirish yoki testlarni ko'rish mutlaqo mumkin emas!</b> O'z ismingizni tanlab, shaxsiy kalit/PIN kodingizni kiriting.
-            </p>
-
-            <!-- Form -->
-            <div class="space-y-4 text-left">
-                <div>
-                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Talaba (F.I.Sh):</label>
-                    <div class="relative">
-                        <select id="gateStudentSelect" class="w-full pl-3.5 pr-10 py-3 rounded-xl border border-slate-300 bg-slate-50 text-slate-800 text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition-all appearance-none cursor-pointer">
-                            <option value="">— Ism-familiyangizni tanlang —</option>
-                            <option value="mng_01">1. Axmadov Shaxzod</option>
-                            <option value="mng_02">2. Homidjonov Sardorbek</option>
-                            <option value="mng_03">3. Ilhomjonov Jamshid</option>
-                            <option value="mng_04">4. Mirobidova Fotima</option>
-                            <option value="mng_05">5. Mirzayev Quvonch (Dasturchi / Creator)</option>
-                            <option value="mng_06">6. Musurmonov Abdulaziz</option>
-                            <option value="mng_07">7. Muhammadjonov Otabek</option>
-                            <option value="mng_08">8. Narimbetov Islombek</option>
-                            <option value="mng_09">9. Ochilova Sadoqat</option>
-                            <option value="mng_10">10. Tirkashev Ravshan</option>
-                            <option value="mng_11">11. Urolov Daler</option>
-                            <option value="mng_12">12. Xoliqulova Gulsevar</option>
-                            <option value="mng_13">13. Xolmatov Sherali</option>
-                            <option value="mng_14">14. Shaydullayev Asadbek</option>
-                        </select>
-                        <div class="absolute inset-y-0 right-0 flex items-center pr-3.5 pointer-events-none text-slate-400">
-                            <i class="fa-solid fa-chevron-down text-xs"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Shaxsiy Kirish Kaliti / PIN:</label>
-                    <div class="relative">
-                        <input type="password" id="gateKeyInput" placeholder="Shaxsiy kalit yoki 6 xonali PIN kodni kiriting" class="w-full pl-3.5 pr-10 py-3 rounded-xl border border-slate-300 bg-slate-50 text-slate-800 text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition-all tracking-wider" onkeydown="if(event.key==='Enter') attemptStudentLogin()">
-                        <button type="button" onclick="toggleGateKeyVisibility()" class="absolute inset-y-0 right-0 flex items-center pr-3.5 text-slate-400 hover:text-slate-600 transition-colors">
-                            <i id="gateKeyEyeIcon" class="fa-solid fa-eye text-sm"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="flex items-center justify-between text-xs text-slate-500 pt-1">
-                    <label class="flex items-center space-x-2 cursor-pointer">
-                        <input type="checkbox" id="gateRememberMe" checked class="rounded border-slate-300 text-indigo-600 focus:ring-indigo-500">
-                        <span class="font-medium text-slate-600">Meni ushbu qurilmada eslab qolish</span>
-                    </label>
-                </div>
-
-                <!-- Error Banner -->
-                <div id="gateErrorBox" class="hidden p-3 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-xs font-semibold flex items-center space-x-2">
-                    <i class="fa-solid fa-triangle-exclamation text-rose-500 text-sm flex-shrink-0"></i>
-                    <span id="gateErrorText">Kiritilgan kalit noto'g'ri!</span>
-                </div>
-
-                <div class="flex items-center space-x-2 pt-1">
-                    <button type="button" onclick="hideGateModal()" class="w-1/3 py-3 rounded-xl border border-slate-200 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs transition-all cursor-pointer">
-                        Yopish
-                    </button>
-                    <button type="button" onclick="attemptStudentLogin()" class="w-2/3 py-3 rounded-xl bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white font-extrabold text-xs shadow-lg shadow-indigo-600/30 transition-all flex items-center justify-center space-x-2 cursor-pointer active:scale-[0.99]">
-                        <span>Tizimga Kirish</span>
-                        <i class="fa-solid fa-arrow-right text-xs"></i>
-                    </button>
-                </div>
-            </div>
-
-            <div class="mt-6 pt-4 border-t border-slate-100 text-[11px] text-slate-400">
-                Kalit olmadingizmi? Bot & Tizim yaratuvchisi <strong>Mirzayev Quvonchbek</strong>ga murojaat qiling.
-            </div>
-        </div>
-    </div>
-
-    <!-- ==================== KEYS MANAGER MODAL ==================== -->
-    <div id="keysManagerModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
-        <div class="w-full max-w-2xl bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden p-6 sm:p-8 relative max-h-[90vh] flex flex-col">
-            <div class="flex items-center justify-between pb-4 border-b border-slate-100">
-                <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 rounded-xl bg-amber-500 text-white flex items-center justify-center text-lg font-bold shadow-md">
-                        <i class="fa-solid fa-key"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-base sm:text-lg font-black text-slate-900">MNG25-102 Guruh Talabalari Kirish Kalitlari</h3>
-                        <p class="text-xs text-slate-500">Guruhdoshlarga shaxsiy kalitlarini Telegram orqali yuborish paneli</p>
-                    </div>
-                </div>
-                <button onclick="closeKeysModal()" class="w-8 h-8 rounded-lg bg-slate-100 text-slate-500 hover:bg-slate-200 flex items-center justify-center transition-colors">
-                    <i class="fa-solid fa-xmark text-sm"></i>
-                </button>
-            </div>
-
-            <div class="my-4 flex items-center justify-between gap-2">
-                <button onclick="copyAllKeysForTelegram()" class="px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold shadow-sm transition-all flex items-center space-x-2 cursor-pointer">
-                    <i class="fa-solid fa-copy"></i>
-                    <span>Barcha 13 ta Kalitni Telegram Uchun Nusxalash</span>
-                </button>
-                <span id="copyFeedback" class="text-xs font-bold text-emerald-600 opacity-0 transition-opacity">Nusxalandi! ✓</span>
-            </div>
-
-            <div class="overflow-y-auto flex-1 border border-slate-200 rounded-xl">
-                <table class="w-full text-left border-collapse text-xs">
-                    <thead>
-                        <tr class="bg-slate-100 border-b border-slate-200 text-slate-700 font-extrabold uppercase">
-                            <th class="p-2.5">№</th>
-                            <th class="p-2.5">Talaba (F.I.Sh)</th>
-                            <th class="p-2.5">Shaxsiy Kalit</th>
-                            <th class="p-2.5">PIN</th>
-                            <th class="p-2.5 text-right">Harakat</th>
-                        </tr>
-                    </thead>
-                    <tbody id="keysTableBody" class="divide-y divide-slate-100 text-slate-800">
-                        <!-- Populated dynamically -->
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</body>
+    </body>
 </html>
