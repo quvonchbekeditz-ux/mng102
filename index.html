@@ -818,7 +818,7 @@
     </div><!-- END #appContainer -->
 
     <!-- ==================== STUDENT GATE MODAL ==================== -->
-    <div id="studentGateModal" class="hidden fixed inset-0 z-[99999] flex items-center justify-center p-4 bg-slate-950/90 backdrop-blur-xl transition-all duration-300">
+    <div id="studentGateModal" class="fixed inset-0 z-[99999] flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md transition-all duration-300" style="display: flex;">
         <div class="w-full max-w-md bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden transform transition-all p-6 sm:p-8 text-center relative animate-fade-in">
             <!-- Close Button (X) -->
             <button type="button" id="gateCloseBtnX" onclick="hideGateModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-800 flex items-center justify-center transition-all cursor-pointer shadow-xs" title="Yopish (Bekor qilish)">
@@ -2264,6 +2264,7 @@ Holat: Tizimga muvaffaqiyatli ulangan.`);
         function showGateModal(customMsg) {
             const modal = document.getElementById("studentGateModal");
             if (modal) {
+                modal.style.display = "flex";
                 modal.classList.remove("hidden");
                 modal.classList.add("flex");
             }
@@ -2293,8 +2294,8 @@ Holat: Tizimga muvaffaqiyatli ulangan.`);
             const submitBtn = document.getElementById("gateSubmitBtn");
 
             if (!currentStudent) {
-                if (closeX) closeX.classList.add("hidden");
-                if (closeBottom) closeBottom.classList.add("hidden");
+                if (closeX) { closeX.classList.add("hidden"); closeX.style.display = "none"; }
+                if (closeBottom) { closeBottom.classList.add("hidden"); closeBottom.style.display = "none"; }
                 if (submitBtn) {
                     submitBtn.classList.remove("w-2/3");
                     submitBtn.classList.add("w-full");
@@ -2302,8 +2303,8 @@ Holat: Tizimga muvaffaqiyatli ulangan.`);
                 const app = document.getElementById("appContainer");
                 if (app) app.classList.add("filter", "blur-md", "pointer-events-none", "select-none");
             } else {
-                if (closeX) closeX.classList.remove("hidden");
-                if (closeBottom) closeBottom.classList.remove("hidden");
+                if (closeX) { closeX.classList.remove("hidden"); closeX.style.display = "flex"; }
+                if (closeBottom) { closeBottom.classList.remove("hidden"); closeBottom.style.display = "block"; }
                 if (submitBtn) {
                     submitBtn.classList.remove("w-full");
                     submitBtn.classList.add("w-2/3");
@@ -2324,6 +2325,7 @@ Holat: Tizimga muvaffaqiyatli ulangan.`);
             }
             const modal = document.getElementById("studentGateModal");
             if (modal) {
+                modal.style.display = "none";
                 modal.classList.add("hidden");
                 modal.classList.remove("flex");
             }
