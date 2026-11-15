@@ -1,0 +1,1592 @@
+{
+  "statistika": [
+    {
+      "id": 1,
+      "title_uz": "1-Mavzu: Ma'lumotlar turlari va NOIR o'lchov shkalalari",
+      "title_en": "Data Types and NOIR Measurement Scales",
+      "summary_deep": "Statistikada har qanday tahlil ma'lumotlar turini to'g'ri aniqlashdan boshlanadi. Agar ma'lumot turi noto'g'ri aniqlansa, noto'g'ri formulalar va grafiklar qo'llanilib, xato xulosalarga olib keladi.\n \n1. Sifat (Kategorial) ma'lumotlar:\n - Nominal (Nomlash): Ob'ektlarni faqat nomlari bo'yicha ajratadi. Matematik tartib mavjud emas. Masalan: Mijozning jinsi, millati, to'lov turi (naqd, karta, Payme), avtomobil rusumi. Bu yerda faqat Moda (Mode) va foizlarni hisoblash mumkin.\n - Ordinal (Tartibli): Ob'ektlar ma'lum bir mantiqiy daraja yoki iyerarxiya bo'yicha joylashadi, ammo oraliq masofa aniq o'lchanmaydi. Masalan: Mijoz qoniqishi (1-yomon, 2-o'rtacha, 3-a'lo), ta'lim darajasi (bakalavr, magistr, PhD), restoran yulduzlari. Bu yerda Mediana va Moda qo'llanadi, o'rtacha arifmetik hisoblash noto'g'ri hisoblanadi.\n\n2. Miqdoriy (Raqamli) ma'lumotlar:\n - Interval (Oraliq): Raqamlar orasidagi masofa aniq va teng, ammo ABSOLYUT NOL (nol nuqta yo'qlikni bildirmaydi) mavjud emas. Masalan: Selsiy bo'yicha harorat (0°C harorat yo'qligini bildirmaydi, balki suvning muzlash nuqtasi), IQ darajasi, kalendar yillari (2024-yil). Qo'shish va ayirish mumkin, lekin \"2 barobar issiq\" deb bo'lmaydi.\n - Ratio (Nisbiy): Statistikada eng yuqori darajadagi shkala. Unda HAQIQIY ABSOLYUT NOL mavjud (0 bu narsaning umuman yo'qligini bildiradi). Masalan: Oylik maosh (0 so'm = daromad yo'q), sotuvlar hajmi, xodimlar soni, vazn, masofa. Bu yerda barcha arifmetik amallar (qo'shish, ayirish, ko'paytirish, bo'lish, nisbat olish) to'liq amal qiladi.",
+      "case_study_extended": "🏢 REAL HAYOTIY BIZNES KEYSI (Korzinka.uz Chakana Savdosi):\nTasavvur qiling, Korzinka.uz supermarketlar tarmog'i yangi ochilgan filialning mijozlar oqimini o'rganmoqda.\n- Xaridorlarning to'lov usuli (Uzcard, Humo, Naqd, Click) — NOMINAL shkala. Menejer faqat qaysi usul eng ko'p ishlatilganini (Moda) aniqlay oladi.\n- Kassa chekidagi \"Xizmat ko'rsatishdan mamnunligingiz\" (Qoniqarsiz, Qoniqarli, A'lo) — ORDINAL shkala. Buni tartiblab, medianani topish mumkin.\n- Xaridorlarning savatchadagi xarid summasi (masalan, 320,000 so'm) va sotib olingan tovarlar soni (4 ta) — RATIO (NISBIY) shkala.\n⚠️ Menejerning xatosi: Agar menejer ordinal shkaladagi \"Mijoz qoniqishi\" (1, 2, 3) sonlarini o'rtacha arifmetik qilib \"O'rtacha qoniqish 2.4 ga teng\" desa, bu statistik jihatdan xato! Chunki 'Qoniqarli' va 'A'lo' orasidagi masofa raqamli o'lchovga ega emas.",
+      "formulas_detailed": [
+        "NOIR Ketma-ketligi: Nominal -> Ordinal -> Interval -> Ratio (Zaifdan kuchliga qarab)",
+        "Diskret o'zgaruvchi: Faqat butun sonlar (Xodimlar soni: 1, 2, 3... 2.5 ta xodim bo'lmaydi)",
+        "Uzluksiz o'zgaruvchi: Har qanday oraliq qiymatni qabul qila oladi (Vaqt: 12.45 minut, Daromad, Harorat)"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: 'Selsiy bo'yicha harorat' qaysi shkala? Talabalar ko'pincha Ratio deb o'ylashadi, to'g'ri javob INTERVAL, chunki 0°C mutlaq nol emas!",
+        "Tuzoq 2: 'Telefon raqamlari' yoki 'Talaba ID raqami' miqdoriy emas, NOMINAL shkaladir, chunki ularni qo'shib yoki o'rtachasini olib bo'lmaydi!"
+      ],
+      "improvement_guide": "Agar ushbu mavzudan adashsangiz, 'Nol nimani anglatadi?' qoidasini takrorlang. Nol mutlaq yo'qlikni bildirsa — bu Ratio, agar shartli belgilangan nuqta bo'lsa — Interval. PDF qo'llanmaning 3-6 betlarini qayta o'qing.",
+      "pdf_ref": "Statistika Qo'llanmasi: 3 - 6 betlar",
+      "svg_type": "noirhierarchy",
+      "videos": [
+        {
+          "title": "Khan Academy: Types of Statistical Data",
+          "url": "https://www.youtube.com/results?searchquery=Khan+Academy+Types+of+Statistical+Data+NOIR+scales",
+          "takeaway": "Nominal, Ordinal, Interval va Ratio shkalalarining aniq farqlari."
+        },
+        {
+          "title": "StatQuest: Qualitative vs Quantitative Variables",
+          "url": "https://www.youtube.com/results?searchquery=StatQuest+Qualitative+vs+Quantitative+Variables+discrete+continuous",
+          "takeaway": "Sifat va miqdoriy o'zgaruvchilarni tushunish."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title_uz": "2-Mavzu: Jamlash, guruhlash va chastotalar taqsimoti",
+      "title_en": "Data Aggregation, Grouping, and Frequency Distributions",
+      "summary_deep": "Xom (ishlanmagan) ma'lumotlar biznesda hech qanday foyda keltirmaydi. Ularni ma'noli qilish uchun guruhlash va chastotaviy taqsimot jadvallari tuziladi.\n\n1. Guruhlar sonini aniqlash (Styorjes formulasi):\n Agar tanlanma hajmi n ta bo'lsa, optimal guruhlar soni k quyidagicha topiladi:\n k = 1 + 3.322 * log10(n).\n Bu formula ma'lumotlarni haddan tashqari maydalab yubormaslik yoki haddan tashqari qo'pol birlashtirmaslik uchun optimal sonni beradi.\n\n2. Guruh oraliq qadami (Interval kengligi - h):\n h = (Xmax - Xmin) / k.\n Bu yerda (Xmax - Xmin) — variatsiya kengligi (Range).\n\n3. Chastota turlari:\n - Absolyut chastota (f): Har bir guruhga tushgan kuzatuvlar soni.\n - Nisbiy chastota (w): Har bir guruhning umumiy to'plamdagi ulushi (w = f / n yoki foizda w% = (f / n) * 100).\n - Jamg'arilgan (Kumulyativ) chastota: Har bir intervalgacha bo'lgan chastotalarning yig'indisi.\n \n4. Grafik tasvirlash:\n - Gistogramma: Uzluksiz miqdoriy ma'lumotlar uchun (ustunlar bir-biriga yopishgan bo'ladi).\n - Poligon: Gistogramma ustunlarining o'rtalarini tutashtiruvchi sinuq chiziq.\n - Ogiva: Jamg'arilgan (kumulyativ) chastotalar egri chizig'i.",
+      "case_study_extended": "🏢 REAL HAYOTIY BIZNES KEYSI (Bank Kredit Departamenti):\nBank 1,000 nafar mijozning kredit summalarini o'rganmoqda.\n- n = 1,000 ta mijoz.\n- Styorjes formulasi: k = 1 + 3.322 * log10(1000) = 1 + 3.322 * 3 = 10.96 ≈ 11 ta guruh.\n- Eng kichik kredit: 1 mln so'm, eng kattasi: 56 mln so'm.\n- Interval qadami: h = (56 - 1) / 11 = 5 mln so'm.\nBank kreditlarni 1-6 mln, 6-11 mln, ..., 51-56 mln guruhlarga ajratib, gistogramma quradi. Natijada bank mijozlarining 65% qismi 11-16 mln so'm oralig'idagi kreditlarni olayotgani yaqqol ko'rinadi va bank marketingini aynan shu segmentga yo'naltiradi.",
+      "formulas_detailed": [
+        "Styorjes qoidasi: k = 1 + 3.322 * lg(n) (Guruhlar soni)",
+        "Interval kengligi: h = (Xmax - Xmin) / k",
+        "Nisbiy chastota: wi = fi / n",
+        "Jamg'arilgan chastota: Fi = f₁ + f₂ + ... + fi"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: Gistogramma bilan Oddiy Ustunli (Bar chart) diagrammaning farqi: Bar chartda ustunlar orasida bo'shliq bo'ladi (sifat ma'lumotlar uchun), Gistogrammada esa ustunlar yopishgan bo'ladi (uzluksiz miqdor uchun)!",
+        "Tuzoq 2: Nisbiy chastotalar yig'indisi doimo 1.0 ga (yoki foizda 100% ga) teng bo'lishi shart."
+      ],
+      "improvement_guide": "Styorjes formulasini (1 + 3.322 * log10(n)) va gistogramma mohiyatini esda saqlang. PDF qo'llanmaning 7-10 betlarini ko'rib chiqing.",
+      "pdf_ref": "Statistika Qo'llanmasi: 7 - 10 betlar",
+      "svg_type": "histogramcurve",
+      "videos": [
+        {
+          "title": "Khan Academy: Creating Histograms & Frequency Tables",
+          "url": "https://www.youtube.com/results?searchquery=Khan+Academy+Creating+Histograms+and+Frequency+Tables",
+          "takeaway": "Gistogramma tuzish va interval qadamini hisoblash."
+        },
+        {
+          "title": "Sturges Rule: Frequency Distribution Explained",
+          "url": "https://www.youtube.com/results?searchquery=Sturges+Rule+Frequency+Distribution+statistics+formula",
+          "takeaway": "Guruhlar sonini aniqlash formulasi va amaliy misollar."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title_uz": "3-Mavzu: Markaziy moyillik va Variatsiya ko'rsatkichlari",
+      "title_en": "Measures of Central Tendency and Dispersion",
+      "summary_deep": "Taqsimot markazini va ma'lumotlarning tarqoqligini tavsiflovchi asosiy ko'rsatkichlar:\n\n1. Markaziy moyillik o'lchovlari:\n - O'rtacha arifmetik (Mean - X̄): Barcha qiymatlar yig'indisini ularning soniga bo'linmasi. Kamchiligi: Chetdagi favqulodda keskin qiymatlarga (outliers) o'ta ta'sirchan!\n - Mediana (Median - Me): Tartiblangan qatorning qoq o'rtasidagi qiymat (50% kuzatuvlar undan kichik, 50% katta). Afzalligi: Keskin qiymatlarga chidamli (robust)!\n - Moda (Mode - Mo): Eng ko'p takrorlangan qiymat. Nominal ma'lumotlar uchun qo'llash mumkin bo'lgan yagona markaziy ko'rsatkich.\n - Taqsimot shakli bilan bog'liqlik:\n * Simmetrik taqsimotda: Mean = Median = Mode.\n * O'ngga qiya (Musbat asimmetriya): Mean > Median > Mode (boylik, daromadlar taqsimoti).\n * Chapga qiya (Manfiy asimmetriya): Mean < Median < Mode.\n\n2. Variatsiya (Tarqoqlik) o'lchovlari:\n - Variatsiya kengligi (Range): R = Xmax - Xmin.\n - Interkvartil oraliq (IQR): IQR = Q3 - Q1 (Ma'lumotlarning o'rta 50% qismini o'z ichiga oladi, chetki qiymatlarga chidamli).\n - Dispersiya (Variance - σ² yoki s²): O'rtacha qiymatdan og'ishlar kvadratlarining o'rtachasi.\n - Standart chetlanish (Standard Deviation - σ yoki s): Dispersiyaning kvadrat ildizi. Asl o'lchov birligida ifodalanadi.\n - Variatsiya koeffitsiyenti (CV): CV = (s / X̄) * 100%. Ikki xil o'lchov birligidagi yoki o'rtachalari turlicha bo'lgan to'plamlarning bir xilligini solishtirish uchun yagona ko'rsatkich! (Agar CV < 33% bo'lsa, to'plam bir jinsli hisoblanadi).",
+      "case_study_extended": "🏢 REAL HAYOTIY BIZNES KEYSI (IT Kompaniyasida Maosh Tahlili):\nIT kompaniyada 10 nafar xodim ishlaydi:\n- 9 nafar dasturchi: har biri 10,000,000 so'm maosh oladi.\n- 1 nafar ta'sischi direktor: 110,000,000 so'm maosh oladi.\nHisoblaymiz:\n- O'rtacha arifmetik (Mean): (9*10 + 110) / 10 = 20,000,000 so'm!\n- Mediana (Median): 10,000,000 so'm!\n⚠️ E'tibor bering: HR menejer \"Bizda o'rtacha maosh 20 million\" desa, bu yolg'on tasavvur beradi, chunki 90% xodim 10 million oladi! Bu yerda direktorning maoshi 'outlier' (chetki keskin qiymat) bo'lib, o'rtacha arifmetikni yuqoriga tortib ketgan. Haqiqatni ko'rsatuvchi to'g'ri ko'rsatkich MEDIANA (10 mln) hisoblanadi!",
+      "formulas_detailed": [
+        "O'rtacha arifmetik: X̄ = ΣX / n",
+        "Tanlanma dispersiyasi: s² = Σ(X - X̄)² / (n - 1) (Bessel tuzatmasi)",
+        "Standart chetlanish: s = √(s²)",
+        "Variatsiya koeffitsiyenti: CV = (s / X̄) * 100% (CV < 33% bo'lsa to'plam bir jinsli)",
+        "Kvartillar oralig'i: IQR = Q3 - Q1",
+        "Emulsiyali qoidasi (Outlier aniqlash): X < Q1 - 1.5*IQR yoki X > Q3 + 1.5*IQR"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: Nega tanlanma dispersiyasida n emas, balki (n - 1) ga bo'linadi? Javob: Siljimagan (unbiased) baho olish uchun (Bessel tuzatmasi).",
+        "Tuzoq 2: 'Qaysi ko'rsatkich keskin chetki qiymatlarga (outliers) ta'sirchan emas?' Javob: MEDIANA va IQR! O'rtacha arifmetik esa o'ta ta'sirchan!"
+      ],
+      "improvement_guide": "O'rtacha, Mediana va Moda o'rtasidagi farqni hamda CV = s / X̄ formulasini yodda saqlang. Agar to'plamda keskin farqlar bo'lsa, Mediana eng yaxshi ko'rsatkichdir. PDF qo'llanmaning 11-15 betlarini o'qing.",
+      "pdf_ref": "Statistika Qo'llanmasi: 11 - 15 betlar",
+      "svg_type": "boxplotdiagram",
+      "videos": [
+        {
+          "title": "StatQuest: Mean, Median and Mode",
+          "url": "https://www.youtube.com/results?searchquery=StatQuest+Mean+Median+and+Mode+clearly+explained",
+          "takeaway": "Nega mediana o'rtachadan ustun bo'lishi mumkinligi."
+        },
+        {
+          "title": "Standard Deviation & Variance Explained",
+          "url": "https://www.youtube.com/results?searchquery=Standard+Deviation+and+Variance+visual+explanation+statistics",
+          "takeaway": "Dispersiya va standart chetlanishning geometrik ma'nosi."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title_uz": "4-Mavzu: Ehtimollar nazariyasi asoslari",
+      "title_en": "Fundamentals of Probability Theory",
+      "summary_deep": "Ehtimollar nazariyasi — tasodifiy hodisalarning qonuniyatlarini o'rganuvchi matematika va statistikaning poydevoridir.\n\n1. Asosiy tushunchalar:\n - Klassik ehtimollik ta'rifi: P(A) = m / n (bu yerda m — A hodisaga qulaylik yaratuvchi hollar soni, n — barcha teng imkoniyatli hollar soni).\n - Ehtimollik aksiomalari: Har qanday hodisa uchun 0 ≤ P(A) ≤ 1. Muqarrar hodisa P = 1, Imkonsiz hodisa P = 0.\n - Qarama-qarshi hodisa: P(Ā) = 1 - P(A).\n\n2. Hodisalar ustida amallar:\n - Birgalikda bo'lmagan hodisalar yig'indisi: P(A ∪ B) = P(A) + P(B).\n - Birgalikda bo'lgan hodisalar yig'indisi: P(A ∪ B) = P(A) + P(B) - P(A ∩ B).\n - Mustaqil hodisalar ko'paytmasi: P(A ∩ B) = P(A) * P(B). (Bir hodisaning ro'y berishi ikkinchisining ehtimoliga ta'sir qilmaydi).\n\n3. Shartli ehtimollik va Bayes formulasi:\n - Shartli ehtimollik P(A|B): B hodisa ro'y berganligi ma'lum bo'lganda A hodisaning ro'y berish ehtimoli: P(A|B) = P(A ∩ B) / P(B).\n - To'la ehtimollik formulasi: Agar H1, H2, ..., Hn gipotezalar to'liq guruhni tashkil qilsa, P(A) = Σ P(Hi) * P(A|Hi).\n - Bayes formulasi: Yangi ma'lumot (A hodisa) olingandan so'ng dastlabki (aprior) ehtimolliklarni qayta baholash (aposterior ehtimollik).",
+      "case_study_extended": "🏢 REAL HAYOTIY BIZNES KEYSI (Bank Kredit Skoringi va Bayes Qoidasi):\nBankka kelgan arizachilarning 10% qismi ilgari kreditni qaytarmagan (Defolt).\n- Yangi mijoz tekshirilganda, skoring tizimi 'Xavfli mijoz' deb signal berdi.\n- Ma'lumki, skoring tizimi defolt bo'ladigan mijozlarni 90% aniqlik bilan xavfli deb topadi (Test sezgirligi = 0.90).\n- Ammo halol mijozlarning ham 5% qismida xato qilib 'xavfli' degan soxta signal (False Positive) beradi.\nBayes formulasi bilan hisoblaymiz:\nSkoring tizimi 'Xavfli' deganida, mijozning haqiqatdan ham defolt bo'lish ehtimoli qancha?\nP(Defolt | Xavfli) = (0.10 * 0.90) / [(0.10 * 0.90) + (0.90 * 0.05)] = 0.09 / (0.09 + 0.045) = 0.09 / 0.135 = 66.7%!\nXulosa: Signal bo'lsa ham, mijozning 33.3% qismi halol bo'lib chiqadi. Bayes qoidasisiz bank barcha shubhali mijozlarni rad etib, daromaddan quruq qolgan bo'lardi!",
+      "formulas_detailed": [
+        "Klassik ehtimollik: P(A) = m / n",
+        "Qarama-qarshi hodisa: P(Ā) = 1 - P(A)",
+        "Qo'shish teoremasi (umumiy): P(A + B) = P(A) + P(B) - P(AB)",
+        "Ko'paytirish teoremasi (bog'liq): P(AB) = P(A) * P(B|A)",
+        "Ko'paytirish (mustaqil): P(AB) = P(A) * P(B)",
+        "Bayes formulasi: P(Hi|A) = [P(Hi) * P(A|Hi)] / Σ [P(Hk) * P(A|Hk)]"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: 'Birgalikda bo'lmagan' bilan 'Mustaqil' hodisalarni adashtirmang! Agar A va B birgalikda bo'lmasa, P(AB) = 0 bo'ladi. Agar mustaqil bo'lsa, P(AB) = P(A)*P(B) bo'ladi!",
+        "Tuzoq 2: Ikkita tanga tashlanganda kamida bitta gerb tushish ehtimoli: 1 - P(hech biri gerb emas) = 1 - 0.25 = 0.75."
+      ],
+      "improvement_guide": "P(A+B) va P(A*B) farqini, hamda qarama-qarshi hodisa P(Ā) = 1 - P(A) orqali yechish usullarini mustahkamlang. PDF qo'llanmaning 16-19 betlarini o'rganing.",
+      "pdf_ref": "Statistika Qo'llanmasi: 16 - 19 betlar",
+      "svg_type": "probabilityvenn",
+      "videos": [
+        {
+          "title": "Khan Academy: Probability Basics & Addition Rule",
+          "url": "https://www.youtube.com/results?searchquery=Khan+Academy+Probability+Basics+Addition+Multiplication+Rule",
+          "takeaway": "Qo'shish va ko'paytirish qoidalari."
+        },
+        {
+          "title": "3Blue1Brown: Bayes Theorem Visually Explained",
+          "url": "https://www.youtube.com/results?searchquery=3Blue1Brown+Bayes+Theorem+Visually+Explained",
+          "takeaway": "Bayes qoidasining ajoyib geometrik tushuntirilishi."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title_uz": "5-Mavzu: Tasodifiy miqdorlar va Diskret taqsimotlar",
+      "title_en": "Random Variables and Discrete Probability Distributions",
+      "summary_deep": "Tasodifiy miqdor — sinov natijasida u yoki bu raqamli qiymatni ma'lum ehtimollik bilan qabul qiluvchi o'zgaruvchidir.\n\n1. Diskret tasodifiy miqdor (DTM):\n Qabul qilishi mumkin bo'lgan qiymatlar soni chekli yoki sanoqli (0, 1, 2, ...).\n - Taqsimot qonuni: Jadval ko'rinishida xi qiymatlar va ularga mos pi ehtimolliklar beriladi.\n - Normalizatsiya sharti: Σ pi = 1 (barcha ehtimolliklar yig'indisi qat'iy 1 ga teng bo'lishi shart!).\n - Matematik kutilma (O'rtacha qiymat - E(X) yoki μ): μ = E(X) = Σ (xi * pi).\n - Dispersiya: Var(X) = E(X²) - [E(X)]² = Σ (xi² * pi) - μ².\n\n2. Asosiy diskret taqsimotlar:\n - Binomial taqsimot (B(n, p)): Bernulli sinovlari ketma-ketligi (n ta mustaqil sinov, har birida muvaffaqiyat ehtimoli p, muvaffaqiyatsizlik q = 1 - p).\n Formula: P(X = k) = C(n, k) * p^k * q^(n-k).\n Matematik kutilmasi: E(X) = n * p.\n Dispersiyasi: Var(X) = n * p * q.\n - Puasson taqsimoti (P(λ)): Vaqt yoki fazo birligida kamdan-kam ro'y beradigan hodisalar soni (masalan, 1 soatda bankka kelgan mijozlar soni, qo'ng'iroqlar soni).\n Formula: P(X = k) = (λ^k * e^(-λ)) / k!\n Muhim xususiyati: Puasson taqsimotida E(X) = Var(X) = λ (Matematik kutilma va dispersiya teng!).",
+      "case_study_extended": "🏢 REAL HAYOTIY BIZNES KEYSI (Call-Centerga Qo'ng'iroqlar Oqimi):\nKompaniyaning call-centeriga tushlik paytida har 10 minutda o'rtacha λ = 4 ta qo'ng'iroq tushadi (Puasson jarayoni).\nMenejer savol qo'ydi: Keyingi 10 minut ichida ayni 2 ta qo'ng'iroq tushish ehtimoli qancha?\nHisoblash:\nP(X = 2) = (4² * e^(-4)) / 2! = (16 * 0.0183) / 2 = 0.1465 (14.65%).\nUmuman qo'ng'iroq tushmaslik ehtimoli: P(X = 0) = e^(-4) ≈ 1.8%.\nBu tahlil orqali menejer tushlik vaqtida kassa va call-centerda nechta operator navbatchi bo'lishi kerakligini aniq rejalashtiradi.",
+      "formulas_detailed": [
+        "Ehtimolliklar yig'indisi: Σ pi = 1",
+        "Matematik kutilma: E(X) = Σ (xi * pi)",
+        "Dispersiya: Var(X) = E(X²) - (E(X))²",
+        "Binomial ehtimollik: P(X = k) = Cn^k * p^k * (1-p)^(n-k)",
+        "Binomial kutilma va dispersiya: E(X) = n*p, Var(X) = n*p*(1-p)",
+        "Puasson formulasi: P(X = k) = (λ^k * e^(-λ)) / k!, bu yerda E(X) = Var(X) = λ"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: 'Qaysi taqsimotda matematik kutilma dispersiyaga teng?' Javob: PUASSON taqsimotida (E = Var = λ)!",
+        "Tuzoq 2: Binomial taqsimotda maksimal dispersiya qachon bo'ladi? Javob: p = 0.5 bo'lganda (Var = 0.25 * n)."
+      ],
+      "improvement_guide": "Binomial E(X) = np va Puasson E = Var = λ parametrlarini, shuningdek ehtimolliklar yig'indisi 1 ga tengligini doimo tekshiring. PDF qo'llanmaning 20-23 betlarini o'qing.",
+      "pdf_ref": "Statistika Qo'llanmasi: 20 - 23 betlar",
+      "svg_type": "poissondistribution",
+      "videos": [
+        {
+          "title": "Khan Academy: Binomial Distribution Formula",
+          "url": "https://www.youtube.com/results?searchquery=Khan+Academy+Binomial+Distribution+Formula+intuition",
+          "takeaway": "Binomial formula qanday hosil bo'ladi va qachon ishlatiladi."
+        },
+        {
+          "title": "Poisson Distribution Explained with Real Cases",
+          "url": "https://www.youtube.com/results?searchquery=Poisson+Distribution+statistics+explained+real+world+examples",
+          "takeaway": "Puasson taqsimoti va vaqt birligidagi hodisalar."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title_uz": "6-Mavzu: Normal taqsimot va Z-baholar",
+      "title_en": "Normal Distribution and Z-Scores",
+      "summary_deep": "Normal taqsimot (Gauss egri chizig'i) — statistikaning 'shohi' hisoblanadi. Tabiat va jamiyatdagi aksariyat uzluksiz miqdorlar (bo'y, vazn, xatoliklar, test ballari) aynan shu qonunga bo'ysunadi.\n\n1. Xususiyatlari:\n - Qo'ng'iroqsimon (Bell curve) va mukammal simmetrik.\n - Cho'qqi nuqtasida: Mean = Median = Mode (μ).\n - Umumiy egri chiziq ostidagi maydon (ehtimollik) 1.0 ga teng (yoki 100%).\n\n2. Empirik Qoida (68 - 95 - 99.7 Qoidasi):\n - μ ± 1σ oralig'ida ma'lumotlarning taxminan 68.26% qismi joylashadi.\n - μ ± 2σ oralig'ida ma'lumotlarning taxminan 95.44% qismi joylashadi.\n - μ ± 3σ oralig'ida ma'lumotlarning taxminan 99.73% qismi joylashadi.\n - 3σ dan tashqaridagi har qanday qiymat deyarli favqulodda hodisa (Outlier) hisoblanadi!\n\n3. Standartlashtirish va Z-baho (Z-score):\n Istalgan N(μ, σ²) taqsimotni standart Normal N(0, 1) taqsimotga keltirish:\n Z = (X - μ) / σ.\n Z-baho nima? U har qanday kuzatuv o'z o'rtachasidan qancha standart chetlanish masofada yotganini ko'rsatadi.\n - Agar Z = 0 bo'lsa, qiymat aynan o'rtachaga teng.\n - Agar Z > 0 bo'lsa, o'rtachadan yuqori, Z < 0 bo'lsa, o'rtachadan past.\n - Agar |Z| > 3 bo'lsa, bu deyarli mumkin bo'lmagan anomal qiymatdir.",
+      "case_study_extended": "🏢 REAL HAYOTIY BIZNES KEYSI (IELTS va SAT Ballarini Solishtirish):\nUniversitet qabul komissiyasiga ikki abituriyent hujjat topshirdi:\n- Jamshid: IELTS dan 7.5 oldi (Respublika bo'yicha IELTS o'rtachasi μ = 6.0, standart chetlanish σ = 0.5).\n- Sardor: SAT Matematikadan 720 ball oldi (SAT o'rtachasi μ = 500, σ = 100).\nSavol: Qaysi abituriyent o'z imtihonida boshqalarga nisbatan kuchliroq natija ko'rsatgan?\nHisoblash (Z-baho orqali):\n- Jamshidning Z-bahosi: Z = (7.5 - 6.0) / 0.5 = 1.5 / 0.5 = +3.0!\n- Sardorning Z-bahosi: Z = (720 - 500) / 100 = 220 / 100 = +2.2!\nXulosa: Jamshid o'z tengdoshlaridan 3 ta standart chetlanish yuqorida (top 0.1% ichida), Sardor esa 2.2 ta chetlanish yuqorida turibdi. Z-baho turli o'lchovdagi natijalarni adolatli solishtirish imkonini beradi!",
+      "formulas_detailed": [
+        "Z-baho formulasi: Z = (X - μ) / σ",
+        "Empirik qoida: P(μ - 1σ < X < μ + 1σ) ≈ 68.3%",
+        "P(μ - 2σ < X < μ + 2σ) ≈ 95.4%",
+        "P(μ - 3σ < X < μ + 3σ) ≈ 99.7%",
+        "Standart Normal taqsimot parametrlari: μ = 0, σ² = 1"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: 'Standart normal taqsimotning o'rtachasi va dispersiyasi nechaga teng?' Javob: O'rtachasi μ = 0, Dispersiyasi σ² = 1!",
+        "Tuzoq 2: 'Normal taqsimotda mediananing qiymati nimaga teng?' Javob: O'rtacha arifmetik (μ) ga teng, chunki simmetrik!"
+      ],
+      "improvement_guide": "68-95-99.7 qoidasini va Z = (X - μ)/σ formulasini mahkam ushlang. Har qanday oraliq savolida avval Z ni topish kerak. PDF qo'llanmaning 24-27 betlarini o'qing.",
+      "pdf_ref": "Statistika Qo'llanmasi: 24 - 27 betlar",
+      "svg_type": "gaussbellcurve",
+      "videos": [
+        {
+          "title": "StatQuest: Normal Distribution and Z-Scores",
+          "url": "https://www.youtube.com/results?searchquery=StatQuest+Normal+Distribution+and+Z-Scores+clearly+explained",
+          "takeaway": "Z-score qanday hisoblanadi va nima uchun kerak."
+        },
+        {
+          "title": "Empirical Rule 68-95-99.7 Explained",
+          "url": "https://www.youtube.com/results?searchquery=The+Empirical+Rule+68+95+99.7+statistics+explained",
+          "takeaway": "Empirik qoidani masalalarda qo'llash."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title_uz": "7-Mavzu: Tanlanma nazariyasi va Markaziy Limit Teorema (CLT)",
+      "title_en": "Sampling Theory and Central Limit Theorem (CLT)",
+      "summary_deep": "Bosh to'plamdagi barcha elementlarni (masalan, O'zbekistonning barcha 37 million aholisini) to'liq tekshirish vaqt va xarajat jihatidan imkonsiz. Shu sababli tanlanma (sample) olinadi.\n\n1. Markaziy Limit Teoremasi (CLT) — Statistikaning eng qudratli qonuni:\n Bosh to'plamning taqsimoti QANDAY BO'LISHIDAN QAT'I NAZAR (qiya, tekis, bimodal yoki tartibsiz), agar tanlanma hajmi yetarlicha katta bo'lsa (qoida tariqasida n ≥ 30), tanlanma o'rtachalarining (X̄) taqsimoti NORMAL TAQSIMOTGA intiladi!\n - Tanlanma o'rtachalarining o'rtachasi: μ_X̄ = μ.\n - Tanlanma o'rtachasining standart xatosi (Standard Error - SE): SE = σ / √n.\n\n2. Standart xatoning muhim qonuniyati (Kvadrat ildiz qoidasi):\n Chunki formulada n ildiz ostida (√n) turadi:\n - Baholash xatosini (SE) 2 BAROBAR KAMAYTIRISH UCHUN tanlanma hajmini 4 BAROBAR OSHIRISH SHART!\n - Xatoni 3 barobar kamaytirish uchun n ni 9 barobar oshirish kerak!\n\n3. Tanlanma olish usullari:\n - Oddiy tasodifiy (Simple Random): Har bir element teng ehtimollik bilan tanlanadi.\n - Qatlamli (Stratified): To'plam avval o'xshash qatlamlarga (masalan, viloyatlar, erkak/ayol) bo'linadi, so'ng har biridan mutanosib tanlanadi. Eng yuqori aniqlik beradi.\n - Klasterli (Cluster): To'plam tabiiy guruhlarga (masalan, maktablar, tumanlar) bo'linib, butun guruhlar tasodifan tanlanadi.",
+      "case_study_extended": "🏢 REAL HAYOTIY BIZNES KEYSI (Sotsiologik So'rovnoma va CLT):\nSaylov oldidan xalqning kimga ovoz berishini bilish kerak. Bosh to'plam = 20,000,000 saylovchi.\nOshpaz qozondagi 100 litr sho'rvaning tuzini bilish uchun hammasini ichib ko'rmaydi — qozonni yaxshilab aralashtirib (xolis tasodifiy tanlanma), 1 osh qoshiq tatib ko'radi.\nXuddi shuningdek, agar tanlanma to'g'ri va xolis tanlansa, 20 millionlik xalq ichidan atigi n = 1,500 kishini so'rash orqali, CLT teoremasiga ko'ra butun xalq fikrini atigi ±2.5% xatolik bilan 95% ishonchlilikda bilib olish mumkin!",
+      "formulas_detailed": [
+        "Markaziy Limit Teoremasi sharti: n ≥ 30",
+        "Standart xato: SE = σ / √n",
+        "Tanlanma Z-bahosi: Z = (X̄ - μ) / (σ / √n)",
+        "Xatoni 2 marta qisqartirish uchun: nyangi = 4 * neski"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: 'Standart xatoni 2 barobar kamaytirish uchun tanlanma hajmini necha marta oshirish kerak?' Ko'pchilik 2 deb xato qiladi, to'g'ri javob 4 marta, chunki n ildiz ostida!",
+        "Tuzoq 2: CLT ishlashi uchun bosh to'plam normal taqsimlangan bo'lishi shartmi? YO'Q! Bosh to'plam har qanday (notekis) bo'lsa ham, n ≥ 30 bo'lsa tanlanma o'rtachalari normal bo'ladi!"
+      ],
+      "improvement_guide": "SE = σ / √n formulasini va n ≥ 30 shartini doimo yodda tuting. Xatoni kamaytirish kvadrat ildizga bog'liq ekanligini unutmang. PDF qo'llanmaning 28-30 betlarini o'qing.",
+      "pdf_ref": "Statistika Qo'llanmasi: 28 - 30 betlar",
+      "svg_type": "cltvisualization",
+      "videos": [
+        {
+          "title": "Central Limit Theorem (CLT) Clearly Explained",
+          "url": "https://www.youtube.com/results?searchquery=Central+Limit+Theorem+Khan+Academy+clearly+explained",
+          "takeaway": "Nega CLT statistikaning eng muhim qonuni hisoblanadi."
+        },
+        {
+          "title": "Standard Error vs Standard Deviation",
+          "url": "https://www.youtube.com/results?searchquery=Standard+Error+vs+Standard+Deviation+statistics+difference",
+          "takeaway": "SE va SD orasidagi tub farq."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title_uz": "8-Mavzu: Ishonchlilik intervallari va Styudent t-taqsimoti",
+      "title_en": "Confidence Intervals and Student's t-Distribution",
+      "summary_deep": "Bosh to'plam parametrini (masalan, haqiqiy o'rtacha μ ni) bitta nuqta bilan baholash (Point estimate) xatarli, chunki tasodifiy xato bo'lishi mumkin. Shu sababli oraliqli baholash — Ishonchlilik Intervali (Confidence Interval - CI) quriladi.\n\n1. Ishonchlilik darajasi (Confidence Level - 1 - α):\n - Odatda 90% (α = 0.10, Z = 1.645)\n - 95% (α = 0.05, Z = 1.960 — amaliyotda eng ko'p qo'llanuvchisi!)\n - 99% (α = 0.01, Z = 2.576)\n\n2. Qaysi mezon tanlanadi? Z yoki t?\n - Agar bosh to'plamning standart chetlanishi σ MA'LUM bo'lsa -> Z-taqsimot qo'llanadi:\n CI = X̄ ± Z_(α/2) * (σ / √n).\n - Agar σ NOMA'LUM bo'lsa va tanlanma kichik bo'lsa (n < 30) -> STYUDENT t-TAQSIMOTI qo'llanadi:\n CI = X̄ ± t_(α/2, df) * (s / √n), bu yerda df = n - 1 (erkinlik darajasi - degrees of freedom).\n\n3. Styudent t-taqsimoti xususiyatlari:\n - Z kabi simmetrik va qo'ng'iroqsimon, ammo markazi pastroq va chetlari (dumlari - tails) qalinroq (chunki σ noma'lum bo'lgani uchun noaniqlik ko'proq).\n - Erkinlik darajasi df ortishi bilan (n kattalashgan sari) t-taqsimot asta-sekin standart normal Z-taqsimotga aylanib boradi.",
+      "case_study_extended": "🏢 REAL HAYOTIY BIZNES KEYSI (Yangi Mahsulot Qadoqlash Og'irligi):\nZavod yangi qadoqlangan shokolad ishlab chiqarmoqda. Standart bo'yicha og'irlik 100 gramm bo'lishi kerak.\nLaboratoriya n = 16 ta shokoladni tanlab oldi:\n- O'rtacha og'irlik X̄ = 98.5 gramm.\n- Tanlanma standart chetlanishi s = 2.0 gramm (bosh to'plam σ noma'lum!).\n- df = 16 - 1 = 15.\n- 95% ishonchlilik darajasida jadvaldan t_(0.025, 15) = 2.131.\nXatolik chegarasi: ME = 2.131 * (2.0 / √16) = 2.131 * (2.0 / 4) = 1.065 gramm.\n95% Ishonchlilik intervali: [98.5 - 1.065; 98.5 + 1.065] = [97.435; 99.565] gramm!\nXulosa: 100 grammlik qiymat ushbu intervalga kirmaydi! Demak, zavod apparati shokoladlarni me'yordan kam qadoqlayapti, apparatni zudlik bilan sozlash shart!",
+      "formulas_detailed": [
+        "Z-interval (σ ma'lum): CI = X̄ ± Z * (σ / √n)",
+        "t-interval (σ noma'lum): CI = X̄ ± t * (s / √n)",
+        "Erkinlik darajasi: df = n - 1",
+        "95% ishonchlilikda kritik Z qiymati: Z = 1.96",
+        "Xatolik chegarasi (Margin of Error): ME = Z * (σ / √n)"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: '95% ishonchlilik intervali nimani anglatadi?' Noto'g'ri talqin: 'Haqiqiy parametr shu oraliqda yotishining 95% ehtimoli bor'. To'g'ri talqin: 'Agar 100 ta mustaqil tanlanma olib interval qursak, ularning 95 tasi haqiqiy parametrni o'z ichiga oladi!'",
+        "Tuzoq 2: Tanlanma hajmi oshsa, interval kengligi TORAYADI (aniqlik oshadi). Ishonchlilik darajasi (masalan, 95% dan 99% ga) oshirilsa, interval kengligi KENGAYADI!"
+      ],
+      "improvement_guide": "Z = 1.96 (95%) qiymatini, df = n - 1 formulasini va σ noma'lum bo'lganda t-taqsimot ishlatilishini mustahkamlang. PDF qo'llanmaning 31-33 betlarini o'qing.",
+      "pdf_ref": "Statistika Qo'llanmasi: 31 - 33 betlar",
+      "svg_type": "confidenceinterval",
+      "videos": [
+        {
+          "title": "Khan Academy: Confidence Intervals Explained",
+          "url": "https://www.youtube.com/results?searchquery=Khan+Academy+Confidence+Intervals+clearly+explained",
+          "takeaway": "Ishonchlilik oralig'ining geometrik ma'nosi."
+        },
+        {
+          "title": "Student's t-Distribution vs Normal Z",
+          "url": "https://www.youtube.com/results?searchquery=Student+t-distribution+vs+Normal+Z+distribution+degrees+of+freedom",
+          "takeaway": "Nega kichik tanlanmada t-taqsimot qo'llanadi."
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title_uz": "9-Mavzu: Statistik gipotezalar tekshiruvi va p-value",
+      "title_en": "Hypothesis Testing and p-Value Interpretation",
+      "summary_deep": "Statistik gipotezalarni tekshirish — ilmiy yoki biznes farazlarning to'g'riligini tasodifiy xatolikdan farqlash mexanizmidir.\n\n1. Gipotezalar juftligi:\n - Nol gipoteza (H0 - Null): 'Farq yo'q, o'zgarish yo'q, ta'sir nolga teng'. O'zida doimo tenglik belgisini saqlaydi (=, ≤, ≥).\n - Muqobil gipoteza (H1 yoki Ha - Alternative): Tadqiqotchi isbotlamoqchi bo'lgan faraz ('Farq bor, yangi dori yaxshiroq, yangi narx ko'proq foyda keltiradi'). O'zida tengsizlikni saqlaydi (≠, <, >).\n\n2. Xatolik turlari (O'ta muhim imtihon mavzusi!):\n - I tur xatolik (α - Alfa): To'g'ri bo'lgan H0 ni nohaq rad etish ('Aybsiz odamni qamash'). Ahamiyatlilik darajasi deyiladi (odatda α = 0.05).\n - II tur xatolik (β - Beta): Xato bo'lgan H0 ni qabul qilish ('Haqiqiy jinoyatchini oqlab yuborish').\n - Test quvvati (Power of test): 1 - β (Haqiqatdan mavjud farqni to'g'ri aniqlash qobiliyati).\n\n3. P-qiymat (p-value) — Qaror qabul qilish oltin qoidasi:\n P-value — bu H0 to'g'ri bo'lgan taqdirda, olingan natijadek yoki undan ham keskinroq natija faqat tasodif tufayli yuzaga kelish ehtimolidir.\n - Oltin qoida:\n * Agar p-value < α (masalan, p < 0.05) bo'lsa -> H0 RAD ETILADI! (Natija statistik jihatdan ahamiyatli, farq tasodif emas!).\n * Agar p-value ≥ α bo'lsa -> H0 rad etilmaydi (Farq borligiga yetarli dalil yo'q).\n * Mnemonic shior: 'If p is low, H0 must go! If p is high, H0 can fly!'",
+      "case_study_extended": "🏢 REAL HAYOTIY BIZNES KEYSI (A/B Test — E-commerce Sayti):\nUzum Market ilovasida 'Xarid qilish' tugmasining rangi yashildan to'q sariqqa o'zgartirildi (A/B testing).\n- H0 (Nol gipoteza): Rang o'zgarishi konversiyaga hech qanday ta'sir qilmadi (p1 = p2).\n- H1 (Muqobil): To'q sariq rang konversiyani oshirdi (p1 < p2).\nTest natijasida p-value = 0.012 chiqdi.\nAhamiyatlilik darajasi α = 0.05 etib belgilangan edi.\nTaqqoslash: p-value (0.012) < α (0.05).\nQaror: H0 qat'iy rad etiladi! Rang o'zgarishi konversiyani haqiqatan ham oshirgan, bu tasodif emas. Kompaniya yangi dizaynni butun ilovaga joriy qiladi va millionlab dollar qo'shimcha daromad ko'radi.",
+      "formulas_detailed": [
+        "H0 doimo '=' belgisiga ega, H1 esa '≠', '<', '>'.",
+        "I tur xatolik: P(Rad etish H0 | H0 to'g'ri) = α",
+        "II tur xatolik: P(Qabul qilish H0 | H0 xato) = β",
+        "Qaror qoidasi: Agar p-value < α -> H0 rad etiladi!",
+        "Bir tomonlama (One-tailed) va Ikki tomonlama (Two-tailed) testlar"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: 'P-qiymat bu nima?' Ko'pchilik talaba 'H0 ning to'g'ri bo'lish ehtimoli' deb xato qiladi. TO'G'RI: H0 to'g'ri bo'lganda shunday natija tasodifan chiqish ehtimoli!",
+        "Tuzoq 2: 'I tur xatolik (alfa) nimani bildiradi?' Aybsiz H0 ni rad etish! Agar alfa 0.01 qilinsa, I tur xatolik kamayadi, lekin II tur xatolik (beta) ortadi!"
+      ],
+      "improvement_guide": "Agar p-value < 0.05 bo'lsa H0 rad etilishini va I tur / II tur xatoliklar ta'rifini qayta ko'rib chiqing. PDF qo'llanmaning 34-35 betlarini o'qing.",
+      "pdf_ref": "Statistika Qo'llanmasi: 34 - 35 betlar",
+      "svg_type": "hypothesiserrors",
+      "videos": [
+        {
+          "title": "StatQuest: p-Value Clearly Explained",
+          "url": "https://www.youtube.com/results?searchquery=StatQuest+p-value+Clearly+Explained+Josh+Starmer",
+          "takeaway": "p-value ning eng sodda va mukammal tushuntirilishi."
+        },
+        {
+          "title": "Type I and Type II Errors in Hypothesis Testing",
+          "url": "https://www.youtube.com/results?searchquery=Type+I+and+Type+II+Errors+Hypothesis+Testing+statistics",
+          "takeaway": "Alfa va Beta xatoliklari o'rtasidagi muvozanat."
+        }
+      ]
+    }
+  ],
+  "marketing": [
+    {
+      "id": 1,
+      "title_uz": "1-Mavzu: Marketingga kirish, ehtiyoj, talab, 5 konsepsiya va 4P",
+      "title_en": "Introduction to Marketing, Needs, 5 Orientations, and 4P",
+      "summary_deep": "Marketing — bu iste'molchilar uchun qiymat yaratish, yetkazib berish va korxona uchun daromadli uzoq muddatli munosabatlarni shakllantirish jarayonidir (Filip Kotler ta'rifi).\n\n1. Zanjirning 3 asosiy bosqichi:\n - Muhtojlik (Need): Insonning birlamchi fiziologik yoki biologik yetishmovchilik hissi (ochlik, chanqoqlik, sovuq).\n - Ehtiyoj (Want): Muhtojlikning inson shaxsiyati va jamiyat madaniyati ta'sirida aniq shaklga kirgan ko'rinishi (Och odam nonga yoki pitsaga ehtiyoj sezadi).\n - Talab (Demand): Xarid qobiliyati (pul) bilan ta'minlangan ehtiyoj (Menda pitsaga ehtiyoj bor VA cho'ntagimda uni sotib olishga pulim bor).\n\n2. Marketing Boshqaruvining 5 Asosiy Konsepsiyasi:\n - Ishlab chiqarish konsepsiyasi: 'Mijozlar arzon va keng tarqalgan tovarni oladi'. Diqqat: Ommaviy ishlab chiqarish va tannarxni tushirish (Genri Ford modeli: 'Qora rangda bo'lsa, istalgan rangdagi mashinani beramiz').\n - Tovar konsepsiyasi: 'Mijozlar eng sifatli, yuqori funksiyali tovarni afzal ko'radi'. Diqqat: Tovarni tinimsiz takomillashtirish. Xatari: 'Marketing miopiyasi' (kalamush qopqonini mukammal qilish, lekin mijoz zaharli dorini tanlashi).\n - Sotish (Intensivlash) konsepsiyasi: 'Agar kuchli reklama va bosim qilinmasa, mijoz sotib olmaydi'. Diqqat: Agressiv sotuv (sug'urta, ensiklopediya).\n - An'anaviy Marketing konsepsiyasi: 'Avval ehtiyojni aniqla, keyin unga mos tovar yarat va raqobatchilardan ko'ra yaxshiroq qondir'. Diqqat: Mijoz qoniqishi va uzoq muddatli sodiqlik.\n - Ijtimoiy-axloqiy (Xayriya) marketing: 'Mijoz ehtiyoji + Korxona foydasi + Jamiyatning uzoq muddatli farovonligi (ekologiya, salomatlik, axloq)'.\n\n3. Klassik Marketing Miksi (4P Modeli - E. Jerome McCarthy):\n - Product (Mahsulot): Sifat, dizayn, qadoq, brend, kafolat.\n - Price (Narx): Asosiy narx, chegirmalar, kredit shartlari.\n - Place (Taqsimot/Joy): Savdo kanallari, logistika, do'kon joylashuvi.\n - Promotion (Rag'batlantirish): Reklama, PR, shaxsiy sotuv, sales promotion.",
+      "case_study_extended": "🏢 REAL HAYOTIY BIZNES KEYSI (Tesla va Ijtimoiy Marketing):\nTesla avtomobil kompaniyasi marketing evolyutsiyasining yorqin namunasidir.\n- Ular an'anaviy avtosalonlar tizimidan (Place) voz kechib, to'g'ridan-to'g'ri onlayn sotuv va o'zining shou-rumlarini yo'lga qo'ydi.\n- Ularning bosh g'oyasi — shunchaki mashina sotish emas, balki IJTIMOIY-AXLOQIY MARKETING tamoyiliga asoslangan holda sayyorani yashil energiyaga o'tkazish, havoni ifloslantirmaslik. Natijada xaridorlar o'zlarini shunchaki mashina egasi emas, balki kelajakni qutqaruvchi qahramondek his qiladi va brendga cheksiz sodiq bo'ladi.",
+      "formulas_detailed": [
+        "Marketing Zanjiri: Muhtojlik (Need) -> Ehtiyoj (Want) -> Talab (Demand) -> Xarid",
+        "Klassik 4P Miksi: Product, Price, Place, Promotion",
+        "Xizmatlar uchun 7P: + People (Xodimlar), Process (Jarayon), Physical Evidence (Moddiy dalil)",
+        "Mijoz qabul qilgan qiymat = Umumiy foyda - Umumiy xarajat"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: 'Marketing miopiyasi' (Marketing Myopia - T. Levitt) nima? Javob: Tovarga haddan tashqari oshiq bo'lib, iste'molchining asl ehtiyojini unutib qo'yish (Masalan, temir yo'l kompaniyalari o'zlarini 'transport biznesi' emas, 'poyezd biznesi' deb hisoblab inqirozga uchragan)!",
+        "Tuzoq 2: 'Ehtiyoj' bilan 'Talab' farqi: Talab — bu faqat pul bilan ta'minlangan ehtiyojdir!"
+      ],
+      "improvement_guide": "5 ta marketing konsepsiyasi farqlarini (ayniqsa Tovar va Marketing konsepsiyasi farqini) hamda 4P elementlarini yodda saqlang. PDF qo'llanmaning 3-7 betlarini o'qing.",
+      "pdf_ref": "Marketing Qo'llanmasi: 3 - 7 betlar",
+      "svg_type": "marketingmix₄p",
+      "videos": [
+        {
+          "title": "Philip Kotler: Principles of Marketing Masterclass",
+          "url": "https://www.youtube.com/results?searchquery=Philip+Kotler+Principles+of+Marketing+lecture+interview",
+          "takeaway": "Marketing otasi Kotlerdan asosiy tamoyillar va 5 konsepsiya."
+        },
+        {
+          "title": "The 4 Ps of Marketing Mix Simplified",
+          "url": "https://www.youtube.com/results?searchquery=The+4+Ps+of+Marketing+Mix+Simplified+Product+Price+Place+Promotion",
+          "takeaway": "4P modelining har bir komponenti tahlili."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title_uz": "2-Mavzu: Marketing-menejment va boshqaruv funksiyalari",
+      "title_en": "Marketing Management and Strategic Planning",
+      "summary_deep": "Marketing-menejment — maqsadli bozorlarni tanlash, marketing strategiyalarini rejalashtirish, amalga oshirish va nazorat qilish orqali foyda olish san'atidir.\n\n1. Strategik rejalashtirish bosqichlari:\n - Korxona missiyasini aniqlash (Biz qaysi biznesdamiz? Mijozimiz kim?).\n - Korxona maqsadlarini belgilash (SMART talablari: Specific, Measurable, Achievable, Relevant, Time-bound).\n - Biznes-portfelni tahlil qilish (BCG Matritsasi va Ansoff matritsasi).\n - Funksional strategiyalarni (marketing, moliya, HR, IT) ishlab chiqish.\n\n2. BCG (Boston Consulting Group) O'sish-Ulush Matritsasi:\n - Yulduzlar (Stars): Bozor o'sishi YUQORI, Bozor ulushi YUQORI. Katta investitsiya talab qiladi, kelajak poydevori.\n - Sog'in sigirlar (Cash Cows): Bozor o'sishi PAST, Bozor ulushi YUQORI. O'sish uchun pul talab qilmaydi, lekin boshqa loyihalarni moliyalashtirish uchun eng ko'p sof naqd pul beradi.\n - So'roq belgilari / Muammoli bolalar (Question Marks): Bozor o'sishi YUQORI, Bozor ulushi PAST. Katta xatar, agar investitsiya qilinsa Yulduzga aylanishi mumkin, aks holda Itga aylanadi.\n - Itlar (Dogs): Bozor o'sishi PAST, Bozor ulushi PAST. Foyda bermaydi, resurslarni yeb yotadi, biznesdan chiqarib tashlash (divest) kerak.\n\n3. Ansoffning Tovar/Bozor Matritsasi (O'sish strategiyalari):\n - Bozorni chuqurlashtirish (Market Penetration): Mavjud tovar + Mavjud bozor (Eng kam xatar, reklama va chegirma orqali ko'proq sotish).\n - Bozor rivojlantirish (Market Development): Mavjud tovar + Yangi bozor (boshqa hududga yoki davlatga chiqish).\n - Tovar rivojlantirish (Product Development): Yangi tovar + Mavjud bozor (mavjud mijozlarga yangi model taklif qilish).\n - Diversifikatsiya (Diversification): Yangi tovar + Yangi bozor (Eng xatarli strategiya, mutlaqo yangi soha).",
+      "case_study_extended": "🏢 REAL HAYOTIY BIZNES KEYSI (Apple Kompaniyasining BCG Portfeli):\nApple kompaniyasi misolida BCG matritsasini tahlil qilamiz:\n- iPhone — 'Sog'in sigir' (Cash Cow) va qisman Yulduz: Har yili yuzlab milliard dollar naqd pul oqimi keltiradi.\n- Apple Vision Pro (VR ko'zoynak) — 'So'roq belgisi' (Question Mark): Bozor o'sayotgan yangi soha, ammo ulush hali past, kelajagi noaniq.\n- Apple Watch va AI xizmatlari — 'Yulduz' (Star): Bozor jadal rivojlanmoqda, Apple ulushi yetakchi.\n- Eski iPod musiqiy pleyeri — 'It' (Dog): Bozor o'lmoqda, ishlab chiqarish to'xtatildi.\nStrategiya: iPhone (Cash Cow) keltirgan daromad hisobiga Vision Pro va Sun'iy intellekt (Question Marks) loyihalari moliyalashtiriladi!",
+      "formulas_detailed": [
+        "SMART Maqsad: Aniq, O'lchanadigan, Erishsa bo'ladigan, Mos va Vaqti belgilangan",
+        "BCG Matritsasi o'qlari: Vertikal = Bozor o'sish sur'ati, Gorizontal = Nisbiy bozor ulushi",
+        "Ansoff Matritsasi: 4 ta kvadrat (Bozorga kirish, Bozor rivoji, Tovar rivoji, Diversifikatsiya)"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: 'Sog'in sigir' (Cash Cow)dan tushgan foyda qayerga sarflanadi? Javob: 'So'roq belgilari'ni Yulduzga aylantirish uchun va R&D ga!",
+        "Tuzoq 2: Ansoff matritsasida eng yuqori xatarga ega o'sish strategiyasi qaysi? Javob: Diversifikatsiya (Yangi tovar + Yangi bozor)!"
+      ],
+      "improvement_guide": "BCG matritsasining 4 ta kvadrantini (Yulduz, Sigir, So'roq, It) va Ansoff matritsasining 4 strategiyasini aniq bilib oling. PDF qo'llanmaning 8-11 betlarini o'qing.",
+      "pdf_ref": "Marketing Qo'llanmasi: 8 - 11 betlar",
+      "svg_type": "bcgmatrix",
+      "videos": [
+        {
+          "title": "The BCG Matrix Explained with Real Brands",
+          "url": "https://www.youtube.com/results?searchquery=The+BCG+Matrix+Explained+with+Real+Brands+Boston+Consulting+Group",
+          "takeaway": "BCG matritsasi: Yulduz, Sigir, So'roq, It amaliy tahlili."
+        },
+        {
+          "title": "Ansoff Matrix Strategy Framework Explained",
+          "url": "https://www.youtube.com/results?searchquery=Ansoff+Matrix+Strategy+Framework+Explained+Igor+Ansoff",
+          "takeaway": "Ansoff modeli bo'yicha 4 ta o'sish strategiyasi."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title_uz": "3-Mavzu: Marketing tizimi va muhiti (PESTLE va SWOT)",
+      "title_en": "Marketing Environment and SWOT/PESTLE Analysis",
+      "summary_deep": "Marketing muhiti — korxonaning o'z mijozlari bilan muvaffaqiyatli munosabat qurish qobiliyatiga ta'sir qiluvchi barcha ichki va tashqi omillar yig'indisidir.\n\n1. Mikro-muhit (Bevosita ta'sir etuvchi omillar - korxona qisman nazorat qila oladi):\n - Korxonaning o'zi (boshqaruv, moliya, R&D).\n - Yetkazib beruvchilar (xomashyo uzluksizligi va narxi).\n - Marketing vositachilari (dilerlar, reklama agentliklari, logistika).\n - Mijozlar (iste'molchi, biznes, davlat, xalqaro bozorlar).\n - Raqobatchilar.\n - Aloqa auditoriyalari (OAV, banklar, mahalliy jamoatchilik, davlat organlari).\n\n2. Makro-muhit (Bilvosita ta'sir etuvchi global kuchlar - korxona nazorat qila olmaydi, faqat moslashadi):\n PESTLE tahlili:\n - P (Political) — Siyosiy: Hukumat siyosati, soliq islohotlari, bojxona to'siqlari.\n - E (Economic) — Iqtisodiy: Inflyatsiya, foiz stavkalari, aholi daromadlari va xarid qobiliyati.\n - S (Social/Demographic) — Ijtimoiy: Aholi soni, tug'ilish sur'ati, urbanizatsiya, qadriyatlar.\n - T (Technological) — Texnologik: Internet, sun'iy intellekt, avtomatlashtirish, smartfonlar.\n - L (Legal) — Huquqiy: Mehnat qonunchiligi, iste'molchilar huquqlari, monopoliyaga qarshi qonunlar.\n - E (Environmental) — Ekologik: Iqlim o'zgarishi, qayta ishlash, yashil energiya talablari.\n\n3. SWOT Tahlili (Ichki va Tashqi muhit sintezi):\n - Strengths (Kuchli tomonlar) — ICHKI: Tajribali xodimlar, kuchli brend, patentlar.\n - Weaknesses (Kuchsiz tomonlar) — ICHKI: Mablag' yetishmasligi, eskirgan uskunalar.\n - Opportunities (Imkoniyatlar) — TASHQI: Bozorning kengayishi, yangi qonun, raqibning ketishi.\n - Threats (Xavf-xatarlar) — TASHQI: Inflyatsiya, yangi kuchli raqib kirib kelishi, xomashyo qimmatlashishi.",
+      "case_study_extended": "🏢 REAL HAYOTIY BIZNES KEYSI (O'zbekistonda Elektromobillar Bozori - BYD):\nBYD kompaniyasining O'zbekiston bozoridagi PESTLE va SWOT tahlili:\n- Siyosiy/Huquqiy (P & L): O'zbekiston hukumati yashil transportga imtiyozli bojxona va soliqlarni kiritdi (Katta imkoniyat - Opportunity).\n- Iqtisodiy (E): Benzin narxining oshishi sababli odamlar elektr energiyasida yurish 10 barobar arzon ekanligini hisoblab chiqdi.\n- Texnologik (T): Shaharlarda tez zaryadlash stansiyalari (TokBor) tarmog'i tez sur'atda kengaydi.\n- Xavf (Threat): Elektr tarmog'idagi qishki uzilishlar va raqobatchilarning ko'payishi.\nSWOT matritsasi natijasida BYD Jizzaxda rasmiy zavod ochdi va bozorda 70% dan ortiq yetakchilikni qo'lga kiritdi.",
+      "formulas_detailed": [
+        "SWOT Matritsasi: 2x2 jadval (Ichki: S, W; Tashqi: O, T)",
+        "PESTLE: Makro-muhitning 6 ta ustuni",
+        "Mikro va Makro muhit farqi: Mikro bilan muloqot qilish mumkin, Makroga faqat moslashish mumkin"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: 'Inflyatsiyaning oshishi korxonaning Kuchsiz tomonimi (Weakness) yoki Xavf-xatarimi (Threat)?' Javob: THREAT (Xavf-xatar), chunki inflyatsiya tashqi makro-muhitga tegishli, ichki emas!",
+        "Tuzoq 2: 'Yetkazib beruvchilar va vositachilar' qaysi muhitga kiradi? Javob: MIKRO-muhitga!"
+      ],
+      "improvement_guide": "Ichki omillar (S, W) va Tashqi omillar (O, T) orasidagi qat'iy chegarani esda saqlang. Korxona ichidagi holat — S/W, tashqaridagi voqealar — O/T. PDF qo'llanmaning 12-15 betlarini o'qing.",
+      "pdf_ref": "Marketing Qo'llanmasi: 12 - 15 betlar",
+      "svg_type": "swotpestle",
+      "videos": [
+        {
+          "title": "How to Perform a SWOT Analysis with Examples",
+          "url": "https://www.youtube.com/results?searchquery=How+to+perform+a+SWOT+Analysis+marketing+business+examples",
+          "takeaway": "SWOT tuzishning to'g'ri amaliy qoidalari."
+        },
+        {
+          "title": "PESTLE Analysis Explained with Real Companies",
+          "url": "https://www.youtube.com/results?searchquery=PESTLE+Analysis+Explained+with+Real+Companies+marketing+environment",
+          "takeaway": "Tashqi makro-muhitning 6 omilini baholash."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title_uz": "4-Mavzu: Marketing tadqiqotlari va axborot yig'ish",
+      "title_en": "Marketing Research and Information Systems (MIS)",
+      "summary_deep": "Marketing tadqiqotlari — marketing qarorlarini qabul qilish uchun ma'lumotlarni tizimli yig'ish, tahlil qilish va hisobot tayyorlash jarayonidir.\n\n1. Axborot manbalari:\n - Ikkilamchi ma'lumotlar (Secondary Data): Allaqachon boshqa maqsadlar uchun yig'ilgan va mavjud bo'lgan ma'lumotlar (Statistika agentligi hisobotlari, ilmiy maqolalar, ichki buxgalteriya, raqobatchilar saytlari). Afzalligi: Arzon va tez topiladi. Kamchiligi: Eskirgan yoki to'liq mos kelmasligi mumkin. Oltin qoida: Har qanday tadqiqot IKKILAMCHI ma'lumotlardan boshlanadi!\n - Birlamchi ma'lumotlar (Primary Data): Aynan ushbu muammo uchun birinchi marta noldan yig'iladigan ma'lumotlar (so'rovnomalar, fokus-guruhlar, tajriba). Afzalligi: Aniq va dolzarb. Kamchiligi: Qimmat va ko'p vaqt oladi.\n\n2. Birlamchi axborot yig'ish usullari:\n - Kuzatish (Observation): Odamlarning tabiiy xatti-harakatlarini sezdirmasdan kuzatish (Supermarketda xaridor qaysi polkaga birinchi qarashini o'rganish).\n - So'rovnoma (Survey): Eng ommabop usul (anketa, telefon, onlayn).\n - Fokus-guruh (Focus Group): 6-10 kishilik maqsadli auditoriyani moderator boshchiligida tovar yoki reklama bo'yicha chuqur muhokama qildirish.\n - Eksperiment (Tajriba): Bir omilni o'zgartirib (masalan, narxni), boshqa omillarning o'zgarishini nazorat ostida o'lchash (A/B testing).",
+      "case_study_extended": "🏢 REAL HAYOTIY BIZNES KEYSI (Yangi Qahvaxona Tarmog'i):\nToshkentda yangi qahvaxona ochmoqchi bo'lgan tadbirkor:\n1. Avval Davlat statistika qo'mitasidan tuman aholisi va ularning o'rtacha daromadini ko'rdi (Ikkilamchi ma'lumot — tekin va tez).\n2. Keyin tanlangan ko'chada 3 kun turib, soatiga nechta odam o'tishini sanadi (Kuzatish usuli).\n3. 8 nafar qahvaxo'r talabani taklif qilib, yangi desert va qahva ta'mini bepul tatib ko'rishni va fikr bildirishni so'radi (Fokus-guruh).\nNatijada tadbirkor katta xatodan saqlanib qoldi: u rejalashtirgan achchiq qahva o'rniga, yoshlar shirin sutli qahvalarni yoqtirishi ma'lum bo'ldi.",
+      "formulas_detailed": [
+        "Tadqiqot bosqichlari: Muammoni aniqlash -> Reja tuzish -> Axborot yig'ish -> Tahlil -> Xulosa",
+        "Fokus-guruh optimal soni: 6 - 10 kishi",
+        "Ikkilamchi axborot afzalligi: Arzonligi va tezligi"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: 'Marketing tadqiqoti qaysi ma'lumotlarni yig'ishdan boshlanadi?' Javob: IKKILAMCHI ma'lumotlardan (arzon va mavjud bo'lgani uchun)!",
+        "Tuzoq 2: 'Sabab-oqibat bog'liqligini (masalan, narx oshsa sotuv qancha tushadi) aniqlash uchun eng yaxshi usul qaysi?' Javob: EKSPERIMENT (Tajriba)!"
+      ],
+      "improvement_guide": "Birlamchi va Ikkilamchi ma'lumotlar afzallik/kamchiliklarini hamda fokus-guruh qoidalarini takrorlang. PDF qo'llanmaning 16-19 betlarini o'qing.",
+      "pdf_ref": "Marketing Qo'llanmasi: 16 - 19 betlar",
+      "svg_type": "researchprocess",
+      "videos": [
+        {
+          "title": "Primary vs Secondary Data in Marketing Research",
+          "url": "https://www.youtube.com/results?searchquery=Primary+vs+Secondary+Data+in+Marketing+Research+differences",
+          "takeaway": "Birlamchi va ikkilamchi ma'lumotlar solishtiruvi."
+        },
+        {
+          "title": "How to Run an Effective Focus Group in Marketing",
+          "url": "https://www.youtube.com/results?searchquery=How+to+Run+an+Effective+Focus+Group+market+research",
+          "takeaway": "Fokus-guruh o'tkazish metodikasi."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title_uz": "5-Mavzu: Talabni tadqiq etish va prognozlash (8 talab holati)",
+      "title_en": "Demand Analysis and 8 States of Demand",
+      "summary_deep": "Marketingning asosiy vazifasi — shunchaki tovar sotish emas, balki talab darajasini, uning vaqtini va xarakterini boshqarishdir.\n\nFilip Kotler bo'yicha Talabning 8 ta Holati va ularga mos Marketing Vazifalari:\n1. Manfiy (Salbiy) talab (Negative Demand): Bozor tovarni yoqtirmaydi va undan qochish uchun hatto pul to'lashga tayyor (tish shifokori, emlashlar, qabriston xizmatlari).\n - Marketing vazifasi: Konversion marketing (tovarga bo'lgan salbiy munosabatni ijobiyga o'zgartirish, tushuntirish).\n2. Nol (Mavjud bo'lmagan) talab (No Demand): Iste'molchilar tovardan bexabar yoki unga mutlaqo qiziqmaydi (cho'lda qor kuragi, chet tilini bilmaydiganlarga inglizcha roman).\n - Marketing vazifasi: Rag'batlantiruvchi marketing (ehtiyojni uyg'otish).\n3. Yashirin (Potensial) talab (Latent Demand): Kuchli ehtiyoj bor, lekin uni qondiradigan tovar bozorda hali yo'q (zararsiz sigaret, 1 minutda to'ladigan smartfon batareyasi).\n - Marketing vazifasi: Rivojlantiruvchi marketing (yangi innovatsion tovar yaratish).\n4. Pasayuvchi talab (Falling Demand): Tovar o'z umrini o'tab, sotuvlar kamaymoqda (DVD disklar, qog'oz gazetalar).\n - Marketing vazifasi: Remarketing (tovarga yangi hayot berish, qayta pozitsiyalash).\n5. Noqonuniy / Noto'g'ri (Tartibsiz) talab (Irregular Demand): Talab fasllar yoki kun soatlari bo'yicha tebranadi (muzqaymoq qishda, shahar transporti tig'iz vaqtda).\n - Marketing vazifasi: Sinxromarketing (narxlar va aksiyalar orqali talabni tekislash — masalan, tushlikka chegirma).\n6. To'laqonli (Optimal) talab (Full Demand): Korxona quvvati bilan talab to'liq mos (eng ideal holat).\n - Marketing vazifasi: Qo'llab-quvvatlovchi marketing (sifatni ushlab turish, raqobatchilardan himoyalanish).\n7. Haddan tashqari yuqori talab (Overfull Demand): Korxona ishlab chiqarish quvvatidan ko'ra talab ancha yuqori (yozda mashhur kurortdagi mehmonxonalar).\n - Marketing vazifasi: Demarketing (narxni oshirish, xizmatni cheklash orqali talabni vaqtincha pasaytirish).\n8. Nosog'lom (Zararli) talab (Unwholesome Demand): Jamiyat va salomatlikka zararli tovarlarga talab (spirtli ichimliklar, tamaki, qimor).\n - Marketing vazifasi: Qarshi ta'sir ko'rsatuvchi marketing (Counter-marketing — qat'iy taqiqlash, aksil-reklama).",
+      "case_study_extended": "🏢 REAL HAYOTIY BIZNES KEYSI (Chortoq Mineral Suvi va Sinxromarketing):\nMuzqaymoq va salqin ichimliklar ishlab chiqaruvchi kompaniyada yozda talab to'lib-toshib ketadi, lekin qishda sotuvlar 80% ga tushib ketadi (Tartibsiz talab - Irregular demand).\nKompaniya Sinxromarketing strategiyasini qo'lladi:\n- Qish faslida qahvaxonalar va restoranlar bilan maxsus issiq ichimliklar yoki qishki aksiyalar shartnomalarini tuzdi.\n- Narxlarni qishda arzonlashtirib, 'Qishda ham immunitetni mustahkamlang' shiori ostida vitaminli ichimliklar qatorini yo'lga qo'ydi.\nNatijada korxona zavodi qishda ham to'xtab qolmasdan, bir tekis ishlab, zarar ko'rishdan saqlanib qoldi.",
+      "formulas_detailed": [
+        "Manfiy talab -> Konversion marketing",
+        "Yashirin talab -> Rivojlantiruvchi marketing",
+        "Haddan tashqari talab -> Demarketing (narxni oshirib talabni tushirish)",
+        "Tartibsiz talab -> Sinxromarketing (tebranishlarni tekislash)"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: 'Demarketing bu tovar ishlab chiqarishni butunlay to'xtatishmi?' YO'Q! Demarketing — talab korxona quvvatidan oshib ketganda, narxni oshirish orqali talabni me'yoriga tushirishdir!",
+        "Tuzoq 2: 'Tish shifokoriga bo'lgan talab qaysi turga kiradi?' Javob: MANFIY (Salbiy) talab, chunki odamlar og'riqdan qo'rqib bormaslikka harakat qiladi!"
+      ],
+      "improvement_guide": "8 ta talab holatini va ularga mos marketing turlarini (ayniqsa Demarketing, Sinxromarketing, Konversion) yodlang. PDF qo'llanmaning 20-23 betlarini o'qing.",
+      "pdf_ref": "Marketing Qo'llanmasi: 20 - 23 betlar",
+      "svg_type": "demandstates",
+      "videos": [
+        {
+          "title": "8 States of Demand in Marketing (Philip Kotler)",
+          "url": "https://www.youtube.com/results?searchquery=8+States+of+Demand+in+Marketing+Philip+Kotler+examples",
+          "takeaway": "Talabning 8 holati va mos marketing strategiyalari."
+        },
+        {
+          "title": "Demarketing and Synchromarketing Explained",
+          "url": "https://www.youtube.com/results?searchquery=What+is+Demarketing+and+Synchromarketing+marketing+management",
+          "takeaway": "Talabni tekislash va boshqarish usullari."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title_uz": "6-Mavzu: Iste'molchilar xulq-atvori va xarid qarori",
+      "title_en": "Consumer Behavior and Buying Decision Process",
+      "summary_deep": "Iste'molchi xulq-atvori — insonlarning o'z ehtiyojlarini qondirish uchun tovarlarni tanlash, sotib olish, ishlatish va ulardan qutulish jarayonidir.\n\n1. Iste'molchiga ta'sir etuvchi 4 ta asosiy omillar guruhi:\n - Madaniy omillar: Asosiy madaniyat, submadaniyat (yoshlar, din, hudud), ijtimoiy tabaqa.\n - Ijtimoiy omillar: Referent guruhlar (inson havas qiladigan va fikriga quloq soladigan guruhlar), oila (eng kuchli birlamchi guruh), rollar va status.\n - Shaxsiy omillar: Yoshi, hayotiy sikl bosqichi, kasbi, iqtisodiy holati, turmush tarzi (lifestyle), shaxsiyati.\n - Psixologik omillar: Motivatsiya (ehtiyoj kuchi), Idrok (Perception), O'rganish (tajriba), E'tiqod va munosabatlar.\n\n2. Maslouning Ehtiyojlar Ierarxiyasi Piramidasi (Quyi bosqich qondirilmaguncha, yuqorisi ishlamaydi):\n - 1-bosqich: Fiziologik ehtiyojlar (ovqat, suv, uyqu).\n - 2-bosqich: Xavfsizlik ehtiyoji (sog'liq, ish barqarorligi, xavfsiz mahalla).\n - 3-bosqich: Ijtimoiy ehtiyojlar (sevgi, do'stlik, jamoaga tegishlilik hissi).\n - 4-bosqich: Hurmat va e'tirof ehtiyoji (mavqe, status, yutuqlar, obro').\n - 5-bosqich: O'z-o'zini namoyon qilish (Self-actualization — o'z salohiyatini 100% yuzaga chiqarish, ijod).\n\n3. Xarid qarori qabul qilishning 5 bosqichi:\n - 1. Muammoni / Ehtiyojni anglash.\n - 2. Axborot qidirish (shaxsiy, tijoriy, ommaviy manbalar).\n - 3. Variantlarni baholash.\n - 4. Xarid to'g'risida qaror qabul qilish.\n - 5. Xariddan keyingi xatti-harakat (Kognitiv dissonans — 'To'g'ri qildimmi yoki adashdimmi?' degan shubha).\n\n4. B2B va B2C farqlari:\n - B2C (Iste'molchi bozori): Xaridorlar ko'p, xarid hajmi kichik, hissiyotga asoslangan, qaror tez qabul qilinadi.\n - B2B (Tashkiliy bozor): Xaridorlar soni kam, ammo xarid hajmi juda katta, qarorlar professional mutaxassislar (xarid komissiyasi) tomonidan ratsional va shartnoma asosida qabul qilinadi. Talab ikkilamchi (Hosila talab - Derived demand) bo'ladi.",
+      "case_study_extended": "🏢 REAL HAYOTIY BIZNES KEYSI (Kognitiv Dissonans va Avtosalon Strategiyasi):\nXaridor o'zining barcha yig'gan puliga 30,000 dollarga yangi avtomobil sotib oldi.\nUyga qaytgach, unda 'Kognitiv dissonans' (ichki ikkilanish va shubha) boshlanadi: 'Balki boshqa model olsam bo'larmidi? Narxi tushib ketmaydimi? Shoshildimmi?'\nAqlli avtosalon buni oldindan biladi:\nErtasi kuni menejer qo'ng'iroq qilib: 'Tabriklaymiz! Siz butun viloyatdagi eng to'g'ri va xavfsiz tanlovni qildingiz, ushbu model eng tejamkor deb topildi' deb aytadi va bepul sovg'a beradi.\nNatijada xaridorning kognitiv dissonansi yo'qoladi va u brendning doimiy himoyachisiga aylanadi!",
+      "formulas_detailed": [
+        "Maslou Piramidasi: Fiziologik -> Xavfsizlik -> Ijtimoiy -> Hurmat -> O'zini namoyon qilish",
+        "Xarid zanjiri: Muammo -> Qidiruv -> Baholash -> Xarid -> Xariddan keyin",
+        "Hosila talab (B2B): Korxonalarning xarid hajmi oddiy iste'molchilar talabiga bog'liq (Masalan, poyabzalga talab tushsa, teriga talab tushadi)"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: 'Idrok (Perception) nima?' Javob: Insonning tashqi axborotni qabul qilish, saralash va ma'no berish jarayoni! (Motivatsiya bilan adashtirmang!)",
+        "Tuzoq 2: 'B2B bozoridagi talab qanday xarakterga ega?' Javob: HOSILA (Derived) talab, ya'ni yakuniy iste'molchilar talabidan kelib chiqadi!"
+      ],
+      "improvement_guide": "Maslou piramidasining 5 ta bosqichini va xarid qarori qabul qilishning 5 ta qadamini ketma-ketlikda yodlang. PDF qo'llanmaning 24-27 betlarini o'qing.",
+      "pdf_ref": "Marketing Qo'llanmasi: 24 - 27 betlar",
+      "svg_type": "maslowpyramid",
+      "videos": [
+        {
+          "title": "Maslow's Hierarchy of Needs in Marketing",
+          "url": "https://www.youtube.com/results?searchquery=Maslow+Hierarchy+of+Needs+in+Marketing+consumer+behavior",
+          "takeaway": "Maslou piramidasi mijozlarni qanday harakatga keltiradi."
+        },
+        {
+          "title": "Consumer Buying Decision Process (5 Stages)",
+          "url": "https://www.youtube.com/results?searchquery=Consumer+Buying+Decision+Process+5+stages+marketing",
+          "takeaway": "Xarid qarorining 5 bosqichi va kognitiv dissonans."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title_uz": "7-Mavzu: Maqsadli bozorni tanlash va STP strategiyasi",
+      "title_en": "STP Strategy: Segmentation, Targeting, and Positioning",
+      "summary_deep": "STP — zamonaviy marketingning yuragi va 'oltin uchligi'dir. Barcha uchun bir xil tovar ishlab chiqaradigan davr o'tdi.\n\n1. S - Segmentatsiyalash (Segmentation):\n Yaxlit katta bozorni ehtiyojlari va xulq-atvori o'xshash bo'lgan alohida guruhlarga (segmentlarga) ajratish.\n Asosiy mezonlar:\n - Geografik: Davlat, viloyat, shahar, iqlim.\n - Demografik (Eng ko'p qo'llanuvchi): Yoshi, jinsi, daromadi, oila hajmi, kasbi.\n - Psixografik: Ijtimoiy sinf, turmush tarzi (lifestyle), qadriyatlari.\n - Xulq-atvor (Behavioral - Eng samarali): Xarid sababi, tovardan foydalanish chastotasi, brendga sodiqlik darajasi, kutilayotgan naf.\n\n2. T - Maqsadli bozorni tanlash (Targeting):\n Segmentlar ichidan korxona o'z resurslari bilan eng yuqori foyda ko'ra oladiganini tanlash.\n Strategiyalar:\n - Differensiallanmagan (Ommaviy) marketing: Butun bozorga bitta taklif (tuz, shakar).\n - Differensiallangan marketing: Bir nechta segmentga alohida-alohida maxsulot (Toyota: arzon Yaris, oilaviy Camry, hashamatli Lexus).\n - Kontsentratsiyalangan (Nisha) marketing: Bitta tor segmentga bor kuchni qaratish (Rolex, Ferrari).\n - Mikromarketing: Aniq bitta shaxs yoki hududga moslashtirish (individual buyurtma).\n\n3. P - Pozitsiyalash (Positioning):\n Mijoz ongida tovarning raqobatchilarga nisbatan egallagan aniq, ajralib turuvchi va jozibador o'rni.\n - Pozitsiyalash xaritasi (Perceptual Map): Odatda 'Narx' va 'Sifat' o'qlari bo'yicha tuziladi.\n - Pozitsiyalash shiorlari: Volvo = Xavfsizlik, BMW = Haydash zavqi, Apple = Innovatsiya va nufuz.",
+      "case_study_extended": "🏢 REAL HAYOTIY BIZNES KEYSI (Coca-Cola Kompaniyasining STP Strategiyasi):\nCoca-Cola kompaniyasi bozorni qanday segmentlaydi va nishonga oladi?\n- Oddiy Coca-Cola (Qizil): An'anaviy ta'mni yaxshi ko'radigan keng omma uchun (Ommaviy marketing).\n- Coca-Cola Zero / Diet: Qandli diabeti bor yoki vazn tashlamoqchi bo'lgan, sog'lom turmush tarziga rioya qiluvchi insonlar uchun (Demografik va Xulq-atvor segmentatsiyasi).\n- Coca-Cola Energy: Yoshlar, talabalar va tungi hayot vakillari uchun (Psixografik segmentatsiya).\nNatijada bitta kompaniya turli maqsadli guruhlarni (Targeting) to'liq qamrab oladi va har birining ongida o'z o'rnini (Positioning) mustahkamlaydi.",
+      "formulas_detailed": [
+        "STP Ketma-ketligi: 1. Segmentation (Ajratish) -> 2. Targeting (Tanlash) -> 3. Positioning (Ongda o'rin egallash)",
+        "Segment talablari: O'lchanadigan, Yetarli darajada katta, Erishib bo'ladigan, Farqlanadigan",
+        "Pozitsiyalash formulasi: Biz [Maqsadli guruh] uchun [Raqobatchilardan farqli ustunlik]ni beruvchi [Brend]miz"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: 'Bozor segmentatsiyasida eng ko'p ishlatiladigan mezon qaysi?' Javob: DEMOGRAFIK mezon (chunki uni o'lchash va statistikani topish eng oson)!",
+        "Tuzoq 2: 'Pozitsiyalash qayerda amalga oshiriladi?' Javob: ISTE'MOLCHINING ONGINDA (Mind of consumer)!"
+      ],
+      "improvement_guide": "STP ketma-ketligini va 4 ta segmentatsiya mezonini (Geo, Demo, Psixo, Xulq) takrorlang. PDF qo'llanmaning 28-31 betlarini o'qing.",
+      "pdf_ref": "Marketing Qo'llanmasi: 28 - 31 betlar",
+      "svg_type": "stpfunnel",
+      "videos": [
+        {
+          "title": "STP Marketing Strategy (Segmentation, Targeting, Positioning)",
+          "url": "https://www.youtube.com/results?searchquery=STP+Marketing+Strategy+Segmentation+Targeting+Positioning+explained",
+          "takeaway": "STP strategiyasining 3 bosqichi."
+        },
+        {
+          "title": "Perceptual Mapping and Brand Positioning",
+          "url": "https://www.youtube.com/results?searchquery=Perceptual+Mapping+and+Brand+Positioning+perceptual+map",
+          "takeaway": "Pozitsiyalash xaritasini chizish."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title_uz": "8-Mavzu: Tovar va tovar siyosati (3 sath, PLC, Yangi tovar)",
+      "title_en": "Product Strategy, 3 Levels of Product, and PLC",
+      "summary_deep": "Tovar — ehtiyojni qondirish maqsadida bozorga taklif qilinadigan har qanday moddiy yoki nomoddiy narsadir.\n\n1. Tovarning 3 Sathi (Filip Kotler modeli):\n - 1. Asosiy naf (Core Benefit): Mijoz aslida nimani sotib olmoqda? (Masalan, drel sotib olgan odamga drel emas, devordagi 10 mm li teshik kerak; mehmonxonadan xona olgan odamga tunab qolish va dam olish kerak).\n - 2. Haqiqiy tovar (Actual Product): Asosiy nafni o'rab turuvchi moddiy xususiyatlar: sifat, dizayn, funksiyalar, brend nomi, qadoqlash.\n - 3. Kengaytirilgan (Qo'shimcha) tovar (Augmented Product): Sotishdan keyingi xizmat, yetkazib berish, bepul o'rnatish, kafolat, kredit shartlari.\n\n2. Mahsulotning Hayotiy Sikli (Product Life Cycle - PLC):\n - 1-bosqich: Kiritish (Introduction): Sotuvlar past, ishlab chiqarish va reklama xarajatlari yuqori, foyda MANFIY yoki nolga teng. Maqsad: Tovarni tanishtirish.\n - 2-bosqich: O'sish (Growth): Sotuvlar jadal o'sadi, xarajatlar tushadi, foyda tez ko'payadi, yangi raqobatchilar kirib keladi. Maqsad: Bozor ulushini maksimal egallash.\n - 3-bosqich: Yetuklik (Maturity - Eng uzun bosqich): Sotuvlar cho'qqiga chiqadi va sekinlashadi, bozor to'yingan, raqobat o'ta shafqatsiz (narx urushlari). Foyda asta pasayishni boshlaydi. Maqsad: Himoyalanish, tovarni modifikatsiya qilish.\n - 4-bosqich: Inqiroz / Pasayish (Decline): Sotuvlar va foyda keskin tushadi (texnologik eskirish). Maqsad: Xarajatlarni qisqartirish yoki tovarni bozordan chiqarish.\n\n3. Yangi tovarni o'zlashtirish toifalari (Everett Rogers):\n - Innovatorlar (2.5%) -> Ilg'orlar (13.5%) -> Erta ko'pchilik (34%) -> Kechikuvchi ko'pchilik (34%) -> Konservatorlar/Qoloqlar (16%).",
+      "case_study_extended": "🏢 REAL HAYOTIY BIZNES KEYSI (Smartfonlar Bozori va PLC):\nDunyo smartfonlar bozori hozirda YETUKLIK (Maturity) bosqichida:\n- Har yili yangi chiqqan smartfonlar bir-biridan deyarli farq qilmaydi (kamera piksellari bir xil, korpus bir xil).\n- Sotuvlar o'sishi to'xtagan, chunki deyarli hamma odamda smartfon bor.\nKompaniyalar nima qilmoqda?\n1. Tovarni kengaytirish (Augmented): Apple endi asosiy daromadni faqat telefondan emas, iCloud, Apple Music va Apple Pay orqali topmoqda.\n2. Yangi PLC boshlash: Buklanuvchi ekranlar (Galaxy Fold) yoki Sun'iy intellekt (Apple Intelligence) orqali yangi o'sish to'lqinini yaratishga harakat qilinmoqda.",
+      "formulas_detailed": [
+        "Tovar sathlari: Asosiy naf -> Haqiqiy tovar -> Kengaytirilgan tovar",
+        "PLC 4 bosqichi: Kiritish -> O'sish -> Yetuklik -> Inqiroz",
+        "Foyda qachon manfiy? Kiritish (Introduction) bosqichida!"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: 'Mahsulot hayotiy siklining qaysi bosqichida korxona sof foydasi eng yuqori bo'ladi?' Javob: O'SISH (Growth) bosqichining oxiri va YETUKLIK boshida! Yetuklikning oxirida esa raqobat sababli foyda tusha boshlaydi!",
+        "Tuzoq 2: 'Drel sotib olgan odam uchun asosiy naf nima?' Asosiy naf — devordagi teshikdir, drelning motori yoki rangi esa haqiqiy tovarga kiradi!"
+      ],
+      "improvement_guide": "Tovarning 3 ta sathi va PLC ning 4 bosqichidagi sotuvlar/foyda xatti-harakatini yodda saqlang. PDF qo'llanmaning 32-34 betlarini o'qing.",
+      "pdf_ref": "Marketing Qo'llanmasi: 32 - 34 betlar",
+      "svg_type": "plccurve",
+      "videos": [
+        {
+          "title": "Product Life Cycle (PLC) Stages and Strategies",
+          "url": "https://www.youtube.com/results?searchquery=Product+Life+Cycle+PLC+Stages+and+Strategies+marketing",
+          "takeaway": "PLC ning har bir bosqichidagi marketing strategiyalari."
+        },
+        {
+          "title": "Three Levels of Product by Philip Kotler",
+          "url": "https://www.youtube.com/results?searchquery=Three+Levels+of+Product+by+Philip+Kotler+core+actual+augmented",
+          "takeaway": "Asosiy naf, haqiqiy tovar va kengaytirilgan tovar."
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title_uz": "9-Mavzu: Marketingda narx va narx siyosati (Ashurboyev F.A. ma'ruzasi asosida)",
+      "title_en": "Topic 9: Pricing and Pricing Policy in Marketing (Cyber University 2026)",
+      "summary_deep": "📚 MA'RUZA ASOSIY KONSEPSIYASI (Cyber University, Ijtimoiy fanlar kafedrasi, Ma'ruzachi: Ashurboyev F.A., Toshkent, 2026):\n\n1. NARX TUSHUNCHASI VA MARKETING-MIKS KOMPLEKSIDAGI O'RNI:\n - Narx — tovar, buyum va xizmatlar qiymatining puldagi ifodasi hamda tovar nafliligi tan olinganda uning qiymatining bozorda namoyon bo'lish shaklidir.\n - Muhim xususiyat: Narx marketing miksining (4P) boshqa unsurlaridan faqat DAROMAD keltirishi bilan farqlanadi! (Mahsulot, taqsimot va reklama esa xarajat keltiruvchi omillardir).\n - Qiymat — xaridorning mahsulotdan ko'rgan foydasi, foydalanish darajasi.\n\n2. NARXNING 7 TA ASOSIY VAZIFASI (Slayd 8):\n 1) Qiymatni hisobga olish — sarflangan mehnat va resurslarni o'lchaydi.\n 2) Hisob-kitob — daromad, xarajat va sof foydani aniqlash imkonini beradi.\n 3) Muvozanatlash — talab va taklifni bozor nuqtasida tenglashtiradi.\n 4) Tartibga solish — ishlab chiqarish va iste'moldagi o'zgarishlardan xabar beradi.\n 5) Taqsimlash — daromadlar va ishlab chiqarish omillarini tarmoqlararo taqsimlaydi.\n 6) Raqobat vositasi — xaridorlar e'tiborini qozonish uchun qo'llaniladi.\n 7) Ijtimoiy himoya — davlat aholining kam ta'minlangan qatlami uchun ijtimoiy muhim tovarlar narxini tartibga soladi.\n\n3. NETTO, BRUTTO VA FRANKO NARXLAR HAMDA INCOTERMS 2020 (Slayd 10-12):\n - Netto narx: Tovarning hech qanday qo'shimcha shartlarsiz 'sof' narxi.\n - Brutto narx: Yalpi narx: soliqlar, chegirmalar, franko turi va sug'urta hisobga olingan narx.\n - Franko narx: Transport xarajatlari kimning zimmasida ekaniga qarab belgilanadi (masalan, franko-sotuvchi ombori narxida xaridor yuklash, tashish va tushirishni o'z hisobidan bajaradi).\n - Incoterms 2020 4 ta guruhga bo'linadi:\n * E guruhi (EXW - Ex Works): Franko-zavod, sotuvchi o'z korxonasida topshiradi.\n * F guruhi (FCA, FAS, FOB): Asosiy tashish to'lanmagan. FOB (Free On Board) — yuklash portida kema bortida topshiriladi.\n * C guruhi (CPT, CIP, CFR, CIF): Asosiy tashish sotuvchi tomonidan to'lanadi. CIF (Cost, Insurance and Freight) — tovar qiymati, sug'urta va dengiz fraxti sotuvchi zimmasida.\n * D guruhi (DAP, DPU, DDP): To'liq yetkazib berish. DDP (Delivered Duty Paid) — bojxona bojlari to'langan holda xaridor manziliga yetkazib beriladi.\n\n4. NARX SIYOSATINING 'MAGIYA UCHBURCHAGI' (Slayd 15):\n - Korxona xarajatlari: Narxning QUYI chegarasi (Price floor) — tannarxdan past narx zararga olib keladi.\n - Iste'molchilar baholari: Narxning YUQORI chegarasi (Price ceiling) — mijoz idrok qilgan qiymatdan yuqori narxda talab nolga teng bo'ladi.\n - Raqobatchilar narxlari: Narxni belgilashdagi MO'LJAL (Benchmark).\n\n5. ZARARSIZLIK TAHLILI VA AMALIY MISOL (Slayd 16):\n - Formula: Q = Doimiy xarajatlar / (Narx - Birlik o'zgaruvchan xarajat)\n - Misol: FC = 20 000 000 so'm, P = 100 000 so'm, AVC = 60 000 so'm bo'lsa:\n Q = 20 000 000 / (100 000 - 60 000) = 20 000 000 / 40 000 = 500 dona!\n\n6. YANGI TOVARLAR UCHUN NARX STRATEGIYALARI (Slayd 26):\n - 'Qaymog'ini olish' (Market Skimming): Boshlang'ich narx o'ta yuqori, keyin asta-sekin pasaytiriladi (Apple iPhone). Tovar yangi, raqobatchi kam, xaridor to'lashga tayyor.\n - 'Bozorga kirib borish' (Market Penetration): Boshlang'ich narx o'ta past, bozor ulushi egallangach saqlanadi yoki oshiriladi (Xiaomi, Red Bull).\n - Neytral narx: Raqobatchilar darajasida narx belgilash.\n\n7. NARX STRATEGIYASINI ISHLAB CHIQISHNING 5 TA BOSQICHI (Slayd 27):\n 1-bosqich: Narx belgilash maqsadlarini shakllantirish.\n 2-bosqich: Narx belgilashning umumiy siyosati.\n 3-bosqich: Narx belgilash strategiyasining o'zi.\n 4-bosqich: Strategiyani amalga oshirish.\n 5-bosqich: Narxlarni moslashtirish.",
+      "case_study_extended": "🏢 REAL HAYOTIY BIZNES KEYSI 1 (Ma'ruzadagi Zararsizlik Nuqtasi Hisob-kitobi):\nToshkentdagi mebel ishlab chiqaruvchi korxona yangi ergonomik ofis stullarini ishlab chiqarmoqchi.\n- Doimiy xarajatlar (sex ijarasi, ma'muriyat maoshi, asbob-uskuna amortizatsiyasi): 20 000 000 so'm/oy.\n- Bitta stul uchun o'zgaruvchan xarajat (yog'och, g'ildirak, mato, usta ish haqi): 60 000 so'm.\n- Bozorga taklif etilayotgan sotish narxi: 100 000 so'm.\nSavol: Korxona bankrot bo'lmasligi va foyda ko'ra boshlashi uchun oyiga eng kamida necha dona stul sotishi shart?\nYechim: Q = FC / (P - AVC) = 20 000 000 / (100 000 - 60 000) = 500 dona!\nXulosa: Agar korxona 499 dona sotsa — zarar ko'radi, 500 dona sotsa — zararsizlik nuqtasida bo'ladi (foyda 0), 501-donadan boshlab har bir stul korxonaga sof 40 000 so'm sof marjinal foyda keltiradi!\n\n🏢 REAL HAYOTIY BIZNES KEYSI 2 (FOB va CIF Farqi bo'yicha Eksport Keysi):\nO'zbekistonlik to'qimachilik korxonasi Germaniyaga 10 000 dona paxtali futbolka eksport qilmoqda.\n- FOB shartida: Korxona mahsulotni Poti portida kema bortiga ortib berishi bilan barcha javobgarlik nemis xaridoriga o'tadi.\n- CIF shartida: Korxona nafaqat kema bortiga ortadi, balki Gamburg portigacha bo'lgan dengiz fraxti va xalqaro dengiz sug'urtasini ham o'z hisobidan to'laydi va bu xarajatlarni tovar narxiga kiritadi.",
+      "formulas_detailed": [
+        "Zararsizlik nuqtasi (Break-even): Q = FC / (P - AVC) [Doimiy xarajat / (Narx - O'zgaruvchan xarajat)]",
+        "Ma'ruzadagi sonli misol: Q = 20 000 000 / (100 000 - 60 000) = 500 dona",
+        "Talabning narx elastikligi: Ed = (%ΔQ) / (%ΔP) = [(Q2 - Q1) / Q1] / [(P2 - P1) / P1]",
+        "Agar |Ed| > 1: Narx tushsa -> Jami tushum (TR) ORTADI",
+        "Agar |Ed| < 1: Narx oshsa -> Jami tushum (TR) ORTADI",
+        "Incoterms formulasi: CIF = FOB + Dengiz fraxti (tashish) + Dengiz sug'urtasi"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: 'Marketing-miksning (4P) qaysi elementi korxonaga daromad keltiradi?' Javob: FAQAT NARX (PRICE)! Qolgan barcha 3 ta element (Product, Place, Promotion) korxona uchun xarajat hisoblanadi.",
+        "Tuzoq 2: 'Magiya uchburchagida narxning quyi chegarasini nima belgilaydi?' Javob: Korxona xarajatlari (tannarx). Yuqori chegarani esa iste'molchilarning tovar nafliligini idrok etishi belgilaydi.",
+        "Tuzoq 3: 'FOB va CIF o'rtasidagi asosiy farq nimada?' Javob: CIF narxiga dengiz orqali tashish (fraxt) va tovar sug'urtasi xarajatlari qo'shilgan bo'ladi, FOB da esa bu xarajatlarni xaridor o'zi to'laydi.",
+        "Tuzoq 4: 'Franko narx nima?' Javob: Yetkazib berish va transport xarajatlari kimning zimmasida ekaniga qarab belgilanadigan narx turi.",
+        "Tuzoq 5: 'Qaymoqni yig'ib olish (Skimming) strategiyasi qachon qo'llaniladi?' Javob: Tovar mutlaqo yangi, nufuzli, innovatsion bo'lganda va raqobatchilar bozorda hali mavjud bo'lmaganda."
+      ],
+      "improvement_guide": "Slaydlardagi 'Magiya uchburchagi' (15-slayd), Incoterms 2020 jadvali (12-slayd) va 500 donalik zararsizlik hisob-kitobini (16-slayd) mukammal o'zlashtiring.",
+      "pdf_ref": "Cyber University, 'Marketingda narx va narx siyosati' PPTX (Ashurboyev F.A.), 28 ta slayd",
+      "svg_type": "priceelasticity",
+      "videos": [
+        {
+          "title": "Price Elasticity of Demand Clearly Explained",
+          "url": "https://www.youtube.com/results?searchquery=Price+Elasticity+of+Demand+clearly+explained+economics+marketing",
+          "takeaway": "Elastiklik formulasi va umumiy daromadga ta'siri."
+        },
+        {
+          "title": "Price Skimming vs Penetration Pricing Strategy",
+          "url": "https://www.youtube.com/results?searchquery=Price+Skimming+vs+Penetration+Pricing+Strategy+marketing",
+          "takeaway": "Yangi tovarlar uchun narx strategiyalarini tanlash."
+        }
+      ]
+    }
+  ],
+  "buxgalteriya": [
+    {
+      "id": 1,
+      "title_uz": "1-Mavzu: Buxgalteriya hisobining predmeti, balansi va ikkiyoqlama yozuv",
+      "title_en": "Accounting Subject, Balance Sheet Equation & Double Entry",
+      "summary_deep": "Buxgalteriya hisobi korxonaning barcha xo'jalik mablag'lari (Aktivlar) va ularning tashkil topish manbalarini (Majburiyatlar va Xususiy kapital) uzluksiz, hujjatlashtirilgan holda pul ifodasida aks ettirish tizimidir. Asosiy buxgalteriya balansi tenglamasi: Aktivlar = Majburiyatlar + Xususiy kapital. Har bir xo'jalik operatsiyasi ikkiyoqlama yozuv (Double-Entry Bookkeeping) usuli orqali bir hisobvaraqning debeti va ikkinchi hisobvaraqning kreditida bir xil summada qayd etiladi.",
+      "case_study_extended": "🏢 REAL BIZNES KEYSI (Kompaniyaga bank orqali pul kirishi):\nKorxona ta'sischisi korxona hisob raqamiga ustav kapitalini to'ldirish uchun 100 000 000 so'm naqd pulsiz o'tkazdi. Natijada korxona aktividagi hisob-kitob hisobvarag'i (5110) 100 mln ga ko'paydi (Debet 5110). Shu bilan birga, korxonaning ta'sischilar oldidagi ustav kapitali (8330) 100 mln ga oshdi (Kredit 8330). Ikkala tomon ham 100 mln so'mga teng oshgani sababli balans tengligi (Aktiv = Majburiyat + Kapital) to'liq saqlanib qoldi.",
+      "formulas_detailed": [
+        "Asosiy Balans Tenglamasi: Aktivlar = Majburiyatlar + Xususiy Kapital",
+        "Aktiv hisobvaraqlar qoidasi: Debetda ko'payish (+), Kreditda kamayish (-)",
+        "Passiv hisobvaraqlar qoidasi: Kreditda ko'payish (+), Debetda kamayish (-)",
+        "Aktiv hisobvaraqning oxirgi qoldig'i: Sk = Sb + Daylanma - Kaylanma",
+        "Passiv hisobvaraqning oxirgi qoldig'i: Sk = Sb + Kaylanma - Daylanma"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: Buxgalteriya qoidalarida 'Debet' har doim ham daromad yoki plyus emas! Passiv schyotlarda (masalan, bank qarzi yoki ustav kapitali) Debet kamayishni bildiradi!",
+        "Tuzoq 2: Kontr-aktiv schyotlar (masalan, 0200 - Asosiy vositalar eskirishi): Aktivda turadi, lekin passiv schyot kabi ishlaydi (kreditida ko'payadi, balansda aktivdan minus qilib ko'rsatiladi)!"
+      ],
+      "improvement_guide": "Agar ushbu mavzudan xato qilsangiz, schyotlar rejasidagi 0100-5900 gacha aktiv, 6000-8900 gacha passiv schyotlar ekanini va ularning debet-kredit qoidasini sxema chizib takrorlang.",
+      "pdf_ref": "Buxgalteriya Hisobi Qo'llanmasi: 3 - 12 betlar",
+      "svg_type": "accountingequation",
+      "videos": [
+        {
+          "title": "Buxgalteriya darslari: Ikkiyoqlama yozuv va schyotlar",
+          "url": "https://www.youtube.com/results?searchquery=buxgalteriya+hisobi+ikkiyoqlama+yozuv+debet+kredit",
+          "takeaway": "Debet va Kredit tushunchasi hamda korxona balansi tuzilishi."
+        },
+        {
+          "title": "Accounting 101: The Accounting Equation and Double Entry",
+          "url": "https://www.youtube.com/results?searchquery=accounting+equation+assets+liabilities+equity+double+entry",
+          "takeaway": "Assets = Liabilities + Equity fundamental balancing mechanics."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title_uz": "2-Mavzu: Birlamchi hujjatlar, inventarizatsiya va hisobot davri",
+      "title_en": "Source Documents, Inventory Audit & Accounting Period",
+      "summary_deep": "Buxgalteriyaning qat'iy qoidasi: 'Hujjatsiz hech qanday yozuv qilinmaydi!'. Har bir xo'jalik muomalasi yuz bergan paytida birlamchi hisob hujjati (invoys, schyot-faktura, yuk xati, kassa kiritim/chiqim orderi) bilan rasmiylashtirilishi shart. Inventarizatsiya — bu buxgalteriya hisobidagi qog'ozdagi raqamlar bilan korxonadagi amaldagi moddiy boyliklarni (tovar, pul, uskuna) sanab chiqish orqali taqqoslash va kamomad yoki ortiqchalikni aniqlash usulidir.",
+      "case_study_extended": "🏢 REAL BIZNES KEYSI (Ombordagi inventarizatsiya natijasi):\nYil oxirida 'Grand Market' omborida inventarizatsiya o'tkazildi. Buxgalteriya daftarida 500 dona yog' (qiymati 10 000 000 so'm) bo'lishi kerak edi. Sanab ko'rilganda 490 dona chiqdi (10 dona kamomad - 200 000 so'm). Tekshirish natijasida bu ombor mudirining e'tiborsizligi tufayli yuz bergani aniqlandi. Kamomad summasi moddiy javobgar shaxs (omborchi) hisobiga yozildi: Debet 4730 (Xodimlarning moddiy zararni qoplash bo'yicha qarzi) - Kredit 2910 (Tovarlar) 200 000 so'm.",
+      "formulas_detailed": [
+        "Haqiqiy qoldiq - Kitobiy qoldiq = Farq (Musbat bo'lsa ortiqchalik, manfiy bo'lsa kamomad)",
+        "Ortiqchalik kirim qilinganda: Debet 2910, Kredit 9390 (Boshqa operatsion daromadlar)",
+        "Kamomad aybdordan undirilganda: Debet 4730, Kredit 2910",
+        "Kamomad aybdori topilmaganda zararga hisobdan chiqarish: Debet 9430, Kredit 2910"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: Birlamchi hujjatlarda o'chirib yozish yoki tuzatish vositasidan (shtrix) foydalanish mutlaqo taqiqlanadi! Xato bo'lsa ustidan bitta chizilib to'g'risi yoziladi va imzo qo'yiladi.",
+        "Tuzoq 2: Inventarizatsiya paytida topilgan ortiqcha tovarlar darhol korxona daromadiga (9390 schyotga) kirim qilinishi shart!"
+      ],
+      "improvement_guide": "Elektron schyot-faktura (soliq.uz) va kassa orderlarining majburiy rekvizitlarini (sana, imzo, raqam, summa) takrorlang.",
+      "pdf_ref": "Buxgalteriya Hisobi Qo'llanmasi: 13 - 22 betlar",
+      "svg_type": "sourcedocuments",
+      "videos": [
+        {
+          "title": "Buxgalteriya birlamchi hujjatlari va inventarizatsiya",
+          "url": "https://www.youtube.com/results?searchquery=buxgalteriya+birlamchi+hujjatlar+inventarizatsiya+qoidalari",
+          "takeaway": "Schyot-faktura, yuk xatlari va kamomadlarni hisobga olish."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title_uz": "3-Mavzu: Asosiy vositalar hisobi va amortizatsiya usullari",
+      "title_en": "Fixed Assets Accounting & Depreciation Methods",
+      "summary_deep": "Asosiy vositalar (AV) — xizmat muddati 1 yildan ortiq va qiymati bazaviy hisoblash miqdorining (BHM) 50 barobaridan yuqori bo'lgan uzoq muddatli moddiy aktivlar (binolar, stanoklar, avtomashinalar, kompyuterlar). AV lar foydalanish jarayonida eskiradi. Bu eskirish qiymatining mahsulot tannarxi yoki xarajatlarga bosqichma-bosqich o'tkazilishi Amortizatsiya deyiladi. 5-son BHMS ga ko'ra 4 ta asosiy usul qo'llaniladi: 1) Chiziqli usul; 2) Kamayuvchi qoldiq usuli; 3) Yillar soni yig'indisi (kumulyativ); 4) Ishlab chiqarish hajmiga mutanosib usul.",
+      "case_study_extended": "🏢 REAL BIZNES KEYSI (Chiziqli amortizatsiya hisobi):\nKorxona 120 000 000 so'mga yangi dastgoh sotib oldi. Uning foydali xizmat muddati 5 yil (60 oy), tugash qiymati nol deb belgilandi. Chiziqli usul bo'yicha yillik amortizatsiya: 120 mln / 5 = 24 000 000 so'm. Oylik amortizatsiya: 24 mln / 12 = 2 000 000 so'm. Har oy oxirida quyidagi buxgalteriya provodkasi beriladi: Debet 2010 (Asosiy ishlab chiqarish) - Kredit 0230 (Mashina va uskunalarning eskirishi) 2 000 000 so'm.",
+      "formulas_detailed": [
+        "Boshlang'ich qiymat = Sotib olish narxi + Yetkazib berish + O'rnatish/sozlash xarajatlari",
+        "Chiziqli oylik amortizatsiya: Aoy = (Boshlang'ich qiymat - Tugatish qiymati) / (Foydali xizmat oylari)",
+        "Qoldiq (balans) qiymat = Boshlang'ich qiymat - To'plangan eskirish (0100 - 0200)",
+        "Ishlab chiqarish usuli: A = (Boshlang'ich qiymat / Rejadagi jami hajm) * Joriy oylik ishlab chiqarilgan dona"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: YER (Yer maydonlari - 0110 schyot) hech qachon amortizatsiya qilinmaydi! Chunki yerning foydalanish muddati cheksiz va u eskirmaydi!",
+        "Tuzoq 2: Yangi sotib olingan asosiy vositaga amortizatsiya u foydalanishga topshirilgan OYNING KEYINGI OYI 1-sanasidan boshlab hisoblanadi!"
+      ],
+      "improvement_guide": "Chiziqli va ishlab chiqarish usuli formulalarini hamda 0100 (AV) va 0200 (Eskirish) schyotlarining provodkalarini amaliy misollarda hisoblab ko'ring.",
+      "pdf_ref": "Buxgalteriya Hisobi Qo'llanmasi: 23 - 35 betlar",
+      "svg_type": "depreciationcurves",
+      "videos": [
+        {
+          "title": "Asosiy vositalar va amortizatsiya hisobi",
+          "url": "https://www.youtube.com/results?searchquery=asosiy+vositalar+amortizatsiya+hisoblash+usullari",
+          "takeaway": "Chiziqli, kamayuvchi va mahsulot hajmiga mutanosib amortizatsiya."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title_uz": "4-Mavzu: Tovar-moddiy zaxiralar hisobi (FIFO va AVCO)",
+      "title_en": "Inventory Accounting: FIFO & Weighted Average (AVCO)",
+      "summary_deep": "Tovar-moddiy zaxiralar (TMZ) — ishlab chiqarish jarayonida foydalanish yoki qayta sotish uchun mo'ljallangan xomashyo, materiallar, yarim tayyor mahsulotlar va tovarlardir (4-son BHMS). Zaxiralar hisobdan chiqarilganda ularni baholashning ikkita asosiy xalqaro va milliy standarti mavjud: 1) FIFO (First-In, First-Out) — birinchi kirim qilingan tovarlar birinchi bo'lib sotiladi/ishlatiladi; 2) O'rtacha tortilgan qiymat (AVCO / Weighted Average Cost) — jami tovarlar summasi ularning jami donasiga bo'linib o'rtacha narx chiqariladi. Eslatma: LIFO usuli IFRS va BHMS da rasman taqiqlangan!",
+      "case_study_extended": "🏢 REAL BIZNES KEYSI (Inflyatsiya davrida FIFO va AVCO farqi):\nOmborda 1-kuni 10 dona tovar 10 000 so'mdan (100 000 so'm), 2-kuni 10 dona tovar 12 000 so'mdan (120 000 so'm) sotib olindi. Jami: 20 dona, 220 000 so'm. 3-kuni 15 dona tovar sotildi.\n- FIFO bo'yicha: 10 dona x 10 000 = 100 000 so'm, qolgan 5 dona x 12 000 = 60 000 so'm. Jami tannarx = 160 000 so'm. Omborda qolgan 5 dona 12 000 so'mlik eng yangi narxda (60 000 so'm) qoladi.\n- AVCO bo'yicha: O'rtacha narx = 220 000 / 20 = 11 000 so'm. Sotilgan 15 dona x 11 000 = 165 000 so'm.",
+      "formulas_detailed": [
+        "AVCO O'rtacha narxi = (Boshlang'ich qoldiq summasi + Kirim qilinganlar summasi) / (Boshlang'ich dona + Kirim dona)",
+        "Chiqarilgan tovarlar tannarxi: Debet 9110 (Sotilgan tayyor mahsulot tannarxi) - Kredit 2810/2910",
+        "Inflyatsiya sharoitida: FIFO eng past tannarx va eng yuqori sof foydani, omborda esa eng yuqori qoldiq qiymatni ko'rsatadi!"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: LIFO (Last-In, First-Out) bugungi kunda O'zbekiston BHMS va xalqaro IFRS (IAS 2) qoidalarida TAQIQLANGAN! Imtihonda ruxsat etilgan usul sifatida faqat FIFO va AVCO ni tanlang!",
+        "Tuzoq 2: Tovar sotilganda har doim ikkita provodka beriladi: 1) Sotish narxida daromad (D4010 K9010); 2) O'z tannarxida hisobdan chiqarish (D9110 K2910)!"
+      ],
+      "improvement_guide": "FIFO jadvalini qadamma-qadam to'ldirib, birinchi kirgan tovar partiyalarini ketma-ket chiqarish amaliyotini bajaring.",
+      "pdf_ref": "Buxgalteriya Hisobi Qo'llanmasi: 36 - 48 betlar",
+      "svg_type": "fifoavcodiagram",
+      "videos": [
+        {
+          "title": "FIFO va O'rtacha narx usulida tovarlarni hisoblash",
+          "url": "https://www.youtube.com/results?searchquery=FIFO+va+AVCO+usulida+tovar+moddiy+zaxiralarni+baholash",
+          "takeaway": "Ombordagi tovarlarni FIFO va o'rtacha qiymatda hisobdan chiqarish."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title_uz": "5-Mavzu: Mehnatga haq to'lash va hisob-kitoblar",
+      "title_en": "Payroll Accounting, Income Tax, Social Tax & INPS",
+      "summary_deep": "Mehnatga haq to'lash hisobi korxona xodimlariga hisoblangan oylik maoshlar, ushlab qolinadigan soliqlar va majburiy to'lovlarni o'z ichiga oladi. O'zbekiston Respublikasi Soliq kodeksiga binoan: 1) Jismoniy shaxslardan olinadigan daromad solig'i (JShShDS) — stavkasi 12% bo'lib, xodimning hisoblangan ish haqidan ushlab qolinadi; 2) Shaxsiy jamg'arib boriladigan pensiya ta'minoti (INPS - Xalq banki) — stavkasi 0.1% bo'lib, hisoblangan daromad solig'i hisobidan chegirib qolinadi (qo'shimcha ushlanmaydi); 3) Ijtimoiy soliq — 12% bo'lib, xodimdan emas, KORXONA MABLAG'LARI HISOBIDAN qo'shimcha xarajat sifatida to'lanadi.",
+      "case_study_extended": "🏢 REAL BIZNES KEYSI (5 000 000 so'm maosh hisob-kitobi):\nXodimga 5 000 000 so'm ish haqi hisoblandi (Debet 2010/9420 - Kredit 6710: 5 000 000 so'm).\n1. JShShDS (12%): 5 000 000 * 12% = 600 000 so'm. Bundan INPS ga (0.1%): 5 000 so'm (Kredit 6530). Byudjetga sof soliq: 600 000 - 5 000 = 595 000 so'm (Kredit 6410). Ushlab qolish provodkasi: Debet 6710 - Kredit 6410 (595 000), Kredit 6530 (5 000).\n2. Xodimga qo'lga tegadigan sof maosh: 5 000 000 - 600 000 = 4 400 000 so'm (Debet 6710 - Kredit 5110/5010).\n3. Korxona hisobidan Ijtimoiy soliq (12%): 5 000 000 * 12% = 600 000 so'm (Debet 2010/9420 - Kredit 6520: 600 000 so'm). Korxona uchun xodimning umumiy xarajati: 5 600 000 so'm bo'ldi.",
+      "formulas_detailed": [
+        "Hisoblangan ish haqi = Tarif stavkasi + Mukofotlar + Ustamalar",
+        "JShShDS (Daromad solig'i) = Hisoblangan maosh * 12%",
+        "INPS (Xalq banki) = Hisoblangan maosh * 0.1% (Daromad solig'i ichidan olinadi)",
+        "Xodim qo'lga oladigan pul (Net salary) = Hisoblangan maosh - JShShDS (12%)",
+        "Ijtimoiy soliq (Korxona xarajati) = Hisoblangan maosh * 12%"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: Ijtimoiy soliq (12%) xodimning maoshidan ushlab qolinmaydi! U ish beruvchi (korxona) hisobidan qo'shimcha to'lanadi!",
+        "Tuzoq 2: INPS (0.1%) alohida qo'shimcha ushlanmaydi, u 12% lik daromad solig'ining ichidan ajratiladi (byudjetga 11.9%, INPS ga 0.1%)!"
+      ],
+      "improvement_guide": "5 mln, 10 mln va 3 mln so'mlik ish haqlari misolida qo'lga tegadigan summani va korxona to'laydigan ijtimoiy soliqni o'zingiz hisoblab tekshiring.",
+      "pdf_ref": "Buxgalteriya Hisobi Qo'llanmasi: 49 - 61 betlar",
+      "svg_type": "payrollbreakdown",
+      "videos": [
+        {
+          "title": "O'zbekistonda ish haqi va soliqlar hisob-kitobi",
+          "url": "https://www.youtube.com/results?searchquery=ish+haqi+hisoblash+daromad+soligi+ijtimoiy+soliq+inps",
+          "takeaway": "JShShDS, ijtimoiy soliq va xodimga to'lanadigan sof summa."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title_uz": "6-Mavzu: Ishlab chiqarish xarajatlari va tannarx kalkulyatsiyasi",
+      "title_en": "Production Costs & Cost Accounting (Direct & Indirect Costs)",
+      "summary_deep": "Mahsulot tannarxi — uni ishlab chiqarish va sotish uchun sarflangan barcha moddiy, mehnat va moliyaviy resurslarning puldagi ifodasidir (Vazirlar Mahkamasining 54-sonli Nizomi). Xarajatlar quyidagilarga bo'linadi: 1) To'g'ridan-to'g'ri ishlab chiqarish xarajatlari — bevosita ma'lum bir mahsulotga tegishli bo'lgan xarajatlar: asosiy xomashyo (2010), asosiy ishlab chiqarish ishchilarining maoshi va unga ijtimoiy soliq; 2) Davr xarajatlari — ishlab chiqarish hajmiga to'g'ridan-to'g'ri bog'liq bo'lmagan ma'muriy (9420), sotish (9410) va boshqa operatsion xarajatlar (9430). Davr xarajatlari mahsulot tannarxiga qo'shilmaydi, to'g'ridan-to'g'ri joriy davr moliyaviy natijasiga (9910 ga) olib boriladi.",
+      "case_study_extended": "🏢 REAL BIZNES KEYSI (Mebel ishlab chiqarish tannarxi):\nFabrika 1 dona stol ishlab chiqardi. Bunga ketgan xarajatlar:\n- Yog'och va mixlar: 200 000 so'm (Debet 2010 - Kredit 1010)\n- Duradgorning maoshi va ijtimoiy solig'i: 150 000 so'm (Debet 2010 - Kredit 6710, 6520)\n- Stanok amortizatsiyasi: 50 000 so'm (Debet 2010 - Kredit 0230)\nMahsulot tayyor bo'lib omborga topshirildi: Jami ishlab chiqarish tannarxi = 200 000 + 150 000 + 50 000 = 400 000 so'm (Debet 2810 'Tayyor mahsulot' - Kredit 2010: 400 000 so'm). Bosh hisobchining oyligi esa 9420 schyotga yoziladi va stol tannarxiga kiritilmaydi!",
+      "formulas_detailed": [
+        "Ishlab chiqarish tannarxi = To'g'ridan-to'g'ri moddiy xarajatlar + To'g'ridan-to'g'ri mehnat xarajatlari + Umumishlab chiqarish xarajatlari (2510)",
+        "Tayyor mahsulotni omborga qabul qilish: Debet 2810 - Kredit 2010",
+        "Davr xarajatlari = Sotish xarajatlari (9410) + Ma'muriy xarajatlar (9420) + Boshqa operatsion xarajatlar (9430)"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: Bosh direktor yoki hisobchining oyligi, ofis ijarasi va reklama xarajatlari MAHSULOT TANNARXIGA (2010) QO'SHILMAYDI! Ular davr xarajati (9400) hisoblanadi!",
+        "Tuzoq 2: 2010 schyotda oy oxirida qoldiq bo'lsa, bu tugallanmagan ishlab chiqarishni (TIICh) bildiradi!"
+      ],
+      "improvement_guide": "54-sonli Nizom bo'yicha mahsulot tannarxiga kiruvchi xarajatlar bilan davr xarajatlari o'rtasidagi chegara ro'yxatini yod oling.",
+      "pdf_ref": "Buxgalteriya Hisobi Qo'llanmasi: 62 - 74 betlar",
+      "svg_type": "coststructure",
+      "videos": [
+        {
+          "title": "Mahsulot tannarxi va xarajatlar hisobi",
+          "url": "https://www.youtube.com/results?searchquery=mahsulot+tannarxini+hisoblash+ishlab+chiqarish+va+davr+xarajatlari",
+          "takeaway": "2010, 2510, 2810 va 9400 schyotlarining harakati."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title_uz": "7-Mavzu: Daromadlar, xarajatlar va moliyaviy natijalar hisobi",
+      "title_en": "Revenues, Expenses & Financial Results Accounting (9910 P&L)",
+      "summary_deep": "Korxonaning yakuniy faoliyat samaradorligi uning moliyaviy natijasida — Foyda yoki Zararida namoyon bo'ladi. Bu jarayon 9910 'Yakuniy moliyaviy natija' schyotida umumlashtiriladi. 9910 schyotining KREDITI — barcha daromadlarni (9000-asosiy savdo, 9300-boshqa daromadlar, 9500-moliyaviy daromadlar) to'playdi. 9910 schyotining DEBETI — barcha xarajatlarni (9100-tannarx, 9400-davr xarajatlari, 9600-moliyaviy xarajatlar) to'playdi. Agar Kredit > Debet bo'lsa — SOF FOYDA, agar Debet > Kredit bo'lsa — ZARAR yuzaga keladi.",
+      "case_study_extended": "🏢 REAL BIZNES KEYSI (Yillik moliyaviy natijani aniqlash):\nYil oxirida 'Orient Savdo' MChJ ko'rsatkichlari:\n- Tovarlar sotishdan tushum (9020): 1 000 000 000 so'm (Kredit 9910 ga ko'chirildi)\n- Sotilgan tovarlar tannarxi (9120): 600 000 000 so'm (Debet 9910 ga ko'chirildi)\n- Yalpi foyda = 1 000 mln - 600 mln = 400 000 000 so'm\n- Davr xarajatlari (ijara, maosh - 9400): 250 000 000 so'm (Debet 9910 ga ko'chirildi)\n- Soliq to'lagunga qadar foyda: 400 mln - 250 mln = 150 000 000 so'm.\n- Foyda solig'i (15%): 150 mln * 15% = 22 500 000 so'm (Debet 9810 - Kredit 6410).\n- Korxonaning SOF FOYDASI: 150 mln - 22.5 mln = 127 500 000 so'm. Bu summa taqsimlanmagan foydaga o'tkaziladi: Debet 9910 - Kredit 8710: 127 500 000 so'm.",
+      "formulas_detailed": [
+        "Yalpi foyda (zarar) = Sof tushum (9000) - Sotilgan mahsulot tannarxi (9100)",
+        "Asosiy faoliyat foydasi = Yalpi foyda - Davr xarajatlari (9400) + Boshqa daromadlar (9300)",
+        "Sof foyda = Soliq to'langunga qadar foyda - Foyda solig'i (9810)",
+        "Sof foydani o'tkazish provodkasi: Debet 9910 - Kredit 8710 (Taqsimlanmagan foyda)",
+        "Sof zararni o'tkazish provodkasi: Debet 8720 (Qoplanmagan zarar) - Kredit 9910"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: 9910 schyot oy davomida ochilmaydi, faqat hisobot davri (oy yoki yil) oxirida barcha 9-sinf daromad va xarajat schyotlarini yopish uchun ishlatiladi!",
+        "Tuzoq 2: 9000, 9100, 9400 schyotlarida yil oxirida QOLDIQ QOLMAYDI, ularning hammasi 9910 ga o'tkazilib 'nolga' tenglashtiriladi!"
+      ],
+      "improvement_guide": "Daromadlar va xarajatlarni 9910 schyotiga yopish zanjirini grafik sxemada chizib mashq qiling.",
+      "pdf_ref": "Buxgalteriya Hisobi Qo'llanmasi: 75 - 86 betlar",
+      "svg_type": "plflowchart",
+      "videos": [
+        {
+          "title": "Buxgalteriyada 9910 schyot va moliyaviy natijalarni yopish",
+          "url": "https://www.youtube.com/results?searchquery=buxgalteriya+moliyaviy+natijalar+9910+schyotni+yopish+provodkalari",
+          "takeaway": "Yalpi foyda, davr xarajatlari va sof foydani 8710 ga o'tkazish."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title_uz": "8-Mavzu: Moliyaviy hisobotlar: Buxgalteriya balansi va Moliyaviy natijalar",
+      "title_en": "Financial Statements: Balance Sheet (Form 1) & Profit/Loss (Form 2)",
+      "summary_deep": "Moliyaviy hisobotlar korxona faoliyatining ochiq ko'zgusidir (1-son BHMS). O'zbekistonda yillik moliyaviy hisobot tarkibiga quyidagilar kiradi: 1) Buxgalteriya balansi (1-shakl) — ma'lum bir sanadagi (masalan, 31-dekabr holatiga) aktivlar, majburiyatlar va kapitalni ko'rsatuvchi statik hisobot; 2) Moliyaviy natijalar to'g'risida hisobot (2-shakl) — ma'lum bir davr ichidagi (1-yanvardan 31-dekabrgacha) daromadlar, xarajatlar va sof foydani ko'rsatuvchi dinamik hisobot; 3) Pul oqimlari to'g'risida hisobot (4-shakl); 4) Xususiy kapital to'g'risida hisobot (5-shakl).",
+      "case_study_extended": "🏢 REAL BIZNES KEYSI (Bankdan kredit olish uchun balans tahlili):\nKorxona yangi fabrika qurish uchun bankka 1 milliard so'm kredit so'rab 1-shakl (Balans) topshirdi. Bank tahlilchisi balansdan 'Joriy likvidlik koeffitsiyenti'ni hisobladi: Aylanma aktivlar (600 mln) / Qisqa muddatli majburiyatlar (300 mln) = 2.0. Ushbu ko'rsatkich me'yorda (1.5 - 2.0) bo'lgani sababli, bank korxonaning o'z qarzlarini o'z vaqtida qaytara olish qobiliyatiga ishonch hosil qildi va kredit ajratishga ijobiy xulosa berdi.",
+      "formulas_detailed": [
+        "Buxgalteriya Balansi Qoidasi: Aktivlar Jami = Majburiyatlar Jami + O'z Mablag'lari Jami",
+        "Joriy likvidlik koeffitsiyenti (Current Ratio) = Aylanma aktivlar / Qisqa muddatli majburiyatlar (Norma: >= 1.5 - 2.0)",
+        "Tezkor likvidlik (Quick Ratio) = (Aylanma aktivlar - Tovar zaxiralari) / Qisqa muddatli majburiyatlar (Norma: >= 1.0)",
+        "Absolyut likvidlik koeffitsiyenti = Pul mablag'lari (5000+5100) / Qisqa muddatli majburiyatlar (Norma: >= 0.2)"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: Buxgalteriya balansi (1-shakl) davr uchun emas, ANIQ BIR SANAGA (masalan, 1-yanvar yoki 31-dekabr holatiga) tuziladi!",
+        "Tuzoq 2: 2-shakl (Moliyaviy natijalar) esa sanaga emas, ma'lum bir VAQT DAVRI UCHUN (oylik, choraklik, yillik) o'sib boruvchi yakun bilan tuziladi!"
+      ],
+      "improvement_guide": "1-shakl va 2-shakl satrlarini bir-biri bilan solishtiring: 2-shakldagi sof foyda 1-shakl passividagi 8710 satrida aks etishini kuzating.",
+      "pdf_ref": "Buxgalteriya Hisobi Qo'llanmasi: 87 - 98 betlar",
+      "svg_type": "balancesheetstructure",
+      "videos": [
+        {
+          "title": "Buxgalteriya balansi va 2-shakl hisoboti",
+          "url": "https://www.youtube.com/results?searchquery=buxgalteriya+balansi+1+shakl+va+moliyaviy+natijalar+2+shakl",
+          "takeaway": "Moliyaviy hisobot shakllari va likvidlik koeffitsiyentlari."
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title_uz": "9-Mavzu: Auditorlik tekshiruvi asoslari, xulosalar turlari va audit etikasi",
+      "title_en": "Auditing Fundamentals, Audit Opinions & Code of Ethics",
+      "summary_deep": "Audit — bu mustaqil auditorlik tashkiloti tomonidan korxona moliyaviy hisobotlarining haqqoniyligi va qonunchilikka muvofiqligini tekshirish jarayonidir ('Auditorlik faoliyati to'g'risida'gi Qonun). Auditor tekshiruv natijasida 4 ta asosiy xulosa turidan birini beradi: 1) Ijobiy xulosa (Unmodified / Clean opinion) — moliyaviy hisobotlar barcha muhim jihatlari bo'yicha haqqoniy tuzilgan; 2) Shartli-ijobiy xulosa (Qualified opinion) — ma'lum bir alohida moddadan tashqari barcha hisobotlar to'g'ri; 3) Salbiy xulosa (Adverse opinion) — hisobotlarda keng ko'lamli jiddiy buzilishlar mavjud; 4) Fikr bildirishdan bosh tortish (Disclaimer of opinion) — auditorga yetarli dalil to'plashga imkon berilmagan (cheklash qo'yilgan).",
+      "case_study_extended": "🏢 REAL BIZNES KEYSI (Auditor xulosasi berish amaliyoti):\n'Katta Zavod' AJ yillik hisobotini audit qilish uchun auditorlik kompaniyasi taklif etildi. Tekshiruv davomida korxona rahbariyati 50 milliard so'mlik asosiy vositalar inventarizatsiyasida auditorning ishtirok etishiga ruxsat bermadi va tegishli hujjatlarni taqdim qilmadi. Ushbu summa balansning 40% qismini tashkil etgani sababli, auditor moliyaviy hisobotning haqqoniyligini tasdiqlovchi dalillarni to'play olmadi. Natijada auditorlik kompaniyasi 'Fikr bildirishdan bosh tortish' (Disclaimer of Opinion) xulosasini taqdim etdi.",
+      "formulas_detailed": [
+        "Auditorlik riski (AR) = Tug'ma risk (Inherent Risk) x Nazorat riski (Control Risk) x Aniqlamaslik riski (Detection Risk)",
+        "Muhimlilik darajasi (Materiality) — foydalanuvchilarning iqtisodiy qarorlariga ta'sir qiluvchi xatolar ko'lami",
+        "Auditorning 5 ta kasbiy axloq tamoyili: Halollik, Xolislik, Kasbiy layoqatlilik, Maxfiylik va Kasbiy xulq-atvor"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: Agar korxona auditorga tekshirish uchun zarur hujjatlarni bermasa (cheklash qo'ysa), auditor Salbiy xulosa bermaydi, balki 'Fikr bildirishdan bosh tortish' (Disclaimer) xulosasini beradi!",
+        "Tuzoq 2: Auditor korxona buxgalteriya hisobini o'zi yuritib berishi va o'sha hisobotga o'zi auditorlik xulosasi berishi QAT'IYAN TAQIQLANADI (Mustaqillik tamoyili buziladi)!"
+      ],
+      "improvement_guide": "4 ta auditorlik xulosasi (ijobiy, shartli, salbiy, bosh tortish) berilish shartlarini solishtirib jadval qilib yod oling.",
+      "pdf_ref": "Buxgalteriya Hisobi Qo'llanmasi: 99 - 110 betlar",
+      "svg_type": "auditopinionstree",
+      "videos": [
+        {
+          "title": "Auditorlik faoliyati va xulosalar turlari",
+          "url": "https://www.youtube.com/results?searchquery=auditorlik+tekshiruvi+xulosalar+turlari+ijobiy+salbiy+shartli",
+          "takeaway": "Auditorlik xulosalari, audit riski va kasb etikasi."
+        }
+      ]
+    }
+  ],
+  "yangi_tarix": [
+    {
+      "id": 1,
+      "title_uz": "1-Mavzu: O'zbekistonning davlat mustaqilligiga erishishi va uning huquqiy asoslari",
+      "title_en": "Declaration of State Independence & Legal Foundations",
+      "summary_deep": "1991-yil 31-avgustda O'zbekiston Oliy Kengashining navbatdan tashqari VI sessiyasida 'O'zbekiston Respublikasining davlat mustaqilligini e'lon qilish to'g'risida'gi tarixiy Qaror va 'O'zbekiston Respublikasi davlat mustaqilligining asoslari to'g'risida'gi Qonun qabul qilindi. 1-sentabr Mustaqillik kuni deb e'lon qilindi. 1991-yil 29-dekabrda Mustaqillik to'g'risidagi umumxalq referendumi va birinchi Prezidentlik saylovi bo'lib o'tdi. 1992-yil 8-dekabrda esa mustaqil davlatning bosh Qomusi — O'zbekiston Respublikasi Konstitutsiyasi qabul qilindi.",
+      "case_study_extended": "🏛️ TARIXIY VOQELIK (Davlat ramzlarining qabul qilinishi):\nMustaqil davlatning xalqaro maydonda tan olinishi va suvereniteti uning davlat ramzlarida mustahkamlandi. Ketma-ketlikda:\n- 1991-yil 18-noyabr: O'zbekiston Respublikasining Davlat bayrog'i;\n- 1992-yil 2-iyul: O'zbekiston Respublikasining Davlat gerbi;\n- 1992-yil 10-dekabr: Mutal Burhonov musiqasi va Abdulla Oripov so'zi bilan Davlat madhiyasi qabul qilindi. 1992-yil 2-martda esa O'zbekiston BMT ning to'la huquqli a'zoligiga qabul qilinib, Nyu-Yorkdagi BMT bosh qarorgohi oldida O'zbekiston bayrog'i ko'tarildi.",
+      "formulas_detailed": [
+        "1990-yil 20-iyun: Mustaqillik Deklaratsiyasi qabul qilindi",
+        "1991-yil 31-avgust: Davlat mustaqilligi e'lon qilindi (1-sentabr - bayram)",
+        "1991-yil 18-noyabr: Davlat bayrog'i to'g'risidagi qonun",
+        "1991-yil 29-dekabr: Mustaqillik Referendumi (98.2% qo'llab-quvvatladi)",
+        "1992-yil 8-dekabr: O'zbekiston Respublikasi Konstitutsiyasi qabul qilindi"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: Mustaqillik DEKLARATSIYASI 1990-yil 20-iyunda qabul qilingan, Davlat mustaqilligi esa 1991-yil 31-avgustda e'lon qilingan! Bu ikki sanani chalkashtirmang!",
+        "Tuzoq 2: Konstitutsiya 1992-yil 8-dekabrda qabul qilingan (1991-yil emas)!"
+      ],
+      "improvement_guide": "Mustaqillikning dastlabki yillaridagi asosiy xronologik sanalar (1990-1992) jadvalini qayta ko'rib chiqing.",
+      "pdf_ref": "O'zbekiston Tarixi Qo'llanmasi: 3 - 14 betlar",
+      "svg_type": "independencetimeline",
+      "videos": [
+        {
+          "title": "O'zbekiston mustaqilligining e'lon qilinishi tarixi",
+          "url": "https://www.youtube.com/results?searchquery=ozbekiston+mustaqillikka+erishishi+tarixi+1991+yil",
+          "takeaway": "Mustaqillik deklaratsiyasi, referendumi va Konstitutsiya qabul qilinishi."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title_uz": "2-Mavzu: Ijtimoiy-iqtisodiy islohotlar va bozor iqtisodiyotiga o'tishning 'O'zbek modeli'",
+      "title_en": "Socio-Economic Reforms & The 'Uzbek Model' of Economy",
+      "summary_deep": "O'zbekiston ma'muriy-buyruqbozlik tizimidan ijtimoiy yo'naltirilgan bozor iqtisodiyotiga o'tishda xorijiy modellarni ko'r-ko'rona ko'chirmasdan, o'zining milliy taraqqiyot yo'li bo'lgan 'O'zbek modeli'ni ishlab chiqdi. 'O'zbek modeli' 5 ta asosiy tamoyilga asoslanadi: 1) Iqtisodiyotning siyosatdan ustunligi (deideologizatsiya); 2) Davlat — bosh islohotchi; 3) Qonun ustuvorligi; 4) Kuchli ijtimoiy himoya; 5) Bozor iqtisodiyotiga bosqichma-bosqich (evolyutsion) o'tish. 1994-yil 1-iyuldan milliy valyuta — 'So'm' muomalaga kiritildi.",
+      "case_study_extended": "🏛️ TARIXIY VOQELIK (Don va Neft mustaqilligining ta'minlanishi):\nSSSR davrida O'zbekiston paxta xomashyosi bazasiga aylantirilib, aholi iste'moli uchun don va un chetdan olib kelinardi (yiliga 4-5 mln tonna don). Mustaqillikning dastlabki yillarida oziq-ovqat xavfsizligini ta'minlash uchun g'allachilik tarmog'i tubdan isloh qilindi va don mustaqilligiga erishildi. Shuningdek, Buxoro neftni qayta ishlash zavodi va Farg'ona NQIZ modernizatsiya qilinib, respublikaning energetika mustaqilligi ta'minlandi.",
+      "formulas_detailed": [
+        "O'zbek modelining 5 tamoyili: 1. Iqtisodiyot ustuvorligi; 2. Davlat - bosh islohotchi; 3. Qonun ustuvorligi; 4. Kuchli ijtimoiy himoya; 5. Bosqichma-bosqichlik",
+        "1993-yil 15-noyabr: 'So'm-kupon' vaqtinchalik pul belgisi",
+        "1994-yil 1-iyul: O'zbekiston milliy valyutasi — 'So'm' rasman joriy etildi",
+        "1996-yil: Asaka avtomobil zavodi (UzDaewooAuto, keyinchalik GM Uzbekistan / UzAuto Motors) ishga tushirildi"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: 'Shok terapiyasi' (birvarakay narxlarni qo'yib yuborish) O'zbekistonda qo'llanilmagan! O'zbekiston bosqichma-bosqich (evolyutsion) yo'lni tanlagan!",
+        "Tuzoq 2: Milliy valyuta 'So'm' 1991-yilda emas, 1994-yil 1-iyulda muomalaga kiritilgan!"
+      ],
+      "improvement_guide": "5 ta tamoyilning har biriga hayotiy misollarni va 1994-yilgi valyuta islohotini yodda saqlang.",
+      "pdf_ref": "O'zbekiston Tarixi Qo'llanmasi: 15 - 28 betlar",
+      "svg_type": "uzbekmodelpillars",
+      "videos": [
+        {
+          "title": "Bozor iqtisodiyotiga o'tishning O'zbek modeli 5 tamoyili",
+          "url": "https://www.youtube.com/results?searchquery=bozor+iqtisodiyotiga+otishning+ozbek+modeli+5+tamoyili",
+          "takeaway": "O'zbek modeli, milliy valyuta som va sanoatlashtirish."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title_uz": "3-Mavzu: Huquqiy demokratik davlat va fuqarolik jamiyati asoslarining shakllanishi",
+      "title_en": "Democratic State & Civil Society Institutions Formation",
+      "summary_deep": "Demokratik davlat qurishning muhim bosqichi sifatida hokimiyatlarning bo'linishi printsipi (Qonun chiqaruvchi, Ijro etuvchi, Sud) joriy etildi. 1994-yil dekabrda mustaqil O'zbekistonning bir palatali parlamenti — Oliy Majlisga birinchi saylovlar bo'lib o'tdi. 2002-yilgi umumxalq referendumi natijasida parlament ikki palatali (Qonunchilik palatasi va Senat) tizimga aylantirildi va 2004-yildan faoliyat boshladi. Sud-huquq sohasida o'lim jazosi bekor qilindi (2008), qamoqqa olishga sanksiya berish sudyalarga o'tkazildi ('Habeas corpus'). O'z-o'zini boshqarish organi sifatida Mahalla instituti mustahkamlandi.",
+      "case_study_extended": "🏛️ TARIXIY VOQELIK (Mahalla institutining rivojlanishi):\nO'zbek xalqining ko'p asrlik an'analariga asoslangan Mahalla tizimi fuqarolik jamiyatining noyob modeliga aylandi. 1993 va 1999-yillarda 'Fuqarolarning o'zini o'zi boshqarish organlari to'g'risida'gi qonunlar qabul qilindi. Mahalla shunchaki yashash joyi emas, balki ijtimoiy birdamlik, adolat, ehtiyojmand oilalarga moddiy ko'mak va yoshlar tarbiyasining markaziga aylandi. 2020-yillardan boshlab har bir mahallada 'Mahalla yettiligi' tizimi yo'lga qo'yildi.",
+      "formulas_detailed": [
+        "Hokimiyat bo'linishi: Qonun chiqaruvchi (Oliy Majlis) + Ijro etuvchi (Vazirlar Mahkamasi) + Sud hokimiyati",
+        "2002-yil 27-yanvar: Referendum - ikki palatali parlament va Prezidentlik muddatini belgilash",
+        "2008-yil 1-yanvar: O'lim jazosi rasman bekor qilindi va 'Habeas corpus' (sud sanksiyasi) kiritildi",
+        "Ko'ppartiyaviylik tizimi: O'zXDP, 'Adolat' SDP, 'Milliy tiklanish' DP, O'zLiDeP, Ekologik partiya"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: O'zbekistonda ikki palatali parlament (Senat va Qonunchilik palatasi) 1991-yilda emas, 2002-yilgi referendumdan so'ng 2004-yil oxiridan boshlab saylangan!",
+        "Tuzoq 2: O'lim jazosi 2008-yil 1-yanvardan qat'iy bekor qilingan!"
+      ],
+      "improvement_guide": "Parlamentning quyi (Qonunchilik palatasi) va yuqori (Senat) palatalari vakolatlari va tuzilishini takrorlang.",
+      "pdf_ref": "O'zbekiston Tarixi Qo'llanmasi: 29 - 41 betlar",
+      "svg_type": "statepowersdiagram",
+      "videos": [
+        {
+          "title": "Oliy Majlis va O'zbekistonda parlamentarizm tarixi",
+          "url": "https://www.youtube.com/results?searchquery=ozbekiston+oliy+majlis+senat+va+qonunchilik+palatasi+tarixi",
+          "takeaway": "Ikki palatali parlament va sud-huquq islohotlari."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title_uz": "4-Mavzu: Ma'naviy-ma'rifiy tiklanish, milliy qadriyatlar va ta'lim islohotlari",
+      "title_en": "Spiritual Revival, Cultural Heritage & Educational Reforms",
+      "summary_deep": "Mustaqillik yillarida milliy o'zlikni anglash, din erkinligi va madaniy merosni tiklash davlat siyosatining ustuvor yo'nalishiga aylandi. Navro'z bayrami, Ro'za va Qurbon hayitlari umumxalq bayramlari deb e'lon qilindi. Amir Temur, Imom Buxoriy, Ahmad Farg'oniy, Mirzo Ulug'bek, Alisher Navoiy, Jaloliddin Manguberdi kabi buyuk ajdodlarimizning yubileylari xalqaro miqyosda (YUNESKO shafeligida) nishonlandi. Qatag'on qurbonlari xotirasi abadiylashtirilib, 'Shahidlar xotirasi' yodgorlik majmuasi bunyod etildi. 1997-yil 29-avgustda 'Ta'lim to'g'risida'gi Qonun va 'Kadrlar tayyorlash milliy dasturi' qabul qilindi.",
+      "case_study_extended": "🏛️ TARIXIY VOQELIK (Jadidlar merosining oqlanishi va qayta tiklanishi):\nSovet tuzumi davrida 'panturkist', 'aksilinqilobchi' deb qoralangan va 1937-1938 yillarda qatag'on etilgan Mahmudxo'ja Behbudiy, Munavvarqori Abdurashidxonov, Abdulla Qodiriy, Abdulhamid Cho'lpon, Abdurauf Fitrat, Usmon Nosir kabi millat fidoyilarining nomlari to'liq oqlandi. Toshkentda Shahidlar xotirasi majmuasi va Qatag'on qurbonlari xotirasi muzeyi ochildi. 31-avgust esa 'Qatag'on qurbonlarini yod etish kuni' deb e'lon qilindi.",
+      "formulas_detailed": [
+        "1993-yil 2-sentabr: Lotin yozuviga asoslangan o'zbek alifbosini joriy etish to'g'risida Qonun",
+        "1996-yil: Amir Temur yili (Toshkent, Samarqand, Shahrisabzda haykallari ochildi)",
+        "1997-yil 29-avgust: Kadrlar tayyorlash milliy dasturi",
+        "2001-yil: 31-avgust — Qatag'on qurbonlarini yod etish kuni",
+        "YUNESKO yubileylari: Xiva-2500, Buxoro-2500, Samarqand-2750, Toshkent-2200, Shahrisabz-2700"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: 'Qatag'on qurbonlarini yod etish kuni' — 31-avgust sanasida nishonlanadi (Mustaqillik arafasida)!",
+        "Tuzoq 2: Lotin yozuviga asoslangan o'zbek alifbosiga o'tish to'g'risidagi qonun 1993-yilda qabul qilingan!"
+      ],
+      "improvement_guide": "Jadidlar harakati namoyandalari va YUNESKO bilan birgalikda nishonlangan shahar va allomalar yubileylari yillarini takrorlang.",
+      "pdf_ref": "O'zbekiston Tarixi Qo'llanmasi: 42 - 55 betlar",
+      "svg_type": "jadidsheritage",
+      "videos": [
+        {
+          "title": "Jadidlar merosi va O'zbekiston ma'naviy tiklanishi",
+          "url": "https://www.youtube.com/results?searchquery=ozbekiston+manaviy+tiklanish+jadidlar+va+milliy+meros",
+          "takeaway": "Ajdodlar xotirasi, Navro'z tiklanishi va ta'lim islohotlari."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title_uz": "5-Mavzu: O'zbekistonning xalqaro munosabatlar tizimidagi o'rni va tashqi siyosati",
+      "title_en": "Foreign Policy & Uzbekistan in the International Arena",
+      "summary_deep": "O'zbekiston tashqi siyosatining asosiy tamoyillari Konstitutsiyaning 17-moddasi va Tashqi siyosiy faoliyat konsepsiyasida belgilangan: davlatlarning suveren tengligi, kuch ishlatmaslik yoki kuch bilan tahdid qilmaslik, chegaralar daxlsizligi, nizolarni tinch yo'l bilan hal etish, ichki ishlarga aralashmaslik. 1992-yil 2-martda O'zbekiston BMT ga a'zo bo'ldi. O'zbekiston Shanxay Hamkorlik Tashkiloti (SHHT), Turkiy Davlatlar Tashkiloti (TDT), MDH, EXHT va Islom Hamkorlik Tashkiloti (IHT) ning faol a'zosi hisoblanadi. Tashqi siyosatning eng asosiy ustuvor yo'nalishi — Markaziy Osiyo mintaqasida do'stlik, yaxshi qo'shnichilik va ishonch muhitini yaratishdir.",
+      "case_study_extended": "🏛️ TARIXIY VOQELIK (Markaziy Osiyoda yadro qurolidan xoli zona yaratilishi):\n1993-yil BMT Bosh Assambleyasining 48-sessiyasida O'zbekiston Markaziy Osiyoda yadro qurolidan xoli hudud (Nuclear-Weapon-Free Zone) barpo etish tashabbusini ilgari surdi. Ko'p yillik diplomatik harakatlar natijasida 2006-yil 8-sentabrda Semipalatinskda Markaziy Osiyoning besh davlati (O'zbekiston, Qozog'iston, Qirg'iziston, Tojikiston, Turkmaniston) tegishli Shartnomani imzoladilar. Bu mintaqada xavfsizlik va yadroviy xavfni bartaraf etishda tarixiy qadam bo'ldi.",
+      "formulas_detailed": [
+        "1992-yil 2-mart: O'zbekiston Birlashgan Millatlar Tashkilotiga (BMT) a'zo bo'ldi",
+        "1992-yil 30-yanvar: EXHT (OSCE) ga a'zolik",
+        "2001-yil 15-iyun: Shanxay Hamkorlik Tashkiloti (SHHT) ta'sis etildi (Toshkentda Mintaqaviy aksilterror tuzilmasi - RATS joylashgan)",
+        "O'zbekiston harbiy bloklarga qo'shilmaslik va o'z hududida xorijiy harbiy bazalarni joylashtirmaslik tamoyiliga qat'iy amal qiladi"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: SHHT ning doimiy ishlovchi Mintaqaviy aksilterror tuzilmasi (RATS) ijroiya qo'mitasi aynan TOSHKENT shahrida joylashgan!",
+        "Tuzoq 2: O'zbekiston Tashqi siyosatining bosh ustuvor yo'nalishi AQSh yoki Yevropa emas, balki MARKAZIY OSIYO mintaqasi hisoblanadi!"
+      ],
+      "improvement_guide": "O'zbekiston a'zo bo'lgan xalqaro tashkilotlar (BMT, SHHT, TDT) sanalarini va tashqi siyosat tamoyillarini takrorlang.",
+      "pdf_ref": "O'zbekiston Tarixi Qo'llanmasi: 56 - 69 betlar",
+      "svg_type": "foreignpolicyrelations",
+      "videos": [
+        {
+          "title": "O'zbekiston tashqi siyosati va xalqaro tashkilotlar",
+          "url": "https://www.youtube.com/results?searchquery=ozbekiston+tashqi+siyosati+bmt+shht+turkiy+davlatlar+tashkiloti",
+          "takeaway": "BMT ga a'zolik, SHHT ta'sis etilishi va Markaziy Osiyo tashabbuslari."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title_uz": "6-Mavzu: 'Yangi O'zbekiston' taraqqiyot strategiyasi va tub islohotlar bosqichi",
+      "title_en": "Development Strategy of New Uzbekistan & Systemic Reforms",
+      "summary_deep": "2016-yildan O'zbekiston taraqqiyotining mutlaqo yangi davri — Yangi O'zbekiston bosqichi boshlandi. Prezident Shavkat Mirziyoyev tashabbusi bilan 2017-2021 yillarda 'Harakatlar strategiyasi' (5 ta ustuvor yo'nalish) muvaffaqiyatli amalga oshirildi. Uning mantiqiy davomi sifatida 2022-2026 yillarga mo'ljallangan 'Yangi O'zbekistonning taraqqiyot strategiyasi' (7 ta ustuvor yo'nalish) tasdiqlandi. Islohotlarning bosh g'oyasi: 'Inson qadri uchun' va 'Davlat xalqqa xizmat qilishi kerak' tamoyillariga asoslandi. Virtual qabulxonalar va Xalq qabulxonalari tizimi tashkil etildi.",
+      "case_study_extended": "🏛️ TARIXIY VOQELIK (Valyuta bozorining erkinlashtirilishi - 2017-yil sentabr):\nO'nlab yillar davomida O'zbekistonda tadbirkorlar va fuqarolar uchun erkin valyuta ayirboshlash imkonsiz edi; rasmiy kurs va 'qora bozor' kursi o'rtasida 2 barobar farq mavjud edi. 2017-yil 2-sentabrdagi Farmon bilan valyuta bozori to'liq erkinlashtirildi, konvertatsiya ochildi. Fuqarolar va biznes banklarda erkin chet el valyutasini sotib olish va sotish imkoniga ega bo'ldi. Bu O'zbekistonga xorijiy investitsiyalar oqimining keskin oshishiga yo'l ochdi.",
+      "formulas_detailed": [
+        "2017-2021: Harakatlar strategiyasi (5 ta ustuvor yo'nalish)",
+        "2022-2026: Yangi O'zbekiston taraqqiyot strategiyasi (7 ta ustuvor yo'nalish, 100 ta maqsad)",
+        "2017-yil: Valyuta erkinlashtirilishi, Xalq qabulxonalari tashkil etilishi",
+        "Islohot shiori: 'Xalq davlat idoralariga emas, davlat idoralari xalqimizga xizmat qilishi kerak'"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: Harakatlar strategiyasi 5 ta yo'nalishdan (2017-2021), Yangi O'zbekiston Taraqqiyot strategiyasi esa 7 TA yo'nalishdan (2022-2026) iborat! Sonlarni almashtirmang!",
+        "Tuzoq 2: Valyuta bozorining erkinlashtirilishi (konvertatsiyaning ochilishi) 2017-yil sentabrda ro'y bergan!"
+      ],
+      "improvement_guide": "Harakatlar strategiyasining 5 ta va Taraqqiyot strategiyasining 7 ta ustuvor yo'nalishlarini nomma-nom yodda tuting.",
+      "pdf_ref": "O'zbekiston Tarixi Qo'llanmasi: 70 - 83 betlar",
+      "svg_type": "actionstrategypillars",
+      "videos": [
+        {
+          "title": "Harakatlar strategiyasi va Yangi O'zbekiston taraqqiyot yo'li",
+          "url": "https://www.youtube.com/results?searchquery=harakatlar+strategiyasi+5+ustuvor+yonalish+yangi+ozbekiston",
+          "takeaway": "2017-2026 yillardagi tub islohotlar va valyuta erkinlashuvi."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title_uz": "7-Mavzu: Iqtisodiyotni modernizatsiya qilish, erkinlashtirish va raqamlashtirish",
+      "title_en": "Economic Modernization, Liberalization & Digitalization",
+      "summary_deep": "Iqtisodiy sohada monopoliyalarni qisqartirish, erkin raqobat muhitini yaratish, soliq yukini kamaytirish va davlat xizmatlarini to'liq raqamlashtirish bo'yicha ulkan ishlar amalga oshirildi. 2019-yilda yangi tahrirdagi Soliq kodeksi qabul qilinib, QQS stavkasi 20% dan bosqichma-bosqich 15% ga, so'ngra 12% ga tushirildi. 'Raqamli O'zbekiston - 2030' strategiyasi doirasida IT Park tashkil etildi, Yagona interaktiv davlat xizmatlari portali (my.gov.uz) orqali yuzlab xizmatlar elektron shaklga o'tkazildi. Jahon Savdo Tashkilotiga (JST / WTO) a'zo bo'lish jarayoni faollashdi.",
+      "case_study_extended": "🏛️ TARIXIY VOQELIK (IT Park rezidentligi va eksportining o'sishi):\n2019-yilda O'zbekistonda dasturiy mahsulotlar va axborot texnologiyalari texnoparki (IT Park) ochildi. Rezidentlar uchun barcha soliqlardan nol stavkali imtiyozlar berildi. Natijada O'zbekistonda IT xizmatlari eksporti hajmi 2017-yildagi bir necha yuz ming dollardan bugungi kunda yuzlab million dollarga yetdi. 'Bir million dasturchi' (One Million Uzbek Coders) loyihasi orqali yoshlarga bepul dasturlash ta'limi berildi.",
+      "formulas_detailed": [
+        "QQS (Qo'shilgan qiymat solig'i) pasayishi: 20% -> 15% (2019) -> 12% (2023-yil 1-yanvardan)",
+        "IT Park ta'sis etilishi: 2019-yil Toshkent",
+        "'Raqamli O'zbekiston - 2030' dasturi: 2020-yil 5-oktabr Farmoni",
+        "Yagona interaktiv davlat xizmatlari portali: my.gov.uz",
+        "Jahon Savdo Tashkiloti (JST / WTO) a'zoligi bo'yicha muzokaralar qayta tiklandi"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: QQS (Qo'shilgan qiymat solig'i) ning amaldagi eng so'nggi stavkasi — 12% hisoblanadi (2023-yil 1-yanvardan kuchga kirgan)!",
+        "Tuzoq 2: IT Park rezidentlari uchun daromad solig'i 12% emas, imtiyozli 7.5% qilib belgilangan!"
+      ],
+      "improvement_guide": "Raqamli iqtisodiyot, soliq islohotlari va IT eksportiga oid raqamlarni takrorlang.",
+      "pdf_ref": "O'zbekiston Tarixi Qo'llanmasi: 84 - 96 betlar",
+      "svg_type": "digitaleconomygrowth",
+      "videos": [
+        {
+          "title": "Raqamli O'zbekiston 2030 va IT Park yutuqlari",
+          "url": "https://www.youtube.com/results?searchquery=raqamli+ozbekiston+2030+it+park+soliq+islohotlari",
+          "takeaway": "QQS pasayishi, my.gov.uz va IT eksporti o'sishi."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title_uz": "8-Mavzu: Ijtimoiy himoya, gender tenglik va yoshlar siyosati",
+      "title_en": "Social Welfare, Gender Equality & Youth Policy",
+      "summary_deep": "Ijtimoiy sohada 'Inson qadri uchun' tamoyili asosida kambag'allikni qisqartirish milliy harakat darajasiga ko'tarildi. Aholining ehtiyojmand qatlamlarini manzilli qo'llab-quvvatlash uchun 'Temir daftar', 'Ayollar daftari' va 'Yoshlar daftari' tizimlari joriy etildi. 2023-yilda Ijtimoiy himoya milliy agentligi tashkil etildi. Xotin-qizlarning jamiyatdagi mavqeini oshirish maqsadida 'Xotin-qizlar va erkaklar uchun teng huquq hamda imkoniyatlar kafolatlari to'g'risida'gi qonun qabul qilindi. 30-iyun sanasi 'Yoshlar kuni' deb e'lon qilindi.",
+      "case_study_extended": "🏛️ TARIXIY VOQELIK (Kambag'allikni qisqartirishda Monomarkazlar tajribasi):\nKambag'allikni oddiy nafaqa tarqatish yo'li bilan emas, balki aholiga kasb va hunar o'rgatish orqali yengish maqsadida respublika bo'ylab 'Ishga marhamat' monomarkazlari ochildi. Ishsiz fuqarolar va yoshlar payvandlash, santexnika, IT, pazandachilik, tikuvchilik va xorijiy tillarga bepul o'qitilib, ularga subsidiyalar va mehnat qurollari (tikuv mashinalari, motokultivatorlar) ajratildi.",
+      "formulas_detailed": [
+        "30-iyun: Yoshlar kuni (2017-yilda qabul qilingan)",
+        "Ijtimoiy daftarlar: 'Temir daftar' (kambag'al oilalar), 'Ayollar daftari', 'Yoshlar daftari'",
+        "2023-yil: O'zbekiston Respublikasi Prezidenti huzuridagi Ijtimoiy himoya milliy agentligi",
+        "Prezident maktablari, Al-Xorazmiy, Mirzo Ulug'bek nomidagi ixtisoslashtirilgan maktablar va 'Yangi O'zbekiston' universiteti tashkil etildi"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: 'Yoshlar kuni' — 30-iyun sanasida nishonlanadi!",
+        "Tuzoq 2: Kambag'allikni qisqartirish siyosatida Nobel mukofoti laureatlari Abhijit Banerji va Ester Dyuflo bilan hamkorlikda Xitoy tajribasi asos qilib olindi!"
+      ],
+      "improvement_guide": "Ijtimoiy daftarlar mexanizmi, Yoshlar kuni sanasi va ta'lim sohasidagi yangi muassasalar ro'yxatini ko'rib chiqing.",
+      "pdf_ref": "O'zbekiston Tarixi Qo'llanmasi: 97 - 108 betlar",
+      "svg_type": "socialdaftarlar",
+      "videos": [
+        {
+          "title": "O'zbekistonda yoshlar siyosati va ijtimoiy himoya",
+          "url": "https://www.youtube.com/results?searchquery=ozbekistonda+ijtimoiy+himoya+temir+daftar+yoshlar+kuni",
+          "takeaway": "Ijtimoiy daftarlar, gender tenglik va ta'lim muassasalari."
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title_uz": "9-Mavzu: 'O'zbekiston — 2030' strategiyasi va yangilangan Konstitutsiya",
+      "title_en": "Uzbekistan - 2030 Strategy & Reformed Constitution",
+      "summary_deep": "2023-yil 30-aprelda umumxalq referendumi orqali yangi tahrirdagi O'zbekiston Respublikasi Konstitutsiyasi qabul qilindi. Konstitutsiyada O'zbekiston ilk bor rasman 'Suveren, demokratik, huquqiy, IJTIMOIY va dunyoviy davlat' deb belgilandi. Davlatning ijtimoiy majburiyatlari 3 barobarga oshirildi. 2023-yil 11-sentabrda tasdiqlangan 'O'zbekiston — 2030' strategiyasi 5 ta asosiy yo'nalish va 100 ta maqsadni o'z ichiga oladi: YAIM hajmini 160 milliard dollarga yetkazish, aholi jon boshiga daromadni 4 000 dollardan oshirish, 'Yashil makon' loyihasi orqali ekologik barqarorlikni ta'minlash.",
+      "case_study_extended": "🏛️ TARIXIY VOQELIK ('Yashil makon' umummilliy loyihasi):\nOrol fojiasi va global iqlim o'zgarishi oqibatlarini yumshatish maqsadida O'zbekiston bo'ylab 'Yashil makon' umummilliy dasturi yo'lga qo'yildi. Har yili 200 million tup daraxt va buta ko'chatlarini ekish rejalashtirildi. Orol dengizining qurigan tubida 2 million gektarga yaqin maydonda saksovul va sho'rga chidamli butazorlar barpo etilib, chang bo'ronlarining oldi olindi.",
+      "formulas_detailed": [
+        "2023-yil 30-aprel: Umumxalq referendumi - Yangi tahrirdagi Konstitutsiya qabul qilindi",
+        "Konstitutsiyaning 1-moddasi: O'zbekiston — suveren, demokratik, huquqiy, ijtimoiy va dunyoviy davlat",
+        "'O'zbekiston — 2030' strategiyasi: 5 ta ustuvor yo'nalish, 100 ta aniq maqsad",
+        "Asosiy iqtisodiy maqsad: 2030-yilga borib YAIMni 160 milliard dollarga, aholi jon boshiga daromadni 4 000 dollarga yetkazish"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: Yangi tahrirdagi Konstitutsiyaga ko'ra davlat ta'rifiga aynan 'IJTIMOIY' (Social State) tushunchasi yangi qo'shildi!",
+        "Tuzoq 2: 'O'zbekiston — 2030' strategiyasi 2023-yil sentabrda tasdiqlangan bo'lib, 5 ta yo'nalish va 100 ta maqsaddan iborat!"
+      ],
+      "improvement_guide": "2023-yilgi Referendum sanasi, Konstitutsiyaning 1-moddasidagi 5 ta sifat va 2030-yil ko'rsatkichlarini yodlang.",
+      "pdf_ref": "O'zbekiston Tarixi Qo'llanmasi: 109 - 120 betlar",
+      "svg_type": "uzbekistan₂030_goals",
+      "videos": [
+        {
+          "title": "Yangi tahrirdagi Konstitutsiya va O'zbekiston 2030 strategiyasi",
+          "url": "https://www.youtube.com/results?searchquery=yangi+tahrirdagi+konstitutsiya+referendum+ozbekiston+2030+strategiyasi",
+          "takeaway": "Ijtimoiy davlat tamoyili, referendum va 2030 maqsadlari."
+        }
+      ]
+    }
+  ],
+  "mikroiqtisodiyot": [
+    {
+      "id": 1,
+      "title_uz": "1-Mavzu: Mikroiqtisodiyotga kirish, cheklanganlik va ishlab chiqarish imkoniyatlari egri chizig'i (PPC)",
+      "title_en": "Introduction to Microeconomics, Scarcity & Production Possibilities Curve",
+      "summary_deep": "Iqtisodiyot fanining bosh muammosi — inson ehtiyojlarining cheksizligi va ularni qondirish uchun resurslarning (yer, mehnat, kapital, tadbirkorlik) cheklanganligidir (Scarcity). Barcha iqtisodiy sub'ektlar Tanlov qilishga majbur. Har bir tanlov o'zining Muqobil qiymatiga (Opportunity Cost) ega — ya'ni tanlangan variant foydasiga voz kechilgan ikkinchi eng yaxshi imkoniyat qiymati. Ishlab chiqarish imkoniyatlari egri chizig'i (PPC) mavjud resurslardan to'liq va samarali foydalanilganda ishlab chiqarilishi mumkin bo'lgan ikki tovar kombinatsiyalarini ifodalaydi.",
+      "case_study_extended": "📈 REAL BIZNES KEYSI (Kompaniyaning muqobil qiymati):\nTadbirkor hisobida 100 000 000 so'm bo'sh pul bor. U bu pulni 22% yillik bank depozitiga qo'yib yiliga 22 000 000 so'm kafolatlangan passiv daromad olishi mumkin edi. Biroq u ushbu 100 mln so'mga yangi qahvaxona ochdi va yil oxirida 25 000 000 so'm buxgalteriya foydasi ko'rdi. Iqtisodiy nuqtai nazardan uning iqtisodiy foydasi: 25 mln - 22 mln (muqobil qiymat) = 3 000 000 so'mni tashkil etdi.",
+      "formulas_detailed": [
+        "Muqobil qiymat (Opportunity Cost) = Voz kechilgan tovar miqdori / Olingan tovar miqdori (ΔY / ΔX)",
+        "PPC egri chizig'idagi nuqtalar: Resurslardan to'liq va samarali foydalanilayotgan holat",
+        "PPC ichidagi nuqtalar: Resurslardan samarasiz foydalanish (ishsizlik, quvvatlarning bo'sh turishi)",
+        "PPC tashqarisidagi nuqtalar: Joriy resurslar va texnologiya bilan erishib bo'lmaydigan holat",
+        "Ortib boruvchi muqobil xarajatlar qonuni: Bir tovarni ko'proq ishlab chiqarish uchun ikkinchisidan tobora ko'p voz kechishga to'g'ri keladi (PPC ning botiq bo'lishi sababi)"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: 'PPC egri chizig'i ichida turgan nuqta' erishib bo'lmaydigan emas, erishsa bo'ladi, lekin resurslar samarasiz (ishsizlik bor) deganidir!",
+        "Tuzoq 2: Buxgalteriya xarajatlari faqat naqd to'langan pulni hisoblasa, Iqtisodiy xarajatlar ichiga Muqobil qiymat (Opportunity cost) ham kiritiladi!"
+      ],
+      "improvement_guide": "PPC grafigini chizib, ichki, ustki va tashqi nuqtalar ma'nosini va muqobil qiymat formulasini takrorlang.",
+      "pdf_ref": "Mikroiqtisodiyot Master Qo'llanmasi: 3 - 18 betlar",
+      "svg_type": "ppcfrontier",
+      "videos": [
+        {
+          "title": "Ishlab chiqarish imkoniyatlari egri chizig'i (PPC) va muqobil xarajat",
+          "url": "https://www.youtube.com/results?searchquery=ishlab+chiqarish+imkoniyatlari+egri+chizigi+ppc+muqobil+qiymat",
+          "takeaway": "PPC grafigi, cheklanganlik va opportunity cost tushunchasi."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title_uz": "2-Mavzu: Bozor mexanizmi: Talab, taklif va bozor muvozanati",
+      "title_en": "Market Mechanism: Law of Demand, Supply & Equilibrium",
+      "summary_deep": "Bozor iqtisodiyoti talab va taklif qonunlari asosida o'zini o'zi boshqaradi. Talab qonuni (Law of Demand): boshqa barcha omillar o'zgarmas bo'lganda (Ceteris paribus), tovar narxi oshsa, unga bo'lgan talab hajmi kamayadi (P uparrow → Qd downarrow). Taklif qonuni (Law of Supply): tovar narxi oshsa, sotuvchilar taklif etadigan hajm ham oshadi (P uparrow → Qs uparrow). Talab va taklif kesishgan nuqtada Bozor muvozanati (Qd = Qs) yuzaga keladi. Davlat tomonidan narx shifti (Price Ceiling) qo'yilsa taqchillik, narx poli (Price Floor) qo'yilsa ortiqchalik kelib chiqadi.",
+      "case_study_extended": "📈 REAL BIZNES KEYSI (Bozor muvozanatini hisoblash):\nShahar bozorida muzqaymoqqa talab funksiyasi: Qd = 100 - 5P, taklif funksiyasi: Qs = 20 + 3P.\nMuvozanatni topish uchun tenglashtiramiz: 100 - 5P = 20 + 3P → 8P = 80 → P^* = 10 ming so'm.\nMuvozanat miqdori: Q^* = 100 - 5(10) = 50 dona.\nAgar davlat ijtimoiy maqsadda muzqaymoq narxini 5 ming so'm qilib cheklasa (Price Ceiling): Qd = 100 - 25 = 75, Qs = 20 + 15 = 35. Natijada bozorda 75 - 35 = 40 dona muzqaymoq taqchilligi (Shortage) yuzaga keladi va navbatlar paydo bo'ladi.",
+      "formulas_detailed": [
+        "Bozor muvozanati sharti: Qd(P) = Qs(P)",
+        "Talab hajmining o'zgarishi (Egri chiziq bo'ylab harakat) — FAQAT tovarning o'z narxi o'zgarganda",
+        "Talabning o'zgarishi (Egri chiziqning o'ngga/chapga siljishi) — daromad, did, o'rinbosar/to'ldiruvchi tovar narxlari o'zgarganda",
+        "Narx shifti (Pceiling < Peq) -> Taqchillik (Shortage: Qd > Qs)",
+        "Narx poli (Pfloor > Peq) -> Ortiqchalik (Surplus: Qs > Qd)"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: 'Talab miqdorining o'zgarishi' (faqat narx o'zgarganda chiziq bo'ylab siljish) bilan 'Talabning o'zgarishi' (narx bo'lmagan omillar tufayli butun chiziqning o'ngga/chapga ko'chishi) ni farqlang!",
+        "Tuzoq 2: Davlat belgilaydigan narx shifti (Price Ceiling) muvozanat narxidan PASTDA o'rnatiladi va taqchillikka sabab bo'ladi!"
+      ],
+      "improvement_guide": "Qd = a - bP va Qs = c + dP tenglamalarini tenglashtirib muvozanat narxi va miqdorini topishni 3 marta mashq qiling.",
+      "pdf_ref": "Mikroiqtisodiyot Master Qo'llanmasi: 19 - 35 betlar",
+      "svg_type": "supplydemandequilibrium",
+      "videos": [
+        {
+          "title": "Talab va taklif qonuni, bozor muvozanati",
+          "url": "https://www.youtube.com/results?searchquery=talab+va+taklif+qonuni+bozor+muvozanati+hisoblash",
+          "takeaway": "Talab va taklif egri chiziqlari, siljish omillari va taqchillik."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title_uz": "3-Mavzu: Talab va taklif elastikligi (Narx, Daromad va Kesishgan elastiklik)",
+      "title_en": "Elasticity of Demand & Supply (Price, Income & Cross Elasticity)",
+      "summary_deep": "Elastiklik — bir iqtisodiy ko'rsatkichning ikkinchisi o'zgarishiga nisbatan sezgirlik darajasidir. 1) Talabning narx bo'yicha elastikligi (Ed) — narx 1% ga o'zgarganda talab hajmi necha foizga o'zgarishini ko'rsatadi. Agar |Ed| > 1 bo'lsa talab elastik (narx oshsa jami daromad tushadi); agar |Ed| < 1 bo'lsa noelastik (narx oshsa jami daromad oshadi). 2) Daromad bo'yicha elastiklik (EI): agar EI > 0 bo'lsa normal tovar, EI < 0 bo'lsa past sifatli (inferior) tovar. 3) Kesishgan elastiklik (E_{xy}): agar E_{xy} > 0 bo'lsa o'rinbosar (substitut), E_{xy} < 0 bo'lsa bir-birini to'ldiruvchi (komplementar) tovarlar.",
+      "case_study_extended": "📈 REAL BIZNES KEYSI (Dorixona va Narx elastikligi):\nQandli diabet kasallariga insulin dori vositasi hayotiy zarur. Uning narx elastikligi o'ta noelastik (|Ed| = 0.1). Agar dorixona insulin narxini 20% ga oshirsa, sotiladigan miqdor atigi 2% ga kamayadi, dorixonaning umumiy tushumi (TR = P x Q) esa keskin oshadi. Aksincha, restoran taomlari elastik (|Ed| = 2.0): taomlar narxi 10% oshsa, mijozlar soni 20% ga kamayib ketadi va restoran tushumi qisqaradi.",
+      "formulas_detailed": [
+        "O'rta nuqta (Midpoint) formulasi: Ed = [(Q2 - Q1) / ((Q1 + Q2) / 2)] / [(P2 - P1) / ((P1 + P2) / 2)]",
+        "Jami daromad (Total Revenue): TR = P * Q",
+        "Elastik talabda (|Ed| > 1): Narx oshsa -> TR kamayadi; Narx tushsa -> TR oshadi",
+        "Noelastik talabda (|Ed| < 1): Narx oshsa -> TR oshadi; Narx tushsa -> TR kamayadi",
+        "Daromad elastikligi: EI > 1 (hashamatli), 0 < EI < 1 (zaruriy), EI < 0 (past toifali/inferior)"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: Agar ikkita tovarning kesishgan elastikligi musbat bo'lsa (E_{xy} > 0), ular O'RINBOSAR (masalan, Pepsi va Coca-Cola)! Agar manfiy bo'lsa (E_{xy} < 0) TO'LDIRUVCHI (masalan, Avtomobil va Benzin)!",
+        "Tuzoq 2: Narx bo'yicha elastiklik manfiy chiqsa ham, uni tahlil qilishda har doim MODULI olinadi (|Ed|)!"
+      ],
+      "improvement_guide": "Elastiklikning 3 turi (narx, daromad, kesishgan) belgilarini (+ / -) va ularning tovar turiga bog'liqligini jadval qilib yodlang.",
+      "pdf_ref": "Mikroiqtisodiyot Master Qo'llanmasi: 36 - 52 betlar",
+      "svg_type": "elasticityrevenuecurve",
+      "videos": [
+        {
+          "title": "Talabning narx va daromad bo'yicha elastikligi",
+          "url": "https://www.youtube.com/results?searchquery=talabning+narx+boyicha+elastikligi+va+jami+daromad",
+          "takeaway": "Midpoint formulasi, TR qoidasi va substitut tovarlar."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title_uz": "4-Mavzu: Iste'molchi xulq-atvori nazariyasi: Chekli naflilik va befarqlik egri chiziqlari",
+      "title_en": "Consumer Behavior: Marginal Utility & Indifference Curves",
+      "summary_deep": "Iste'molchi nazariyasi shaxs o'zining cheklangan byudjeti bilan naflilikni (qoniqishni) qanday maksimallashtirishini tushuntiradi. Ikki yondashuv mavjud: 1) Kardinal (miqdoriy) yondashuv — naflilikni maxsus birlik 'yutil' (util) larda o'lchash mumkin deb hisoblaydi. Kamayib boruvchi chekli naflilik qonuni (Gossenning 1-qonuni): tovar iste'moli oshgan sari, har bir qo'shimcha birlik keltiradigan naflilik (MU) kamayib boradi. 2) Ordinal (tartibiy) yondashuv — naflilikni o'lchab bo'lmaydi, faqat taqqoslab tartiblash mumkin. U Befarqlik egri chiziqlari (Indifference Curves) va Byudjet chizig'i (Budget Line) orqali tahlil qilinadi.",
+      "case_study_extended": "📈 REAL BIZNES KEYSI (Issiq kunda muzdek suv iste'moli):\nChanqagan odam uchun birinchi stakan suv beradigan qoniqish (MU1) 100 ballga teng. Ikkinchi stakan — 50 ball, uchinchi stakan — 10 ball, to'rtinchi stakanda esa uning qoniqishi nolga tushadi (chanqoq qondi). Agar 5-stakanni majburlab ichirilsa, uning nafliligi manfiy bo'lib, umumiy naflilik (TU) kamayadi. Shu sababli olmos suvdan ko'ra hayot uchun zarur bo'lmasa-da, chekli nafliligi yuqori bo'lgani uchun qimmatroq turadi ('Suv-olmos paradoksi').",
+      "formulas_detailed": [
+        "Chekli naflilik: MU = ΔTU / ΔQ (Umumiy naflilikning hosilasi)",
+        "Iste'molchi muvozanati (Kardinal): MUx / Px = MUy / Py (Har bir sarflangan so'mga to'g'ri keluvchi chekli naflilik teng bo'lishi shart)",
+        "Byudjet cheklovi: I = Px * X + Py * Y",
+        "Chekli almashtirish me'yori: MRS = - ΔY / ΔX = MUx / MUy",
+        "Optimal iste'molchi nuqtasi: Befarqlik egri chizig'i byudjet chizig'iga urinish nuqtasi (MRS = Px / Py)"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: Chekli naflilik (MU) nolgacha tushganda, Umumiy naflilik (TU) o'zining MAKSIMAL nuqtasiga yetadi! MU manfiy bo'lgandagina TU kamayishni boshlaydi!",
+        "Tuzoq 2: Befarqlik egri chiziqlari HECH QACHON BIR-BIRI BILAN KESISHMAYDI va koordinata boshiga nisbatan har doim BOTIQ bo'ladi!"
+      ],
+      "improvement_guide": "Gossenning 1 va 2-qonunlari hamda byudjet chizig'i qiyaligi (Px/Py) formulalarini takrorlang.",
+      "pdf_ref": "Mikroiqtisodiyot Master Qo'llanmasi: 53 - 70 betlar",
+      "svg_type": "indifferencecurveoptimum",
+      "videos": [
+        {
+          "title": "Iste'molchi muvozanati va befarqlik egri chiziqlari",
+          "url": "https://www.youtube.com/results?searchquery=iste'molchi+xulq+atvori+chekli+naflilik+befarqlik+egri+chiziqlari",
+          "takeaway": "Kardinal va ordinal yondashuv, MU formulasi va MRS."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title_uz": "5-Mavzu: Ishlab chiqarish nazariyasi va xarajatlar tahlili",
+      "title_en": "Production Theory & Cost Analysis (Short-run & Long-run)",
+      "summary_deep": "Ishlab chiqarish nazariyasi resurslarni mahsulotga aylantirish qonuniyatlarini o'rganadi. Qisqa muddatli davrda (Short Run) kamida bitta omil (odatda kapital/bino) o'zgarmas qoladi. Bunda Kamayib boruvchi unumdorlik qonuni (Law of Diminishing Returns) amal qiladi: o'zgarmas kapitalga qo'shimcha ishchilar qo'shilgan sari, ularning chekli mahsuloti (MP) avval o'sadi, so'ngra pasayadi. Xarajatlar: 1) O'zgarmas xarajatlar (FC) — ishlab chiqarish hajmiga bog'liq emas (ijara, qo'riqlash); 2) O'zgaruvchan xarajatlar (VC) — hajmga qarab o'zgaradi (xomashyo, ish haqi); 3) Jami xarajatlar: TC = FC + VC; 4) Chekli xarajat (MC) — bitta qo'shimcha mahsulot ishlab chiqarishga ketgan xarajat.",
+      "case_study_extended": "📈 REAL BIZNES KEYSI (Nonvoyxona xarajatlari tahlili):\nNonvoyxona ijarasi oyiga 10 000 000 so'm (FC). 1 dona non uchun un va tuz xarajati 2 000 so'm (AVC). Agar nonvoyxona oyiga 10 000 dona non yopsa:\n- Jami o'zgaruvchan xarajat: VC = 10 000 x 2 000 = 20 000 000 so'm\n- Jami xarajat: TC = 10 mln + 20 mln = 30 000 000 so'm\n- 1 dona nonning o'rtacha umumiy tannarxi: ATC = 30 mln / 10 000 = 3 000 so'm.\nAgar nonvoyxona ishlab chiqarishni 20 000 donaga oshirsa, o'zgarmas xarajatlar katta hajmga 'yoyiladi' (AFC = 10 mln / 20 000 = 500 so'm) va 1 dona nonning tannarxi 2 500 so'mga arzonlashadi (Ko'lam samaradorligi / Economies of Scale).",
+      "formulas_detailed": [
+        "Jami xarajat: TC = TFC + TVC",
+        "O'rtacha umumiy xarajat: ATC = TC / Q = AFC + AVC",
+        "Chekli xarajat (Marginal Cost): MC = ΔTC / ΔQ = ΔVC / ΔQ (TC funksiyasining hosilasi)",
+        "Chekli mahsulot: MP = ΔTP / ΔL",
+        "MC egri chizig'i har doim ATC va AVC egri chiziqlarini ularning eng MINIMAL (quyi) nuqtalarida kesib o'tadi!"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: Agar mahsulot ishlab chiqarish nolga teng bo'lsa ham (Q = 0), JAMI XARAJAT (TC) nolga teng bo'lmaydi! Chunki O'zgarmas xarajat (FC) saqlanib qoladi (masalan, ijara baribir to'lanadi)!",
+        "Tuzoq 2: MC (Chekli xarajat) formulasida FC ning roli yo'q, chunki o'zgarmas xarajatning hosilasi nolga teng!"
+      ],
+      "improvement_guide": "FC, VC, TC, AFC, AVC, ATC va MC ko'rsatkichlarining jadvalli hisob-kitobini va U-simon grafiklarini chizib o'rganing.",
+      "pdf_ref": "Mikroiqtisodiyot Master Qo'llanmasi: 71 - 88 betlar",
+      "svg_type": "costcurvesu_shaped",
+      "videos": [
+        {
+          "title": "Qisqa muddatli xarajatlar: TC, FC, VC, ATC va MC",
+          "url": "https://www.youtube.com/results?searchquery=qisqa+muddatli+xarajatlar+tc+fc+vc+atc+mc+hisoblash",
+          "takeaway": "O'zgarmas va o'zgaruvchan xarajatlar, MC va ATC munosabati."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title_uz": "6-Mavzu: Mukammal raqobat bozori va korxonaning foydani maksimallashtirish sharti",
+      "title_en": "Perfect Competition & Profit Maximization (P = MR = MC)",
+      "summary_deep": "Mukammal raqobat bozori — iqtisodiy nazariyadagi ideal bozor tuzilmasi bo'lib, quyidagi xususiyatlarga ega: 1) Bozorda juda ko'p sotuvchi va xaridorlar mavjud; 2) Mahsulotlar mutlaqo bir xil (standartlashgan / bir jinsli); 3) Bozorga kirish va chiqish uchun hech qanday to'siq yo'q; 4) Bozor haqida to'liq va mukammal axborot mavjud. Mukammal raqobatda korxona 'Narx qabul qiluvchi' (Price Taker) hisoblanadi va narxga ta'sir qila olmaydi. Shuning uchun: P = MR = AR. Korxonaning foydani maksimallashtirishning oltin qoidasi: MR = MC (Chekli daromad = Chekli xarajat).",
+      "case_study_extended": "📈 REAL BIZNES KEYSI (Fermer xo'jaligining bug'doy yetishtirishi):\nBug'doy bozori mukammal raqobatga eng yaqin soha. Bir fermer o'z bug'doyini bozor narxidan (masalan, 1 kg = 3 000 so'm) qimmatroq sotmoqchi bo'lsa, hech kim sotib olmaydi. Narxni arzon qilib sotishdan esa ma'no yo'q, chunki u barcha bug'doyini 3 000 so'mdan bemalol sota oladi. Fermer qancha bug'doy ekishni aniqlash uchun MR = MC shartidan foydalanadi: bug'doyning bozor narxi 3 000 so'm bo'lsa, u ishlab chiqarishni so'nggi 1 kg bug'doy yetishtirish xarajati (MC) 3 000 so'mga teng bo'lguncha oshiradi.",
+      "formulas_detailed": [
+        "Mukammal raqobatda talab chizig'i: Gorizontal (Mutlaq elastik), P = AR = MR",
+        "Foydani maksimallashtirish sharti: MR = MC (yoki P = MC)",
+        "Iqtisodiy foyda: Foyda = (P - ATC) * Q",
+        "Faoliyatni vaqtincha to'xtatish (Shutdown point) sharti: P < AVC (Agar narx hatto o'rtacha o'zgaruvchan xarajatni ham qoplamasa)",
+        "Uzoq muddatli muvozanat sharti: P = MC = min ATC (Iqtisodiy foyda NOLGA teng bo'ladi)"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: Uzoq muddatda mukammal raqobatda korxonalar 'Nol iqtisodiy foyda' (Zero Economic Profit) oladi! Bu korxona bankrot bo'ldi degani emas, balki normal buxgalteriya foydasi olayotganini bildiradi!",
+        "Tuzoq 2: Korxona narx o'rtacha jami xarajatdan past bo'lsa ham (P < ATC) faoliyatini darhol to'xtatmaydi; u faqat narx o'rtacha o'zgaruvchan xarajatdan ham tushib ketgandagina (P < AVC) to'xtaydi!"
+      ],
+      "improvement_guide": "MR = MC qoidasini va uzoq muddatli muvozanatda P = ATC bo'lishini grafikda tahlil qiling.",
+      "pdf_ref": "Mikroiqtisodiyot Master Qo'llanmasi: 89 - 105 betlar",
+      "svg_type": "perfectcompetitionprofit",
+      "videos": [
+        {
+          "title": "Mukammal raqobat bozori va MR = MC qoidasi",
+          "url": "https://www.youtube.com/results?searchquery=mukammal+raqobat+bozori+foydani+maksimallashtirish+mr+mc",
+          "takeaway": "Price taker tushunchasi, MR=MC va faoliyatni to'xtatish nuqtasi."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title_uz": "7-Mavzu: Sof monopoliya bozori, narx diskriminatsiyasi va ijtimoiy yo'qotish",
+      "title_en": "Monopoly, Price Discrimination & Deadweight Loss",
+      "summary_deep": "Sof monopoliya — bozorda faqat bitta yagona sotuvchi mavjud bo'lgan, mahsulotning yaqin o'rinbosarlari bo'lmagan va yangi korxonalar kirishi uchun mutlaq to'siqlar (litsenziyalar, patentlar, tabiiy monopoliya) mavjud bo'lgan bozor tuzilmasi. Monopolist 'Narx o'rnatuvchi' (Price Maker) hisoblanadi. Monopoliyada talab egri chizig'i pastga yo'nalgan bo'lgani sababli, Chekli daromad har doim narxdan pastda joylashadi (MR < P). Monopolist ishlab chiqarish hajmini sun'iy kamaytirib, yuqori narx qo'yadi, bu esa jamiyat uchun Ijtimoiy yo'qotish (Deadweight Loss) keltirib chiqaradi.",
+      "case_study_extended": "📈 REAL BIZNES KEYSI (Poyezd chiptalarida 3-darajali narx diskriminatsiyasi):\n'O'zbekiston Temir Yo'llari' yo'lovchi tashishda tabiiy monopoliyaga ega. Kompaniya bitta yo'nalishdagi bitta poyezd chiptasini turli guruhlarga har xil narxda sotadi: talabalar uchun 50% chegirma (talab elastikligi yuqori), oddiy yo'lovchilar uchun to'liq narx, VIP yo'lovchilar uchun esa 3 barobar yuqori narx. Bu orqali korxona iste'molchi ortiqchaligini o'z foydasiga aylantiradi va jami daromadini maksimallashtiradi.",
+      "formulas_detailed": [
+        "Monopoliyada: MR < P (har bir qo'shimcha tovar sotish uchun narxni tushirish kerak)",
+        "Foyda maksimallashtirish: MR = MC (lekin narx P talab egri chizig'idan olinadi: P > MC)",
+        "Lerner indeksi (Monopoliya kuchi): L = (P - MC) / P = 1 / |Ed| (0 dan 1 gacha bo'ladi)",
+        "Ijtimoiy sof yo'qotish (Deadweight Loss - DWL): 0.5 * (Pm - MC) * (Qc - Qm)",
+        "Narx diskriminatsiyasi: 1-darajali (mukammal), 2-darajali (hajm bo'yicha), 3-darajali (iste'molchilar guruhlari bo'yicha)"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: Monopolist xohlagan narxini qo'ya olmaydi! Uning narxi bozor TALAB EGRI CHIZIG'I bilan cheklanadi (agar narxni osmonga ko'tarsa, hech kim sotib olmaydi)!",
+        "Tuzoq 2: Monopoliyada taklif egri chizig'i MAVJUD EMAS! Chunki monopolist narxga qarab hajm bermaydi, balki bir vaqtda narx va hajmni o'zi tanlaydi!"
+      ],
+      "improvement_guide": "Monopoliya grafigida MR < P egri chizig'ini, DWL uchburchagini va Lerner indeksini hisoblashni mashq qiling.",
+      "pdf_ref": "Mikroiqtisodiyot Master Qo'llanmasi: 106 - 124 betlar",
+      "svg_type": "monopolydwldiagram",
+      "videos": [
+        {
+          "title": "Sof monopoliya va narx diskriminatsiyasi",
+          "url": "https://www.youtube.com/results?searchquery=sof+monopoliya+bozori+va+narx+diskriminatsiyasi+deadweight+loss",
+          "takeaway": "Monopoliyada MR va narx, Lerner indeksi va sof yo'qotish."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title_uz": "8-Mavzu: Monopolistik raqobat va mahsulot differensiallanishi",
+      "title_en": "Monopolistic Competition & Product Differentiation",
+      "summary_deep": "Monopolistik raqobat — o'zida ham mukammal raqobat, ham monopoliya xususiyatlarini birlashtirgan bozor tuzilmasi. Asosiy belgilari: 1) Bozorda juda ko'p sonli sotuvchilar mavjud; 2) Mahsulotlar bir-biriga yaqin o'rinbosar, ammo differensiallashgan (brend, dizayn, ta'm, sifat bilan ajralib turadi); 3) Bozorga kirish va chiqish nisbatan oson; 4) Narxsiz raqobat (reklama, brending, xizmat ko'rsatish) keng qo'llaniladi. Qisqa muddatda korxonalar iqtisodiy foyda olishi mumkin, ammo uzoq muddatda yangi raqobatchilar kirib kelishi natijasida iqtisodiy foyda nolga tushadi va Ortiqcha quvvat (Excess Capacity) yuzaga keladi.",
+      "case_study_extended": "📈 REAL BIZNES KEYSI (Shahar kafelari va Pitsa tarmoqlari):\nShahardagi qahvaxonalar (Black Star Burger, Evos, MaxWay, KFC) monopolistik raqobatga misol bo'ladi. Ular barchasi tezkor ovqat sotadi, ammo har biri o'zining maxsus sousi, qadoqlash dizayni, qulay divanlari yoki yetkazib berish ilovasi bilan o'z mijozlar guruhiga ega. Har bir kafe o'zining sodiq auditoriyasi uchun 'kichik monopolist' hisoblanadi, lekin narxni haddan tashqari oshira olmaydi, chunki yonida yuzlab boshqa kafelar bor.",
+      "formulas_detailed": [
+        "Foydani maksimallashtirish: MR = MC",
+        "Uzoq muddatli muvozanat: P = ATC (Iqtisodiy foyda = 0, ammo P > MC bo'ladi)",
+        "Ortiqcha quvvat (Excess Capacity) = Samarali ko'lam hajmi (min ATC) - Amaldagi ishlab chiqarish hajmi",
+        "Differensiallashuv omillari: Sifat, Dizayn, Xizmat ko'rsatish, Joylashuv, Reklama"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: Monopolistik raqobatda uzoq muddatda korxona min ATC nuqtasida ishlab chiqarmaydi! U ATC ning tushib borayotgan qismida to'xtaydi, shu sababli ORTIQCHA QUVVAT (resurslar to'liq ishlatilmasligi) hosil bo'ladi!",
+        "Tuzoq 2: 'Ortiqcha quvvat' faqat monopolistik raqobat va monopoliyaga xos, mukammal raqobatda esa uzoq muddatda quvvatlar 100% samarali ishlaydi!"
+      ],
+      "improvement_guide": "Monopolistik raqobatning mukammal raqobatdan farqlarini (mahsulot differensiallanishi va ortiqcha quvvat) taqqoslang.",
+      "pdf_ref": "Mikroiqtisodiyot Master Qo'llanmasi: 125 - 140 betlar",
+      "svg_type": "monopolisticexcesscapacity",
+      "videos": [
+        {
+          "title": "Monopolistik raqobat bozori va ortiqcha quvvat",
+          "url": "https://www.youtube.com/results?searchquery=monopolistik+raqobat+bozori+va+ortiqcha+quvvat+reklama",
+          "takeaway": "Mahsulot differensiallanishi, uzoq muddatli muvozanat va ortiqcha quvvat."
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title_uz": "9-Mavzu: Oligopoliya bozori, strategik o'zaro ta'sir va o'yinlar nazariyasi",
+      "title_en": "Oligopoly, Strategic Interaction & Game Theory (Nash Equilibrium)",
+      "summary_deep": "Oligopoliya — sanoat tarmog'ining asosiy qismini bir nechta (odatda 2 tadan 5-8 tagacha) yirik korxonalar nazorat qiladigan bozor tuzilmasi (masalan, mobil aloqa operatorlari: Beeline, Ucell, Mobiuz, Uztelecom). Oligopoliyaning bosh xususiyati — O'zaro strategik bog'liqlik (Mutual Interdependence): har bir korxona o'z narxi yoki hajmini o'zgartirishdan oldin raqobatchilarining qanday javob qaytarishini hisobga olishga majbur. Narxlar qovushqoqligi Sinuvchan talab egri chizig'i (Kinked Demand Curve) bilan tushuntiriladi. Strategik o'zaro harakatlar O'yinlar nazariyasi (Game Theory) va Nesh muvozanati (Nash Equilibrium) orqali modellashtiriladi.",
+      "case_study_extended": "📈 REAL BIZNES KEYSI (Mahbuslar dilemmasi va Reklama jangi):\nIkki yirik ichimlik kompaniyasi (Kompaniya A va Kompaniya B) reklama byudjeti bo'yicha qaror qabul qilmoqda:\n- Agar ikkalasi ham reklama qilmasa: har biri 50 mln $ foyda oladi (hamkorlik).\n- Agar A reklama qilib, B qilmasa: A 80 mln oladi, B esa bozorini yo'qotib 10 mln oladi.\n- Agar ikkalasi ham bir-biridan qo'rqib qimmat reklama bersa: har biri 30 mln $ dan foyda oladi.\nHar bir korxona uchun dominant strategiya — 'Reklama qilish' bo'ladi. Natijada ikkalasi ham reklama qilib 30 mln dan oladi (Nesh muvozanati), garchi kelishib reklama qilmasdan 50 mln olish imkoni bo'lsa ham!",
+      "formulas_detailed": [
+        "Sinuvchan talab modeli (Sweezy): Agar korxona narxni oshirsa — hech kim ergashmaydi (elastik); agar narxni tushirsa — hamma tushiradi (noelastik)",
+        "Nesh muvozanati (Nash Equilibrium): Boshqa o'yinchilarning strategiyasi o'zgarmas bo'lganda, hech bir o'yinchi o'z strategiyasini yakka tartibda o'zgartirishdan manfaatdor bo'lmagan holat",
+        "Kurno duopoliyasi (Cournot): Korxonalar bir vaqtda ishlab chiqarish hajmini (Q) tanlaydilar",
+        "Bertran duopoliyasi (Bertrand): Korxonalar narx (P) bo'yicha raqobatlashadi va natija mukammal raqobat narxiga tushadi (P = MC)",
+        "Gerfindal-Xirshman indeksi: HHI = s1² + s2² + ... + sn² (Bozor konsentratsiyasini o'lchaydi)"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: Kartel (maxfiy til biriktirish) tashkil etish qonunan noqonuniy bo'lib, o'yinlar nazariyasiga ko'ra ichkaridan har bir ishtirokchining kelishuvni buzishga bo'lgan shaxsiy rag'bati tufayli beqaror hisoblanadi!",
+        "Tuzoq 2: Bertran modelida korxonalar narx bo'yicha raqobatlashganda, atigi 2 ta korxona bo'lsa ham narx mukammal raqobat darajasiga (P = MC) tushib qoladi!"
+      ],
+      "improvement_guide": "Mahbuslar dilemmasi matritsasini chizib, dominant strategiya va Nesh muvozanatini topishni takrorlang.",
+      "pdf_ref": "Mikroiqtisodiyot Master Qo'llanmasi: 141 - 158 betlar",
+      "svg_type": "prisonersdilemmamatrix",
+      "videos": [
+        {
+          "title": "Oligopoliya, o'yinlar nazariyasi va Nesh muvozanati",
+          "url": "https://www.youtube.com/results?searchquery=oligopoliya+oyinlar+nazariyasi+nesh+muvozanati+mahbuslar+dilemmasi",
+          "takeaway": "O'zaro bog'liqlik, Mahbuslar dilemmasi va Kurno modeli."
+        }
+      ]
+    }
+  ],
+  "kiberxavfsizlik": [
+    {
+      "id": 1,
+      "title_uz": "1-Mavzu: Kiberxavfsizlik asoslari, CIA triadasi va Cyber Kill Chain",
+      "title_en": "Cybersecurity Fundamentals, CIA Triad & Cyber Kill Chain",
+      "summary_deep": "Kiberxavfsizlik — kompyuter tizimlari, tarmoqlar, dasturlar va ma'lumotlarni raqamli hujumlar va ruxsatsiz kirishdan himoya qilish amaliyotidir. CIA xavfsizlik triadasi uning poydevoridir: 1) Maxfiylik (Confidentiality) — ma'lumotlar faqat vakolatli shaxslarga ochiq bo'lishi (shifrlash, ACL); 2) Yaxlitlik (Integrity) — ma'lumotlarning aniqligi va begona o'zgartirishlardan xoliligi (xeshlar, raqamli imzo); 3) Mavjudlik (Availability) — tizimning kerakli paytda uzluksiz ishlashi (DDoS himoyasi, zaxira). Lockheed Martin'ning Cyber Kill Chain modeli tajovuzkorning 7 bosqichli hujum zanjirini ifodalaydi (Reconnaissance -> Weaponization -> Delivery -> Exploitation -> Installation -> C2 -> Actions on Objectives). Wazuh va SIEM tizimlari loglarni markaziy korrelyatsiya qiladi.",
+      "case_study_extended": "🔒 REAL KIBER-VOQELIK (Bankka qilingan hujumning Kill Chain tahlili):\nXakerlar bank tizimini nishonga oldi:\n1. Recon: LinkedIn orqali bosh hisobchi ismini aniqlashdi.\n2. Weaponization: Word hujjatiga Excel exploitini va troyanni paketlashdi.\n3. Delivery: 'Oylik hisoboti' mavzusida fishing xat yuborishdi.\n4. Exploitation: Hisobchi faylni ochganda dasturiy zaiflik ishga tushdi.\n5. Installation: Kompyuter xotirasiga yashirin agent o'rnatildi.\n6. C2: Agent xakerning serveri bilan shifrlangan aloqa bog'ladi.\n7. Actions: Xakerlar bank hisoblaridan 500 mln so'mni o'g'irlashga urindi. Ammo Blue Team (SIEM) tunda noodatiy tranzaksiyani aniqlab, ulanishni darhol uzib qo'ydi.",
+      "formulas_detailed": [
+        "CIA Triadasi: Confidentiality (Maxfiylik) + Integrity (Yaxlitlik) + Availability (Mavjudlik)",
+        "Kiber-risk formulasi: Risk = Ehtimollik (Likelihood) x Ta'sir (Impact)",
+        "Cyber Kill Chain: Recon -> Weaponize -> Deliver -> Exploit -> Install -> C2 -> Actions on Objectives",
+        "Jamoalar roli: Red Team (hujumchi/sinovchi), Blue Team (himoyachi/SOC), Purple Team (hamkorlik/integrator)",
+        "IDS (Detection - faqat signal beradi) vs IPS (Prevention - zararli paketlarni avtomatik bloklaydi)"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: 'Yaxlitlik' (Integrity) ma'lumotning sirliligini emas, balki uning o'zgarmaganligini va soxtalashtirilmaganligini anglatadi!",
+        "Tuzoq 2: Cyber Kill Chain da 'Weaponization' (Qurollanish) ekspluatatsiyadan oldin keladi: avval qurol yasaladi, keyin yetkaziladi va ishga tushiriladi!"
+      ],
+      "improvement_guide": "CIA triadasi, Kill Chain ning 7 bosqichi va SIEM/Wazuh vazifalarini sxema tarzida daftaringizga chizib takrorlang.",
+      "pdf_ref": "Kiberxavfsizlik Master Qo'llanmasi: 3 - 15 betlar",
+      "svg_type": "killchainsteps",
+      "videos": [
+        {
+          "title": "Kiberxavfsizlik asoslari: CIA triadasi va Cyber Kill Chain",
+          "url": "https://www.youtube.com/results?searchquery=kiberxavfsizlik+asoslari+cia+triadasi+cyber+kill+chain+wazuh",
+          "takeaway": "CIA triadasi, Red/Blue team, Wazuh SIEM va hujum zanjiri."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title_uz": "2-Mavzu: Zararli kodlar, ijtimoiy injeneriya va parol hujumlari",
+      "title_en": "Malware, Social Engineering & Password Attacks",
+      "summary_deep": "Zararli dasturiy ta'minot (Malware) turlari: Ransomware (fayllarni shifrlab to'lov talab qiladi), Wiper (tizimni butunlay yo'q qiladi), Trojan (foydali niqobi ostida kiruvchi), Worm (tarmoq bo'ylab mustaqil tarqaluvchi), Keylogger (klaviatura tugmalarini yozib oluvchi), Spyware va Cryptominer. Zero-click hujumlari (masalan, Pegasus) foydalanuvchi hech narsani bosmasdan ham qurilmani zararlaydi. Ijtimoiy injeneriya inson zaifligiga tayanadi: Phishing (ommaviy e-mail), Spear phishing (maqsadli), Whaling (rahbarlarga), Smishing (SMS), Vishing (telefon qo'ng'irog'i), Pretexting (stsenariy to'qish). Parol hujumlari: Brute force, Dictionary, Credential stuffing, Password spraying. Himoya choralari: MFA, Rate limiting, Lockout.",
+      "case_study_extended": "🔒 REAL KIBER-VOQELIK (Credential Stuffing va Password Spraying):\n2022-yilda ommabop ijtimoiy tarmoqdan 50 million login-parol sizib chiqdi. Xakerlar avtomatlashtirilgan botlar yordamida o'sha parollarni banklarning veb-saytlarida sinab ko'rishdi (Credential Stuffing). 100 000 dan ortiq odam bankda ham o'sha parolni ishlatgani sababli hisoblari ochilib ketdi. Boshqa bir kompaniyada esa hisoblar bloklanmasligi uchun xakerlar 'Kompaniya2026!' parolini barcha xodimlarning loginiga bir martadan tekshirib chiqishdi (Password Spraying) va 12 ta xodim hisobiga kirib olishdi.",
+      "formulas_detailed": [
+        "Ransomware: Fayllarni AES/RSA bilan shifrlaydi va .onion to'lov talabini qoldiradi",
+        "Credential Stuffing = O'g'irlangan baza (rockyou.txt) + Botnet orqali ko'p saytlarda sinash",
+        "Password Spraying = Bitta ommabop parol x Ko'p foydalanuvchilar (Lockout eshigidan qochish)",
+        "Malware tahlili: Statik tahlil (kodni yurgizmasdan xesh va satrlarni ko'rish) vs Dinamik tahlil (Sandbox muhitida ishlatib kuzatish)",
+        "Base64 shifrlash emas, oddiy kodlashdir (Encoding)"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: 'Wiper' tovlamachi (ransomware) emas, u to'lov talab qilmaydi, ma'lumotlarni qaytarib bo'lmas darajada yo'q qiladi!",
+        "Tuzoq 2: 'Password Spraying' bitta akkauntga 100 ta parol terish emas (u Brute force), aksincha bitta parolni 100 ta har xil odamga 1 martadan sinashdir!"
+      ],
+      "improvement_guide": "Malware tasnifi (Worm, Trojan, Ransomware, Wiper) va Phishing turlari (Spear, Whale, Smishing, Vishing) farqlarini jadval qilib yodlang.",
+      "pdf_ref": "Kiberxavfsizlik Master Qo'llanmasi: 16 - 32 betlar",
+      "svg_type": "malwaretaxomony",
+      "videos": [
+        {
+          "title": "Zararli dasturlar turlari va ijtimoiy injeneriya",
+          "url": "https://www.youtube.com/results?searchquery=malware+turlari+ransomware+trojan+phishing+ijtimoiy+injeneriya",
+          "takeaway": "Ransomware, keylogger, phishing, brute force va MFA himoyasi."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title_uz": "3-Mavzu: Xavfsizlikni baholash va sinov (CVE, CVSS, OSINT, UFW)",
+      "title_en": "Security Assessment & Testing (CVE, CVSS, OSINT, UFW)",
+      "summary_deep": "Xavfsizlikni baholash tizimdagi kemtikliklarni tajovuzkorlardan oldin aniqlashga qaratilgan. Standartlar: CVE (ma'lum zaifliklar identifikatori), CWE (zaifliklar turi katalogi), CVSS (0.0 dan 10.0 gacha xavflilik balli: Critical 9.0-10.0, High 7.0-8.9, Medium 4.0-6.9, Low 0.1-3.9), NVD (NIST bazasi). Sinov turlari: Black Box (tizim haqida ma'lumot yo'q), White Box (to'liq kod va arxitektura ochiq), Gray Box (qisman ma'lumot). PTES — pen-test standarti. OSINT vositalari: Nmap (-sV servis versiyasi), Google Dorking (site:, filetype:, intitle:). UFW xavfsizlik devori: enable, status, default deny incoming, allow 80/tcp.",
+      "case_study_extended": "🔒 REAL KIBER-VOQELIK (Nmap va UFW orqali perimetrni tozalash):\nXavfsizlik auditi vaqtida tester 'nmap -sV 192.168.1.50' buyrug'ini berdi va serverda 21 (FTP), 22 (SSH), 80 (HTTP) va 3306 (MySQL) portlari ochiqligini ko'rdi. MySQL ma'lumotlar bazasi porti internetga ochiq qolgani jiddiy xavf edi. Administrator zudlik bilan UFW orqali himoyani yoqdi:\n1. 'sudo ufw default deny incoming'\n2. 'sudo ufw allow 80/tcp'\n3. 'sudo ufw allow 22/tcp'\n4. 'sudo ufw enable'\nNatijada MySQL porti faqat ichki localhost (127.0.0.1) uchun qolib, tashqi xakerlar uchun butunlay yopildi.",
+      "formulas_detailed": [
+        "CVSS v3.1 darajalari: None (0.0), Low (0.1-3.9), Medium (4.0-6.9), High (7.0-8.9), Critical (9.0-10.0)",
+        "Nmap kalitlari: -sV (Version detection), -p- (Barcha 65535 portlar), -sn (Ping sweep)",
+        "Google Dorking: site:target.com filetype:pdf (Faqat nishon saytdagi PDF fayllar)",
+        "UFW buyruqlari: sudo ufw enable, sudo ufw status, sudo ufw default deny incoming, sudo ufw allow 80/tcp",
+        "Xatolar: False Positive (soxta signal - toza narsani virus deyish), False Negative (eng xavflisi - haqiqiy virusni o'tkazib yuborish)"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: Xavfsizlik monitoringida eng xavfli holat 'False Positive' emas, 'False Negative' hisoblanadi, chunki bu holda kiberhujum butunlay sezilmay qoladi!",
+        "Tuzoq 2: CVSS ballida 9.0 dan yuqori ball har doim CRITICAL (O'ta xavfli) hisoblanadi!"
+      ],
+      "improvement_guide": "CVSS ballari shkalasi, UFW asosiy 4 ta buyrug'i va Google Dork operatorlarini takrorlang.",
+      "pdf_ref": "Kiberxavfsizlik Master Qo'llanmasi: 33 - 48 betlar",
+      "svg_type": "cvssscalegauge",
+      "videos": [
+        {
+          "title": "Penetration testing asoslari, Nmap va UFW sozlash",
+          "url": "https://www.youtube.com/results?searchquery=penetration+testing+cve+cvss+nmap+ufw+firewall+darslari",
+          "takeaway": "Black/White box sinovlari, CVSS baholash va UFW qoidalari."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title_uz": "4-Mavzu: Ilovalar xavfsizligi (OWASP Top 10:2025, IDOR, Injection)",
+      "title_en": "Application Security (OWASP Top 10:2025, IDOR & Injection)",
+      "summary_deep": "OWASP Top 10 — veb-ilovalardagi eng xavfli 10 ta zaiflikning global ro'yxati. 1-o'rinda: Broken Access Control (Kirishni boshqarish buzilishi) — foydalanuvchi boshqa shaxslar ma'lumotlariga ruxsat berilmagan holda kirishi, xususan IDOR (URL dagi id=105 ni id=106 ga o'zgartirish). SQL Injection — kiritish maydonlariga zararli SQL kod kiritish orqali bazani o'g'irlash; himoyasi — Parametrlangan so'rovlar (Prepared Statements). Cryptographic Failures — ma'lumotlarni ochiq HTTP orqali uzatish. Parollarni saqlashda zamonaviy sekin kriptografik xeshlar (Argon2id, bcrypt) va tasodifiy Tuz (Salt) ishlatilishi shart. MD5 va SHA-1 taqiqlangan.",
+      "case_study_extended": "🔒 REAL KIBER-VOQELIK (SQL Injection orqali kirish va Prepared Statements yechimi):\nVeb-saytda kirish kodi: 'SELECT * FROM users WHERE login = '' + user + '' AND pass = '' +pass + '''.\nXaker login maydoniga: 'admin' --' deb yozdi. SQL so'rovi: 'SELECT * FROM users WHERE login = 'admin' -- ...' bo'lib, parolni tekshirish qismi izohga (--) aylanib ketdi va xaker parolsiz administrator paneliga kirdi.\nDasturchilar buni Prepared Statements ga o'tkazishdi: 'SELECT * FROM users WHERE login = ? AND pass = ?'. Endi kiritilgan har qanday belgi oddiy matn deb qabul qilinadi va SQL Injection 100% bartaraf etildi.",
+      "formulas_detailed": [
+        "SQL Injection oldini olish: Prepared Statements / Parameterized Queries (100% samarali)",
+        "Parollarni xavfsiz saqlash: Hash + Salt (Argon2id yoki bcrypt)",
+        "IDOR himoyasi: Server tomonda har doim 'Ushbu foydalanuvchi ushbu ob'ekt egasimi?' deb tekshirish",
+        "Cookie xavfsizlik bayroqlari: HttpOnly (XSS dan himoya - JS o'qiy olmaydi), Secure (Faqat HTTPS orqali uzatiladi), SameSite=Strict (CSRF dan himoya)"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: SQL Injection dan himoyalanishda so'rov matnini kattalashtirish yoki oddiy tekshirish yetarli emas, yagona to'liq yechim — PREPARED STATEMENTS hisoblanadi!",
+        "Tuzoq 2: Parollarni saqlashda MD5 yoki SHA-1 ishlatish MUTLAQO TAQIQLANADI, chunki ular juda tez ishlaydi va GPU larda bir necha soniyada buziladi!"
+      ],
+      "improvement_guide": "OWASP Top 10 ning dastlabki 3 ta toifasi (Broken Access Control, Crypto Failures, Injection) hamda cookie bayroqlarini qayta ko'rib chiqing.",
+      "pdf_ref": "Kiberxavfsizlik Master Qo'llanmasi: 49 - 65 betlar",
+      "svg_type": "sqlipreparedstatements",
+      "videos": [
+        {
+          "title": "OWASP Top 10 va SQL Injection dan to'liq himoyalanish",
+          "url": "https://www.youtube.com/results?searchquery=owasp+top+10+idor+sql+injection+prepared+statements",
+          "takeaway": "IDOR zaifligi, SQLi mexanizmi va xavfsiz parol xeshlash."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title_uz": "5-Mavzu: Kriptografiya va PKI (AES, RSA, Xesh, Raqamli imzo)",
+      "title_en": "Cryptography & PKI (AES, RSA, Hashes & Digital Signatures)",
+      "summary_deep": "Kerkhoffs prinsipi: shifrlash tizimining xavfsizligi algoritm siriga emas, faqat va faqat kalitning maxfiyligiga tayanishi shart. Simmetrik shifrlash (bitta maxfiy kalit): AES-256 (zamonaviy oltin standart), eskirgan DES (56-bit). Asimmetrik shifrlash (ochiq va yopiq kalit juftligi): RSA (katta tub sonlar faktorizatsiyasiga tayanadi), ECC (elliptik egri chiziqlar, mobil qurilmalarda kam quvvat sarflaydi). Kriptografik xesh funksiyalar (SHA-256): bir tomonlama, qat'iy uzunlik (256-bit), ko'chki effekti (1 bit o'zgarsa butun xesh o'zgaradi). Raqamli imzo: jo'natuvchining shaxsiy yopiq kaliti bilan imzolanadi va autentifikatsiya, yaxlitlik hamda rad etib bo'lmaslikni (Non-repudiation) ta'minlaydi.",
+      "case_study_extended": "🔒 REAL KIBER-VOQELIK (TLS/HTTPS qanday ishlaydi - Gibrid kriptotizim):\nBrauzer bank saytiga kirganda (HTTPS):\n1. Brauzer saytning raqamli sertifikatini tekshiradi (CA tomonidan imzolangan).\n2. Asimmetrik shifrlash (RSA/ECC) orqali brauzer va server o'rtasida vaqtinchalik 'Seans kaliti' xavfsiz almashib olinadi.\n3. Shundan so'ng butun veb-sahifa, rasmlar va tranzaksiyalar yuqori tezlikdagi simmetrik shifr (AES-256) bilan uzatiladi. Bu xavfsizlik va maksimal tezlikni birgalikda ta'minlaydi.",
+      "formulas_detailed": [
+        "Kerkhoffs prinsipi: Algoritm ochiq bo'lsa ham tizim buzilmasligi kerak, faqat kalit maxfiy",
+        "Simmetrik shifr: Shifrlashkaliti = Deshifrlashkaliti (AES-256)",
+        "Asimmetrik shifr: Public Key (shifrlash) + Private Key (deshifrlash) - RSA, ECC",
+        "SHA-256: Kiruvchi fayl qancha bo'lishidan qat'i nazar har doim 256 bit (64 hex belgi) chiqaradi",
+        "Raqamli imzo = Hash(Ma'lumot) shifrlangan Jo'natuvchining Private Key bilan"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: Raqamli imzo yaratishda jo'natuvchi OCHIQ kaliti bilan emas, o'zining shaxsiy YOPIQ KALITI (Private Key) bilan imzolaydi!",
+        "Tuzoq 2: Sezar shifri simmetrik almashtirish shifriga mansub bo'lib, chastotali tahlil orqali bir necha daqiqada buziladi!"
+      ],
+      "improvement_guide": "Simmetrik va asimmetrik shifrlash taqqoslash jadvalini va raqamli imzo hosil bo'lish bosqichlarini takrorlang.",
+      "pdf_ref": "Kiberxavfsizlik Master Qo'llanmasi: 66 - 82 betlar",
+      "svg_type": "cryptopkihandshake",
+      "videos": [
+        {
+          "title": "Kriptografiya asoslari: AES, RSA, SHA-256 va Raqamli imzo",
+          "url": "https://www.youtube.com/results?searchquery=kriptografiya+aes+rsa+sha256+raqamli+imzo+pki",
+          "takeaway": "Simmetrik va asimmetrik shifrlash, xeshlar va raqamli imzo."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title_uz": "6-Mavzu: Identifikatsiya va kirishni boshqarish (IAM, MFA, Zero Trust, RBAC)",
+      "title_en": "Identity & Access Management (IAM, MFA, Zero Trust, RBAC)",
+      "summary_deep": "IAM — to'g'ri odamlarga to'g'ri resurslarga to'g'ri vaqtda ruxsat berish tizimidir. Bosqichlar: Identifikatsiya (kimligini da'vo qilish), Autentifikatsiya (isbotlash), Avtorizatsiya (huquqlarni belgilash). MFA 3 ta klassik omilga tayanadi: Bilim (parol), Egalik (telefon/token), Shaxsiyat (biometrika). TOTP (Google Authenticator) har 30 soniyada yangilanadi. Passkeys (FIDO2) parolsiz va fishingga chidamli. SSO (Single Sign-On). Kirish modellari: DAC (egasi belgilaydi), MAC (majburiy maxfiy yorliqlar), RBAC (rollarga asoslangan), ABAC (atributlar va kontekst). Least Privilege — eng kam imtiyoz. Zero Trust: 'Hech qachon ishonma, doimo tekshir'.",
+      "case_study_extended": "🔒 REAL KIBER-VOQELIK (Zero Trust va Least Privilege orqali zararni cheklash):\nKompaniya marketing xodimining kompyuteri fishing orqali zararlangandi. Eski tarmoq modelida (perimetr himoyasi) xaker butun ichki tarmoq bo'ylab aylanib, buxgalteriya bazasini o'g'irlashi mumkin edi. Ammo kompaniyada Zero Trust va Mikrosegmentatsiya joriy etilgandi. Marketing xodimi faqat o'zining bo'lim serverlariga (RBAC bo'yicha) ruxsatga ega edi; buxgalteriya tarmog'iga ulanish esa bloklangan va alohida MFA so'ralgan. Xaker ichki tarmoqda 'Lateral Movement' qila olmadi va hujum faqat bitta kompyuter ichida to'xtatildi.",
+      "formulas_detailed": [
+        "MFA 3 omili: Something you know (parol) + Something you have (telefon/OTP) + Something you are (barmoq izi)",
+        "TOTP: 30 soniyalik qadamlarda HMAC-SHA-1/256 xeshlash orqali 6 xonali kod yaratadi",
+        "Zero Trust tamoyili: 'Never trust, always verify' (Hech qachon ishonma, doim tekshir)",
+        "Biometrika sifat ko'rsatkichi: CER (Crossover Error Rate) = FAR va FRR tenglashgan nuqta (qancha kichik bo'lsa shuncha yaxshi)"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: SMS orqali yuboriladigan OTP kodlar eng xavfsiz emas, eng zaif MFA usuli hisoblanadi (SIM swapping tufayli)! Eng xavfsizi — FIDO2 Passkey va apparat kalitlar (YubiKey)!",
+        "Tuzoq 2: 'Least Privilege' (Minimal huquq) tamoyili xodimga umuman huquq bermaslik emas, faqat o'z ishiga yetarli minimal huquq berishni bildiradi!"
+      ],
+      "improvement_guide": "RBAC va ABAC farqlari, MFA omillari va Zero Trust arxitekturasi qoidalarini qayta ko'rib chiqing.",
+      "pdf_ref": "Kiberxavfsizlik Master Qo'llanmasi: 83 - 98 betlar",
+      "svg_type": "zerotrustarchitecture",
+      "videos": [
+        {
+          "title": "IAM, Multi-Factor Authentication va Zero Trust arxitekturasi",
+          "url": "https://www.youtube.com/results?searchquery=identity+access+management+mfa+totp+zero+trust+rbac",
+          "takeaway": "Autentifikatsiya, RBAC, Passkey va Zero Trust tamoyillari."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title_uz": "7-Mavzu: Barqarorlik va jismoniy xavfsizlik (Resilience, Failover, RPO/RTO, 3-2-1)",
+      "title_en": "Resilience & Physical Security (Failover, RPO/RTO, 3-2-1 Backup)",
+      "summary_deep": "Kiber-barqarorlik (Cyber Resilience) — tizimning nosozliklar va kiberhujumlar vaqtida ham xizmat ko'rsatishni davom ettirish va tezda qayta tiklanish qobiliyati. Klaster tizimlari: Active-Active (barcha tugunlar bir vaqtda ishlaydi), Active-Passive (biri ishlaydi, ikkinchisi kutadi, avtomatik Failover bilan). Falokatdan tiklash ko'rsatkichlari: RPO (yo'qotilishi mumkin bo'lgan maksimal ma'lumot vaqti) va RTO (tizimni qayta oyoqqa turg'azish vaqti). 3-2-1 zaxira qoidasi: 3 ta nusxa, 2 xil tashuvchi, 1 ta nusxa tashqarida (off-site). Linux RAID tekshiruvi: /proc/mdstat. Jismoniy nazorat: Preventive (turniket, mantrap), Detective (CCTV), Deterrent (ogohlantirish). Gazli o'chirish (FM-200).",
+      "case_study_extended": "🔒 REAL KIBER-VOQELIK (3-2-1 qoidasi korxonani Ransomwaredan qanday qutqardi):\n2023-yilda logistika kompaniyasi serverlariga Ransomware hujumi uyushtirildi. Xakerlar asosiy serverlarni va hatto lokal tarmoqdagi backup serverni ham shifrlab, 50 000 dollar to'lov talab qilishdi. Ammo kompaniya 3-2-1 qoidasiga amal qilgandi: 1 ta zaxira nusxasi har kecha shifrlangan holda masofaviy bulutli 'Immutable' (o'zgarmas WORM) omborga yuborilardi. Administratorlar zararlangan tizimlarni tozalab, 4 soat ichida bulutdagi nusxadan barcha ma'lumotlarni 100% tiklashdi va xakerlarga bir tiyin ham to'lamadilar.",
+      "formulas_detailed": [
+        "RPO (Recovery Point Objective): Ruxsat etilgan ma'lumot yo'qotilishi vaqti (Masalan, RPO = 2 soat)",
+        "RTO (Recovery Time Objective): Ruxsat etilgan uzilish va tiklanish davomiyligi (Masalan, RTO = 1 soat)",
+        "3-2-1 Zaxira qoidasi: 3 ta nusxa, 2 xil media tashuvchi, 1 ta nusxa off-site (boshqa binoda/bulutda)",
+        "Linux mdstat o'qish: [UU] = ikkala disk sog'lom, [U_] = bitta disk ishdan chiqqan (Degraded)",
+        "Jismoniy nazorat: Mantrap vestibyuli (ikki eshikli shlyuz) tailgatingni 100% to'xtatadi"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: RPO va RTO ni chalkashtirmang: RPO — ma'lumot yo'qotilishi o'lchovi (necha soatlik data yo'qoladi), RTO esa tiklanish vaqti (tizim qancha vaqtda qayta ishga tushadi)!",
+        "Tuzoq 2: Server xonasida yong'in bo'lganda suv sepish TAQIQLANADI! Maxsus toza gazli (FM-200, Novec 1230) tizimlar ishlatiladi!"
+      ],
+      "improvement_guide": "RPO va RTO hisob-kitoblarini hamda 3-2-1 zaxiralash qoidasini amaliy misollarda takrorlang.",
+      "pdf_ref": "Kiberxavfsizlik Master Qo'llanmasi: 99 - 114 betlar",
+      "svg_type": "backup₃21_rule",
+      "videos": [
+        {
+          "title": "Disaster Recovery, RPO, RTO va 3-2-1 zaxiralash qoidasi",
+          "url": "https://www.youtube.com/results?searchquery=disaster+recovery+rpo+rto+321+backup+rule+failover",
+          "takeaway": "RPO va RTO hisobi, Active-Active klasterlar va 3-2-1 qoidasi."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title_uz": "8-Mavzu: Bulutli muhitlar va virtualizatsiya (IaaS/PaaS/SaaS, Hypervisor, Docker, K8s)",
+      "title_en": "Cloud Computing & Virtualization (IaaS/PaaS/SaaS, Hypervisors, Containers)",
+      "summary_deep": "Bulutli hisoblash modellari: 1) SaaS (tayyor dastur: Gmail, Microsoft 365); 2) PaaS (ishlab chiqish muhiti: Heroku, App Engine); 3) IaaS (xom serverlar va tarmoq: AWS EC2). Umumiy javobgarlik modeli (Shared Responsibility Model): IaaS da operatsion tizimni yangilash va yamash (patching) to'liq mijoz zimmasida bo'ladi! Virtualizatsiya: Type 1 Hypervisor (bare-metal, apparat ustida: VMware ESXi, Proxmox) vs Type 2 Hypervisor (xost OS ichida: VirtualBox). Konteynerlar (Docker) to'liq OS nusxasiga ega bo'lmay, xost yadrosini (kernel) bo'lishadi, juda yengil ishlaydi. Kubernetes (K8s) — avtomatlashtirilgan orkestrator.",
+      "case_study_extended": "🔒 REAL KIBER-VOQELIK (Ochiq AWS S3 Bucket oqibati):\nYirik kompaniya o'z mijozlarining shaxsiy ma'lumotlari zaxira nusxasini AWS S3 bulutiga yukladi. Xavfsizlik sozlamasidagi e'tiborsizlik tufayli S3 bucket huquqi 'Public Read' (hammaga ochiq) qilib qo'yildi. Avtomatlashtirilgan internet skanerlari bir necha soatda ushbu ochiq omborni topib, 10 million fuqaroning pasport nusxalarini internetga sizdirdi. Kompaniya Shared Responsibility modeli bo'yicha ma'lumotlar ruxsatiga o'zi javobgar bo'lgani sababli millionlab dollar jarimaga tortildi.",
+      "formulas_detailed": [
+        "Bulut iyerarxiyasi: IaaS (ko'proq nazorat mijozda) -> PaaS -> SaaS (barcha nazorat provayderda)",
+        "IaaS xavfsizligi: OS patching, ma'lumotlar shifrlanishi va firewall sozlash mijoz javobgarligida",
+        "VM sig'im formulasi: min[(JamiRAM - HostRAM) / VMRAM, (JamivCPU - HostvCPU) / VMvCPU]",
+        "Bulut xarajati = Hisoblash (Soat x Narx) + Saqlash (GB x Narx) + Tarmoq trafigi",
+        "IaC (Infrastructure as Code): Terraform orqali infratuzilmani kod bilan xavfsiz boshqarish"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: IaaS modelida (masalan, AWS EC2) operatsion tizimni yangilashga bulut provayderi (AWS) javob bermaydi! Mijoz o'zi yangilashi va patch qo'yishi shart!",
+        "Tuzoq 2: Docker konteynerida dasturlarni hech qachon 'root' foydalanuvchi sifatida ishga tushirish mumkin emas (Container Escape xavfi)!"
+      ],
+      "improvement_guide": "IaaS, PaaS, SaaS taqqoslash jadvalini va Type 1 va Type 2 gipervizorlar farqini takrorlang.",
+      "pdf_ref": "Kiberxavfsizlik Master Qo'llanmasi: 115 - 128 betlar",
+      "svg_type": "cloudsharedresponsibility",
+      "videos": [
+        {
+          "title": "Bulutli hisoblash, Shared Responsibility va Docker asoslari",
+          "url": "https://www.youtube.com/results?searchquery=bulutli+hisoblash+iaas+paas+saas+shared+responsibility+docker",
+          "takeaway": "IaaS/PaaS/SaaS javobgarligi, Type 1/2 gipervizorlar va K8s."
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title_uz": "9-Mavzu: Endpoint xavfsizligi (Attack Surface, EDR/XDR, Patch Management, BitLocker)",
+      "title_en": "Endpoint Security (Attack Surface, EDR/XDR, Patch Management, BitLocker)",
+      "summary_deep": "Endpoint — tarmoqqa ulangan foydalanuvchi qurilmalari (noutbuk, PC, smartfon). Hujum yuzasi (Attack Surface) — tajovuzkor zarba berishi mumkin bo'lgan barcha ochiq portlar va zaifliklar yig'indisi. Patch Management bosqichlari: Identifikatsiya -> Test -> Zaxira -> Deploy -> Audit. EDR (Endpoint Detection and Response) — xotira, jarayonlar va xatti-harakatlarni real vaqtda kuzatuvchi ilg'or himoya; XDR — endpoint, tarmoq va bulutni yaxlit tahlil qiladi. Mobil qurilmalar: BYOD, COPE, MDM (masofadan tozalash / Remote Wipe). TPM chipi va BitLocker (Full Disk Encryption) noutbuk o'g'irlanganda diskni to'liq shifrlaydi.",
+      "case_study_extended": "🔒 REAL KIBER-VOQELIK (Yo'qolgan noutbuk va BitLocker himoyasi):\nKompaniya moliya direktorining xizmat noutbuki kafeda o'g'irlab ketildi. Noutbuk ichida 5 yillik audit hisobotlari va barcha bank kalitlari bor edi. Xakerlar noutbukni ochib, qattiq diskini (SSD) chiqarib boshqa kompyuterga ulab o'qimoqchi bo'lishdi. Ammo noutbukda BitLocker (AES-256) yoqilgan va kalitlar ona platadagi TPM chipiga bog'langan edi. PIN-kodsiz va TPM chipisiz diskdagi barcha ma'lumotlar o'qib bo'lmas tushunarsiz raqamlar bo'lib ko'rindi. Bunga qo'shimcha ravishda IT admin MDM orqali noutbukka masofaviy tozalash (Remote Wipe) buyrug'ini yubordi.",
+      "formulas_detailed": [
+        "Hujum yuzasini qisqartirish (ASR): Keraksiz portlarni yopish, Office makroslarini bloklash, Local Admin huquqini olish",
+        "EDR aniqlash usullari: Signatura (ma'lum xesh) + Evristika + Xulq-atvor (Behavioral)",
+        "BitLocker: Butun qattiq diskni AES-128/256 bilan shifrlaydi va kalitni TPM chipida saqlaydi",
+        "MDM vazifasi: Qurilmalarni masofadan sozlash, qoidalarni majburlash va masofadan o'chirish (Remote Wipe)",
+        "Eng zaif bo'g'in: Har doim Inson omilidir (xodimlarning e'tiborsizligi)"
+      ],
+      "exam_traps": [
+        "Tuzoq 1: Mahalliy administrator (Local Admin) huquqini oddiy xodimlarga berish kiberxavfsizlikda qat'iyan taqiqlanadi, chunki bu viruslarning tizimga to'liq o'rnashib olishiga yo'l ochadi!",
+        "Tuzoq 2: BitLocker ishlashi uchun kompyuter ona platasida TPM (Trusted Platform Module) mikrosxemasi zarur bo'ladi!"
+      ],
+      "improvement_guide": "Attack Surface Reduction, EDR vazifalari, Patch management bosqichlari va BitLocker qoidalarini takrorlang.",
+      "pdf_ref": "Kiberxavfsizlik Master Qo'llanmasi: 129 - 142 betlar",
+      "svg_type": "endpointdefenselayers",
+      "videos": [
+        {
+          "title": "Endpoint xavfsizligi, EDR, BitLocker va Patch Management",
+          "url": "https://www.youtube.com/results?searchquery=endpoint+security+edr+xdr+bitlocker+tpm+patch+management",
+          "takeaway": "Attack surface, EDR/XDR, BitLocker shifrlash va MDM siyosatlari."
+        }
+      ]
+    }
+  ]
+}
