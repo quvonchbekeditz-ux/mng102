@@ -43,7 +43,10 @@
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col pb-24 md:pb-12">
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col pb-24 md:pb-12 relative overflow-x-hidden">
+
+    <!-- APP CONTAINER (BLURRED & DISABLED BY DEFAULT UNTIL AUTHENTICATED) -->
+    <div id="appContainer" class="flex flex-col min-h-screen filter blur-md pointer-events-none select-none transition-all duration-300">
 
     <!-- TOP HEADER -->
     <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
@@ -807,6 +810,7 @@
         </section>
 
     </main>
+    </div><!-- END #appContainer -->
 
     <!-- CONFIRM FINISH MODAL -->
     <div id="confirmModal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
@@ -944,6 +948,10 @@
 
         // --- SUBJECT SWITCHER (ALL 6 SUBJECTS) ---
         function setSubject(subj) {
+            if (!currentStudent) {
+                showGateModal();
+                return;
+            }
             if (!SUBJECTS[subj]) subj = "stat";
             currentSubject = subj;
             const conf = SUBJECTS[subj];
@@ -992,6 +1000,10 @@
 
         // --- TAB NAVIGATION ---
         function setMode(mode) {
+            if (!currentStudent) {
+                showGateModal();
+                return;
+            }
             currentMode = mode;
             ["exam", "practice", "theory", "history", "sardor"].forEach(m => {
                 const tab = document.getElementById("tab-" + m);
@@ -1016,6 +1028,10 @@
         // 1. ⏱️ 25 TALIK STRATIFIED REAL IMTIHON SIMULYATORI
         // ========================================================
         function startNewExamSession() {
+            if (!currentStudent) {
+                showGateModal();
+                return;
+            }
             const db = getActiveDb();
             const byTopic = {};
             db.forEach(q => {
@@ -1624,6 +1640,10 @@
         }
 
         function selectPracticeAnswer(optIdx) {
+            if (!currentStudent) {
+                showGateModal();
+                return;
+            }
             practiceChosenAnswer = optIdx;
             const q = practiceFilteredList[practiceCurrentIdx];
             const isCorrect = optIdx === q.correct_index;
@@ -1854,6 +1874,10 @@
         document.addEventListener("fullscreenchange", () => updateFullscreenUI(!!document.fullscreenElement));
 
         function openBotForPdf() {
+            if (!currentStudent) {
+                showGateModal();
+                return;
+            }
             const botUrl = "https://t.me/idora102_bot?start=pdf_" + currentSubject;
             if (window.Telegram?.WebApp?.openTelegramLink) {
                 window.Telegram.WebApp.openTelegramLink(botUrl);
@@ -1877,6 +1901,10 @@
         }
 
         function downloadSubjectPdf() {
+            if (!currentStudent) {
+                showGateModal();
+                return;
+            }
             const pdfMap = {
                 stat: "Statistika_Qollanma_35_bet.pdf",
                 mkt: "Marketing_Qollanma_36_bet.pdf",
@@ -1967,17 +1995,25 @@
 
         function showGateModal() {
             const modal = document.getElementById("studentGateModal");
+            const app = document.getElementById("appContainer");
             if (modal) {
                 modal.classList.remove("hidden");
                 modal.classList.add("flex");
+            }
+            if (app) {
+                app.classList.add("filter", "blur-md", "pointer-events-none", "select-none");
             }
         }
 
         function hideGateModal() {
             const modal = document.getElementById("studentGateModal");
+            const app = document.getElementById("appContainer");
             if (modal) {
                 modal.classList.add("hidden");
                 modal.classList.remove("flex");
+            }
+            if (app) {
+                app.classList.remove("filter", "blur-md", "pointer-events-none", "select-none");
             }
         }
 
@@ -2083,11 +2119,23 @@
             const nameEl = document.getElementById("userNameDisplay");
             if (nameEl) nameEl.textContent = "Kirish kutilmoqda";
             const subText = document.getElementById("userSubText");
-            if (subText) subText.innerHTML = '<i class="fa-solid fa-key text-[9px]"></i><span>MNG25-102</span>';
+            if (subText) subText.innerHTML = '<i class="fa-solid fa-key text-[9px] mr-1"></i><span>MNG25-102</span>';
             
+            const btnLogin = document.getElementById("btnLoginGateHeader");
+            if (btnLogin) btnLogin.classList.remove("hidden");
+            const btnLogout = document.getElementById("btnLogoutHeader");
+            if (btnLogout) btnLogout.classList.add("hidden");
+            const btnKeys = document.getElementById("btnKeysHeader");
+            if (btnKeys) btnKeys.classList.add("hidden");
+
             const tabSardor = document.getElementById("tab-sardor");
             if (tabSardor) tabSardor.classList.add("hidden");
             if (currentMode === "sardor") setMode("exam");
+
+            const inp = document.getElementById("gateKeyInput");
+            if (inp) inp.value = "";
+            const errBox = document.getElementById("gateErrorBox");
+            if (errBox) errBox.classList.add("hidden");
 
             showGateModal();
         }
@@ -2339,7 +2387,7 @@
     </script>
 
     <!-- ==================== STUDENT GATE MODAL ==================== -->
-    <div id="studentGateModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md transition-opacity duration-300">
+    <div id="studentGateModal" class="fixed inset-0 z-[99999] flex items-center justify-center p-4 bg-slate-950/90 backdrop-blur-xl transition-all duration-300">
         <div class="w-full max-w-md bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden transform transition-all p-6 sm:p-8 text-center relative animate-fade-in">
             <!-- University Badge -->
             <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 text-xs font-extrabold mb-4">
@@ -2352,8 +2400,8 @@
             </div>
 
             <h2 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight mb-2">Guruh Talabalari Kirish Tizimi</h2>
-            <p class="text-xs text-slate-500 leading-relaxed mb-6">
-                Ushbu platforma faqat <strong>MNG25-102 guruhi</strong> uchun mo'ljallangan yopiq tizimdir. O'z ismingizni tanlang va shaxsiy kirish kalitingizni kiriting.
+            <p class="text-xs text-slate-600 leading-relaxed mb-6 font-medium">
+                🔒 Ushbu platforma faqat <strong>MNG25-102 guruhi</strong> talabalari uchun qat'iy yopiq tizimdir. <b>Login va kalitsiz tizimga kirish yoki testlarni ko'rish mutlaqo mumkin emas!</b> O'z ismingizni tanlab, shaxsiy kalit/PIN kodingizni kiriting.
             </p>
 
             <!-- Form -->
