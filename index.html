@@ -114,6 +114,11 @@
                     <span>Kirish</span>
                 </button>
 
+                                <!-- Keys Modal Button (Only visible to Creator) -->
+                <button onclick="openKeysModal()" id="btnKeysHeader" title="Guruh Kalitlarini Boshqarish" class="hidden px-2.5 py-1.5 rounded-xl bg-amber-50 hover:bg-amber-100 border border-amber-200 text-amber-700 text-xs font-bold transition-all flex items-center space-x-1 cursor-pointer">
+                    <i class="fa-solid fa-key text-xs"></i>
+                    <span class="hidden md:inline">Kalitlar</span>
+                </button>
                 <!-- Logout Button (Visible when logged in) -->
                 <button onclick="logoutStudent()" id="btnLogoutHeader" title="Tizimdan chiqish" class="hidden px-2.5 py-1.5 rounded-xl bg-rose-50 text-rose-700 hover:bg-rose-100 border border-rose-200 text-xs font-bold transition-all flex items-center space-x-1 cursor-pointer">
                     <i class="fa-solid fa-right-from-bracket text-xs"></i>
@@ -1192,6 +1197,10 @@
             });
 
             examQuestions = selected.sort(() => Math.random() - 0.5).slice(0, 25);
+            if (examQuestions.length < 25) {
+                const remaining = db.filter(q => !examQuestions.some(eq => eq.id === q.id)).sort(() => Math.random() - 0.5);
+                examQuestions.push(...remaining.slice(0, 25 - examQuestions.length));
+            }
             examAnswers = {};
             examFlags = new Set();
             examCurrentIdx = 0;
