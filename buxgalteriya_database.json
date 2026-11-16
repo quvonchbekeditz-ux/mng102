@@ -98,36 +98,36 @@
     "question_uz": "Quyidagi moddalardan qaysi biri korxonaning majburiyati (kreditorlik qarzi) hisoblanadi?",
     "question_en": "Which of the following is considered a liability?",
     "options_uz": [
-      "Bankdagi hisob-kitob schyotidagi pul mablag'lari (5110)",
-      "Xaridorlarning korxona oldidagi qarzlari (4010)",
-      "Mol yetkazib beruvchilarga to'lanadigan qarzlar (6010)",
-      "Ombordagi tovar-moddiy zaxiralar (2910)"
+      "Bankdagi hisob-kitob schyotidagi pul mablag'lari (5100)",
+      "Xaridorlarning korxona oldidagi qarzlari (4000)",
+      "Mol yetkazib beruvchilarga to'lanadigan qarzlar (6000)",
+      "Ombordagi tovar-moddiy zaxiralar (2900)"
     ],
     "options_en": [
-      "Cash in bank current account (5110)",
-      "Accounts receivable from customers (4010)",
-      "Accounts payable to suppliers (6010)",
-      "Merchandise inventory in warehouse (2910)"
+      "Cash in bank current account (5100)",
+      "Accounts receivable from customers (4000)",
+      "Accounts payable to suppliers (6000)",
+      "Merchandise inventory in warehouse (2900)"
     ],
     "correct_index": 2,
     "correct_letter": "C",
     "hint": "💡 Maslahat: Majburiyat — bu korxona boshqa shaxslarga to'lashi shart bo'lgan qarz.",
-    "why_right": "To'g'ri javob: «Mol yetkazib beruvchilarga to'lanadigan qarzlar (6010)». Mol yetkazib beruvchilarga to'lanadigan qarz (6010) — bu olingan tovar yoki xizmat uchun to'lanishi lozim bo'lgan qisqa muddatli majburiyatdir. 5110, 4010, 2910 esa aktivlardir.",
-    "why_right_en": "Correct answer: «Accounts payable to suppliers (6010)».",
+    "why_right": "To'g'ri javob: «Mol yetkazib beruvchilarga to'lanadigan qarzlar (6000)». Mol yetkazib beruvchilarga to'lanadigan qarz (6000) — bu olingan tovar yoki xizmat uchun to'lanishi lozim bo'lgan qisqa muddatli majburiyatdir. 5100, 4000, 2900 esa aktivlardir.",
+    "why_right_en": "Correct answer: «Accounts payable to suppliers (6000)».",
     "why_wrongs": [
       {
         "letter": "A",
-        "text": "Bankdagi hisob-kitob schyotidagi pul mablag'lari (5110)",
+        "text": "Bankdagi hisob-kitob schyotidagi pul mablag'lari (5100)",
         "reason": "Ushbu variant 1-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "B",
-        "text": "Xaridorlarning korxona oldidagi qarzlari (4010)",
+        "text": "Xaridorlarning korxona oldidagi qarzlari (4000)",
         "reason": "Ushbu variant 1-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "D",
-        "text": "Ombordagi tovar-moddiy zaxiralar (2910)",
+        "text": "Ombordagi tovar-moddiy zaxiralar (2900)",
         "reason": "Ushbu variant 1-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -278,36 +278,36 @@
     "question_uz": "Quyidagilardan qaysi biri uzoq muddatli (asosiy) aktivlar toifasiga kiradi?",
     "question_en": "Which of the following is considered a non-current (fixed) asset?",
     "options_uz": [
-      "Xaridorlarning debitorlik qarzlari (4010)",
-      "Bank hisobvarag'idagi pul mablag'lari (5110)",
-      "Bino va inshootlar (0120)",
-      "Ombordagi xomashyo va materiallar (1010)"
+      "Xaridorlarning debitorlik qarzlari (4000)",
+      "Bank hisobvarag'idagi pul mablag'lari (5100)",
+      "Bino va inshootlar (0100)",
+      "Ombordagi xomashyo va materiallar (1000)"
     ],
     "options_en": [
-      "Trade receivables (4010)",
-      "Cash in bank account (5110)",
-      "Buildings and constructions (0120)",
-      "Raw materials in warehouse (1010)"
+      "Trade receivables (4000)",
+      "Cash in bank account (5100)",
+      "Buildings and constructions (0100)",
+      "Raw materials in warehouse (1000)"
     ],
     "correct_index": 2,
     "correct_letter": "C",
     "hint": "💡 Maslahat: 1 yildan ortiq davr davomida xizmat qiluvchi moddiy aktivni tanlang.",
-    "why_right": "To'g'ri javob: «Bino va inshootlar (0120)». Bino va inshootlar (0120) 1 yildan ortiq xizmat qiladigan uzoq muddatli aktiv hisoblanadi. 4010, 5110, 1010 esa aylanma (qisqa muddatli) aktivlardir.",
-    "why_right_en": "Correct answer: «Buildings and constructions (0120)».",
+    "why_right": "To'g'ri javob: «Bino va inshootlar (0100)». Bino va inshootlar (0100) 1 yildan ortiq xizmat qiladigan uzoq muddatli aktiv hisoblanadi. 4000, 5100, 1000 esa aylanma (qisqa muddatli) aktivlardir.",
+    "why_right_en": "Correct answer: «Buildings and constructions (0100)».",
     "why_wrongs": [
       {
         "letter": "A",
-        "text": "Xaridorlarning debitorlik qarzlari (4010)",
+        "text": "Xaridorlarning debitorlik qarzlari (4000)",
         "reason": "Ushbu variant 1-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "B",
-        "text": "Bank hisobvarag'idagi pul mablag'lari (5110)",
+        "text": "Bank hisobvarag'idagi pul mablag'lari (5100)",
         "reason": "Ushbu variant 1-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "D",
-        "text": "Ombordagi xomashyo va materiallar (1010)",
+        "text": "Ombordagi xomashyo va materiallar (1000)",
         "reason": "Ushbu variant 1-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -368,36 +368,36 @@
     "question_uz": "Aksiyadorlar yoki ta'sischilar tomonidan korxona tashkil etilayotganda kiritilgan dastlabki mablag' nima deb ataladi?",
     "question_en": "What is the initial funds contributed by shareholders/founders called?",
     "options_uz": [
-      "Ustav kapitali (8330)",
-      "Kreditorlik qarzi (6010)",
-      "Taqsimlanmagan foyda (8710)",
-      "Zaxira kapitali (8520)"
+      "Ustav kapitali (8300)",
+      "Kreditorlik qarzi (6000)",
+      "Taqsimlanmagan foyda (8700)",
+      "Zaxira kapitali (8500)"
     ],
     "options_en": [
-      "Charter (Share) Capital (8330)",
-      "Accounts payable (6010)",
-      "Retained earnings (8710)",
-      "Reserve capital (8520)"
+      "Charter (Share) Capital (8300)",
+      "Accounts payable (6000)",
+      "Retained earnings (8700)",
+      "Reserve capital (8500)"
     ],
     "correct_index": 0,
     "correct_letter": "A",
     "hint": "💡 Maslahat: Ta'sis hujjatlarida qayd etilgan boshlang'ich kapital turi.",
-    "why_right": "To'g'ri javob: «Ustav kapitali (8330)». Ustav kapitali (8330) — ta'sis hujjatlarida belgilangan va ta'sischilar tomonidan jamiyat faoliyatini ta'minlash uchun kiritilgan boshlang'ich mablag'dir.",
-    "why_right_en": "Correct answer: «Charter (Share) Capital (8330)».",
+    "why_right": "To'g'ri javob: «Ustav kapitali (8300)». Ustav kapitali (8300) — ta'sis hujjatlarida belgilangan va ta'sischilar tomonidan jamiyat faoliyatini ta'minlash uchun kiritilgan boshlang'ich mablag'dir.",
+    "why_right_en": "Correct answer: «Charter (Share) Capital (8300)».",
     "why_wrongs": [
       {
         "letter": "B",
-        "text": "Kreditorlik qarzi (6010)",
+        "text": "Kreditorlik qarzi (6000)",
         "reason": "Ushbu variant 1-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "C",
-        "text": "Taqsimlanmagan foyda (8710)",
+        "text": "Taqsimlanmagan foyda (8700)",
         "reason": "Ushbu variant 1-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "D",
-        "text": "Zaxira kapitali (8520)",
+        "text": "Zaxira kapitali (8500)",
         "reason": "Ushbu variant 1-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -427,7 +427,7 @@
     "correct_index": 1,
     "correct_letter": "B",
     "hint": "💡 Maslahat: Bank hisobiga pul kelib tushadi (Aktiv +) va bank oldidagi qarz paydo bo'ladi (Majburiyat +).",
-    "why_right": "To'g'ri javob: «Aktivlar 200 mln oshadi va Majburiyatlar 200 mln oshadi». Bank hisobidagi pul (5110 - Aktiv) 200 mln so'mga ko'payadi, ayni paytda bankdan olingan kredit qarzi (6810 - Majburiyat) ham 200 mln so'mga oshadi. Tenglik saqlanadi.",
+    "why_right": "To'g'ri javob: «Aktivlar 200 mln oshadi va Majburiyatlar 200 mln oshadi». Bank hisobidagi pul (5100 - Aktiv) 200 mln so'mga ko'payadi, ayni paytda bankdan olingan kredit qarzi (6800 - Majburiyat) ham 200 mln so'mga oshadi. Tenglik saqlanadi.",
     "why_right_en": "Correct answer: «Assets increase by 200m and Liabilities increase by 200m».",
     "why_wrongs": [
       {
@@ -728,36 +728,36 @@
     "question_uz": "Quyidagi moddalardan qaysi biri 'Xususiy kapital' tarkibiga kirmaydi?",
     "question_en": "Which of the following does NOT belong to owners' equity?",
     "options_uz": [
-      "Xodimlarga to'lanadigan ish haqi qarzlari (6710)",
-      "Ustav kapitali (8330)",
-      "Taqsimlanmagan foyda (8710)",
-      "Qo'shilgan kapital (8410)"
+      "Xodimlarga to'lanadigan ish haqi qarzlari (6700)",
+      "Ustav kapitali (8300)",
+      "Taqsimlanmagan foyda (8700)",
+      "Qo'shilgan kapital (8400)"
     ],
     "options_en": [
-      "Wages payable to employees (6710)",
-      "Charter capital (8330)",
-      "Retained earnings (8710)",
-      "Additional paid-in capital (8410)"
+      "Wages payable to employees (6700)",
+      "Charter capital (8300)",
+      "Retained earnings (8700)",
+      "Additional paid-in capital (8400)"
     ],
     "correct_index": 0,
     "correct_letter": "A",
     "hint": "💡 Maslahat: Ish haqi qarzi — bu korxonaning ishchilarga to'lashi shart bo'lgan majburiyatidir.",
-    "why_right": "To'g'ri javob: «Xodimlarga to'lanadigan ish haqi qarzlari (6710)». 6710 schyoti korxonaning xodimlar oldidagi qisqa muddatli majburiyati hisoblanadi. Ustav, qo'shilgan va taqsimlanmagan foyda esa xususiy kapital elementlaridir.",
-    "why_right_en": "Correct answer: «Wages payable to employees (6710)».",
+    "why_right": "To'g'ri javob: «Xodimlarga to'lanadigan ish haqi qarzlari (6700)». 6700 schyoti korxonaning xodimlar oldidagi qisqa muddatli majburiyati hisoblanadi. Ustav, qo'shilgan va taqsimlanmagan foyda esa xususiy kapital elementlaridir.",
+    "why_right_en": "Correct answer: «Wages payable to employees (6700)».",
     "why_wrongs": [
       {
         "letter": "B",
-        "text": "Ustav kapitali (8330)",
+        "text": "Ustav kapitali (8300)",
         "reason": "Ushbu variant 1-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "C",
-        "text": "Taqsimlanmagan foyda (8710)",
+        "text": "Taqsimlanmagan foyda (8700)",
         "reason": "Ushbu variant 1-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "D",
-        "text": "Qo'shilgan kapital (8410)",
+        "text": "Qo'shilgan kapital (8400)",
         "reason": "Ushbu variant 1-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -831,7 +831,7 @@
     ],
     "correct_index": 2,
     "correct_letter": "C",
-    "hint": "💡 Maslahat: Tovarni nasiyaga sotganda mijozning korxona oldidagi qarzi (Debitorlik - 4010) paydo bo'ladi.",
+    "hint": "💡 Maslahat: Tovarni nasiyaga sotganda mijozning korxona oldidagi qarzi (Debitorlik - 4000) paydo bo'ladi.",
     "why_right": "To'g'ri javob: «Aktivlar (Debitorlik qarzi) oshadi va Daromad hisobiga Xususiy kapital oshadi». Debitorlik qarzi (Aktiv) 50 mln so'mga ko'payadi, sotuvdan olingan daromad esa davr oxirida foyda orqali Xususiy kapitalni oshiradi.",
     "why_right_en": "Correct answer: «Assets (Receivables) increase and Equity increases via revenue».",
     "why_wrongs": [
@@ -1178,36 +1178,36 @@
     "question_uz": "Bankdagi hisob-kitob schyotidan kassaga naqd pul olib kelindi (8 mln so'm). To'g'ri buxgalteriya provodkasi qaysi?",
     "question_en": "Cash (8m UZS) was withdrawn from bank current account into cash register. What is correct entry?",
     "options_uz": [
-      "Debet 5110 (Hisob-kitob schyoti) - Kredit 5010 (Kassa) : 8 000 000",
-      "Debet 6010 (Mol yetkazib beruvchilar) - Kredit 5010 (Kassa) : 8 000 000",
-      "Debet 5010 (Kassa) - Kredit 5110 (Hisob-kitob schyoti) : 8 000 000",
-      "Debet 5010 (Kassa) - Kredit 6710 (Ish haqi) : 8 000 000"
+      "Debet 5100 (Hisob-kitob schyoti) - Kredit 5000 (Kassa) : 8 000 000",
+      "Debet 6000 (Mol yetkazib beruvchilar) - Kredit 5000 (Kassa) : 8 000 000",
+      "Debet 5000 (Kassa) - Kredit 5100 (Hisob-kitob schyoti) : 8 000 000",
+      "Debet 5000 (Kassa) - Kredit 6700 (Ish haqi) : 8 000 000"
     ],
     "options_en": [
-      "Debit 5110 - Credit 5010 : 8,000,000",
-      "Debit 6010 - Credit 5010 : 8,000,000",
-      "Debit 5010 - Credit 5110 : 8,000,000",
-      "Debit 5010 - Credit 6710 : 8,000,000"
+      "Debit 5100 - Credit 5000 : 8,000,000",
+      "Debit 6000 - Credit 5000 : 8,000,000",
+      "Debit 5000 - Credit 5100 : 8,000,000",
+      "Debit 5000 - Credit 6700 : 8,000,000"
     ],
     "correct_index": 2,
     "correct_letter": "C",
-    "hint": "💡 Maslahat: Kassada pul ko'paydi (5010 Debet), bank hisobida pul kamaydi (5110 Kredit).",
-    "why_right": "To'g'ri javob: «Debet 5010 (Kassa) - Kredit 5110 (Hisob-kitob schyoti) : 8 000 000». Kassa (5010) aktiv schyot bo'lib, pul ko'payganda Debetlanadi. Bankdagi schyot (5110) ham aktiv bo'lib, pul kamayganda Kreditlanadi.",
-    "why_right_en": "Correct answer: «Debit 5010 - Credit 5110 : 8,000,000».",
+    "hint": "💡 Maslahat: Kassada pul ko'paydi (5000 Debet), bank hisobida pul kamaydi (5100 Kredit).",
+    "why_right": "To'g'ri javob: «Debet 5000 (Kassa) - Kredit 5100 (Hisob-kitob schyoti) : 8 000 000». Kassa (5000) aktiv schyot bo'lib, pul ko'payganda Debetlanadi. Bankdagi schyot (5100) ham aktiv bo'lib, pul kamayganda Kreditlanadi.",
+    "why_right_en": "Correct answer: «Debit 5000 - Credit 5100 : 8,000,000».",
     "why_wrongs": [
       {
         "letter": "A",
-        "text": "Debet 5110 (Hisob-kitob schyoti) - Kredit 5010 (Kassa) : 8 000 000",
+        "text": "Debet 5100 (Hisob-kitob schyoti) - Kredit 5000 (Kassa) : 8 000 000",
         "reason": "Ushbu variant 2-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "B",
-        "text": "Debet 6010 (Mol yetkazib beruvchilar) - Kredit 5010 (Kassa) : 8 000 000",
+        "text": "Debet 6000 (Mol yetkazib beruvchilar) - Kredit 5000 (Kassa) : 8 000 000",
         "reason": "Ushbu variant 2-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "D",
-        "text": "Debet 5010 (Kassa) - Kredit 6710 (Ish haqi) : 8 000 000",
+        "text": "Debet 5000 (Kassa) - Kredit 6700 (Ish haqi) : 8 000 000",
         "reason": "Ushbu variant 2-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -1223,36 +1223,36 @@
     "question_uz": "Xaridorlardan tovarlar uchun bank hisobvarag'iga 45 mln so'm mablag' kelib tushdi. To'g'ri provodka qaysi?",
     "question_en": "Received 45m UZS from trade customers into bank account. What is correct entry?",
     "options_uz": [
-      "Debet 4010 - Kredit 5110 : 45 000 000",
-      "Debet 5110 - Kredit 6010 : 45 000 000",
-      "Debet 9010 - Kredit 5110 : 45 000 000",
-      "Debet 5110 - Kredit 4010 : 45 000 000"
+      "Debet 4000 - Kredit 5100 : 45 000 000",
+      "Debet 5100 - Kredit 6000 : 45 000 000",
+      "Debet 9000 - Kredit 5100 : 45 000 000",
+      "Debet 5100 - Kredit 4000 : 45 000 000"
     ],
     "options_en": [
-      "Debit 4010 - Credit 5110 : 45,000,000",
-      "Debit 5110 - Credit 6010 : 45,000,000",
-      "Debit 9010 - Credit 5110 : 45,000,000",
-      "Debit 5110 - Credit 4010 : 45,000,000"
+      "Debit 4000 - Credit 5100 : 45,000,000",
+      "Debit 5100 - Credit 6000 : 45,000,000",
+      "Debit 9000 - Credit 5100 : 45,000,000",
+      "Debit 5100 - Credit 4000 : 45,000,000"
     ],
     "correct_index": 3,
     "correct_letter": "D",
-    "hint": "💡 Maslahat: Bankda pul oshdi (5110 Debet), xaridorlarning debitorlik qarzi kamaydi (4010 Kredit).",
-    "why_right": "To'g'ri javob: «Debet 5110 - Kredit 4010 : 45 000 000». Bank hisobi (5110) aktiv bo'lib ko'payadi (Debet), xaridorlarning qarzi (4010) aktiv bo'lib to'langani sababli kamayadi (Kredit).",
-    "why_right_en": "Correct answer: «Debit 5110 - Credit 4010 : 45,000,000».",
+    "hint": "💡 Maslahat: Bankda pul oshdi (5100 Debet), xaridorlarning debitorlik qarzi kamaydi (4000 Kredit).",
+    "why_right": "To'g'ri javob: «Debet 5100 - Kredit 4000 : 45 000 000». Bank hisobi (5100) aktiv bo'lib ko'payadi (Debet), xaridorlarning qarzi (4000) aktiv bo'lib to'langani sababli kamayadi (Kredit).",
+    "why_right_en": "Correct answer: «Debit 5100 - Credit 4000 : 45,000,000».",
     "why_wrongs": [
       {
         "letter": "A",
-        "text": "Debet 4010 - Kredit 5110 : 45 000 000",
+        "text": "Debet 4000 - Kredit 5100 : 45 000 000",
         "reason": "Ushbu variant 2-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "B",
-        "text": "Debet 5110 - Kredit 6010 : 45 000 000",
+        "text": "Debet 5100 - Kredit 6000 : 45 000 000",
         "reason": "Ushbu variant 2-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "C",
-        "text": "Debet 9010 - Kredit 5110 : 45 000 000",
+        "text": "Debet 9000 - Kredit 5100 : 45 000 000",
         "reason": "Ushbu variant 2-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -1281,7 +1281,7 @@
     ],
     "correct_index": 0,
     "correct_letter": "A",
-    "hint": "💡 Maslahat: Sintetik (masalan 1010 Xomashyo) — umumiy, analitik (yog'och 5mm, temir 12mm) — mayda tafsilot.",
+    "hint": "💡 Maslahat: Sintetik (masalan 1000 Xomashyo) — umumiy, analitik (yog'och 5mm, temir 12mm) — mayda tafsilot.",
     "why_right": "To'g'ri javob: «Sintetik schyotlar umumlashtirilgan ko'rsatkichlarni beradi, analitik schyotlar esa har bir aniq shaxs, material yoki detal bo'yicha batafsil ma'lumot beradi». Sintetik hisob (bosh kitob schyotlari) umumiy jamlangan qiymatni aks ettiradi, analitik hisob esa har bir kontragent, xodim yoki material nomi bo'yicha yuritiladi.",
     "why_right_en": "Correct answer: «Synthetic accounts give summarized aggregate data, while analytical accounts provide granular detail by each item or person».",
     "why_wrongs": [
@@ -1358,36 +1358,36 @@
     "question_uz": "Mol yetkazib beruvchiga olingan xomashyolar uchun bankdan 30 mln so'm to'lab berildi. To'g'ri provodka:",
     "question_en": "Paid 30m UZS from bank account to suppliers for raw materials. Correct entry:",
     "options_uz": [
-      "Debet 5110 - Kredit 6010 : 30 000 000",
-      "Debet 1010 - Kredit 5110 : 30 000 000",
-      "Debet 6010 - Kredit 5110 : 30 000 000",
-      "Debet 6010 - Kredit 5010 : 30 000 000"
+      "Debet 5100 - Kredit 6000 : 30 000 000",
+      "Debet 1000 - Kredit 5100 : 30 000 000",
+      "Debet 6000 - Kredit 5100 : 30 000 000",
+      "Debet 6000 - Kredit 5000 : 30 000 000"
     ],
     "options_en": [
-      "Debit 5110 - Credit 6010 : 30,000,000",
-      "Debit 1010 - Credit 5110 : 30,000,000",
-      "Debit 6010 - Credit 5110 : 30,000,000",
-      "Debit 6010 - Credit 5010 : 30,000,000"
+      "Debit 5100 - Credit 6000 : 30,000,000",
+      "Debit 1000 - Credit 5100 : 30,000,000",
+      "Debit 6000 - Credit 5100 : 30,000,000",
+      "Debit 6000 - Credit 5000 : 30,000,000"
     ],
     "correct_index": 2,
     "correct_letter": "C",
-    "hint": "💡 Maslahat: Kreditorlik qarzi kamaydi (6010 Debet), bankdagi pul kamaydi (5110 Kredit).",
-    "why_right": "To'g'ri javob: «Debet 6010 - Kredit 5110 : 30 000 000». 6010 passiv schyot bo'lib, qarz kamayganda Debetlanadi. 5110 aktiv schyot bo'lib, pul kamayganda Kreditlanadi.",
-    "why_right_en": "Correct answer: «Debit 6010 - Credit 5110 : 30,000,000».",
+    "hint": "💡 Maslahat: Kreditorlik qarzi kamaydi (6000 Debet), bankdagi pul kamaydi (5100 Kredit).",
+    "why_right": "To'g'ri javob: «Debet 6000 - Kredit 5100 : 30 000 000». 6000 passiv schyot bo'lib, qarz kamayganda Debetlanadi. 5100 aktiv schyot bo'lib, pul kamayganda Kreditlanadi.",
+    "why_right_en": "Correct answer: «Debit 6000 - Credit 5100 : 30,000,000».",
     "why_wrongs": [
       {
         "letter": "A",
-        "text": "Debet 5110 - Kredit 6010 : 30 000 000",
+        "text": "Debet 5100 - Kredit 6000 : 30 000 000",
         "reason": "Ushbu variant 2-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "B",
-        "text": "Debet 1010 - Kredit 5110 : 30 000 000",
+        "text": "Debet 1000 - Kredit 5100 : 30 000 000",
         "reason": "Ushbu variant 2-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "D",
-        "text": "Debet 6010 - Kredit 5010 : 30 000 000",
+        "text": "Debet 6000 - Kredit 5000 : 30 000 000",
         "reason": "Ushbu variant 2-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -1416,7 +1416,7 @@
     ],
     "correct_index": 3,
     "correct_letter": "D",
-    "hint": "💡 Maslahat: 5010, 5110, 5210, 5500 — barchasi pul va uning ekvivalentlari.",
+    "hint": "💡 Maslahat: 5000, 5100, 5200, 5500 — barchasi pul va uning ekvivalentlari.",
     "why_right": "To'g'ri javob: «Pul mablag'lari (Kassa, Bank, Valyuta schyotlari)». 21-son BHMS schyotlar rejasining 5-bo'limi 'Pul mablag'lari' deb ataladi (5000 Kassa, 5100 Hisob-kitob schyoti, 5200 Valyuta schyoti va h.k.).",
     "why_right_en": "Correct answer: «Cash and cash equivalents (Cash, Bank accounts)».",
     "why_wrongs": [
@@ -1538,36 +1538,36 @@
     "question_uz": "Korxona xodimlariga hisoblangan ish haqi uchun qaysi buxgalteriya provodkasi beriladi?",
     "question_en": "Which entry records accrued wages for factory production workers?",
     "options_uz": [
-      "Debet 6710 - Kredit 5010",
-      "Debet 5110 - Kredit 6710",
-      "Debet 2010 (Asosiy ishlab chiqarish) - Kredit 6710 (Mehnat haqi qarzi)",
-      "Debet 6710 - Kredit 2010"
+      "Debet 6700 - Kredit 5000",
+      "Debet 5100 - Kredit 6700",
+      "Debet 2000 (Asosiy ishlab chiqarish) - Kredit 6700 (Mehnat haqi qarzi)",
+      "Debet 6700 - Kredit 2000"
     ],
     "options_en": [
-      "Debit 6710 - Credit 5010",
-      "Debit 5110 - Credit 6710",
-      "Debit 2010 - Credit 6710",
-      "Debit 6710 - Credit 2010"
+      "Debit 6700 - Credit 5000",
+      "Debit 5100 - Credit 6700",
+      "Debit 2000 - Credit 6700",
+      "Debit 6700 - Credit 2000"
     ],
     "correct_index": 2,
     "correct_letter": "C",
-    "hint": "💡 Maslahat: Xarajat oshdi (2010 Debet), ishchilar oldidagi qarz majburiyati paydo bo'ldi (6710 Kredit).",
-    "why_right": "To'g'ri javob: «Debet 2010 (Asosiy ishlab chiqarish) - Kredit 6710 (Mehnat haqi qarzi)». Ishlab chiqarish ishchilariga maosh hisoblanganda: xarajatlar ko'payadi (2010 Debet), ish haqini to'lash majburiyati ko'payadi (6710 Kredit).",
-    "why_right_en": "Correct answer: «Debit 2010 - Credit 6710».",
+    "hint": "💡 Maslahat: Xarajat oshdi (2000 Debet), ishchilar oldidagi qarz majburiyati paydo bo'ldi (6700 Kredit).",
+    "why_right": "To'g'ri javob: «Debet 2000 (Asosiy ishlab chiqarish) - Kredit 6700 (Mehnat haqi qarzi)». Ishlab chiqarish ishchilariga maosh hisoblanganda: xarajatlar ko'payadi (2000 Debet), ish haqini to'lash majburiyati ko'payadi (6700 Kredit).",
+    "why_right_en": "Correct answer: «Debit 2000 - Credit 6700».",
     "why_wrongs": [
       {
         "letter": "A",
-        "text": "Debet 6710 - Kredit 5010",
+        "text": "Debet 6700 - Kredit 5000",
         "reason": "Ushbu variant 2-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "B",
-        "text": "Debet 5110 - Kredit 6710",
+        "text": "Debet 5100 - Kredit 6700",
         "reason": "Ushbu variant 2-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "D",
-        "text": "Debet 6710 - Kredit 2010",
+        "text": "Debet 6700 - Kredit 2000",
         "reason": "Ushbu variant 2-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -1597,7 +1597,7 @@
     "correct_index": 3,
     "correct_letter": "D",
     "hint": "💡 Maslahat: 1 Debet - 1 Kredit = Oddiy. 1 Debet - 2 Kredit (yoki aksincha) = Murakkab.",
-    "why_right": "To'g'ri javob: «Oddiy provodkada faqat bitta Debet va bitta Kredit qatnashadi, murakkab provodkada esa bir nechta Debet yoki bir nechta Kredit bog'lanadi». Masalan, tovar sotilganda xaridorning qarzi bir tomonda (Debet 4010), ikkinchi tomonda esa tushum (Kredit 9010) va QQS (Kredit 6410) aks etishi murakkab provodkadir.",
+    "why_right": "To'g'ri javob: «Oddiy provodkada faqat bitta Debet va bitta Kredit qatnashadi, murakkab provodkada esa bir nechta Debet yoki bir nechta Kredit bog'lanadi». Masalan, tovar sotilganda xaridorning qarzi bir tomonda (Debet 4000), ikkinchi tomonda esa tushum (Kredit 9000) va QQS (Kredit 6400) aks etishi murakkab provodkadir.",
     "why_right_en": "Correct answer: «A simple entry has one Debit and one Credit; a compound entry involves multiple Debits or Credits».",
     "why_wrongs": [
       {
@@ -1628,36 +1628,36 @@
     "question_uz": "Quyidagi schyotlardan qaysi biri passiv schyot hisoblanadi?",
     "question_en": "Which of the following accounts is a passive (liability/equity) account?",
     "options_uz": [
-      "8330 'Ustav kapitali'",
-      "0120 'Binolar va inshootlar'",
-      "1010 'Xomashyo va materiallar'",
-      "5010 'Kassa'"
+      "8300 'Ustav kapitali'",
+      "0100 'Binolar va inshootlar'",
+      "1000 'Xomashyo va materiallar'",
+      "5000 'Kassa'"
     ],
     "options_en": [
-      "8330 'Charter capital'",
-      "0120 'Buildings'",
-      "1010 'Raw materials'",
-      "5010 'Petty cash'"
+      "8300 'Charter capital'",
+      "0100 'Buildings'",
+      "1000 'Raw materials'",
+      "5000 'Petty cash'"
     ],
     "correct_index": 0,
     "correct_letter": "A",
     "hint": "💡 Maslahat: Passiv: majburiyatlar va xususiy kapital manbalari.",
-    "why_right": "To'g'ri javob: «8330 'Ustav kapitali'». 8330 Ustav kapitali xususiy kapital schyoti bo'lib, passiv hisoblanadi (kredit qoldiqli). 0120, 1010 va 5010 lar esa aktiv schyotlardir.",
-    "why_right_en": "Correct answer: «8330 'Charter capital'».",
+    "why_right": "To'g'ri javob: «8300 'Ustav kapitali'». 8300 Ustav kapitali xususiy kapital schyoti bo'lib, passiv hisoblanadi (kredit qoldiqli). 0100, 1000 va 5000 lar esa aktiv schyotlardir.",
+    "why_right_en": "Correct answer: «8300 'Charter capital'».",
     "why_wrongs": [
       {
         "letter": "B",
-        "text": "0120 'Binolar va inshootlar'",
+        "text": "0100 'Binolar va inshootlar'",
         "reason": "Ushbu variant 2-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "C",
-        "text": "1010 'Xomashyo va materiallar'",
+        "text": "1000 'Xomashyo va materiallar'",
         "reason": "Ushbu variant 2-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "D",
-        "text": "5010 'Kassa'",
+        "text": "5000 'Kassa'",
         "reason": "Ushbu variant 2-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -1670,8 +1670,8 @@
     "topic_id": 2,
     "topic_name_uz": "2-Mavzu: Buxgalteriya schyotlari, Debet va Kredit mexanizmi, Ikki yoqlama yozuv",
     "topic_name_en": "Topic 2: Ledger Accounts, Debit and Credit Mechanics, Double-Entry",
-    "question_uz": "Schyotlar rejasida 6010 schyoti nima deb nomlanadi va uning iqtisodiy vazifasi nima?",
-    "question_en": "What is account 6010 called and what is its role?",
+    "question_uz": "Schyotlar rejasida 6000 schyoti nima deb nomlanadi va uning iqtisodiy vazifasi nima?",
+    "question_en": "What is account 6000 called and what is its role?",
     "options_uz": [
       "'Xaridorlar va buyurtmachilar bilan hisob-kitoblar'; debitorlik qarzini hisobga oladi",
       "'Mol yetkazib beruvchilar va pudratchilarga to'lanadigan schyotlar'; olingan materiallar uchun kreditorlik qarzini hisobga oladi",
@@ -1686,8 +1686,8 @@
     ],
     "correct_index": 1,
     "correct_letter": "B",
-    "hint": "💡 Maslahat: 6010 — korxona sotib olgan xomashyosi uchun mol yetkazib beruvchiga berishi kerak bo'lgan qarz schyoti.",
-    "why_right": "To'g'ri javob: «'Mol yetkazib beruvchilar va pudratchilarga to'lanadigan schyotlar'; olingan materiallar uchun kreditorlik qarzini hisobga oladi». 6010 'Mol yetkazib beruvchilar va pudratchilarga to'lanadigan schyotlar' passiv schyot bo'lib, korxonaning xomashyo va xizmatlar yetkazib bergan tashkilotlar oldidagi qarzini aks ettiradi.",
+    "hint": "💡 Maslahat: 6000 — korxona sotib olgan xomashyosi uchun mol yetkazib beruvchiga berishi kerak bo'lgan qarz schyoti.",
+    "why_right": "To'g'ri javob: «'Mol yetkazib beruvchilar va pudratchilarga to'lanadigan schyotlar'; olingan materiallar uchun kreditorlik qarzini hisobga oladi». 6000 'Mol yetkazib beruvchilar va pudratchilarga to'lanadigan schyotlar' passiv schyot bo'lib, korxonaning xomashyo va xizmatlar yetkazib bergan tashkilotlar oldidagi qarzini aks ettiradi.",
     "why_right_en": "Correct answer: «'Accounts payable to vendors and contractors'; tracks debt owed for purchased supplies».",
     "why_wrongs": [
       {
@@ -1763,36 +1763,36 @@
     "question_uz": "Korxona bank hisobvarag'idan o'z xodimlariga 25 mln so'm ish haqini plastik kartalariga o'tkazib berdi. To'g'ri provodka:",
     "question_en": "Transferred 25m UZS from bank account to employees' payroll cards. Correct entry:",
     "options_uz": [
-      "Debet 5110 - Kredit 6710 : 25 000 000",
-      "Debet 2010 - Kredit 5110 : 25 000 000",
-      "Debet 6710 - Kredit 5010 : 25 000 000",
-      "Debet 6710 - Kredit 5110 : 25 000 000"
+      "Debet 5100 - Kredit 6700 : 25 000 000",
+      "Debet 2000 - Kredit 5100 : 25 000 000",
+      "Debet 6700 - Kredit 5000 : 25 000 000",
+      "Debet 6700 - Kredit 5100 : 25 000 000"
     ],
     "options_en": [
-      "Debit 5110 - Credit 6710 : 25,000,000",
-      "Debit 2010 - Credit 5110 : 25,000,000",
-      "Debit 6710 - Credit 5010 : 25,000,000",
-      "Debit 6710 - Credit 5110 : 25,000,000"
+      "Debit 5100 - Credit 6700 : 25,000,000",
+      "Debit 2000 - Credit 5100 : 25,000,000",
+      "Debit 6700 - Credit 5000 : 25,000,000",
+      "Debit 6700 - Credit 5100 : 25,000,000"
     ],
     "correct_index": 3,
     "correct_letter": "D",
-    "hint": "💡 Maslahat: Ish haqi bo'yicha qarz kamaydi (6710 Debet), bankdagi pul kamaydi (5110 Kredit).",
-    "why_right": "To'g'ri javob: «Debet 6710 - Kredit 5110 : 25 000 000». Xodimlar oldidagi ish haqi to'langanda qarz majburiyati yopiladi (6710 Debet), pul bankdan chiqqani uchun 5110 Kreditlanadi.",
-    "why_right_en": "Correct answer: «Debit 6710 - Credit 5110 : 25,000,000».",
+    "hint": "💡 Maslahat: Ish haqi bo'yicha qarz kamaydi (6700 Debet), bankdagi pul kamaydi (5100 Kredit).",
+    "why_right": "To'g'ri javob: «Debet 6700 - Kredit 5100 : 25 000 000». Xodimlar oldidagi ish haqi to'langanda qarz majburiyati yopiladi (6700 Debet), pul bankdan chiqqani uchun 5100 Kreditlanadi.",
+    "why_right_en": "Correct answer: «Debit 6700 - Credit 5100 : 25,000,000».",
     "why_wrongs": [
       {
         "letter": "A",
-        "text": "Debet 5110 - Kredit 6710 : 25 000 000",
+        "text": "Debet 5100 - Kredit 6700 : 25 000 000",
         "reason": "Ushbu variant 2-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "B",
-        "text": "Debet 2010 - Kredit 5110 : 25 000 000",
+        "text": "Debet 2000 - Kredit 5100 : 25 000 000",
         "reason": "Ushbu variant 2-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "C",
-        "text": "Debet 6710 - Kredit 5010 : 25 000 000",
+        "text": "Debet 6700 - Kredit 5000 : 25 000 000",
         "reason": "Ushbu variant 2-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -1940,8 +1940,8 @@
     "topic_id": 2,
     "topic_name_uz": "2-Mavzu: Buxgalteriya schyotlari, Debet va Kredit mexanizmi, Ikki yoqlama yozuv",
     "topic_name_en": "Topic 2: Ledger Accounts, Debit and Credit Mechanics, Double-Entry",
-    "question_uz": "Schyotlar rejasida 4010 schyoti nima deb ataladi?",
-    "question_en": "What is account 4010 called in Chart of Accounts?",
+    "question_uz": "Schyotlar rejasida 4000 schyoti nima deb ataladi?",
+    "question_en": "What is account 4000 called in Chart of Accounts?",
     "options_uz": [
       "'Mol yetkazib beruvchilarga to'lanadigan schyotlar'",
       "'Kassadagi naqd pullar'",
@@ -1956,8 +1956,8 @@
     ],
     "correct_index": 3,
     "correct_letter": "D",
-    "hint": "💡 Maslahat: 4-bo'lim — olinadigan qarzlar (debitorlar). 4010 — xaridorlarning qarzi.",
-    "why_right": "To'g'ri javob: «'Xaridorlar va buyurtmachilardan olinadigan schyotlar'». 4010 schyoti 'Xaridorlar va buyurtmachilardan olinadigan schyotlar' bo'lib, realizatsiya qilingan tovarlar uchun xaridorlardan undirilishi kerak bo'lgan mablag'larni hisobga oluvchi aktiv schyotdir.",
+    "hint": "💡 Maslahat: 4-bo'lim — olinadigan qarzlar (debitorlar). 4000 — xaridorlarning qarzi.",
+    "why_right": "To'g'ri javob: «'Xaridorlar va buyurtmachilardan olinadigan schyotlar'». 4000 schyoti 'Xaridorlar va buyurtmachilardan olinadigan schyotlar' bo'lib, realizatsiya qilingan tovarlar uchun xaridorlardan undirilishi kerak bo'lgan mablag'larni hisobga oluvchi aktiv schyotdir.",
     "why_right_en": "Correct answer: «'Accounts receivable from buyers and customers'».",
     "why_wrongs": [
       {
@@ -2092,7 +2092,7 @@
     "correct_index": 2,
     "correct_letter": "C",
     "hint": "💡 Maslahat: Kassa oshdi (Aktiv +), Bank kamaydi (Aktiv -). Faqat aktivning tarkibi o'zgardi.",
-    "why_right": "To'g'ri javob: «1-tur (A+ A-); Balans valyutasi (jami summasi) o'zgarmaydi». Bu 1-tur muomalasi bo'lib, faqat aktiv moddalari o'rtasida mablag' o'rin almashadi: Kassa (5010) +15 mln, Hisob-kitob (5110) -15 mln. Balansning yakuniy valyutasi o'zgarmaydi.",
+    "why_right": "To'g'ri javob: «1-tur (A+ A-); Balans valyutasi (jami summasi) o'zgarmaydi». Bu 1-tur muomalasi bo'lib, faqat aktiv moddalari o'rtasida mablag' o'rin almashadi: Kassa (5000) +15 mln, Hisob-kitob (5100) -15 mln. Balansning yakuniy valyutasi o'zgarmaydi.",
     "why_right_en": "Correct answer: «Type 1 (A+ A-); Balance total does not change».",
     "why_wrongs": [
       {
@@ -2137,7 +2137,7 @@
     "correct_index": 3,
     "correct_letter": "D",
     "hint": "💡 Maslahat: Materiallar oshdi (Aktiv +), Mol yetkazib beruvchiga qarz oshdi (Passiv +).",
-    "why_right": "To'g'ri javob: «3-tur (A+ P+); Balans valyutasi 70 mln so'mga ko'payadi». Bu 3-tur muomalasidir: bir vaqtning o'zida korxona aktividagi materiallar (1010) 70 mln ga, passividagi kreditorlik qarzi (6010) 70 mln ga oshadi. Balans valyutasi 70 mln so'mga teng ravishda o'sadi.",
+    "why_right": "To'g'ri javob: «3-tur (A+ P+); Balans valyutasi 70 mln so'mga ko'payadi». Bu 3-tur muomalasidir: bir vaqtning o'zida korxona aktividagi materiallar (1000) 70 mln ga, passividagi kreditorlik qarzi (6000) 70 mln ga oshadi. Balans valyutasi 70 mln so'mga teng ravishda o'sadi.",
     "why_right_en": "Correct answer: «Type 3 (A+ P+); Balance total increases by 70m».",
     "why_wrongs": [
       {
@@ -2182,7 +2182,7 @@
     "correct_index": 0,
     "correct_letter": "A",
     "hint": "💡 Maslahat: Bankdagi pul kamaydi (Aktiv -), yetkazib beruvchiga qarz yopildi (Passiv -).",
-    "why_right": "To'g'ri javob: «4-tur (A- P-); Balans valyutasi 40 mln so'mga kamayadi». Bu 4-tur muomalasi: aktiv (5110) 40 mln ga kamayadi, passiv (6010) 40 mln ga kamayadi. Ikkala tomon bir xil summaga qisqaradi, balans valyutasi 40 mln so'mga kamayadi.",
+    "why_right": "To'g'ri javob: «4-tur (A- P-); Balans valyutasi 40 mln so'mga kamayadi». Bu 4-tur muomalasi: aktiv (5100) 40 mln ga kamayadi, passiv (6000) 40 mln ga kamayadi. Ikkala tomon bir xil summaga qisqaradi, balans valyutasi 40 mln so'mga kamayadi.",
     "why_right_en": "Correct answer: «Type 4 (A- P-); Balance total decreases by 40m».",
     "why_wrongs": [
       {
@@ -2226,8 +2226,8 @@
     ],
     "correct_index": 1,
     "correct_letter": "B",
-    "hint": "💡 Maslahat: Taqsimlanmagan foyda (8710 - Passiv) kamaydi, Zaxira kapitali (8520 - Passiv) ko'paydi.",
-    "why_right": "To'g'ri javob: «2-tur (P+ P-); Balans valyutasi o'zgarmaydi». Bu 2-tur muomalasi: o'zgarishlar faqat balansning Passiv qismida yuz beradi. Bitta passiv modda (8710) kamayadi, boshqasi (8520) ko'payadi. Balans valyutasi o'zgarmaydi.",
+    "hint": "💡 Maslahat: Taqsimlanmagan foyda (8700 - Passiv) kamaydi, Zaxira kapitali (8500 - Passiv) ko'paydi.",
+    "why_right": "To'g'ri javob: «2-tur (P+ P-); Balans valyutasi o'zgarmaydi». Bu 2-tur muomalasi: o'zgarishlar faqat balansning Passiv qismida yuz beradi. Bitta passiv modda (8700) kamayadi, boshqasi (8500) ko'payadi. Balans valyutasi o'zgarmaydi.",
     "why_right_en": "Correct answer: «Type 2 (P+ P-); Balance total unchanged».",
     "why_wrongs": [
       {
@@ -2406,7 +2406,7 @@
     ],
     "correct_index": 1,
     "correct_letter": "B",
-    "hint": "💡 Maslahat: Debet 5110 (Aktiv +), Kredit 4010 (Aktiv -).",
+    "hint": "💡 Maslahat: Debet 5100 (Aktiv +), Kredit 4000 (Aktiv -).",
     "why_right": "To'g'ri javob: «Balans valyutasi o'zgarmaydi; bir aktiv (bank) ko'payib, ikkinchi aktiv (debitorlik) kamayadi». Bu 1-tur muomalasidir. Pul mablag'lari oshadi, lekin mijozdan olinadigan qarz kamayadi. Jami aktivlar o'zgarmaydi.",
     "why_right_en": "Correct answer: «Balance total unchanged; one asset increases, another decreases».",
     "why_wrongs": [
@@ -2452,7 +2452,7 @@
     "correct_index": 2,
     "correct_letter": "C",
     "hint": "💡 Maslahat: Uskuna (Aktiv +) ko'paydi, Bank krediti qarzi (Passiv +) ko'paydi.",
-    "why_right": "To'g'ri javob: «3-tur (A+ P+); Balans valyutasi 100 mln so'mga oshadi». Aktivda Asosiy vositalar (0130) +100 mln, Passivda Bank krediti (7810) +100 mln. Ikkala tomon o'sgani sababli bu 3-tur muomalasi bo'lib, balans valyutasi 100 mln ga ortadi.",
+    "why_right": "To'g'ri javob: «3-tur (A+ P+); Balans valyutasi 100 mln so'mga oshadi». Aktivda Asosiy vositalar (0100) +100 mln, Passivda Bank krediti (7800) +100 mln. Ikkala tomon o'sgani sababli bu 3-tur muomalasi bo'lib, balans valyutasi 100 mln ga ortadi.",
     "why_right_en": "Correct answer: «Type 3 (A+ P+); Balance total increases by 100m».",
     "why_wrongs": [
       {
@@ -2496,7 +2496,7 @@
     ],
     "correct_index": 3,
     "correct_letter": "D",
-    "hint": "💡 Maslahat: Debet 4220 (Hisobdor shaxslar bo'nagi - Aktiv +), Kredit 5010 (Kassa - Aktiv -).",
+    "hint": "💡 Maslahat: Debet 4220 (Hisobdor shaxslar bo'nagi - Aktiv +), Kredit 5000 (Kassa - Aktiv -).",
     "why_right": "To'g'ri javob: «1-tur (A+ A-); Balans valyutasi o'zgarmaydi». Aktiv tarkibidagi bir modda kamayib, ikkinchisi oshdi. Balans valyutasi o'zgarmasdan qoladi (1-tur).",
     "why_right_en": "Correct answer: «Type 1 (A+ A-); Balance total unchanged».",
     "why_wrongs": [
@@ -2541,7 +2541,7 @@
     ],
     "correct_index": 0,
     "correct_letter": "A",
-    "hint": "💡 Maslahat: Debet 8710 (Taqsimlanmagan foyda - Passiv -), Kredit 8330 (Ustav kapitali - Passiv +).",
+    "hint": "💡 Maslahat: Debet 8700 (Taqsimlanmagan foyda - Passiv -), Kredit 8300 (Ustav kapitali - Passiv +).",
     "why_right": "To'g'ri javob: «2-tur (P+ P-); Balans valyutasi o'zgarmaydi». Faqat xususiy kapital moddalari ichida qayta taqsimlash bo'ldi. Passiv ichidagi o'zgarish balans valyutasiga ta'sir qilmaydi (2-tur).",
     "why_right_en": "Correct answer: «Type 2 (P+ P-); Balance total unchanged».",
     "why_wrongs": [
@@ -2586,7 +2586,7 @@
     ],
     "correct_index": 1,
     "correct_letter": "B",
-    "hint": "💡 Maslahat: Debet 6410 (Byudjetga soliq qarzi - Passiv -), Kredit 5110 (Bank - Aktiv -).",
+    "hint": "💡 Maslahat: Debet 6400 (Byudjetga soliq qarzi - Passiv -), Kredit 5100 (Bank - Aktiv -).",
     "why_right": "To'g'ri javob: «4-tur (A- P-); Balans valyutasi 12 mln ga kamayadi». Soliq majburiyati kamaydi va pul mablag'i kamaydi. Balansning ikkala tomoni qisqaradi (4-tur).",
     "why_right_en": "Correct answer: «Type 4 (A- P-); Balance total decreases by 12m».",
     "why_wrongs": [
@@ -2676,8 +2676,8 @@
     ],
     "correct_index": 3,
     "correct_letter": "D",
-    "hint": "💡 Maslahat: Debet 2010 (Tugallanmagan ishlab chiqarish - Aktiv +), Kredit 1010 (Xomashyo - Aktiv -).",
-    "why_right": "To'g'ri javob: «1-tur (A+ A-); Balans valyutasi o'zgarmaydi». Ikkala schyot ham (2010 va 1010) Aktiv schyotlar hisoblanadi. Bir aktiv boshqa aktiv shakliga o'tmoqda, shuning uchun balans valyutasi o'zgarmaydi (1-tur).",
+    "hint": "💡 Maslahat: Debet 2000 (Tugallanmagan ishlab chiqarish - Aktiv +), Kredit 1000 (Xomashyo - Aktiv -).",
+    "why_right": "To'g'ri javob: «1-tur (A+ A-); Balans valyutasi o'zgarmaydi». Ikkala schyot ham (2000 va 1000) Aktiv schyotlar hisoblanadi. Bir aktiv boshqa aktiv shakliga o'tmoqda, shuning uchun balans valyutasi o'zgarmaydi (1-tur).",
     "why_right_en": "Correct answer: «Type 1 (A+ A-); Balance total unchanged».",
     "why_wrongs": [
       {
@@ -2766,7 +2766,7 @@
     ],
     "correct_index": 1,
     "correct_letter": "B",
-    "hint": "💡 Maslahat: Kreditorlik qarzi (6010 - Passiv -) yopildi, Bank krediti qarzi (6810 - Passiv +) paydo bo'ldi.",
+    "hint": "💡 Maslahat: Kreditorlik qarzi (6000 - Passiv -) yopildi, Bank krediti qarzi (6800 - Passiv +) paydo bo'ldi.",
     "why_right": "To'g'ri javob: «2-tur (P+ P-); Balans valyutasi o'zgarmaydi». Bir majburiyat boshqa majburiyatga almashtirildi. Passiv ichidagi o'zgarish bo'lgani sababli bu 2-tur va valyuta o'zgarmaydi.",
     "why_right_en": "Correct answer: «Type 2 (P+ P-); Balance total unchanged».",
     "why_wrongs": [
@@ -2811,7 +2811,7 @@
     ],
     "correct_index": 2,
     "correct_letter": "C",
-    "hint": "💡 Maslahat: Avtotransport (0140 - Aktiv +) oshdi, Ustav kapitali (8330 - Passiv +) oshdi.",
+    "hint": "💡 Maslahat: Avtotransport (0100 - Aktiv +) oshdi, Ustav kapitali (8300 - Passiv +) oshdi.",
     "why_right": "To'g'ri javob: «3-tur (A+ P+); Balans valyutasi 60 mln so'mga oshadi». Aktiv va Passiv tomonlarining bir vaqtda teng summaga ko'payishi 3-tur muomalasi hisoblanadi.",
     "why_right_en": "Correct answer: «Type 3 (A+ P+); Balance total increases by 60m».",
     "why_wrongs": [
@@ -2856,7 +2856,7 @@
     ],
     "correct_index": 3,
     "correct_letter": "D",
-    "hint": "💡 Maslahat: Dividend qarzi (6610 - Passiv -) kamaydi, Bankdagi pul (5110 - Aktiv -) kamaydi.",
+    "hint": "💡 Maslahat: Dividend qarzi (6600 - Passiv -) kamaydi, Bankdagi pul (5100 - Aktiv -) kamaydi.",
     "why_right": "To'g'ri javob: «4-tur (A- P-); Balans valyutasi 10 mln so'mga kamayadi». Majburiyat va aktivning birdek qisqarishi 4-tur muomalasi bo'lib, balans valyutasini kamaytiradi.",
     "why_right_en": "Correct answer: «Type 4 (A- P-); Balance total decreases by 10m».",
     "why_wrongs": [
@@ -2901,7 +2901,7 @@
     ],
     "correct_index": 0,
     "correct_letter": "A",
-    "hint": "💡 Maslahat: Debet 2810 (Tayyor mahsulot - Aktiv +), Kredit 2010 (Ishlab chiqarish - Aktiv -).",
+    "hint": "💡 Maslahat: Debet 2800 (Tayyor mahsulot - Aktiv +), Kredit 2000 (Ishlab chiqarish - Aktiv -).",
     "why_right": "To'g'ri javob: «1-tur (A+ A-); Balans valyutasi o'zgarmaydi». Tayyor mahsulot ko'paydi, tugallanmagan ishlab chiqarish kamaydi. Faqat aktiv moddalar ichidagi almashinuv (1-tur).",
     "why_right_en": "Correct answer: «Type 1 (A+ A-); Balance total unchanged».",
     "why_wrongs": [
@@ -2991,7 +2991,7 @@
     ],
     "correct_index": 2,
     "correct_letter": "C",
-    "hint": "💡 Maslahat: Debet 5010 (Kassa - Aktiv +), Kredit 4220 (Hisobdor shaxs - Aktiv -).",
+    "hint": "💡 Maslahat: Debet 5000 (Kassa - Aktiv +), Kredit 4220 (Hisobdor shaxs - Aktiv -).",
     "why_right": "To'g'ri javob: «Balans valyutasi o'zgarmaydi (1-tur: Kassa oshadi, Hisobdor shaxs qarzi kamayadi)». Aktiv ichida bir modda o'rniga boshqasi oshdi. Jami balans valyutasi o'zgarmaydi.",
     "why_right_en": "Correct answer: «Balance total unchanged (Type 1: Cash increases, Advance receivable decreases)».",
     "why_wrongs": [
@@ -3113,22 +3113,22 @@
     "question_uz": "Asosiy vositalar bo'yicha hisoblangan oylik eskirish summasi ishlab chiqarish sexidagi uskunalar uchun qaysi provodka bilan aks ettiriladi?",
     "question_en": "Which entry records monthly depreciation of factory production equipment?",
     "options_uz": [
-      "Debet 0230 - Kredit 0130",
-      "Debet 2010 (Asosiy ishlab chiqarish) - Kredit 0230 (Mashina va uskunalar eskirishi)",
-      "Debet 0130 - Kredit 5110",
-      "Debet 9420 - Kredit 0130"
+      "Debet 0200 - Kredit 0100",
+      "Debet 2000 (Asosiy ishlab chiqarish) - Kredit 0200 (Mashina va uskunalar eskirishi)",
+      "Debet 0100 - Kredit 5100",
+      "Debet 9400 - Kredit 0100"
     ],
     "options_en": [
-      "Debit 0230 - Credit 0130",
-      "Debit 2010 - Credit 0230",
-      "Debit 0130 - Credit 5110",
-      "Debit 9420 - Credit 0130"
+      "Debit 0200 - Credit 0100",
+      "Debit 2000 - Credit 0200",
+      "Debit 0100 - Credit 5100",
+      "Debit 9400 - Credit 0100"
     ],
     "correct_index": 1,
     "correct_letter": "B",
-    "hint": "💡 Maslahat: Eskirish xarajatga olib boriladi (2010 Debet), jamlangan eskirish schyoti Kreditlanadi (0230).",
-    "why_right": "To'g'ri javob: «Debet 2010 (Asosiy ishlab chiqarish) - Kredit 0230 (Mashina va uskunalar eskirishi)». Sex uskunalarining eskirishi mahsulot tannarxiga kiradi (2010 Debet). Eskirish schyotlari kontr-aktiv bo'lgani sababli eskirish ko'payganda Kredit (0230) qilinadi.",
-    "why_right_en": "Correct answer: «Debit 2010 - Credit 0230».",
+    "hint": "💡 Maslahat: Eskirish xarajatga olib boriladi (2000 Debet), jamlangan eskirish schyoti Kreditlanadi (0200).",
+    "why_right": "To'g'ri javob: «Debet 2000 (Asosiy ishlab chiqarish) - Kredit 0200 (Mashina va uskunalar eskirishi)». Sex uskunalarining eskirishi mahsulot tannarxiga kiradi (2000 Debet). Eskirish schyotlari kontr-aktiv bo'lgani sababli eskirish ko'payganda Kredit (0200) qilinadi.",
+    "why_right_en": "Correct answer: «Debit 2000 - Credit 0200».",
     "why_wrongs": [
       {
         "letter": "A",
@@ -3137,12 +3137,12 @@
       },
       {
         "letter": "C",
-        "text": "Debet 0130 - Kredit 5110",
+        "text": "Debet 0130 - Kredit 5100",
         "reason": "Ushbu variant 4-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "D",
-        "text": "Debet 9420 - Kredit 0130",
+        "text": "Debet 9400 - Kredit 0130",
         "reason": "Ushbu variant 4-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -3203,26 +3203,26 @@
     "question_uz": "Korxona ma'muriyati (ofisi) foydalanayotgan kompyuterlar bo'yicha eskirish hisoblanganda qaysi schyot Debetlanadi?",
     "question_en": "When depreciating administrative computers, which account is debited?",
     "options_uz": [
-      "2010 'Asosiy ishlab chiqarish'",
-      "0130 'Mashina va uskunalar'",
-      "1010 'Xomashyo va materiallar'",
-      "9420 'Ma'muriy xarajatlar'"
+      "2000 'Asosiy ishlab chiqarish'",
+      "0100 'Mashina va uskunalar'",
+      "1000 'Xomashyo va materiallar'",
+      "9400 'Ma'muriy xarajatlar'"
     ],
     "options_en": [
-      "2010 'Main production'",
-      "0130 'Machinery'",
-      "1010 'Materials'",
-      "9420 'Administrative expenses'"
+      "2000 'Main production'",
+      "0100 'Machinery'",
+      "1000 'Materials'",
+      "9400 'Administrative expenses'"
     ],
     "correct_index": 3,
     "correct_letter": "D",
-    "hint": "💡 Maslahat: Ofis va boshqaruv xarajatlari 9420 schyotida to'planadi.",
-    "why_right": "To'g'ri javob: «9420 'Ma'muriy xarajatlar'». Ofisda ishlatiladigan kompyuter va mebellar ishlab chiqarishga kirmaydi, shuning uchun ularning eskirishi davr xarajatlariga, ya'ni 9420 'Ma'muriy xarajatlar' Debetiga yoziladi.",
-    "why_right_en": "Correct answer: «9420 'Administrative expenses'».",
+    "hint": "💡 Maslahat: Ofis va boshqaruv xarajatlari 9400 schyotida to'planadi.",
+    "why_right": "To'g'ri javob: «9400 'Ma'muriy xarajatlar'». Ofisda ishlatiladigan kompyuter va mebellar ishlab chiqarishga kirmaydi, shuning uchun ularning eskirishi davr xarajatlariga, ya'ni 9400 'Ma'muriy xarajatlar' Debetiga yoziladi.",
+    "why_right_en": "Correct answer: «9400 'Administrative expenses'».",
     "why_wrongs": [
       {
         "letter": "A",
-        "text": "2010 'Asosiy ishlab chiqarish'",
+        "text": "2000 'Asosiy ishlab chiqarish'",
         "reason": "Ushbu variant 4-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
@@ -3232,7 +3232,7 @@
       },
       {
         "letter": "C",
-        "text": "1010 'Xomashyo va materiallar'",
+        "text": "1000 'Xomashyo va materiallar'",
         "reason": "Ushbu variant 4-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -3262,7 +3262,7 @@
     "correct_index": 0,
     "correct_letter": "A",
     "hint": "💡 Maslahat: Qoldiq qiymat = 200 - 180 = 20 mln so'm.",
-    "why_right": "To'g'ri javob: «20 mln so'm». Yuk mashinasining qoldiq qiymati 200 - 180 = 20 mln so'm bo'lib, u 9210 'Asosiy vositalarning chiqib ketishi' schyoti orqali hisobdan chiqariladi.",
+    "why_right": "To'g'ri javob: «20 mln so'm». Yuk mashinasining qoldiq qiymati 200 - 180 = 20 mln so'm bo'lib, u 9200 'Asosiy vositalarning chiqib ketishi' schyoti orqali hisobdan chiqariladi.",
     "why_right_en": "Correct answer: «20 million UZS».",
     "why_wrongs": [
       {
@@ -3293,36 +3293,36 @@
     "question_uz": "Asosiy vositalarni qayta baholash (Revaluation) natijasida ularning qiymati 50 mln so'mga oshganda, bu farq qaysi kapital schyotida aks ettiriladi?",
     "question_en": "When fixed assets are revalued upward by 50m, which equity account reflects this surplus?",
     "options_uz": [
-      "9010 'Sotishdan sof tushum'",
-      "8510 'Mulkni qayta baholash bo'yicha qo'shimcha kapital'",
-      "6010 'Kreditorlik qarzlari'",
-      "5110 'Hisob-kitob schyoti'"
+      "9000 'Sotishdan sof tushum'",
+      "8500 'Mulkni qayta baholash bo'yicha qo'shimcha kapital'",
+      "6000 'Kreditorlik qarzlari'",
+      "5100 'Hisob-kitob schyoti'"
     ],
     "options_en": [
-      "9010 'Revenue from sales'",
-      "8510 'Revaluation surplus on property'",
-      "6010 'Accounts payable'",
-      "5110 'Bank current account'"
+      "9000 'Revenue from sales'",
+      "8500 'Revaluation surplus on property'",
+      "6000 'Accounts payable'",
+      "5100 'Bank current account'"
     ],
     "correct_index": 1,
     "correct_letter": "B",
-    "hint": "💡 Maslahat: Qayta baholashdan oshgan qiymat daromad emas, balki xususiy kapital tarkibidagi 8510 schyotiga kreditlanadi.",
-    "why_right": "To'g'ri javob: «8510 'Mulkni qayta baholash bo'yicha qo'shimcha kapital'». Asosiy vositalar indeksatsiya orqali qiymati oshganda: Debet 0100 - Kredit 8510 (Mulkni qayta baholash bo'yicha qo'shimcha kapital) provodkasi beriladi.",
-    "why_right_en": "Correct answer: «8510 'Revaluation surplus on property'».",
+    "hint": "💡 Maslahat: Qayta baholashdan oshgan qiymat daromad emas, balki xususiy kapital tarkibidagi 8500 schyotiga kreditlanadi.",
+    "why_right": "To'g'ri javob: «8500 'Mulkni qayta baholash bo'yicha qo'shimcha kapital'». Asosiy vositalar indeksatsiya orqali qiymati oshganda: Debet 0100 - Kredit 8500 (Mulkni qayta baholash bo'yicha qo'shimcha kapital) provodkasi beriladi.",
+    "why_right_en": "Correct answer: «8500 'Revaluation surplus on property'».",
     "why_wrongs": [
       {
         "letter": "A",
-        "text": "9010 'Sotishdan sof tushum'",
+        "text": "9000 'Sotishdan sof tushum'",
         "reason": "Ushbu variant 4-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "C",
-        "text": "6010 'Kreditorlik qarzlari'",
+        "text": "6000 'Kreditorlik qarzlari'",
         "reason": "Ushbu variant 4-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "D",
-        "text": "5110 'Hisob-kitob schyoti'",
+        "text": "5100 'Hisob-kitob schyoti'",
         "reason": "Ushbu variant 4-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -3338,31 +3338,31 @@
     "question_uz": "Asosiy vositani sotib olishda to'langan transport va o'rnatish (montaj) xarajatlari qayerga olib boriladi?",
     "question_en": "Where are shipping and installation costs capitalized when acquiring a fixed asset?",
     "options_uz": [
-      "Darhol joriy oyning ma'muriy xarajati (9420) ga hisobdan chiqariladi",
-      "Mijozlarning debitorlik qarzi (4010) ga qo'shiladi",
-      "Asosiy vositaning boshlang'ich tannarxiga qo'shiladi (0820 orqali 0100 ga)",
+      "Darhol joriy oyning ma'muriy xarajati (9400) ga hisobdan chiqariladi",
+      "Mijozlarning debitorlik qarzi (4000) ga qo'shiladi",
+      "Asosiy vositaning boshlang'ich tannarxiga qo'shiladi (0800 orqali 0100 ga)",
       "Soliq imtiyozlari hisobiga yopiladi"
     ],
     "options_en": [
-      "Expensed immediately to 9420 administrative costs",
+      "Expensed immediately to 9400 administrative costs",
       "Added to accounts receivable",
-      "Capitalized into the initial cost of fixed asset (via 0820 into 0100)",
+      "Capitalized into the initial cost of fixed asset (via 0800 into 0100)",
       "Written off to tax deductions"
     ],
     "correct_index": 2,
     "correct_letter": "C",
     "hint": "💡 Maslahat: Aktivni foydalanishga tayyor holga keltirish bilan bog'liq barcha xarajatlar uning boshlang'ich qiymatiga kiradi.",
-    "why_right": "To'g'ri javob: «Asosiy vositaning boshlang'ich tannarxiga qo'shiladi (0820 orqali 0100 ga)». 5-son BHMS ga asosan asosiy vositani xarid qilish, tashish, o'rnatish, sinovdan o'tkazish xarajatlari uning boshlang'ich qiymatini shakllantiradi.",
-    "why_right_en": "Correct answer: «Capitalized into the initial cost of fixed asset (via 0820 into 0100)».",
+    "why_right": "To'g'ri javob: «Asosiy vositaning boshlang'ich tannarxiga qo'shiladi (0800 orqali 0100 ga)». 5-son BHMS ga asosan asosiy vositani xarid qilish, tashish, o'rnatish, sinovdan o'tkazish xarajatlari uning boshlang'ich qiymatini shakllantiradi.",
+    "why_right_en": "Correct answer: «Capitalized into the initial cost of fixed asset (via 0800 into 0100)».",
     "why_wrongs": [
       {
         "letter": "A",
-        "text": "Darhol joriy oyning ma'muriy xarajati (9420) ga hisobdan chiqariladi",
+        "text": "Darhol joriy oyning ma'muriy xarajati (9400) ga hisobdan chiqariladi",
         "reason": "Ushbu variant 4-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "B",
-        "text": "Mijozlarning debitorlik qarzi (4010) ga qo'shiladi",
+        "text": "Mijozlarning debitorlik qarzi (4000) ga qo'shiladi",
         "reason": "Ushbu variant 4-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
@@ -3428,26 +3428,26 @@
     "question_uz": "Quyidagi aktivlardan qaysi biriga ESKIRISH (amortizatsiya) HISOBLANMAYDI?",
     "question_en": "Which of the following fixed assets is NEVER depreciated?",
     "options_uz": [
-      "Yer uchastkalari (0110)",
-      "Zavod binosi (0120)",
-      "Yuk avtomobili (0140)",
-      "Ishlab chiqarish stanogi (0130)"
+      "Yer uchastkalari (0100)",
+      "Zavod binosi (0100)",
+      "Yuk avtomobili (0100)",
+      "Ishlab chiqarish stanogi (0100)"
     ],
     "options_en": [
-      "Land parcels (0110)",
-      "Factory buildings (0120)",
-      "Freight trucks (0140)",
-      "Production machines (0130)"
+      "Land parcels (0100)",
+      "Factory buildings (0100)",
+      "Freight trucks (0100)",
+      "Production machines (0100)"
     ],
     "correct_index": 0,
     "correct_letter": "A",
     "hint": "💡 Maslahat: Cheksiz xizmat muddatiga ega bo'lgan va eskirmaydigan yagona tabiiy resurs.",
-    "why_right": "To'g'ri javob: «Yer uchastkalari (0110)». Buxgalteriya standartlariga ko'ra Yer uchastkalari (0110) cheklanmagan foydalanish muddatiga ega va jismonan eskirmaydi, shuning uchun yerga amortizatsiya hisoblanmaydi.",
-    "why_right_en": "Correct answer: «Land parcels (0110)».",
+    "why_right": "To'g'ri javob: «Yer uchastkalari (0100)». Buxgalteriya standartlariga ko'ra Yer uchastkalari (0100) cheklanmagan foydalanish muddatiga ega va jismonan eskirmaydi, shuning uchun yerga amortizatsiya hisoblanmaydi.",
+    "why_right_en": "Correct answer: «Land parcels (0100)».",
     "why_wrongs": [
       {
         "letter": "B",
-        "text": "Zavod binosi (0120)",
+        "text": "Zavod binosi (0100)",
         "reason": "Ushbu variant 4-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
@@ -3487,7 +3487,7 @@
     "correct_index": 1,
     "correct_letter": "B",
     "hint": "💡 Maslahat: Kelgusida qo'shimcha iqtisodiy samara bersa — tannarxga kapitallashtiriladi.",
-    "why_right": "To'g'ri javob: «Aktivning xizmat muddatini yoki unumdorligini oshirsa, uning balans qiymatini oshiradi (kapitallashtiriladi)». Asosiy vositani modernizatsiya qilish uning quvvatini yoki xizmat muddatini oshirsa, xarajatlar 0820 orqali aktivning 0100 qiymatiga qo'shiladi (kapitallashtiriladi).",
+    "why_right": "To'g'ri javob: «Aktivning xizmat muddatini yoki unumdorligini oshirsa, uning balans qiymatini oshiradi (kapitallashtiriladi)». Asosiy vositani modernizatsiya qilish uning quvvatini yoki xizmat muddatini oshirsa, xarajatlar 0800 orqali aktivning 0100 qiymatiga qo'shiladi (kapitallashtiriladi).",
     "why_right_en": "Correct answer: «Capitalized to asset's book value if it increases useful life or productivity».",
     "why_wrongs": [
       {
@@ -3515,8 +3515,8 @@
     "topic_id": 4,
     "topic_name_uz": "4-Mavzu: Asosiy vositalar hisobi va eskirish (amortizatsiya) usullari",
     "topic_name_en": "Topic 4: Fixed Assets Accounting and Depreciation Methods",
-    "question_uz": "0820 schyoti 21-BHMS bo'yicha nima deb ataladi va qanday vazifani bajaradi?",
-    "question_en": "What is account 0820 called and what does it track?",
+    "question_uz": "0800 schyoti 21-BHMS bo'yicha nima deb ataladi va qanday vazifani bajaradi?",
+    "question_en": "What is account 0800 called and what does it track?",
     "options_uz": [
       "'Mahsulot sotishdan tushum'",
       "'Kassadagi naqd pullar'",
@@ -3531,8 +3531,8 @@
     ],
     "correct_index": 2,
     "correct_letter": "C",
-    "hint": "💡 Maslahat: 0820 — Asosiy vosita ishga tushguncha barcha xarajatlar to'planadigan 'tranzit' kalkulyatsiya schyoti.",
-    "why_right": "To'g'ri javob: «'Asosiy vositalarni sotib olish (kapital qo'yilmalar)'; xarid qilingan uskunalarni ishga tushirishgacha bo'lgan barcha xarajatlarini to'playdi». 0820 'Asosiy vositalarni sotib olish' kapital qo'yilmalar schyoti bo'lib, aktiv to'liq o'rnatilib ishga tushirilgach 0100 schyotiga ko'chiriladi (Debet 0100 - Kredit 0820).",
+    "hint": "💡 Maslahat: 0800 — Asosiy vosita ishga tushguncha barcha xarajatlar to'planadigan 'tranzit' kalkulyatsiya schyoti.",
+    "why_right": "To'g'ri javob: «'Asosiy vositalarni sotib olish (kapital qo'yilmalar)'; xarid qilingan uskunalarni ishga tushirishgacha bo'lgan barcha xarajatlarini to'playdi». 0800 'Asosiy vositalarni sotib olish' kapital qo'yilmalar schyoti bo'lib, aktiv to'liq o'rnatilib ishga tushirilgach 0100 schyotiga ko'chiriladi (Debet 0100 - Kredit 0800).",
     "why_right_en": "Correct answer: «'Acquisition of fixed assets (capital investments)'; aggregates costs until asset is commissioned».",
     "why_wrongs": [
       {
@@ -3563,22 +3563,22 @@
     "question_uz": "Korxona 100 mln so'mlik uskunani sotib oldi va ishga tushirdi. Provodka qaysi?",
     "question_en": "Company purchased and commissioned equipment for 100m UZS. Entry:",
     "options_uz": [
-      "Debet 0820 - Kredit 0130 : 100 000 000",
-      "Debet 0230 - Kredit 0130 : 100 000 000",
-      "Debet 2010 - Kredit 5110 : 100 000 000",
-      "Debet 0130 - Kredit 0820 : 100 000 000"
+      "Debet 0800 - Kredit 0100 : 100 000 000",
+      "Debet 0200 - Kredit 0100 : 100 000 000",
+      "Debet 2000 - Kredit 5100 : 100 000 000",
+      "Debet 0100 - Kredit 0800 : 100 000 000"
     ],
     "options_en": [
-      "Debit 0820 - Credit 0130 : 100,000,000",
-      "Debit 0230 - Credit 0130 : 100,000,000",
-      "Debit 2010 - Credit 5110 : 100,000,000",
-      "Debit 0130 - Credit 0820 : 100,000,000"
+      "Debit 0800 - Credit 0100 : 100,000,000",
+      "Debit 0200 - Credit 0100 : 100,000,000",
+      "Debit 2000 - Credit 5100 : 100,000,000",
+      "Debit 0100 - Credit 0800 : 100,000,000"
     ],
     "correct_index": 3,
     "correct_letter": "D",
     "hint": "💡 Maslahat: Kapital qo'yilmalar tugallanib, uskuna foydalanishga qabul qilindi.",
-    "why_right": "To'g'ri javob: «Debet 0130 - Kredit 0820 : 100 000 000». Uskuna foydalanishga topshirilganda: Debet 0130 (Mashina va uskunalar) - Kredit 0820 (Asosiy vositalarni o'rnatish/xarid qilish) provodkasi amalga oshiriladi.",
-    "why_right_en": "Correct answer: «Debit 0130 - Credit 0820 : 100,000,000».",
+    "why_right": "To'g'ri javob: «Debet 0100 - Kredit 0800 : 100 000 000». Uskuna foydalanishga topshirilganda: Debet 0100 (Mashina va uskunalar) - Kredit 0800 (Asosiy vositalarni o'rnatish/xarid qilish) provodkasi amalga oshiriladi.",
+    "why_right_en": "Correct answer: «Debit 0100 - Credit 0800 : 100,000,000».",
     "why_wrongs": [
       {
         "letter": "A",
@@ -3592,7 +3592,7 @@
       },
       {
         "letter": "C",
-        "text": "Debet 2010 - Kredit 5110 : 100 000 000",
+        "text": "Debet 2000 - Kredit 5100 : 100 000 000",
         "reason": "Ushbu variant 4-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -3743,36 +3743,36 @@
     "question_uz": "Asosiy vositalar chiqib ketganda (sotilganda yoki tugatilganda) hisob-kitoblar qaysi tranzit schyot orqali yuritiladi?",
     "question_en": "Which intermediary account is used to process the disposal or retirement of fixed assets?",
     "options_uz": [
-      "1010 'Materiallar'",
-      "5110 'Hisob-kitob schyoti'",
-      "8330 'Ustav kapitali'",
-      "9210 'Asosiy vositalarning chiqib ketishi'"
+      "1000 'Materiallar'",
+      "5100 'Hisob-kitob schyoti'",
+      "8300 'Ustav kapitali'",
+      "9200 'Asosiy vositalarning chiqib ketishi'"
     ],
     "options_en": [
-      "1010 'Materials'",
-      "5110 'Bank account'",
-      "8330 'Charter capital'",
-      "9210 'Disposal of fixed assets'"
+      "1000 'Materials'",
+      "5100 'Bank account'",
+      "8300 'Charter capital'",
+      "9200 'Disposal of fixed assets'"
     ],
     "correct_index": 3,
     "correct_letter": "D",
     "hint": "💡 Maslahat: 92-bo'limdagi maxsus chiqib ketish schyotini eslang.",
-    "why_right": "To'g'ri javob: «9210 'Asosiy vositalarning chiqib ketishi'». 21-BHMS ga ko'ra 9210 'Asosiy vositalarning chiqib ketishi' schyotida aktivning boshlang'ich qiymati, jamlangan eskirishi, sotishdan tushum va xarajatlar taqqoslanib, yakuniy moliyaviy natija topiladi.",
-    "why_right_en": "Correct answer: «9210 'Disposal of fixed assets'».",
+    "why_right": "To'g'ri javob: «9200 'Asosiy vositalarning chiqib ketishi'». 21-BHMS ga ko'ra 9200 'Asosiy vositalarning chiqib ketishi' schyotida aktivning boshlang'ich qiymati, jamlangan eskirishi, sotishdan tushum va xarajatlar taqqoslanib, yakuniy moliyaviy natija topiladi.",
+    "why_right_en": "Correct answer: «9200 'Disposal of fixed assets'».",
     "why_wrongs": [
       {
         "letter": "A",
-        "text": "1010 'Materiallar'",
+        "text": "1000 'Materiallar'",
         "reason": "Ushbu variant 4-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "B",
-        "text": "5110 'Hisob-kitob schyoti'",
+        "text": "5100 'Hisob-kitob schyoti'",
         "reason": "Ushbu variant 4-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "C",
-        "text": "8330 'Ustav kapitali'",
+        "text": "8300 'Ustav kapitali'",
         "reason": "Ushbu variant 4-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -3878,36 +3878,36 @@
     "question_uz": "Asosiy vositalar inventarizatsiyasida ortiqcha chiqqan uskuna aniqlansa, qanday provodka beriladi?",
     "question_en": "If an unrecorded fixed asset is discovered during physical inventory, what is the entry?",
     "options_uz": [
-      "Debet 9430 - Kredit 0130",
-      "Debet 0230 - Kredit 5010",
-      "Debet 0130 - Kredit 9390 (Boshqa operatsion daromadlar)",
-      "Debet 6010 - Kredit 0130"
+      "Debet 9400 - Kredit 0100",
+      "Debet 0200 - Kredit 5000",
+      "Debet 0100 - Kredit 9300 (Boshqa operatsion daromadlar)",
+      "Debet 6000 - Kredit 0100"
     ],
     "options_en": [
-      "Debit 9430 - Credit 0130",
-      "Debit 0230 - Credit 5010",
-      "Debit 0130 - Credit 9390",
-      "Debit 6010 - Credit 0130"
+      "Debit 9400 - Credit 0100",
+      "Debit 0200 - Credit 5000",
+      "Debit 0100 - Credit 9300",
+      "Debit 6000 - Credit 0100"
     ],
     "correct_index": 2,
     "correct_letter": "C",
-    "hint": "💡 Maslahat: Aktiv ko'payadi (0130 Debet), tekinga aniqlangani uchun daromad tan olinadi (9390 Kredit).",
-    "why_right": "To'g'ri javob: «Debet 0130 - Kredit 9390 (Boshqa operatsion daromadlar)». Inventarizatsiya chog'ida ortiqcha chiqqan asosiy vositalar joriy bozor bahosida korxona balansiga kirim qilinadi va daromad sifatida 9390 schyotining Kreditida aks etadi.",
-    "why_right_en": "Correct answer: «Debit 0130 - Credit 9390».",
+    "hint": "💡 Maslahat: Aktiv ko'payadi (0100 Debet), tekinga aniqlangani uchun daromad tan olinadi (9300 Kredit).",
+    "why_right": "To'g'ri javob: «Debet 0100 - Kredit 9300 (Boshqa operatsion daromadlar)». Inventarizatsiya chog'ida ortiqcha chiqqan asosiy vositalar joriy bozor bahosida korxona balansiga kirim qilinadi va daromad sifatida 9300 schyotining Kreditida aks etadi.",
+    "why_right_en": "Correct answer: «Debit 0100 - Credit 9300».",
     "why_wrongs": [
       {
         "letter": "A",
-        "text": "Debet 9430 - Kredit 0130",
+        "text": "Debet 9400 - Kredit 0130",
         "reason": "Ushbu variant 4-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "B",
-        "text": "Debet 0230 - Kredit 5010",
+        "text": "Debet 0230 - Kredit 5000",
         "reason": "Ushbu variant 4-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "D",
-        "text": "Debet 6010 - Kredit 0130",
+        "text": "Debet 6000 - Kredit 0130",
         "reason": "Ushbu variant 4-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -4148,36 +4148,36 @@
     "question_uz": "Mol yetkazib beruvchidan olingan xomashyo omborga kirim qilinganda to'g'ri provodka qaysi?",
     "question_en": "Which entry records raw materials received from suppliers into warehouse?",
     "options_uz": [
-      "Debet 1010 (Xomashyo va materiallar) - Kredit 6010 (Mol yetkazib beruvchilar)",
-      "Debet 6010 - Kredit 1010",
-      "Debet 2010 - Kredit 1010",
-      "Debet 1010 - Kredit 5110"
+      "Debet 1000 (Xomashyo va materiallar) - Kredit 6000 (Mol yetkazib beruvchilar)",
+      "Debet 6000 - Kredit 1000",
+      "Debet 2000 - Kredit 1000",
+      "Debet 1000 - Kredit 5100"
     ],
     "options_en": [
-      "Debit 1010 - Credit 6010",
-      "Debit 6010 - Credit 1010",
-      "Debit 2010 - Credit 1010",
-      "Debit 1010 - Credit 5110"
+      "Debit 1000 - Credit 6000",
+      "Debit 6000 - Credit 1000",
+      "Debit 2000 - Credit 1000",
+      "Debit 1000 - Credit 5100"
     ],
     "correct_index": 0,
     "correct_letter": "A",
-    "hint": "💡 Maslahat: Materiallar ko'paydi (1010 Debet), yetkazib beruvchiga qarz oshdi (6010 Kredit).",
-    "why_right": "To'g'ri javob: «Debet 1010 (Xomashyo va materiallar) - Kredit 6010 (Mol yetkazib beruvchilar)». Materiallar omborga kelib tushganda aktiv schyot 1010 Debetlanadi, to'lov amalga oshirilgunga qadar kreditorlik qarzi sifatida 6010 Kreditlanadi.",
-    "why_right_en": "Correct answer: «Debit 1010 - Credit 6010».",
+    "hint": "💡 Maslahat: Materiallar ko'paydi (1000 Debet), yetkazib beruvchiga qarz oshdi (6000 Kredit).",
+    "why_right": "To'g'ri javob: «Debet 1000 (Xomashyo va materiallar) - Kredit 6000 (Mol yetkazib beruvchilar)». Materiallar omborga kelib tushganda aktiv schyot 1000 Debetlanadi, to'lov amalga oshirilgunga qadar kreditorlik qarzi sifatida 6000 Kreditlanadi.",
+    "why_right_en": "Correct answer: «Debit 1000 - Credit 6000».",
     "why_wrongs": [
       {
         "letter": "B",
-        "text": "Debet 6010 - Kredit 1010",
+        "text": "Debet 6000 - Kredit 1000",
         "reason": "Ushbu variant 5-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "C",
-        "text": "Debet 2010 - Kredit 1010",
+        "text": "Debet 2000 - Kredit 1000",
         "reason": "Ushbu variant 5-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "D",
-        "text": "Debet 1010 - Kredit 5110",
+        "text": "Debet 1000 - Kredit 5100",
         "reason": "Ushbu variant 5-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -4207,7 +4207,7 @@
     "correct_index": 1,
     "correct_letter": "B",
     "hint": "💡 Maslahat: Boshqaruv xarajatlari mahsulot tannarxiga kirmaydi, ular davr xarajati hisoblanadi.",
-    "why_right": "To'g'ri javob: «Korxona ma'muriyati (ofis) xodimlarining oylik maoshi». 4-son BHMS ga asosan xomashyo tannarxiga uni sotib olish narxi, transport xarajatlari va qaytarilmaydigan bojlar kiradi. Ofis ma'muriyati xarajatlari esa davr xarajati (9420) dir.",
+    "why_right": "To'g'ri javob: «Korxona ma'muriyati (ofis) xodimlarining oylik maoshi». 4-son BHMS ga asosan xomashyo tannarxiga uni sotib olish narxi, transport xarajatlari va qaytarilmaydigan bojlar kiradi. Ofis ma'muriyati xarajatlari esa davr xarajati (9400) dir.",
     "why_right_en": "Correct answer: «Salaries of corporate administrative office staff».",
     "why_wrongs": [
       {
@@ -4238,36 +4238,36 @@
     "question_uz": "Ombordagi tovar-moddiy zaxiralar inventarizatsiya qilinganda 2 mln so'mlik KAMOMAD (yetishmovchilik) aniqlandi. Aybdor shaxs hali aniqlanmagan. To'g'ri provodka:",
     "question_en": "Inventory physical count revealed 2m UZS shortage with no culprit identified yet. Entry:",
     "options_uz": [
-      "Debet 1010 - Kredit 5910 : 2 000 000",
-      "Debet 9420 - Kredit 1010 : 2 000 000",
-      "Debet 5910 (Kamomadlar va yo'qotishlar) - Kredit 1010 : 2 000 000",
-      "Debet 5010 - Kredit 1010 : 2 000 000"
+      "Debet 1000 - Kredit 5900 : 2 000 000",
+      "Debet 9400 - Kredit 1000 : 2 000 000",
+      "Debet 5900 (Kamomadlar va yo'qotishlar) - Kredit 1000 : 2 000 000",
+      "Debet 5000 - Kredit 1000 : 2 000 000"
     ],
     "options_en": [
-      "Debit 1010 - Credit 5910 : 2,000,000",
-      "Debit 9420 - Credit 1010 : 2,000,000",
-      "Debit 5910 - Credit 1010 : 2,000,000",
-      "Debit 5010 - Credit 1010 : 2,000,000"
+      "Debit 1000 - Credit 5900 : 2,000,000",
+      "Debit 9400 - Credit 1000 : 2,000,000",
+      "Debit 5900 - Credit 1000 : 2,000,000",
+      "Debit 5000 - Credit 1000 : 2,000,000"
     ],
     "correct_index": 2,
     "correct_letter": "C",
-    "hint": "💡 Maslahat: 5910 schyoti kamomadlarni sababi oydinlashguncha vaqtincha jamlaydi.",
-    "why_right": "To'g'ri javob: «Debet 5910 (Kamomadlar va yo'qotishlar) - Kredit 1010 : 2 000 000». Yetishmovchilik aniqlanganda zaxiralar balansdan chiqariladi (1010 Kredit) va tergov tugaguncha 5910 'Kamomadlar va qiymatliklarning buzilishidan yo'qotishlar' schyotining Debetiga yoziladi.",
-    "why_right_en": "Correct answer: «Debit 5910 - Credit 1010 : 2,000,000».",
+    "hint": "💡 Maslahat: 5900 schyoti kamomadlarni sababi oydinlashguncha vaqtincha jamlaydi.",
+    "why_right": "To'g'ri javob: «Debet 5900 (Kamomadlar va yo'qotishlar) - Kredit 1000 : 2 000 000». Yetishmovchilik aniqlanganda zaxiralar balansdan chiqariladi (1000 Kredit) va tergov tugaguncha 5900 'Kamomadlar va qiymatliklarning buzilishidan yo'qotishlar' schyotining Debetiga yoziladi.",
+    "why_right_en": "Correct answer: «Debit 5900 - Credit 1000 : 2,000,000».",
     "why_wrongs": [
       {
         "letter": "A",
-        "text": "Debet 1010 - Kredit 5910 : 2 000 000",
+        "text": "Debet 1000 - Kredit 5910 : 2 000 000",
         "reason": "Ushbu variant 5-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "B",
-        "text": "Debet 9420 - Kredit 1010 : 2 000 000",
+        "text": "Debet 9400 - Kredit 1000 : 2 000 000",
         "reason": "Ushbu variant 5-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "D",
-        "text": "Debet 5010 - Kredit 1010 : 2 000 000",
+        "text": "Debet 5000 - Kredit 1000 : 2 000 000",
         "reason": "Ushbu variant 5-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -4283,22 +4283,22 @@
     "question_uz": "Aniqlangan 2 mln so'mlik kamomad ombor mudirining aybi bilan sodir bo'lganligi tasdiqlandi va uning hisobiga yozildi. To'g'ri provodka:",
     "question_en": "The 2m inventory shortage was officially confirmed as warehouse manager's fault. Entry:",
     "options_uz": [
-      "Debet 5910 - Kredit 4730 : 2 000 000",
-      "Debet 9430 - Kredit 5910 : 2 000 000",
-      "Debet 5010 - Kredit 4730 : 2 000 000",
-      "Debet 4730 (Moddiy zararni qoplash bo'yicha xodim qarzi) - Kredit 5910 : 2 000 000"
+      "Debet 5900 - Kredit 4700 : 2 000 000",
+      "Debet 9400 - Kredit 5900 : 2 000 000",
+      "Debet 5000 - Kredit 4700 : 2 000 000",
+      "Debet 4700 (Moddiy zararni qoplash bo'yicha xodim qarzi) - Kredit 5900 : 2 000 000"
     ],
     "options_en": [
-      "Debit 5910 - Credit 4730 : 2,000,000",
-      "Debit 9430 - Credit 5910 : 2,000,000",
-      "Debit 5010 - Credit 4730 : 2,000,000",
-      "Debit 4730 - Credit 5910 : 2,000,000"
+      "Debit 5900 - Credit 4700 : 2,000,000",
+      "Debit 9400 - Credit 5900 : 2,000,000",
+      "Debit 5000 - Credit 4700 : 2,000,000",
+      "Debit 4700 - Credit 5900 : 2,000,000"
     ],
     "correct_index": 3,
     "correct_letter": "D",
-    "hint": "💡 Maslahat: Xodimning korxonaga zararni to'lab berish majburiyati paydo bo'ldi (4730 Debet).",
-    "why_right": "To'g'ri javob: «Debet 4730 (Moddiy zararni qoplash bo'yicha xodim qarzi) - Kredit 5910 : 2 000 000». Aybdor shaxs aniqlanganda kamomad 5910 dan chiqarilib, aybdor xodimning debitorlik qarzi sifatida Debet 4730 ga o'tkaziladi.",
-    "why_right_en": "Correct answer: «Debit 4730 - Credit 5910 : 2,000,000».",
+    "hint": "💡 Maslahat: Xodimning korxonaga zararni to'lab berish majburiyati paydo bo'ldi (4700 Debet).",
+    "why_right": "To'g'ri javob: «Debet 4700 (Moddiy zararni qoplash bo'yicha xodim qarzi) - Kredit 5900 : 2 000 000». Aybdor shaxs aniqlanganda kamomad 5900 dan chiqarilib, aybdor xodimning debitorlik qarzi sifatida Debet 4700 ga o'tkaziladi.",
+    "why_right_en": "Correct answer: «Debit 4700 - Credit 5900 : 2,000,000».",
     "why_wrongs": [
       {
         "letter": "A",
@@ -4307,12 +4307,12 @@
       },
       {
         "letter": "B",
-        "text": "Debet 9430 - Kredit 5910 : 2 000 000",
+        "text": "Debet 9400 - Kredit 5910 : 2 000 000",
         "reason": "Ushbu variant 5-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "C",
-        "text": "Debet 5010 - Kredit 4730 : 2 000 000",
+        "text": "Debet 5000 - Kredit 4730 : 2 000 000",
         "reason": "Ushbu variant 5-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -4328,13 +4328,13 @@
     "question_uz": "Agar kamomad tabiiy yo'qotish (me'yor) doirasida bo'lsa, u qayerga hisobdan chiqariladi?",
     "question_en": "If inventory shrinkage is within natural allowance (spoilage norm), where is it charged?",
     "options_uz": [
-      "Ishlab chiqarish xarajatlariga (2010 yoki 2500) yoki davr xarajatlariga",
+      "Ishlab chiqarish xarajatlariga (2000 yoki 2500) yoki davr xarajatlariga",
       "Omborchining oyligidan ushlab qolinadi",
       "Ustav kapitalidan ayirib tashlanadi",
       "Bank hisobiga to'lanadi"
     ],
     "options_en": [
-      "Charged to production costs (2010/2500) or period expenses",
+      "Charged to production costs (2000/2500) or period expenses",
       "Deducted from warehouseman's salary",
       "Deducted from charter capital",
       "Paid to bank account"
@@ -4342,8 +4342,8 @@
     "correct_index": 0,
     "correct_letter": "A",
     "hint": "💡 Maslahat: Tabiiy me'yor (qurish, to'kilish) — ishlab chiqarishning qonuniy texnologik xarajatidir.",
-    "why_right": "To'g'ri javob: «Ishlab chiqarish xarajatlariga (2010 yoki 2500) yoki davr xarajatlariga». Belgilangan tabiiy yo'qotish me'yorlari doirasidagi kamomadlar ishlab chiqarish yoki davr xarajatlariga qo'shiladi (Debet 2010, 9430 - Kredit 5910).",
-    "why_right_en": "Correct answer: «Charged to production costs (2010/2500) or period expenses».",
+    "why_right": "To'g'ri javob: «Ishlab chiqarish xarajatlariga (2000 yoki 2500) yoki davr xarajatlariga». Belgilangan tabiiy yo'qotish me'yorlari doirasidagi kamomadlar ishlab chiqarish yoki davr xarajatlariga qo'shiladi (Debet 2000, 9400 - Kredit 5900).",
+    "why_right_en": "Correct answer: «Charged to production costs (2000/2500) or period expenses».",
     "why_wrongs": [
       {
         "letter": "B",
@@ -4415,8 +4415,8 @@
     "topic_id": 5,
     "topic_name_uz": "5-Mavzu: Xomashyo, materiallar va tovar-moddiy zaxiralar hisobi",
     "topic_name_en": "Topic 5: Raw Materials, Supplies, and Inventory Accounting",
-    "question_uz": "2910 schyoti 21-BHMS bo'yicha qanday ataladi?",
-    "question_en": "What is account 2910 called in Chart of Accounts?",
+    "question_uz": "2900 schyoti 21-BHMS bo'yicha qanday ataladi?",
+    "question_en": "What is account 2900 called in Chart of Accounts?",
     "options_uz": [
       "'Xomashyo va materiallar'",
       "'Asosiy ishlab chiqarish'",
@@ -4432,7 +4432,7 @@
     "correct_index": 2,
     "correct_letter": "C",
     "hint": "💡 Maslahat: 29-bo'lim — savdo korxonalaridagi qayta sotish uchun olingan tovarlar.",
-    "why_right": "To'g'ri javob: «'Ombordagi tovarlar'». 2910 schyoti ulgurji va chakana savdo korxonalarida qayta sotish maqsadida xarid qilingan tovarlarni hisobga oluvchi aktiv schyotdir.",
+    "why_right": "To'g'ri javob: «'Ombordagi tovarlar'». 2900 schyoti ulgurji va chakana savdo korxonalarida qayta sotish maqsadida xarid qilingan tovarlarni hisobga oluvchi aktiv schyotdir.",
     "why_right_en": "Correct answer: «'Goods in warehouse'».",
     "why_wrongs": [
       {
@@ -4463,26 +4463,26 @@
     "question_uz": "1000 'Materiallar' guruhiga quyidagilardan qaysi biri kirmaydi?",
     "question_en": "Which of the following does NOT belong to the 1000 'Materials' group?",
     "options_uz": [
-      "1010 'Xomashyo va materiallar'",
-      "1020 'Sotib olingan yarim tayyor mahsulotlar'",
-      "1030 'Yoqilg'i'",
-      "Sotuv zalidagi qayta sotish uchun qo'yilgan televizorlar (2910)"
+      "1000 'Xomashyo va materiallar'",
+      "1000 'Sotib olingan yarim tayyor mahsulotlar'",
+      "1000 'Yoqilg'i'",
+      "Sotuv zalidagi qayta sotish uchun qo'yilgan televizorlar (2900)"
     ],
     "options_en": [
-      "1010 'Raw materials'",
-      "1020 'Purchased semi-finished goods'",
-      "1030 'Fuel'",
-      "Televisions displayed in showroom for resale (2910)"
+      "1000 'Raw materials'",
+      "1000 'Purchased semi-finished goods'",
+      "1000 'Fuel'",
+      "Televisions displayed in showroom for resale (2900)"
     ],
     "correct_index": 3,
     "correct_letter": "D",
-    "hint": "💡 Maslahat: Qayta sotiladigan tayyor mahsulotlar tovar (2910) hisoblanadi, xomashyo emas.",
-    "why_right": "To'g'ri javob: «Sotuv zalidagi qayta sotish uchun qo'yilgan televizorlar (2910)». Qayta sotish uchun mo'ljallangan tovarlar 2900 schyotlarida yuritiladi. 1000 schyotlar guruhi esa ishlab chiqarishda ishlatiladigan xomashyo, yoqilg'i va ehtiyot qismlardir.",
-    "why_right_en": "Correct answer: «Televisions displayed in showroom for resale (2910)».",
+    "hint": "💡 Maslahat: Qayta sotiladigan tayyor mahsulotlar tovar (2900) hisoblanadi, xomashyo emas.",
+    "why_right": "To'g'ri javob: «Sotuv zalidagi qayta sotish uchun qo'yilgan televizorlar (2900)». Qayta sotish uchun mo'ljallangan tovarlar 2900 schyotlarida yuritiladi. 1000 schyotlar guruhi esa ishlab chiqarishda ishlatiladigan xomashyo, yoqilg'i va ehtiyot qismlardir.",
+    "why_right_en": "Correct answer: «Televisions displayed in showroom for resale (2900)».",
     "why_wrongs": [
       {
         "letter": "A",
-        "text": "1010 'Xomashyo va materiallar'",
+        "text": "1000 'Xomashyo va materiallar'",
         "reason": "Ushbu variant 5-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
@@ -4598,36 +4598,36 @@
     "question_uz": "Korxona o'z mahsulotini qadoqlash uchun 5 mln so'mlik idishlar (tara) xarid qildi. To'g'ri provodka:",
     "question_en": "Purchased 5m UZS packaging containers/materials. Entry:",
     "options_uz": [
-      "Debet 6010 - Kredit 1060 : 5 000 000",
-      "Debet 2010 - Kredit 5110 : 5 000 000",
-      "Debet 1060 (Idish va idishbop materiallar) - Kredit 6010 : 5 000 000",
-      "Debet 9420 - Kredit 1060 : 5 000 000"
+      "Debet 6000 - Kredit 1000 : 5 000 000",
+      "Debet 2000 - Kredit 5100 : 5 000 000",
+      "Debet 1000 (Idish va idishbop materiallar) - Kredit 6000 : 5 000 000",
+      "Debet 9400 - Kredit 1000 : 5 000 000"
     ],
     "options_en": [
-      "Debit 6010 - Credit 1060 : 5,000,000",
-      "Debit 2010 - Credit 5110 : 5,000,000",
-      "Debit 1060 - Credit 6010 : 5,000,000",
-      "Debit 9420 - Credit 1060 : 5,000,000"
+      "Debit 6000 - Credit 1000 : 5,000,000",
+      "Debit 2000 - Credit 5100 : 5,000,000",
+      "Debit 1000 - Credit 6000 : 5,000,000",
+      "Debit 9400 - Credit 1000 : 5,000,000"
     ],
     "correct_index": 2,
     "correct_letter": "C",
-    "hint": "💡 Maslahat: 1060 schyoti maxsus idishlar va qadoqlash materiallari uchun javob beradi.",
-    "why_right": "To'g'ri javob: «Debet 1060 (Idish va idishbop materiallar) - Kredit 6010 : 5 000 000». Idishlar va qadoqlash vositalari 1060 schyotining Debetiga kirim qilinadi va 6010 Kreditlanadi.",
-    "why_right_en": "Correct answer: «Debit 1060 - Credit 6010 : 5,000,000».",
+    "hint": "💡 Maslahat: 1000 schyoti maxsus idishlar va qadoqlash materiallari uchun javob beradi.",
+    "why_right": "To'g'ri javob: «Debet 1000 (Idish va idishbop materiallar) - Kredit 6000 : 5 000 000». Idishlar va qadoqlash vositalari 1000 schyotining Debetiga kirim qilinadi va 6000 Kreditlanadi.",
+    "why_right_en": "Correct answer: «Debit 1000 - Credit 6000 : 5,000,000».",
     "why_wrongs": [
       {
         "letter": "A",
-        "text": "Debet 6010 - Kredit 1060 : 5 000 000",
+        "text": "Debet 6000 - Kredit 1060 : 5 000 000",
         "reason": "Ushbu variant 5-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "B",
-        "text": "Debet 2010 - Kredit 5110 : 5 000 000",
+        "text": "Debet 2000 - Kredit 5100 : 5 000 000",
         "reason": "Ushbu variant 5-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "D",
-        "text": "Debet 9420 - Kredit 1060 : 5 000 000",
+        "text": "Debet 9400 - Kredit 1060 : 5 000 000",
         "reason": "Ushbu variant 5-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -4643,36 +4643,36 @@
     "question_uz": "Avtotransport vositasiga 3 mln so'mlik yoqilg'i (benzin) quydirildi va yo'l varaqasi (putyovka) asosida xarajatga chiqarildi. Chiqim provodkasi qaysi?",
     "question_en": "Fuel worth 3m UZS consumed based on waybill for delivery vehicle. Entry:",
     "options_uz": [
-      "Debet 1030 - Kredit 5110 : 3 000 000",
-      "Debet 6010 - Kredit 1030 : 3 000 000",
-      "Debet 1030 - Kredit 2010 : 3 000 000",
-      "Debet 9410 (Sotish xarajatlari) - Kredit 1030 (Yoqilg'i) : 3 000 000"
+      "Debet 1000 - Kredit 5100 : 3 000 000",
+      "Debet 6000 - Kredit 1000 : 3 000 000",
+      "Debet 1000 - Kredit 2000 : 3 000 000",
+      "Debet 9400 (Sotish xarajatlari) - Kredit 1000 (Yoqilg'i) : 3 000 000"
     ],
     "options_en": [
-      "Debit 1030 - Credit 5110 : 3,000,000",
-      "Debit 6010 - Credit 1030 : 3,000,000",
-      "Debit 1030 - Credit 2010 : 3,000,000",
-      "Debit 9410 - Credit 1030 : 3,000,000"
+      "Debit 1000 - Credit 5100 : 3,000,000",
+      "Debit 6000 - Credit 1000 : 3,000,000",
+      "Debit 1000 - Credit 2000 : 3,000,000",
+      "Debit 9400 - Credit 1000 : 3,000,000"
     ],
     "correct_index": 3,
     "correct_letter": "D",
-    "hint": "💡 Maslahat: Yetkazib berish transporti xarajati — 9410 Sotish xarajati. Yoqilg'i schyoti 1030 kamayadi.",
-    "why_right": "To'g'ri javob: «Debet 9410 (Sotish xarajatlari) - Kredit 1030 (Yoqilg'i) : 3 000 000». Mahsulot yetkazib beruvchi mashina benzini sotish xarajati (9410 Debet) va yoqilg'i zaxirasining kamayishi (1030 Kredit) bilan yoziladi.",
-    "why_right_en": "Correct answer: «Debit 9410 - Credit 1030 : 3,000,000».",
+    "hint": "💡 Maslahat: Yetkazib berish transporti xarajati — 9400 Sotish xarajati. Yoqilg'i schyoti 1000 kamayadi.",
+    "why_right": "To'g'ri javob: «Debet 9400 (Sotish xarajatlari) - Kredit 1000 (Yoqilg'i) : 3 000 000». Mahsulot yetkazib beruvchi mashina benzini sotish xarajati (9400 Debet) va yoqilg'i zaxirasining kamayishi (1000 Kredit) bilan yoziladi.",
+    "why_right_en": "Correct answer: «Debit 9400 - Credit 1000 : 3,000,000».",
     "why_wrongs": [
       {
         "letter": "A",
-        "text": "Debet 1030 - Kredit 5110 : 3 000 000",
+        "text": "Debet 1030 - Kredit 5100 : 3 000 000",
         "reason": "Ushbu variant 5-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "B",
-        "text": "Debet 6010 - Kredit 1030 : 3 000 000",
+        "text": "Debet 6000 - Kredit 1030 : 3 000 000",
         "reason": "Ushbu variant 5-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "C",
-        "text": "Debet 1030 - Kredit 2010 : 3 000 000",
+        "text": "Debet 1030 - Kredit 2000 : 3 000 000",
         "reason": "Ushbu variant 5-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -4734,21 +4734,21 @@
     "question_en": "When inventory is written down to NRV due to damage/obsolescence, where is the loss recognized?",
     "options_uz": [
       "Ustav kapitaliga",
-      "Davr xarajatlariga (9430 'Boshqa operatsion xarajatlar')",
+      "Davr xarajatlariga (9400 'Boshqa operatsion xarajatlar')",
       "Debitorlik qarziga",
       "Faqat kassa xarajatiga"
     ],
     "options_en": [
       "Charter capital",
-      "Period expenses (9430 'Other operating expenses')",
+      "Period expenses (9400 'Other operating expenses')",
       "Accounts receivable",
       "Cash expense"
     ],
     "correct_index": 1,
     "correct_letter": "B",
-    "hint": "💡 Maslahat: Buzilgan yoki eskirgan tovar zarari 9430 schyotining Debetiga hisobdan chiqariladi.",
-    "why_right": "To'g'ri javob: «Davr xarajatlariga (9430 'Boshqa operatsion xarajatlar')». Tovar zaxiralarini arzonlashtirishdan ko'rilgan zararlar 9430 'Boshqa operatsion xarajatlar' Debetida va zaxira schyotlari Kreditida aks ettiriladi.",
-    "why_right_en": "Correct answer: «Period expenses (9430 'Other operating expenses')».",
+    "hint": "💡 Maslahat: Buzilgan yoki eskirgan tovar zarari 9400 schyotining Debetiga hisobdan chiqariladi.",
+    "why_right": "To'g'ri javob: «Davr xarajatlariga (9400 'Boshqa operatsion xarajatlar')». Tovar zaxiralarini arzonlashtirishdan ko'rilgan zararlar 9400 'Boshqa operatsion xarajatlar' Debetida va zaxira schyotlari Kreditida aks ettiriladi.",
+    "why_right_en": "Correct answer: «Period expenses (9400 'Other operating expenses')».",
     "why_wrongs": [
       {
         "letter": "A",
@@ -4778,36 +4778,36 @@
     "question_uz": "Xomashyolarni omborlararo ko'chirish (masalan, 1-ombor dan 2-omborga) qanday rasmiylashtiriladi?",
     "question_en": "How is inter-warehouse inventory transfer recorded?",
     "options_uz": [
-      "Debet 2010 - Kredit 1010",
-      "Debet 5110 - Kredit 1010",
-      "Debet 1010 (2-ombor) - Kredit 1010 (1-ombor)",
-      "Debet 1010 - Kredit 6010"
+      "Debet 2000 - Kredit 1000",
+      "Debet 5100 - Kredit 1000",
+      "Debet 1000 (2-ombor) - Kredit 1000 (1-ombor)",
+      "Debet 1000 - Kredit 6000"
     ],
     "options_en": [
-      "Debit 2010 - Credit 1010",
-      "Debit 5110 - Credit 1010",
-      "Debit 1010 (Warehouse 2) - Credit 1010 (Warehouse 1)",
-      "Debit 1010 - Credit 6010"
+      "Debit 2000 - Credit 1000",
+      "Debit 5100 - Credit 1000",
+      "Debit 1000 (Warehouse 2) - Credit 1000 (Warehouse 1)",
+      "Debit 1000 - Credit 6000"
     ],
     "correct_index": 2,
     "correct_letter": "C",
     "hint": "💡 Maslahat: Sintetik schyot o'zgarmaydi, analitik hisobda moddiy javobgar shaxslar o'zgaradi.",
-    "why_right": "To'g'ri javob: «Debet 1010 (2-ombor) - Kredit 1010 (1-ombor)». Ichki ko'chirishda umumiy balans o'zgarmaydi: 1010 schyotining ichki analitik subschyotlari bo'yicha bir ombor krediti va ikkinchi ombor debeti yuritiladi.",
-    "why_right_en": "Correct answer: «Debit 1010 (Warehouse 2) - Credit 1010 (Warehouse 1)».",
+    "why_right": "To'g'ri javob: «Debet 1000 (2-ombor) - Kredit 1000 (1-ombor)». Ichki ko'chirishda umumiy balans o'zgarmaydi: 1000 schyotining ichki analitik subschyotlari bo'yicha bir ombor krediti va ikkinchi ombor debeti yuritiladi.",
+    "why_right_en": "Correct answer: «Debit 1000 (Warehouse 2) - Credit 1000 (Warehouse 1)».",
     "why_wrongs": [
       {
         "letter": "A",
-        "text": "Debet 2010 - Kredit 1010",
+        "text": "Debet 2000 - Kredit 1000",
         "reason": "Ushbu variant 5-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "B",
-        "text": "Debet 5110 - Kredit 1010",
+        "text": "Debet 5100 - Kredit 1000",
         "reason": "Ushbu variant 5-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "D",
-        "text": "Debet 1010 - Kredit 6010",
+        "text": "Debet 1000 - Kredit 6000",
         "reason": "Ushbu variant 5-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -4826,19 +4826,19 @@
       "Material tannarxiga majburiy qo'shiladi",
       "Darhol ishchilar maoshidan ushlab qolinadi",
       "Foyda solig'idan ayirib tashlanadi",
-      "Material tannarxiga qo'shilmaydi, alohida 4410 schyotida hisobga olinib, byudjetga to'lanadigan QQS dan hisobga olinadi (zachyot qilinadi)"
+      "Material tannarxiga qo'shilmaydi, alohida 4400 schyotida hisobga olinib, byudjetga to'lanadigan QQS dan hisobga olinadi (zachyot qilinadi)"
     ],
     "options_en": [
       "Mandatorily capitalized into material cost",
       "Deducted from payroll",
       "Deducted from corporate income tax",
-      "Excluded from material cost, debited to 4410 and offset against output VAT payable"
+      "Excluded from material cost, debited to 4400 and offset against output VAT payable"
     ],
     "correct_index": 3,
     "correct_letter": "D",
-    "hint": "💡 Maslahat: QQS to'lovchilari uchun kiruvchi QQS — bu 'zachyot'ga olinadigan aktiv (4410).",
-    "why_right": "To'g'ri javob: «Material tannarxiga qo'shilmaydi, alohida 4410 schyotida hisobga olinib, byudjetga to'lanadigan QQS dan hisobga olinadi (zachyot qilinadi)». Solih Kodeksiga muvofiq QQS to'lovchi korxonalar sotib olingan tovarlar bo'yicha hisob-fakturada ko'rsatilgan QQSni alohida 4410 schyotida aks ettiradilar va soliqdan chegirib oladilar.",
-    "why_right_en": "Correct answer: «Excluded from material cost, debited to 4410 and offset against output VAT payable».",
+    "hint": "💡 Maslahat: QQS to'lovchilari uchun kiruvchi QQS — bu 'zachyot'ga olinadigan aktiv (4400).",
+    "why_right": "To'g'ri javob: «Material tannarxiga qo'shilmaydi, alohida 4400 schyotida hisobga olinib, byudjetga to'lanadigan QQS dan hisobga olinadi (zachyot qilinadi)». Solih Kodeksiga muvofiq QQS to'lovchi korxonalar sotib olingan tovarlar bo'yicha hisob-fakturada ko'rsatilgan QQSni alohida 4400 schyotida aks ettiradilar va soliqdan chegirib oladilar.",
+    "why_right_en": "Correct answer: «Excluded from material cost, debited to 4400 and offset against output VAT payable».",
     "why_wrongs": [
       {
         "letter": "A",
@@ -4865,8 +4865,8 @@
     "topic_id": 5,
     "topic_name_uz": "5-Mavzu: Xomashyo, materiallar va tovar-moddiy zaxiralar hisobi",
     "topic_name_en": "Topic 5: Raw Materials, Supplies, and Inventory Accounting",
-    "question_uz": "Kompaniya material sotib oldi: hisob-faktura qiymati 10 mln so'm, QQS 12% (1.2 mln so'm). Jami to'lov 11.2 mln so'm. 1010 schyotiga qancha summa kirim qilinadi?",
-    "question_en": "Purchased materials: cost 10m, VAT 12% (1.2m). Total invoice 11.2m. What amount is debited to 1010?",
+    "question_uz": "Kompaniya material sotib oldi: hisob-faktura qiymati 10 mln so'm, QQS 12% (1.2 mln so'm). Jami to'lov 11.2 mln so'm. 1000 schyotiga qancha summa kirim qilinadi?",
+    "question_en": "Purchased materials: cost 10m, VAT 12% (1.2m). Total invoice 11.2m. What amount is debited to 1000?",
     "options_uz": [
       "10 000 000 so'm",
       "11 200 000 so'm",
@@ -4881,8 +4881,8 @@
     ],
     "correct_index": 0,
     "correct_letter": "A",
-    "hint": "💡 Maslahat: Material tannarxiga faqat QQSsiz sof qiymat kiradi: 10 mln. QQS (1.2 mln) 4410 ga ketadi.",
-    "why_right": "To'g'ri javob: «10 000 000 so'm». Provodka: Debet 1010 (10 mln), Debet 4410 (1.2 mln) - Kredit 6010 (11.2 mln). Demak 1010 ga 10 mln so'm kiradi.",
+    "hint": "💡 Maslahat: Material tannarxiga faqat QQSsiz sof qiymat kiradi: 10 mln. QQS (1.2 mln) 4400 ga ketadi.",
+    "why_right": "To'g'ri javob: «10 000 000 so'm». Provodka: Debet 1000 (10 mln), Debet 4400 (1.2 mln) - Kredit 6000 (11.2 mln). Demak 1000 ga 10 mln so'm kiradi.",
     "why_right_en": "Correct answer: «10,000,000 UZS».",
     "why_wrongs": [
       {
@@ -4914,21 +4914,21 @@
     "question_en": "Where is 500,000 UZS unloading labor cost capitalized?",
     "options_uz": [
       "O'tgan yillardagi taqsimlanmagan foydadan chegiriladi",
-      "Materiallarning xarid tannarxiga qo'shiladi (1010 Debet)",
+      "Materiallarning xarid tannarxiga qo'shiladi (1000 Debet)",
       "Ustav kapitalini kamaytiradi",
       "Hisobdan butunlay chiqarib tashlanadi"
     ],
     "options_en": [
       "Deducted from prior year retained earnings",
-      "Capitalized into cost of materials (1010 Debit)",
+      "Capitalized into cost of materials (1000 Debit)",
       "Reduces charter capital",
       "Omitted completely"
     ],
     "correct_index": 1,
     "correct_letter": "B",
     "hint": "💡 Maslahat: Materialni omborga yetkazish va joylashtirish bilan bog'liq to'g'ridan-to'g'ri xarajatlar uning boshlang'ich tannarxiga qo'shiladi.",
-    "why_right": "To'g'ri javob: «Materiallarning xarid tannarxiga qo'shiladi (1010 Debet)». 4-son BHMS ga ko'ra zaxiralarni keltirish va joylashtirish bo'yicha to'g'ridan-to'g'ri xarajatlar material tannarxini oshiradi.",
-    "why_right_en": "Correct answer: «Capitalized into cost of materials (1010 Debit)».",
+    "why_right": "To'g'ri javob: «Materiallarning xarid tannarxiga qo'shiladi (1000 Debet)». 4-son BHMS ga ko'ra zaxiralarni keltirish va joylashtirish bo'yicha to'g'ridan-to'g'ri xarajatlar material tannarxini oshiradi.",
+    "why_right_en": "Correct answer: «Capitalized into cost of materials (1000 Debit)».",
     "why_wrongs": [
       {
         "letter": "A",
@@ -5228,36 +5228,36 @@
     "question_uz": "Xodimlar ish haqidan daromad solig'i (JShShDS) ushlab qolinganda qaysi buxgalteriya provodkasi beriladi?",
     "question_en": "Which journal entry records personal income tax withheld from employee wages?",
     "options_uz": [
-      "Debet 6710 (Mehnat haqi bo'yicha qarz) - Kredit 6410 (Byudjetga soliq qarzi)",
-      "Debet 6410 - Kredit 6710",
-      "Debet 2010 - Kredit 6410",
-      "Debet 6710 - Kredit 5110"
+      "Debet 6700 (Mehnat haqi bo'yicha qarz) - Kredit 6400 (Byudjetga soliq qarzi)",
+      "Debet 6400 - Kredit 6700",
+      "Debet 2000 - Kredit 6400",
+      "Debet 6700 - Kredit 5100"
     ],
     "options_en": [
-      "Debit 6710 - Credit 6410",
-      "Debit 6410 - Credit 6710",
-      "Debit 2010 - Credit 6410",
-      "Debit 6710 - Credit 5110"
+      "Debit 6700 - Credit 6400",
+      "Debit 6400 - Credit 6700",
+      "Debit 2000 - Credit 6400",
+      "Debit 6700 - Credit 5100"
     ],
     "correct_index": 0,
     "correct_letter": "A",
-    "hint": "💡 Maslahat: Xodim oldidagi qarz kamayadi (6710 Debet), byudjet oldidagi qarz oshadi (6410 Kredit).",
-    "why_right": "To'g'ri javob: «Debet 6710 (Mehnat haqi bo'yicha qarz) - Kredit 6410 (Byudjetga soliq qarzi)». Xodimning ish haqidan soliq ushlanganda unga to'lanadigan qarz kamayadi (6710 Debet) va davlat byudjetiga to'lanadigan soliq majburiyati tan olinadi (6410 Kredit).",
-    "why_right_en": "Correct answer: «Debit 6710 - Credit 6410».",
+    "hint": "💡 Maslahat: Xodim oldidagi qarz kamayadi (6700 Debet), byudjet oldidagi qarz oshadi (6400 Kredit).",
+    "why_right": "To'g'ri javob: «Debet 6700 (Mehnat haqi bo'yicha qarz) - Kredit 6400 (Byudjetga soliq qarzi)». Xodimning ish haqidan soliq ushlanganda unga to'lanadigan qarz kamayadi (6700 Debet) va davlat byudjetiga to'lanadigan soliq majburiyati tan olinadi (6400 Kredit).",
+    "why_right_en": "Correct answer: «Debit 6700 - Credit 6400».",
     "why_wrongs": [
       {
         "letter": "B",
-        "text": "Debet 6410 - Kredit 6710",
+        "text": "Debet 6400 - Kredit 6700",
         "reason": "Ushbu variant 6-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "C",
-        "text": "Debet 2010 - Kredit 6410",
+        "text": "Debet 2000 - Kredit 6400",
         "reason": "Ushbu variant 6-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "D",
-        "text": "Debet 6710 - Kredit 5110",
+        "text": "Debet 6700 - Kredit 5100",
         "reason": "Ushbu variant 6-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -5273,36 +5273,36 @@
     "question_uz": "Korxona hisobidan ishlab chiqarish ishchilarining oyligiga 12% ijtimoiy soliq hisoblanganda qaysi provodka beriladi?",
     "question_en": "Which entry records 12% employer social tax accrued on factory workers' wages?",
     "options_uz": [
-      "Debet 6710 - Kredit 6520",
-      "Debet 2010 (Asosiy ishlab chiqarish) - Kredit 6520 (Ijtimoiy sug'urta va jamg'armalarga to'lovlar)",
-      "Debet 6520 - Kredit 5110",
-      "Debet 2010 - Kredit 6710"
+      "Debet 6700 - Kredit 6500",
+      "Debet 2000 (Asosiy ishlab chiqarish) - Kredit 6500 (Ijtimoiy sug'urta va jamg'armalarga to'lovlar)",
+      "Debet 6500 - Kredit 5100",
+      "Debet 2000 - Kredit 6700"
     ],
     "options_en": [
-      "Debit 6710 - Credit 6520",
-      "Debit 2010 - Credit 6520",
-      "Debit 6520 - Credit 5110",
-      "Debit 2010 - Credit 6710"
+      "Debit 6700 - Credit 6500",
+      "Debit 2000 - Credit 6500",
+      "Debit 6500 - Credit 5100",
+      "Debit 2000 - Credit 6700"
     ],
     "correct_index": 1,
     "correct_letter": "B",
-    "hint": "💡 Maslahat: Ijtimoiy soliq korxonaning ishlab chiqarish xarajatlarini oshiradi (2010 Debet) va jamg'armaga majburiyat paydo qiladi (6520 Kredit).",
-    "why_right": "To'g'ri javob: «Debet 2010 (Asosiy ishlab chiqarish) - Kredit 6520 (Ijtimoiy sug'urta va jamg'armalarga to'lovlar)». Ish beruvchining ijtimoiy solig'i mahsulot tannarxiga kiradi (2010 Debet) va byudjetdan tashqari jamg'armalar oldidagi qarz sifatida 6520 schyotining Kreditida aks etadi.",
-    "why_right_en": "Correct answer: «Debit 2010 - Credit 6520».",
+    "hint": "💡 Maslahat: Ijtimoiy soliq korxonaning ishlab chiqarish xarajatlarini oshiradi (2000 Debet) va jamg'armaga majburiyat paydo qiladi (6500 Kredit).",
+    "why_right": "To'g'ri javob: «Debet 2000 (Asosiy ishlab chiqarish) - Kredit 6500 (Ijtimoiy sug'urta va jamg'armalarga to'lovlar)». Ish beruvchining ijtimoiy solig'i mahsulot tannarxiga kiradi (2000 Debet) va byudjetdan tashqari jamg'armalar oldidagi qarz sifatida 6500 schyotining Kreditida aks etadi.",
+    "why_right_en": "Correct answer: «Debit 2000 - Credit 6500».",
     "why_wrongs": [
       {
         "letter": "A",
-        "text": "Debet 6710 - Kredit 6520",
+        "text": "Debet 6700 - Kredit 6500",
         "reason": "Ushbu variant 6-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "C",
-        "text": "Debet 6520 - Kredit 5110",
+        "text": "Debet 6500 - Kredit 5100",
         "reason": "Ushbu variant 6-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "D",
-        "text": "Debet 2010 - Kredit 6710",
+        "text": "Debet 2000 - Kredit 6700",
         "reason": "Ushbu variant 6-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -5318,36 +5318,36 @@
     "question_uz": "Korxona boshqaruv apparati (bosh direktor, buxgalterlar) xodimlariga maosh hisoblanganda qaysi xarajat schyoti Debetlanadi?",
     "question_en": "When accruing salaries for administrative staff (CEO, accountants), which expense account is debited?",
     "options_uz": [
-      "2010 'Asosiy ishlab chiqarish'",
-      "2810 'Tayyor mahsulot'",
-      "9420 'Ma'muriy xarajatlar'",
-      "1010 'Materiallar'"
+      "2000 'Asosiy ishlab chiqarish'",
+      "2800 'Tayyor mahsulot'",
+      "9400 'Ma'muriy xarajatlar'",
+      "1000 'Materiallar'"
     ],
     "options_en": [
-      "2010 'Main production'",
-      "2810 'Finished goods'",
-      "9420 'Administrative expenses'",
-      "1010 'Materials'"
+      "2000 'Main production'",
+      "2800 'Finished goods'",
+      "9400 'Administrative expenses'",
+      "1000 'Materials'"
     ],
     "correct_index": 2,
     "correct_letter": "C",
-    "hint": "💡 Maslahat: Ma'muriy xodimlarning oyligi — 9420 Ma'muriy xarajat.",
-    "why_right": "To'g'ri javob: «9420 'Ma'muriy xarajatlar'». Ofis va ma'muriy xodimlarning mehnat haqi mahsulot ishlab chiqarishga kirmaydi, ular davr xarajati bo'lib, 9420 'Ma'muriy xarajatlar' Debetida aks etadi.",
-    "why_right_en": "Correct answer: «9420 'Administrative expenses'».",
+    "hint": "💡 Maslahat: Ma'muriy xodimlarning oyligi — 9400 Ma'muriy xarajat.",
+    "why_right": "To'g'ri javob: «9400 'Ma'muriy xarajatlar'». Ofis va ma'muriy xodimlarning mehnat haqi mahsulot ishlab chiqarishga kirmaydi, ular davr xarajati bo'lib, 9400 'Ma'muriy xarajatlar' Debetida aks etadi.",
+    "why_right_en": "Correct answer: «9400 'Administrative expenses'».",
     "why_wrongs": [
       {
         "letter": "A",
-        "text": "2010 'Asosiy ishlab chiqarish'",
+        "text": "2000 'Asosiy ishlab chiqarish'",
         "reason": "Ushbu variant 6-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "B",
-        "text": "2810 'Tayyor mahsulot'",
+        "text": "2800 'Tayyor mahsulot'",
         "reason": "Ushbu variant 6-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "D",
-        "text": "1010 'Materiallar'",
+        "text": "1000 'Materiallar'",
         "reason": "Ushbu variant 6-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -5363,36 +5363,36 @@
     "question_uz": "Sotuv va marketing bo'limi xodimlariga maosh hisoblanganda qaysi schyot Debetlanadi?",
     "question_en": "Which account is debited when accruing salaries for sales and marketing staff?",
     "options_uz": [
-      "9420 'Ma'muriy xarajatlar'",
-      "2010 'Asosiy ishlab chiqarish'",
-      "6710 'Mehnat haqi'",
-      "9410 'Sotish xarajatlari'"
+      "9400 'Ma'muriy xarajatlar'",
+      "2000 'Asosiy ishlab chiqarish'",
+      "6700 'Mehnat haqi'",
+      "9400 'Sotish xarajatlari'"
     ],
     "options_en": [
-      "9420 'Administrative expenses'",
-      "2010 'Main production'",
-      "6710 'Wages payable'",
-      "9410 'Selling expenses'"
+      "9400 'Administrative expenses'",
+      "2000 'Main production'",
+      "6700 'Wages payable'",
+      "9400 'Selling expenses'"
     ],
     "correct_index": 3,
     "correct_letter": "D",
-    "hint": "💡 Maslahat: Savdo agentlari, sotuvchilar va marketologlar xarajati — 9410 Sotish xarajati.",
-    "why_right": "To'g'ri javob: «9410 'Sotish xarajatlari'». Tovar va xizmatlarni sotish bilan bevosita shug'ullanuvchi xodimlar maoshi 9410 'Sotish xarajatlari' Debetiga olib boriladi.",
-    "why_right_en": "Correct answer: «9410 'Selling expenses'».",
+    "hint": "💡 Maslahat: Savdo agentlari, sotuvchilar va marketologlar xarajati — 9400 Sotish xarajati.",
+    "why_right": "To'g'ri javob: «9400 'Sotish xarajatlari'». Tovar va xizmatlarni sotish bilan bevosita shug'ullanuvchi xodimlar maoshi 9400 'Sotish xarajatlari' Debetiga olib boriladi.",
+    "why_right_en": "Correct answer: «9400 'Selling expenses'».",
     "why_wrongs": [
       {
         "letter": "A",
-        "text": "9420 'Ma'muriy xarajatlar'",
+        "text": "9400 'Ma'muriy xarajatlar'",
         "reason": "Ushbu variant 6-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "B",
-        "text": "2010 'Asosiy ishlab chiqarish'",
+        "text": "2000 'Asosiy ishlab chiqarish'",
         "reason": "Ushbu variant 6-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "C",
-        "text": "6710 'Mehnat haqi'",
+        "text": "6700 'Mehnat haqi'",
         "reason": "Ushbu variant 6-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -5408,36 +5408,36 @@
     "question_uz": "Xodimning arizasiga ko'ra uning ish haqidan ijro varaqasi (aliment qarzi) ushlab qolinganda qanday provodka beriladi?",
     "question_en": "When deducting child support (alimony) from employee wage based on court order, what is the entry?",
     "options_uz": [
-      "Debet 6710 - Kredit 6990 (Boshqa majburiyatlar / Aliment oluvchi)",
-      "Debet 6990 - Kredit 6710",
-      "Debet 5110 - Kredit 6710",
-      "Debet 2010 - Kredit 6990"
+      "Debet 6700 - Kredit 6900 (Boshqa majburiyatlar / Aliment oluvchi)",
+      "Debet 6900 - Kredit 6700",
+      "Debet 5100 - Kredit 6700",
+      "Debet 2000 - Kredit 6900"
     ],
     "options_en": [
-      "Debit 6710 - Credit 6990",
-      "Debit 6990 - Credit 6710",
-      "Debit 5110 - Credit 6710",
-      "Debit 2010 - Credit 6990"
+      "Debit 6700 - Credit 6900",
+      "Debit 6900 - Credit 6700",
+      "Debit 5100 - Credit 6700",
+      "Debit 2000 - Credit 6900"
     ],
     "correct_index": 0,
     "correct_letter": "A",
-    "hint": "💡 Maslahat: Xodimga to'lanadigan qarz kamayadi (6710 Debet), aliment oluvchi shaxs oldidagi majburiyat oshadi (6990 Kredit).",
-    "why_right": "To'g'ri javob: «Debet 6710 - Kredit 6990 (Boshqa majburiyatlar / Aliment oluvchi)». Sud ijro hujjatlari bo'yicha ushlanmalar xodim ish haqidan ayirilib (6710 Debet), ijro oluvchiga to'lanadigan qarz sifatida 6990 Kreditida ko'rsatiladi.",
-    "why_right_en": "Correct answer: «Debit 6710 - Credit 6990».",
+    "hint": "💡 Maslahat: Xodimga to'lanadigan qarz kamayadi (6700 Debet), aliment oluvchi shaxs oldidagi majburiyat oshadi (6900 Kredit).",
+    "why_right": "To'g'ri javob: «Debet 6700 - Kredit 6900 (Boshqa majburiyatlar / Aliment oluvchi)». Sud ijro hujjatlari bo'yicha ushlanmalar xodim ish haqidan ayirilib (6700 Debet), ijro oluvchiga to'lanadigan qarz sifatida 6900 Kreditida ko'rsatiladi.",
+    "why_right_en": "Correct answer: «Debit 6700 - Credit 6900».",
     "why_wrongs": [
       {
         "letter": "B",
-        "text": "Debet 6990 - Kredit 6710",
+        "text": "Debet 6990 - Kredit 6700",
         "reason": "Ushbu variant 6-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "C",
-        "text": "Debet 5110 - Kredit 6710",
+        "text": "Debet 5100 - Kredit 6700",
         "reason": "Ushbu variant 6-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "D",
-        "text": "Debet 2010 - Kredit 6990",
+        "text": "Debet 2000 - Kredit 6990",
         "reason": "Ushbu variant 6-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -5810,8 +5810,8 @@
     "topic_id": 6,
     "topic_name_uz": "6-Mavzu: Mehnatga haq to'lash hisobi va hisob-kitoblar",
     "topic_name_en": "Topic 6: Payroll Accounting, Deductions and Taxes",
-    "question_uz": "Deponentlangan ish haqi (6720) nima?",
-    "question_en": "What is unclaimed (deposited) wages (account 6720)?",
+    "question_uz": "Deponentlangan ish haqi (6700) nima?",
+    "question_en": "What is unclaimed (deposited) wages (account 6700)?",
     "options_uz": [
       "Korxona tomonidan xodimga berilgan sovg'a",
       "Belgilangan muddatda (3 ish kuni) xodim tomonidan turli sabablarga ko'ra kassadan olinmay qolgan ish haqi",
@@ -5827,7 +5827,7 @@
     "correct_index": 1,
     "correct_letter": "B",
     "hint": "💡 Maslahat: Kassaga naqd pul keltirilgan, lekin xodim kasal bo'lib yoki safarda bo'lib ololmagan maosh.",
-    "why_right": "To'g'ri javob: «Belgilangan muddatda (3 ish kuni) xodim tomonidan turli sabablarga ko'ra kassadan olinmay qolgan ish haqi». Kassadan o'z vaqtida olinmagan ish haqi summasi 6720 'Deponentlangan mehnat haqi' schyotiga o'tkaziladi va bankka qaytariladi; xodim kelganda darhol to'lab beriladi.",
+    "why_right": "To'g'ri javob: «Belgilangan muddatda (3 ish kuni) xodim tomonidan turli sabablarga ko'ra kassadan olinmay qolgan ish haqi». Kassadan o'z vaqtida olinmagan ish haqi summasi 6700 'Deponentlangan mehnat haqi' schyotiga o'tkaziladi va bankka qaytariladi; xodim kelganda darhol to'lab beriladi.",
     "why_right_en": "Correct answer: «Wages not collected by employee from cash register within statutory window (3 days)».",
     "why_wrongs": [
       {
@@ -5856,38 +5856,38 @@
     "topic_name_uz": "6-Mavzu: Mehnatga haq to'lash hisobi va hisob-kitoblar",
     "topic_name_en": "Topic 6: Payroll Accounting, Deductions and Taxes",
     "question_uz": "Deponentlangan ish haqini hisobga olish provodkasi qaysi?",
-    "question_en": "Which journal entry deposits unclaimed wages back from payroll to 6720?",
+    "question_en": "Which journal entry deposits unclaimed wages back from payroll to 6700?",
     "options_uz": [
-      "Debet 6720 - Kredit 6710",
-      "Debet 5010 - Kredit 6720",
-      "Debet 6710 - Kredit 6720",
-      "Debet 2010 - Kredit 6720"
+      "Debet 6700 - Kredit 6700",
+      "Debet 5000 - Kredit 6700",
+      "Debet 6700 - Kredit 6700",
+      "Debet 2000 - Kredit 6700"
     ],
     "options_en": [
-      "Debit 6720 - Credit 6710",
-      "Debit 5010 - Credit 6720",
-      "Debit 6710 - Credit 6720",
-      "Debit 2010 - Credit 6720"
+      "Debit 6700 - Credit 6700",
+      "Debit 5000 - Credit 6700",
+      "Debit 6700 - Credit 6700",
+      "Debit 2000 - Credit 6700"
     ],
     "correct_index": 2,
     "correct_letter": "C",
-    "hint": "💡 Maslahat: Oddiy ish haqi qarzi (6710 Debet) yopilib, deponent qarzi (6720 Kredit) ga o'tkaziladi.",
-    "why_right": "To'g'ri javob: «Debet 6710 - Kredit 6720». Xodim olmagan ish haqi: Debet 6710 (Xodimlar bilan mehnat haqi hisob-kitoblari) - Kredit 6720 (Deponentlangan ish haqi bo'yicha qarz).",
-    "why_right_en": "Correct answer: «Debit 6710 - Credit 6720».",
+    "hint": "💡 Maslahat: Oddiy ish haqi qarzi (6700 Debet) yopilib, deponent qarzi (6700 Kredit) ga o'tkaziladi.",
+    "why_right": "To'g'ri javob: «Debet 6700 - Kredit 6700». Xodim olmagan ish haqi: Debet 6700 (Xodimlar bilan mehnat haqi hisob-kitoblari) - Kredit 6700 (Deponentlangan ish haqi bo'yicha qarz).",
+    "why_right_en": "Correct answer: «Debit 6700 - Credit 6700».",
     "why_wrongs": [
       {
         "letter": "A",
-        "text": "Debet 6720 - Kredit 6710",
+        "text": "Debet 6720 - Kredit 6700",
         "reason": "Ushbu variant 6-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "B",
-        "text": "Debet 5010 - Kredit 6720",
+        "text": "Debet 5000 - Kredit 6720",
         "reason": "Ushbu variant 6-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "D",
-        "text": "Debet 2010 - Kredit 6720",
+        "text": "Debet 2000 - Kredit 6720",
         "reason": "Ushbu variant 6-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -5903,36 +5903,36 @@
     "question_uz": "Korxona xodimlarining plastik kartalariga ish haqi o'tkazish xizmati uchun tijorat banki ushlab qolgan komissiya (masalan, 0.5%) qaysi schyotga yoziladi?",
     "question_en": "Which account records the 0.5% bank commission for processing employee payroll card transfers?",
     "options_uz": [
-      "6710 'Mehnat haqi qarzi' (Xodim maoshidan olib qo'yiladi)",
-      "2810 'Tayyor mahsulot'",
-      "8330 'Ustav kapitali'",
-      "9430 'Boshqa operatsion xarajatlar' (Bank xizmati xarajatlari)"
+      "6700 'Mehnat haqi qarzi' (Xodim maoshidan olib qo'yiladi)",
+      "2800 'Tayyor mahsulot'",
+      "8300 'Ustav kapitali'",
+      "9400 'Boshqa operatsion xarajatlar' (Bank xizmati xarajatlari)"
     ],
     "options_en": [
-      "6710 (Deducted from workers)",
-      "2810 'Finished goods'",
-      "8330 'Charter capital'",
-      "9430 'Other operating expenses' (Bank fee)"
+      "6700 (Deducted from workers)",
+      "2800 'Finished goods'",
+      "8300 'Charter capital'",
+      "9400 'Other operating expenses' (Bank fee)"
     ],
     "correct_index": 3,
     "correct_letter": "D",
-    "hint": "💡 Maslahat: Bank xizmati xarajatlari — korxona operatsion xarajatidir (9430).",
-    "why_right": "To'g'ri javob: «9430 'Boshqa operatsion xarajatlar' (Bank xizmati xarajatlari)». Bankning oylik kartaga tushirish komissiyasi xodim maoshidan chegirilmaydi, bu korxonaning o'z xarajati bo'lib, 9430 schyotining Debetida aks etadi.",
-    "why_right_en": "Correct answer: «9430 'Other operating expenses' (Bank fee)».",
+    "hint": "💡 Maslahat: Bank xizmati xarajatlari — korxona operatsion xarajatidir (9400).",
+    "why_right": "To'g'ri javob: «9400 'Boshqa operatsion xarajatlar' (Bank xizmati xarajatlari)». Bankning oylik kartaga tushirish komissiyasi xodim maoshidan chegirilmaydi, bu korxonaning o'z xarajati bo'lib, 9400 schyotining Debetida aks etadi.",
+    "why_right_en": "Correct answer: «9400 'Other operating expenses' (Bank fee)».",
     "why_wrongs": [
       {
         "letter": "A",
-        "text": "6710 'Mehnat haqi qarzi' (Xodim maoshidan olib qo'yiladi)",
+        "text": "6700 'Mehnat haqi qarzi' (Xodim maoshidan olib qo'yiladi)",
         "reason": "Ushbu variant 6-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "B",
-        "text": "2810 'Tayyor mahsulot'",
+        "text": "2800 'Tayyor mahsulot'",
         "reason": "Ushbu variant 6-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "C",
-        "text": "8330 'Ustav kapitali'",
+        "text": "8300 'Ustav kapitali'",
         "reason": "Ushbu variant 6-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -6052,7 +6052,7 @@
     "correct_index": 2,
     "correct_letter": "C",
     "hint": "💡 Maslahat: Mahsulotning fizik asosi bo'lgan asosiy xomashyo.",
-    "why_right": "To'g'ri javob: «Mebel (stol) yasash uchun ishlatilgan yog'och taxtalar». Mebel ishlab chiqarishda yog'och — to'g'ridan-to'g'ri mahsulotning asosiy substansiyasini tashkil etuvchi birlamchi to'g'ri moddiy xarajatdir (Debet 2010).",
+    "why_right": "To'g'ri javob: «Mebel (stol) yasash uchun ishlatilgan yog'och taxtalar». Mebel ishlab chiqarishda yog'och — to'g'ridan-to'g'ri mahsulotning asosiy substansiyasini tashkil etuvchi birlamchi to'g'ri moddiy xarajatdir (Debet 2000).",
     "why_right_en": "Correct answer: «Wood planks used to manufacture tables».",
     "why_wrongs": [
       {
@@ -6128,31 +6128,31 @@
     "question_uz": "Oy yakunida 2500 'Umumishlab chiqarish xarajatlari' schyotida yig'ilgan summalar qayerga taqsimlanadi va yopiladi?",
     "question_en": "At month-end, where is the accumulated balance of account 2500 closed and allocated?",
     "options_uz": [
-      "2010 'Asosiy ishlab chiqarish' schyotining Debetiga mahsulotlar o'rtasida mutanosib taqsimlanadi",
-      "To'g'ridan-to'g'ri 9910 'Yakuniy moliyaviy natija' ga chiqariladi",
-      "8330 'Ustav kapitali' ga qo'shiladi",
+      "2000 'Asosiy ishlab chiqarish' schyotining Debetiga mahsulotlar o'rtasida mutanosib taqsimlanadi",
+      "To'g'ridan-to'g'ri 9900 'Yakuniy moliyaviy natija' ga chiqariladi",
+      "8300 'Ustav kapitali' ga qo'shiladi",
       "Kassaga naqd pul sifatida topshiriladi"
     ],
     "options_en": [
-      "Allocated to Debit of 2010 'Main production' across products",
-      "Directly to 9910 profit/loss",
-      "Added to 8330 charter capital",
+      "Allocated to Debit of 2000 'Main production' across products",
+      "Directly to 9900 profit/loss",
+      "Added to 8300 charter capital",
       "Turned in as cash to register"
     ],
     "correct_index": 0,
     "correct_letter": "A",
-    "hint": "💡 Maslahat: Oy oxirida 2500 schyotida qoldiq qolmaydi, u to'liq 2010 ga o'tkaziladi.",
-    "why_right": "To'g'ri javob: «2010 'Asosiy ishlab chiqarish' schyotining Debetiga mahsulotlar o'rtasida mutanosib taqsimlanadi». Umumishlab chiqarish xarajatlari oy oxirida bazaga (ishchilar maoshi yoki stanok-soat) mutanosib ravishda asosiy ishlab chiqarishga taqsimlanadi: Debet 2010 - Kredit 2500.",
-    "why_right_en": "Correct answer: «Allocated to Debit of 2010 'Main production' across products».",
+    "hint": "💡 Maslahat: Oy oxirida 2500 schyotida qoldiq qolmaydi, u to'liq 2000 ga o'tkaziladi.",
+    "why_right": "To'g'ri javob: «2000 'Asosiy ishlab chiqarish' schyotining Debetiga mahsulotlar o'rtasida mutanosib taqsimlanadi». Umumishlab chiqarish xarajatlari oy oxirida bazaga (ishchilar maoshi yoki stanok-soat) mutanosib ravishda asosiy ishlab chiqarishga taqsimlanadi: Debet 2000 - Kredit 2500.",
+    "why_right_en": "Correct answer: «Allocated to Debit of 2000 'Main production' across products».",
     "why_wrongs": [
       {
         "letter": "B",
-        "text": "To'g'ridan-to'g'ri 9910 'Yakuniy moliyaviy natija' ga chiqariladi",
+        "text": "To'g'ridan-to'g'ri 9900 'Yakuniy moliyaviy natija' ga chiqariladi",
         "reason": "Ushbu variant 7-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "C",
-        "text": "8330 'Ustav kapitali' ga qo'shiladi",
+        "text": "8300 'Ustav kapitali' ga qo'shiladi",
         "reason": "Ushbu variant 7-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
@@ -6170,8 +6170,8 @@
     "topic_id": 7,
     "topic_name_uz": "7-Mavzu: Ishlab chiqarish xarajatlari va mahsulot tannarxi hisobi",
     "topic_name_en": "Topic 7: Manufacturing Costs and Cost of Goods Manufactured",
-    "question_uz": "2010 'Asosiy ishlab chiqarish' schyotining oy oxiridagi Debet qoldig'i (saldoi) buxgalteriya balansida nimani anglatadi?",
-    "question_en": "What does the ending Debit balance of account 2010 represent on the balance sheet?",
+    "question_uz": "2000 'Asosiy ishlab chiqarish' schyotining oy oxiridagi Debet qoldig'i (saldoi) buxgalteriya balansida nimani anglatadi?",
+    "question_en": "What does the ending Debit balance of account 2000 represent on the balance sheet?",
     "options_uz": [
       "Ombordagi tayyor mahsulotlar zaxirasini",
       "Tugallanmagan ishlab chiqarish (WIP - Work in Process) qoldig'ini",
@@ -6187,7 +6187,7 @@
     "correct_index": 1,
     "correct_letter": "B",
     "hint": "💡 Maslahat: Ishlab chiqarish jarayoni boshlangan, lekin hali to'liq tayyor bo'lmagan yarim fabrikatlar.",
-    "why_right": "To'g'ri javob: «Tugallanmagan ishlab chiqarish (WIP - Work in Process) qoldig'ini». 2010 schyotining oy oxiridagi debet qoldig'i texnologik ishlov berish bosqichida turgan 'Tugallanmagan ishlab chiqarish' qiymatini ifodalaydi va balans aktivida aks etadi.",
+    "why_right": "To'g'ri javob: «Tugallanmagan ishlab chiqarish (WIP - Work in Process) qoldig'ini». 2000 schyotining oy oxiridagi debet qoldig'i texnologik ishlov berish bosqichida turgan 'Tugallanmagan ishlab chiqarish' qiymatini ifodalaydi va balans aktivida aks etadi.",
     "why_right_en": "Correct answer: «Work in Process (WIP) inventory».",
     "why_wrongs": [
       {
@@ -6232,7 +6232,7 @@
     "correct_index": 2,
     "correct_letter": "C",
     "hint": "💡 Maslahat: Sexda nima bor edi + nima sarflandi - oy oxirida nima chala qoldi = tayyor bo'lgan mahsulot tannarxi.",
-    "why_right": "To'g'ri javob: «Haqiqiy tannarx = Boshlang'ich WIP + Davr ishlab chiqarish xarajatlari - Yakuniy WIP». Tannarx formulasi: Tannarx = S1(2010) + Debet aylanmasi (2010) - S2(2010). Bu qiymat 2810 schyotiga o'tkaziladi.",
+    "why_right": "To'g'ri javob: «Haqiqiy tannarx = Boshlang'ich WIP + Davr ishlab chiqarish xarajatlari - Yakuniy WIP». Tannarx formulasi: Tannarx = S1(2000) + Debet aylanmasi (2000) - S2(2000). Bu qiymat 2800 schyotiga o'tkaziladi.",
     "why_right_en": "Correct answer: «COGM = Beginning WIP + Total Manufacturing Costs - Ending WIP».",
     "why_wrongs": [
       {
@@ -6277,7 +6277,7 @@
     "correct_index": 3,
     "correct_letter": "D",
     "hint": "💡 Maslahat: Jami xarajat = 10 + (40 + 30 + 20) = 100 mln. Chala qolgan = 15 mln. Tayyor bo'lgan = 100 - 15 = 85 mln.",
-    "why_right": "To'g'ri javob: «85 mln so'm». Hisoblash: 10 + 90 - 15 = 85 mln so'm. Ushbu 85 mln so'm 2810 'Tayyor mahsulot' Debetiga kirim qilinadi.",
+    "why_right": "To'g'ri javob: «85 mln so'm». Hisoblash: 10 + 90 - 15 = 85 mln so'm. Ushbu 85 mln so'm 2800 'Tayyor mahsulot' Debetiga kirim qilinadi.",
     "why_right_en": "Correct answer: «85 million UZS».",
     "why_wrongs": [
       {
@@ -6308,36 +6308,36 @@
     "question_uz": "Tayyor mahsulotlar ishlab chiqarishdan omborga qabul qilinganda to'g'ri provodka qaysi?",
     "question_en": "Which journal entry transfers completed products from production floor to warehouse?",
     "options_uz": [
-      "Debet 2810 (Tayyor mahsulot) - Kredit 2010 (Asosiy ishlab chiqarish)",
-      "Debet 2010 - Kredit 2810",
-      "Debet 9010 - Kredit 2810",
-      "Debet 2810 - Kredit 5110"
+      "Debet 2800 (Tayyor mahsulot) - Kredit 2000 (Asosiy ishlab chiqarish)",
+      "Debet 2000 - Kredit 2800",
+      "Debet 9000 - Kredit 2800",
+      "Debet 2800 - Kredit 5100"
     ],
     "options_en": [
-      "Debit 2810 - Credit 2010",
-      "Debit 2010 - Credit 2810",
-      "Debit 9010 - Credit 2810",
-      "Debit 2810 - Credit 5110"
+      "Debit 2800 - Credit 2000",
+      "Debit 2000 - Credit 2800",
+      "Debit 9000 - Credit 2800",
+      "Debit 2800 - Credit 5100"
     ],
     "correct_index": 0,
     "correct_letter": "A",
-    "hint": "💡 Maslahat: Tayyor mahsulot oshdi (2810 Debet), ishlab chiqarish xarajatlari hisobdan chiqdi (2010 Kredit).",
-    "why_right": "To'g'ri javob: «Debet 2810 (Tayyor mahsulot) - Kredit 2010 (Asosiy ishlab chiqarish)». Mahsulot tayyor bo'lib omborga kirim qilinganda 2810 aktiv schyoti Debetlanadi va ishlab chiqarish hisobi 2010 Kreditlanadi.",
-    "why_right_en": "Correct answer: «Debit 2810 - Credit 2010».",
+    "hint": "💡 Maslahat: Tayyor mahsulot oshdi (2800 Debet), ishlab chiqarish xarajatlari hisobdan chiqdi (2000 Kredit).",
+    "why_right": "To'g'ri javob: «Debet 2800 (Tayyor mahsulot) - Kredit 2000 (Asosiy ishlab chiqarish)». Mahsulot tayyor bo'lib omborga kirim qilinganda 2800 aktiv schyoti Debetlanadi va ishlab chiqarish hisobi 2000 Kreditlanadi.",
+    "why_right_en": "Correct answer: «Debit 2800 - Credit 2000».",
     "why_wrongs": [
       {
         "letter": "B",
-        "text": "Debet 2010 - Kredit 2810",
+        "text": "Debet 2000 - Kredit 2800",
         "reason": "Ushbu variant 7-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "C",
-        "text": "Debet 9010 - Kredit 2810",
+        "text": "Debet 9000 - Kredit 2800",
         "reason": "Ushbu variant 7-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "D",
-        "text": "Debet 2810 - Kredit 5110",
+        "text": "Debet 2800 - Kredit 5100",
         "reason": "Ushbu variant 7-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -6533,31 +6533,31 @@
     "question_uz": "Yaroqsiz (brak) mahsulotlar hisobi qaysi schyotda aks ettiriladi?",
     "question_en": "Which account is used to record spoiled/defective production (spoilage)?",
     "options_uz": [
-      "5110 'Bank schyoti'",
-      "2610 'Ishlab chiqarishdagi nuqsonlar (brak)'",
-      "8330 'Ustav kapitali'",
-      "0130 'Mashinalar'"
+      "5100 'Bank schyoti'",
+      "2600 'Ishlab chiqarishdagi nuqsonlar (brak)'",
+      "8300 'Ustav kapitali'",
+      "0100 'Mashinalar'"
     ],
     "options_en": [
-      "5110 'Bank account'",
-      "2610 'Defective goods in production'",
-      "8330 'Charter capital'",
-      "0130 'Machinery'"
+      "5100 'Bank account'",
+      "2600 'Defective goods in production'",
+      "8300 'Charter capital'",
+      "0100 'Machinery'"
     ],
     "correct_index": 1,
     "correct_letter": "B",
-    "hint": "💡 Maslahat: Ishlab chiqarishdagi nuqson va braklar uchun maxsus 2610 schyot mavjud.",
-    "why_right": "To'g'ri javob: «2610 'Ishlab chiqarishdagi nuqsonlar (brak)'». Ishlab chiqarishdagi braklar va ularni bartaraf qilish xarajatlari 2610 schyotining Debetida yig'iladi, so'ngra aybdorlardan undiriladi yoki tannarxga kiritiladi.",
-    "why_right_en": "Correct answer: «2610 'Defective goods in production'».",
+    "hint": "💡 Maslahat: Ishlab chiqarishdagi nuqson va braklar uchun maxsus 2600 schyot mavjud.",
+    "why_right": "To'g'ri javob: «2600 'Ishlab chiqarishdagi nuqsonlar (brak)'». Ishlab chiqarishdagi braklar va ularni bartaraf qilish xarajatlari 2600 schyotining Debetida yig'iladi, so'ngra aybdorlardan undiriladi yoki tannarxga kiritiladi.",
+    "why_right_en": "Correct answer: «2600 'Defective goods in production'».",
     "why_wrongs": [
       {
         "letter": "A",
-        "text": "5110 'Bank schyoti'",
+        "text": "5100 'Bank schyoti'",
         "reason": "Ushbu variant 7-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "C",
-        "text": "8330 'Ustav kapitali'",
+        "text": "8300 'Ustav kapitali'",
         "reason": "Ushbu variant 7-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
@@ -6578,22 +6578,22 @@
     "question_uz": "Agar brak mahsulot aybi sex ishchisiga tegishli ekanligi isbotlansa, yetkazilgan zarar qaysi provodka bilan undiriladi?",
     "question_en": "If defective output is caused by worker fault, which entry charges them with the loss?",
     "options_uz": [
-      "Debet 2610 - Kredit 4730",
-      "Debet 2010 - Kredit 5010",
-      "Debet 4730 (Xodimning moddiy zarari) - Kredit 2610 : Zarar summasi",
-      "Debet 9910 - Kredit 2610"
+      "Debet 2600 - Kredit 4700",
+      "Debet 2000 - Kredit 5000",
+      "Debet 4700 (Xodimning moddiy zarari) - Kredit 2600 : Zarar summasi",
+      "Debet 9900 - Kredit 2600"
     ],
     "options_en": [
-      "Debit 2610 - Credit 4730",
-      "Debit 2010 - Credit 5010",
-      "Debit 4730 - Credit 2610",
-      "Debit 9910 - Credit 2610"
+      "Debit 2600 - Credit 4700",
+      "Debit 2000 - Credit 5000",
+      "Debit 4700 - Credit 2600",
+      "Debit 9900 - Credit 2600"
     ],
     "correct_index": 2,
     "correct_letter": "C",
-    "hint": "💡 Maslahat: Ishchining zararni qoplash qarzi (4730 Debet) va brak schyoti yopilishi (2610 Kredit).",
-    "why_right": "To'g'ri javob: «Debet 4730 (Xodimning moddiy zarari) - Kredit 2610 : Zarar summasi». Aybdor ishchidan zararni undirish to'g'risida qaror qabul qilinganda xodimning qarzi 4730 Debetida aks etadi va brak schyotidan (2610 Kredit) chiqariladi.",
-    "why_right_en": "Correct answer: «Debit 4730 - Credit 2610».",
+    "hint": "💡 Maslahat: Ishchining zararni qoplash qarzi (4700 Debet) va brak schyoti yopilishi (2600 Kredit).",
+    "why_right": "To'g'ri javob: «Debet 4700 (Xodimning moddiy zarari) - Kredit 2600 : Zarar summasi». Aybdor ishchidan zararni undirish to'g'risida qaror qabul qilinganda xodimning qarzi 4700 Debetida aks etadi va brak schyotidan (2600 Kredit) chiqariladi.",
+    "why_right_en": "Correct answer: «Debit 4700 - Credit 2600».",
     "why_wrongs": [
       {
         "letter": "A",
@@ -6602,12 +6602,12 @@
       },
       {
         "letter": "B",
-        "text": "Debet 2010 - Kredit 5010",
+        "text": "Debet 2000 - Kredit 5000",
         "reason": "Ushbu variant 7-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "D",
-        "text": "Debet 9910 - Kredit 2610",
+        "text": "Debet 9900 - Kredit 2610",
         "reason": "Ushbu variant 7-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -6713,16 +6713,16 @@
     "question_uz": "Sex stanoklarini moylash va texnik sozlash uchun sarflangan 1 mln so'mlik moylash materiallari qaysi schyotga olib boriladi?",
     "question_en": "Where is 1m UZS machine lubricants and maintenance supplies debited?",
     "options_uz": [
-      "Debet 9420 'Ma'muriy xarajatlar'",
+      "Debet 9400 'Ma'muriy xarajatlar'",
       "Debet 2500 'Umumishlab chiqarish xarajatlari'",
-      "Debet 1010 'Materiallar'",
-      "Debet 9010 'Sotishdan tushum'"
+      "Debet 1000 'Materiallar'",
+      "Debet 9000 'Sotishdan tushum'"
     ],
     "options_en": [
-      "Debit 9420 'Administrative expenses'",
+      "Debit 9400 'Administrative expenses'",
       "Debit 2500 'Manufacturing overhead'",
-      "Debit 1010 'Materials'",
-      "Debit 9010 'Sales revenue'"
+      "Debit 1000 'Materials'",
+      "Debit 9000 'Sales revenue'"
     ],
     "correct_index": 1,
     "correct_letter": "B",
@@ -6732,17 +6732,17 @@
     "why_wrongs": [
       {
         "letter": "A",
-        "text": "Debet 9420 'Ma'muriy xarajatlar'",
+        "text": "Debet 9400 'Ma'muriy xarajatlar'",
         "reason": "Ushbu variant 7-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "C",
-        "text": "Debet 1010 'Materiallar'",
+        "text": "Debet 1000 'Materiallar'",
         "reason": "Ushbu variant 7-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "D",
-        "text": "Debet 9010 'Sotishdan tushum'",
+        "text": "Debet 9000 'Sotishdan tushum'",
         "reason": "Ushbu variant 7-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -6803,26 +6803,26 @@
     "question_uz": "Tayyor mahsulotlar omborida yong'in yoki ofat yuz berib, 30 mln so'mlik mahsulot nobud bo'lsa, bu yo'qotish qayerga olib boriladi?",
     "question_en": "If 30m of finished goods are destroyed by factory fire, where is this extraordinary loss recognized?",
     "options_uz": [
-      "2010 ishlab chiqarish tannarxiga qo'shiladi",
+      "2000 ishlab chiqarish tannarxiga qo'shiladi",
       "Bosh buxgalter maoshidan ushlanadi",
       "Ustav kapitali oshiriladi",
-      "Favqulodda xarajatlar (9720 'Favqulodda zararlar')"
+      "Favqulodda xarajatlar (9700 'Favqulodda zararlar')"
     ],
     "options_en": [
-      "Added to 2010 production cost",
+      "Added to 2000 production cost",
       "Deducted from chief accountant",
       "Charter capital increased",
-      "Extraordinary losses (9720)"
+      "Extraordinary losses (9700)"
     ],
     "correct_index": 3,
     "correct_letter": "D",
-    "hint": "💡 Maslahat: Kutilmagan ofat va yong'inlar favqulodda zararlar (9720) hisoblanadi.",
-    "why_right": "To'g'ri javob: «Favqulodda xarajatlar (9720 'Favqulodda zararlar')». Tabiiy ofat, yong'in va avariyalar tufayli yuzaga kelgan yo'qotishlar mahsulot tannarxiga kiritilmaydi, ular 9720 'Favqulodda zararlar' schyotida ko'rsatiladi.",
-    "why_right_en": "Correct answer: «Extraordinary losses (9720)».",
+    "hint": "💡 Maslahat: Kutilmagan ofat va yong'inlar favqulodda zararlar (9700) hisoblanadi.",
+    "why_right": "To'g'ri javob: «Favqulodda xarajatlar (9700 'Favqulodda zararlar')». Tabiiy ofat, yong'in va avariyalar tufayli yuzaga kelgan yo'qotishlar mahsulot tannarxiga kiritilmaydi, ular 9700 'Favqulodda zararlar' schyotida ko'rsatiladi.",
+    "why_right_en": "Correct answer: «Extraordinary losses (9700)».",
     "why_wrongs": [
       {
         "letter": "A",
-        "text": "2010 ishlab chiqarish tannarxiga qo'shiladi",
+        "text": "2000 ishlab chiqarish tannarxiga qo'shiladi",
         "reason": "Ushbu variant 7-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
@@ -6938,16 +6938,16 @@
     "question_uz": "Sex xodimlariga mehnat xavfsizligi va maxsus kiyim-bosh (kaska, kombinezon) berilganda xarajat qaysi schyotga yoziladi?",
     "question_en": "Where is the cost of occupational safety gear (helmets, overalls) for factory workers debited?",
     "options_uz": [
-      "Debet 9420 'Ma'muriy xarajatlar'",
-      "Debet 8330 'Ustav kapitali'",
+      "Debet 9400 'Ma'muriy xarajatlar'",
+      "Debet 8300 'Ustav kapitali'",
       "Debet 2500 'Umumishlab chiqarish xarajatlari' (Mehnat muhofazasi xarajatlari)",
-      "Debet 6710 'Ish haqi'"
+      "Debet 6700 'Ish haqi'"
     ],
     "options_en": [
-      "Debit 9420 'Administrative expenses'",
-      "Debit 8330 'Charter capital'",
+      "Debit 9400 'Administrative expenses'",
+      "Debit 8300 'Charter capital'",
       "Debit 2500 'Manufacturing overhead' (Labor protection)",
-      "Debit 6710 'Wages'"
+      "Debit 6700 'Wages'"
     ],
     "correct_index": 2,
     "correct_letter": "C",
@@ -6957,17 +6957,17 @@
     "why_wrongs": [
       {
         "letter": "A",
-        "text": "Debet 9420 'Ma'muriy xarajatlar'",
+        "text": "Debet 9400 'Ma'muriy xarajatlar'",
         "reason": "Ushbu variant 7-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "B",
-        "text": "Debet 8330 'Ustav kapitali'",
+        "text": "Debet 8300 'Ustav kapitali'",
         "reason": "Ushbu variant 7-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "D",
-        "text": "Debet 6710 'Ish haqi'",
+        "text": "Debet 6700 'Ish haqi'",
         "reason": "Ushbu variant 7-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -6983,36 +6983,36 @@
     "question_uz": "Mahsulot sotilganda uning sotish narxi (daromadi) qaysi buxgalteriya provodkasi bilan aks ettiriladi?",
     "question_en": "Which entry records the revenue from sales at invoice selling price?",
     "options_uz": [
-      "Debet 9010 - Kredit 4010",
-      "Debet 2810 - Kredit 9010",
-      "Debet 9110 - Kredit 2810",
-      "Debet 4010 (Xaridorlar qarzi) - Kredit 9010 (Mahsulot sotishdan olingan daromadlar)"
+      "Debet 9000 - Kredit 4000",
+      "Debet 2800 - Kredit 9000",
+      "Debet 9100 - Kredit 2800",
+      "Debet 4000 (Xaridorlar qarzi) - Kredit 9000 (Mahsulot sotishdan olingan daromadlar)"
     ],
     "options_en": [
-      "Debit 9010 - Credit 4010",
-      "Debit 2810 - Credit 9010",
-      "Debit 9110 - Credit 2810",
-      "Debit 4010 - Credit 9010"
+      "Debit 9000 - Credit 4000",
+      "Debit 2800 - Credit 9000",
+      "Debit 9100 - Credit 2800",
+      "Debit 4000 - Credit 9000"
     ],
     "correct_index": 3,
     "correct_letter": "D",
-    "hint": "💡 Maslahat: Mijozning qarzi oshadi (4010 Debet), tushum daromadi tan olinadi (9010 Kredit).",
-    "why_right": "To'g'ri javob: «Debet 4010 (Xaridorlar qarzi) - Kredit 9010 (Mahsulot sotishdan olingan daromadlar)». Sotish narxida realizatsiya qilinganda: Debet 4010 (Xaridorlarning debitorlik qarzlari) - Kredit 9010 (Tayyor mahsulot sotishdan olingan daromadlar).",
-    "why_right_en": "Correct answer: «Debit 4010 - Credit 9010».",
+    "hint": "💡 Maslahat: Mijozning qarzi oshadi (4000 Debet), tushum daromadi tan olinadi (9000 Kredit).",
+    "why_right": "To'g'ri javob: «Debet 4000 (Xaridorlar qarzi) - Kredit 9000 (Mahsulot sotishdan olingan daromadlar)». Sotish narxida realizatsiya qilinganda: Debet 4000 (Xaridorlarning debitorlik qarzlari) - Kredit 9000 (Tayyor mahsulot sotishdan olingan daromadlar).",
+    "why_right_en": "Correct answer: «Debit 4000 - Credit 9000».",
     "why_wrongs": [
       {
         "letter": "A",
-        "text": "Debet 9010 - Kredit 4010",
+        "text": "Debet 9000 - Kredit 4000",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "B",
-        "text": "Debet 2810 - Kredit 9010",
+        "text": "Debet 2800 - Kredit 9000",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "C",
-        "text": "Debet 9110 - Kredit 2810",
+        "text": "Debet 9100 - Kredit 2800",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -7028,36 +7028,36 @@
     "question_uz": "Sotilgan tayyor mahsulotlarning ishlab chiqarish tannarxi qaysi provodka bilan hisobdan chiqariladi?",
     "question_en": "Which journal entry writes off the cost of finished goods sold?",
     "options_uz": [
-      "Debet 9110 (Sotilgan mahsulotlarning tannarxi) - Kredit 2810 (Tayyor mahsulot)",
-      "Debet 2810 - Kredit 9110",
-      "Debet 9010 - Kredit 2810",
-      "Debet 9110 - Kredit 4010"
+      "Debet 9100 (Sotilgan mahsulotlarning tannarxi) - Kredit 2800 (Tayyor mahsulot)",
+      "Debet 2800 - Kredit 9100",
+      "Debet 9000 - Kredit 2800",
+      "Debet 9100 - Kredit 4000"
     ],
     "options_en": [
-      "Debit 9110 - Credit 2810",
-      "Debit 2810 - Credit 9110",
-      "Debit 9010 - Credit 2810",
-      "Debit 9110 - Credit 4010"
+      "Debit 9100 - Credit 2800",
+      "Debit 2800 - Credit 9100",
+      "Debit 9000 - Credit 2800",
+      "Debit 9100 - Credit 4000"
     ],
     "correct_index": 0,
     "correct_letter": "A",
-    "hint": "💡 Maslahat: Xarajat tan olinadi (9110 Debet), ombordagi mahsulot kamayadi (2810 Kredit).",
-    "why_right": "To'g'ri javob: «Debet 9110 (Sotilgan mahsulotlarning tannarxi) - Kredit 2810 (Tayyor mahsulot)». Tovarlar ombordan xaridorga jo'natilganda ularning tannarxi 2810 Kreditidan chiqarilib, 9110 'Sotilgan mahsulot tannarxi' Debetiga yoziladi.",
-    "why_right_en": "Correct answer: «Debit 9110 - Credit 2810».",
+    "hint": "💡 Maslahat: Xarajat tan olinadi (9100 Debet), ombordagi mahsulot kamayadi (2800 Kredit).",
+    "why_right": "To'g'ri javob: «Debet 9100 (Sotilgan mahsulotlarning tannarxi) - Kredit 2800 (Tayyor mahsulot)». Tovarlar ombordan xaridorga jo'natilganda ularning tannarxi 2800 Kreditidan chiqarilib, 9100 'Sotilgan mahsulot tannarxi' Debetiga yoziladi.",
+    "why_right_en": "Correct answer: «Debit 9100 - Credit 2800».",
     "why_wrongs": [
       {
         "letter": "B",
-        "text": "Debet 2810 - Kredit 9110",
+        "text": "Debet 2800 - Kredit 9100",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "C",
-        "text": "Debet 9010 - Kredit 2810",
+        "text": "Debet 9000 - Kredit 2800",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "D",
-        "text": "Debet 9110 - Kredit 4010",
+        "text": "Debet 9100 - Kredit 4000",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -7074,7 +7074,7 @@
     "question_en": "How is Gross Profit calculated in financial accounting?",
     "options_uz": [
       "Yalpi foyda = Sotishdan sof tushum - Barcha soliqlar",
-      "Yalpi foyda = Sotishdan sof tushum (9010) - Sotilgan mahsulot tannarxi (9110)",
+      "Yalpi foyda = Sotishdan sof tushum (9000) - Sotilgan mahsulot tannarxi (9100)",
       "Yalpi foyda = Kassa qoldig'i + Bank qoldig'i",
       "Yalpi foyda = Sotilgan mahsulot tannarxi + Ma'muriy xarajatlar"
     ],
@@ -7087,7 +7087,7 @@
     "correct_index": 1,
     "correct_letter": "B",
     "hint": "💡 Maslahat: Daromadlar hisoboti 2-shaklning birinchi asosiy ko'rsatkichi: Tushum - Tannarx.",
-    "why_right": "To'g'ri javob: «Yalpi foyda = Sotishdan sof tushum (9010) - Sotilgan mahsulot tannarxi (9110)». Yalpi foyda — bu tovar yoki xizmatni bevosita ishlab chiqarish xarajatlarini qoplagandan keyin qolgan dastlabki foydadir (9010 - 9110).",
+    "why_right": "To'g'ri javob: «Yalpi foyda = Sotishdan sof tushum (9000) - Sotilgan mahsulot tannarxi (9100)». Yalpi foyda — bu tovar yoki xizmatni bevosita ishlab chiqarish xarajatlarini qoplagandan keyin qolgan dastlabki foydadir (9000 - 9100).",
     "why_right_en": "Correct answer: «Gross Profit = Net Sales Revenue - Cost of Goods Sold».",
     "why_wrongs": [
       {
@@ -7166,19 +7166,19 @@
       "Faqat sex stanoklarining amortizatsiyasi",
       "Faqat asosiy xomashyo va materiallar",
       "Faqat ishchilarning ishbay maoshi",
-      "9410 Sotish xarajatlari, 9420 Ma'muriy xarajatlar va 9430 Boshqa operatsion xarajatlar"
+      "9400 Sotish xarajatlari, 9400 Ma'muriy xarajatlar va 9400 Boshqa operatsion xarajatlar"
     ],
     "options_en": [
       "Only factory machine depreciation",
       "Only direct raw materials",
       "Only direct piece-rate wages",
-      "9410 Selling, 9420 Administrative, and 9430 Other operating expenses"
+      "9400 Selling, 9400 Administrative, and 9400 Other operating expenses"
     ],
     "correct_index": 3,
     "correct_letter": "D",
     "hint": "💡 Maslahat: Ishlab chiqarish tannarxiga kirmaydigan, mahsulot sotilsa-sotilmasa sodir bo'ladigan davriy xarajatlar.",
-    "why_right": "To'g'ri javob: «9410 Sotish xarajatlari, 9420 Ma'muriy xarajatlar va 9430 Boshqa operatsion xarajatlar». Davr xarajatlari 9400 guruhida to'planadi va to'g'ridan-to'g'ri hisobot davri moliyaviy natijalariga olib boriladi (9410, 9420, 9430).",
-    "why_right_en": "Correct answer: «9410 Selling, 9420 Administrative, and 9430 Other operating expenses».",
+    "why_right": "To'g'ri javob: «9400 Sotish xarajatlari, 9400 Ma'muriy xarajatlar va 9400 Boshqa operatsion xarajatlar». Davr xarajatlari 9400 guruhida to'planadi va to'g'ridan-to'g'ri hisobot davri moliyaviy natijalariga olib boriladi (9400, 9400, 9400).",
+    "why_right_en": "Correct answer: «9400 Selling, 9400 Administrative, and 9400 Other operating expenses».",
     "why_wrongs": [
       {
         "letter": "A",
@@ -7208,36 +7208,36 @@
     "question_uz": "Mahsulotni xaridorlarga yetkazib berish (transport) va reklama xarajatlari qaysi schyotning Debetida aks etadi?",
     "question_en": "Where are advertising and delivery shipping costs to customers debited?",
     "options_uz": [
-      "9410 'Sotish xarajatlari'",
-      "2010 'Asosiy ishlab chiqarish'",
-      "2810 'Tayyor mahsulot'",
-      "8330 'Ustav kapitali'"
+      "9400 'Sotish xarajatlari'",
+      "2000 'Asosiy ishlab chiqarish'",
+      "2800 'Tayyor mahsulot'",
+      "8300 'Ustav kapitali'"
     ],
     "options_en": [
-      "9410 'Selling expenses'",
-      "2010 'Main production'",
-      "2810 'Finished goods'",
-      "8330 'Charter capital'"
+      "9400 'Selling expenses'",
+      "2000 'Main production'",
+      "2800 'Finished goods'",
+      "8300 'Charter capital'"
     ],
     "correct_index": 0,
     "correct_letter": "A",
-    "hint": "💡 Maslahat: Reklama, marketing va yetkazib berish — 9410 Sotish xarajati.",
-    "why_right": "To'g'ri javob: «9410 'Sotish xarajatlari'». Mahsulotlarni bozorga olib chiqish, reklama roliklari va xaridorga yetkazib berish bilan bog'liq barcha xarajatlar 9410 'Sotish xarajatlari' Debetida yuritiladi.",
-    "why_right_en": "Correct answer: «9410 'Selling expenses'».",
+    "hint": "💡 Maslahat: Reklama, marketing va yetkazib berish — 9400 Sotish xarajati.",
+    "why_right": "To'g'ri javob: «9400 'Sotish xarajatlari'». Mahsulotlarni bozorga olib chiqish, reklama roliklari va xaridorga yetkazib berish bilan bog'liq barcha xarajatlar 9400 'Sotish xarajatlari' Debetida yuritiladi.",
+    "why_right_en": "Correct answer: «9400 'Selling expenses'».",
     "why_wrongs": [
       {
         "letter": "B",
-        "text": "2010 'Asosiy ishlab chiqarish'",
+        "text": "2000 'Asosiy ishlab chiqarish'",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "C",
-        "text": "2810 'Tayyor mahsulot'",
+        "text": "2800 'Tayyor mahsulot'",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "D",
-        "text": "8330 'Ustav kapitali'",
+        "text": "8300 'Ustav kapitali'",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -7250,29 +7250,29 @@
     "topic_id": 8,
     "topic_name_uz": "8-Mavzu: Tayyor mahsulot sotish, daromadlar va moliyaviy natijalar hisobi",
     "topic_name_en": "Topic 8: Finished Goods Sales, Revenue and Financial Results",
-    "question_uz": "Hisobot davri yakunida 9010 'Sotishdan olingan daromadlar' schyoti qaysi yakuniy schyotga yopiladi?",
-    "question_en": "At the end of accounting period, where is revenue account 9010 closed?",
+    "question_uz": "Hisobot davri yakunida 9000 'Sotishdan olingan daromadlar' schyoti qaysi yakuniy schyotga yopiladi?",
+    "question_en": "At the end of accounting period, where is revenue account 9000 closed?",
     "options_uz": [
-      "5110 'Hisob-kitob schyoti' Debetiga",
-      "9910 'Yakuniy moliyaviy natija' schyotining Kreditiga",
+      "5100 'Hisob-kitob schyoti' Debetiga",
+      "9900 'Yakuniy moliyaviy natija' schyotining Kreditiga",
       "0100 'Asosiy vositalar' ga",
-      "6010 'Kreditorlar' ga"
+      "6000 'Kreditorlar' ga"
     ],
     "options_en": [
-      "To Debit of 5110",
-      "To Credit of 9910 'Final financial result'",
+      "To Debit of 5100",
+      "To Credit of 9900 'Final financial result'",
       "To 0100 fixed assets",
-      "To 6010 creditors"
+      "To 6000 creditors"
     ],
     "correct_index": 1,
     "correct_letter": "B",
-    "hint": "💡 Maslahat: Daromadlar 9910 schyotining Kreditiga (foyda tomoniga) o'tkaziladi.",
-    "why_right": "To'g'ri javob: «9910 'Yakuniy moliyaviy natija' schyotining Kreditiga». Davr oxirida daromad schyotlari o'z saldosini nolga tenglashtirib, moliyaviy natijaga yopiladi: Debet 9010 - Kredit 9910.",
-    "why_right_en": "Correct answer: «To Credit of 9910 'Final financial result'».",
+    "hint": "💡 Maslahat: Daromadlar 9900 schyotining Kreditiga (foyda tomoniga) o'tkaziladi.",
+    "why_right": "To'g'ri javob: «9900 'Yakuniy moliyaviy natija' schyotining Kreditiga». Davr oxirida daromad schyotlari o'z saldosini nolga tenglashtirib, moliyaviy natijaga yopiladi: Debet 9000 - Kredit 9900.",
+    "why_right_en": "Correct answer: «To Credit of 9900 'Final financial result'».",
     "why_wrongs": [
       {
         "letter": "A",
-        "text": "5110 'Hisob-kitob schyoti' Debetiga",
+        "text": "5100 'Hisob-kitob schyoti' Debetiga",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
@@ -7282,7 +7282,7 @@
       },
       {
         "letter": "D",
-        "text": "6010 'Kreditorlar' ga",
+        "text": "6000 'Kreditorlar' ga",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -7295,39 +7295,39 @@
     "topic_id": 8,
     "topic_name_uz": "8-Mavzu: Tayyor mahsulot sotish, daromadlar va moliyaviy natijalar hisobi",
     "topic_name_en": "Topic 8: Finished Goods Sales, Revenue and Financial Results",
-    "question_uz": "Hisobot davri yakunida 9110 (Tannarx) va 9400 (Davr xarajatlari) schyotlari qaysi yakuniy schyotga yopiladi?",
-    "question_en": "Where are cost of sales (9110) and period expenses (9400) closed at period-end?",
+    "question_uz": "Hisobot davri yakunida 9100 (Tannarx) va 9400 (Davr xarajatlari) schyotlari qaysi yakuniy schyotga yopiladi?",
+    "question_en": "Where are cost of sales (9100) and period expenses (9400) closed at period-end?",
     "options_uz": [
-      "9910 schyotining Kreditiga",
-      "8330 'Ustav kapitali' ga",
-      "9910 'Yakuniy moliyaviy natija' schyotining Debetiga",
-      "5010 'Kassa' ga"
+      "9900 schyotining Kreditiga",
+      "8300 'Ustav kapitali' ga",
+      "9900 'Yakuniy moliyaviy natija' schyotining Debetiga",
+      "5000 'Kassa' ga"
     ],
     "options_en": [
-      "To Credit of 9910",
+      "To Credit of 9900",
       "To charter capital",
-      "To Debit of 9910 'Final financial result'",
+      "To Debit of 9900 'Final financial result'",
       "To petty cash"
     ],
     "correct_index": 2,
     "correct_letter": "C",
-    "hint": "💡 Maslahat: Barcha xarajatlar 9910 schyotining Debetiga (zarar/xarajat tomoniga) to'planadi.",
-    "why_right": "To'g'ri javob: «9910 'Yakuniy moliyaviy natija' schyotining Debetiga». Davr xarajatlari 9910 ning Debetiga o'tkazilib yopiladi: Debet 9910 - Kredit 9110, 9410, 9420, 9430.",
-    "why_right_en": "Correct answer: «To Debit of 9910 'Final financial result'».",
+    "hint": "💡 Maslahat: Barcha xarajatlar 9900 schyotining Debetiga (zarar/xarajat tomoniga) to'planadi.",
+    "why_right": "To'g'ri javob: «9900 'Yakuniy moliyaviy natija' schyotining Debetiga». Davr xarajatlari 9900 ning Debetiga o'tkazilib yopiladi: Debet 9900 - Kredit 9100, 9400, 9400, 9400.",
+    "why_right_en": "Correct answer: «To Debit of 9900 'Final financial result'».",
     "why_wrongs": [
       {
         "letter": "A",
-        "text": "9910 schyotining Kreditiga",
+        "text": "9900 schyotining Kreditiga",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "B",
-        "text": "8330 'Ustav kapitali' ga",
+        "text": "8300 'Ustav kapitali' ga",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "D",
-        "text": "5010 'Kassa' ga",
+        "text": "5000 'Kassa' ga",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -7340,8 +7340,8 @@
     "topic_id": 8,
     "topic_name_uz": "8-Mavzu: Tayyor mahsulot sotish, daromadlar va moliyaviy natijalar hisobi",
     "topic_name_en": "Topic 8: Finished Goods Sales, Revenue and Financial Results",
-    "question_uz": "9910 'Yakuniy moliyaviy natija' schyotida Kredit aylanmasi Debet aylanmasidan katta bo'lsa, bu nimani anglatadi?",
-    "question_en": "In account 9910, if total Credit turnover exceeds total Debit turnover, what does it signify?",
+    "question_uz": "9900 'Yakuniy moliyaviy natija' schyotida Kredit aylanmasi Debet aylanmasidan katta bo'lsa, bu nimani anglatadi?",
+    "question_en": "In account 9900, if total Credit turnover exceeds total Debit turnover, what does it signify?",
     "options_uz": [
       "Korxona zarar ko'rganligini",
       "Korxona bankrot bo'lganligini",
@@ -7356,7 +7356,7 @@
     ],
     "correct_index": 3,
     "correct_letter": "D",
-    "hint": "💡 Maslahat: 9910 Kredit tomoni — daromadlar, Debet tomoni — xarajatlar.",
+    "hint": "💡 Maslahat: 9900 Kredit tomoni — daromadlar, Debet tomoni — xarajatlar.",
     "why_right": "To'g'ri javob: «Korxona sof foyda (daromad) ko'rganligini». Daromadlar (Kredit) xarajatlardan (Debet) ko'p bo'lsa, korxona foyda ko'rgan hisoblanadi va kredit qoldiq hosil bo'ladi.",
     "why_right_en": "Correct answer: «Company earned a net profit».",
     "why_wrongs": [
@@ -7385,8 +7385,8 @@
     "topic_id": 8,
     "topic_name_uz": "8-Mavzu: Tayyor mahsulot sotish, daromadlar va moliyaviy natijalar hisobi",
     "topic_name_en": "Topic 8: Finished Goods Sales, Revenue and Financial Results",
-    "question_uz": "Aksincha, 9910 schyotida Debet aylanmasi Kredit aylanmasidan katta bo'lsa, nima sodir bo'lgan?",
-    "question_en": "If Debit turnover exceeds Credit turnover in account 9910, what happened?",
+    "question_uz": "Aksincha, 9900 schyotida Debet aylanmasi Kredit aylanmasidan katta bo'lsa, nima sodir bo'lgan?",
+    "question_en": "If Debit turnover exceeds Credit turnover in account 9900, what happened?",
     "options_uz": [
       "Korxona hisobot davrida zarar ko'rgan",
       "Korxona katta foyda olgan",
@@ -7433,36 +7433,36 @@
     "question_uz": "Hisobot davrida hisoblangan 'Foyda solig'i' (Corporate Income Tax) qanday provodka bilan aks ettiriladi?",
     "question_en": "Which entry records corporate income tax expense accrued for the period?",
     "options_uz": [
-      "Debet 6410 - Kredit 9810",
-      "Debet 9810 (Foyda solig'i bo'yicha xarajatlar) - Kredit 6410 (Byudjetga soliq qarzi)",
-      "Debet 5110 - Kredit 6410",
-      "Debet 9910 - Kredit 5110"
+      "Debet 6400 - Kredit 9800",
+      "Debet 9800 (Foyda solig'i bo'yicha xarajatlar) - Kredit 6400 (Byudjetga soliq qarzi)",
+      "Debet 5100 - Kredit 6400",
+      "Debet 9900 - Kredit 5100"
     ],
     "options_en": [
-      "Debit 6410 - Credit 9810",
-      "Debit 9810 - Credit 6410",
-      "Debit 5110 - Credit 6410",
-      "Debit 9910 - Credit 5110"
+      "Debit 6400 - Credit 9810",
+      "Debit 9810 - Credit 6400",
+      "Debit 5100 - Credit 6400",
+      "Debit 9900 - Credit 5100"
     ],
     "correct_index": 1,
     "correct_letter": "B",
-    "hint": "💡 Maslahat: Foyda solig'i xarajati tan olinadi (9810 Debet) va byudjetga qarz paydo bo'ladi (6410 Kredit).",
-    "why_right": "To'g'ri javob: «Debet 9810 (Foyda solig'i bo'yicha xarajatlar) - Kredit 6410 (Byudjetga soliq qarzi)». Foyda solig'i hisoblanganda: Debet 9810 'Foyda solig'i bo'yicha xarajatlar' - Kredit 6410 'Byudjetga to'lovlar bo'yicha qarz'.",
-    "why_right_en": "Correct answer: «Debit 9810 - Credit 6410».",
+    "hint": "💡 Maslahat: Foyda solig'i xarajati tan olinadi (9810 Debet) va byudjetga qarz paydo bo'ladi (6400 Kredit).",
+    "why_right": "To'g'ri javob: «Debet 9800 (Foyda solig'i bo'yicha xarajatlar) - Kredit 6400 (Byudjetga soliq qarzi)». Foyda solig'i hisoblanganda: Debet 9800 'Foyda solig'i bo'yicha xarajatlar' - Kredit 6400 'Byudjetga to'lovlar bo'yicha qarz'.",
+    "why_right_en": "Correct answer: «Debit 9810 - Credit 6400».",
     "why_wrongs": [
       {
         "letter": "A",
-        "text": "Debet 6410 - Kredit 9810",
+        "text": "Debet 6400 - Kredit 9800",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "C",
-        "text": "Debet 5110 - Kredit 6410",
+        "text": "Debet 5100 - Kredit 6400",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "D",
-        "text": "Debet 9910 - Kredit 5110",
+        "text": "Debet 9900 - Kredit 5100",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -7478,36 +7478,36 @@
     "question_uz": "Yil yakunida korxonaning sof foydasi (barcha soliqlar to'langandan keyin) qaysi kapital schyotiga o'tkaziladi (yillik balansni yopish)?",
     "question_en": "At year end, where is after-tax net profit transferred to close the books?",
     "options_uz": [
-      "Debet 8710 - Kredit 9910",
-      "Debet 9910 - Kredit 5110",
-      "Debet 9910 - Kredit 8710 (Hisobot davrining taqsimlanmagan foydasi)",
-      "Debet 9910 - Kredit 8330"
+      "Debet 8700 - Kredit 9900",
+      "Debet 9900 - Kredit 5100",
+      "Debet 9900 - Kredit 8700 (Hisobot davrining taqsimlanmagan foydasi)",
+      "Debet 9900 - Kredit 8300"
     ],
     "options_en": [
-      "Debit 8710 - Credit 9910",
-      "Debit 9910 - Credit 5110",
-      "Debit 9910 - Credit 8710 (Retained earnings)",
-      "Debit 9910 - Credit 8330"
+      "Debit 8700 - Credit 9900",
+      "Debit 9900 - Credit 5100",
+      "Debit 9900 - Credit 8700 (Retained earnings)",
+      "Debit 9900 - Credit 8300"
     ],
     "correct_index": 2,
     "correct_letter": "C",
-    "hint": "💡 Maslahat: 9910 yopilib, xususiy kapital tarkibidagi 8710 Taqsimlanmagan foyda schyotiga o'tkaziladi.",
-    "why_right": "To'g'ri javob: «Debet 9910 - Kredit 8710 (Hisobot davrining taqsimlanmagan foydasi)». Yillik hisobni yopishda (reformirovanie balansa) sof foyda: Debet 9910 - Kredit 8710 provodkasi bilan taqsimlanmagan foydaga qo'shiladi.",
-    "why_right_en": "Correct answer: «Debit 9910 - Credit 8710 (Retained earnings)».",
+    "hint": "💡 Maslahat: 9900 yopilib, xususiy kapital tarkibidagi 8700 Taqsimlanmagan foyda schyotiga o'tkaziladi.",
+    "why_right": "To'g'ri javob: «Debet 9900 - Kredit 8700 (Hisobot davrining taqsimlanmagan foydasi)». Yillik hisobni yopishda (reformirovanie balansa) sof foyda: Debet 9900 - Kredit 8700 provodkasi bilan taqsimlanmagan foydaga qo'shiladi.",
+    "why_right_en": "Correct answer: «Debit 9900 - Credit 8700 (Retained earnings)».",
     "why_wrongs": [
       {
         "letter": "A",
-        "text": "Debet 8710 - Kredit 9910",
+        "text": "Debet 8700 - Kredit 9900",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "B",
-        "text": "Debet 9910 - Kredit 5110",
+        "text": "Debet 9900 - Kredit 5100",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "D",
-        "text": "Debet 9910 - Kredit 8330",
+        "text": "Debet 9900 - Kredit 8300",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -7523,36 +7523,36 @@
     "question_uz": "Agar korxona yilni sof zarar bilan yakunlagan bo'lsa, qaysi provodka beriladi?",
     "question_en": "If the company finishes the year with a net loss, which entry is made?",
     "options_uz": [
-      "Debet 9910 - Kredit 8720",
-      "Debet 5110 - Kredit 9910",
-      "Debet 6010 - Kredit 8720",
-      "Debet 8720 (Hisobot davrining qoplanmagan zarari) - Kredit 9910"
+      "Debet 9900 - Kredit 8700",
+      "Debet 5100 - Kredit 9900",
+      "Debet 6000 - Kredit 8700",
+      "Debet 8700 (Hisobot davrining qoplanmagan zarari) - Kredit 9900"
     ],
     "options_en": [
-      "Debit 9910 - Credit 8720",
-      "Debit 5110 - Credit 9910",
-      "Debit 6010 - Credit 8720",
-      "Debit 8720 (Uncovered loss) - Credit 9910"
+      "Debit 9900 - Credit 8700",
+      "Debit 5100 - Credit 9900",
+      "Debit 6000 - Credit 8700",
+      "Debit 8700 (Uncovered loss) - Credit 9900"
     ],
     "correct_index": 3,
     "correct_letter": "D",
-    "hint": "💡 Maslahat: Zarar kapitalni kamaytiruvchi debet qoldiq sifatida 8720 ga o'tadi.",
-    "why_right": "To'g'ri javob: «Debet 8720 (Hisobot davrining qoplanmagan zarari) - Kredit 9910». Ko'rilgan sof zarar 9910 schyotining Kreditidan 8720 'Qoplanmagan zarar' schyotining Debetiga o'tkaziladi.",
-    "why_right_en": "Correct answer: «Debit 8720 (Uncovered loss) - Credit 9910».",
+    "hint": "💡 Maslahat: Zarar kapitalni kamaytiruvchi debet qoldiq sifatida 8700 ga o'tadi.",
+    "why_right": "To'g'ri javob: «Debet 8700 (Hisobot davrining qoplanmagan zarari) - Kredit 9900». Ko'rilgan sof zarar 9900 schyotining Kreditidan 8700 'Qoplanmagan zarar' schyotining Debetiga o'tkaziladi.",
+    "why_right_en": "Correct answer: «Debit 8700 (Uncovered loss) - Credit 9900».",
     "why_wrongs": [
       {
         "letter": "A",
-        "text": "Debet 9910 - Kredit 8720",
+        "text": "Debet 9900 - Kredit 8700",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "B",
-        "text": "Debet 5110 - Kredit 9910",
+        "text": "Debet 5100 - Kredit 9900",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "C",
-        "text": "Debet 6010 - Kredit 8720",
+        "text": "Debet 6000 - Kredit 8700",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -7613,36 +7613,36 @@
     "question_uz": "Valyuta kursi ijobiy o'zgarganda (korxona hisobidagi chet el valyutasi so'mga nisbatan qimmatlashganda) hosil bo'lgan kurs farqi qaysi schyotda aks etadi?",
     "question_en": "Where is positive foreign exchange gain recorded when foreign currency appreciates?",
     "options_uz": [
-      "Debet 9540 - Kredit 5210",
-      "Debet 5210 - Kredit 9540 (Valyuta kurs farqlaridan daromadlar)",
-      "Debet 9640 - Kredit 5210",
-      "Debet 5110 - Kredit 9540"
+      "Debet 9500 - Kredit 5200",
+      "Debet 5200 - Kredit 9500 (Valyuta kurs farqlaridan daromadlar)",
+      "Debet 9600 - Kredit 5200",
+      "Debet 5100 - Kredit 9500"
     ],
     "options_en": [
-      "Debit 9540 - Credit 5210",
-      "Debit 5210 - Credit 9540",
-      "Debit 9640 - Credit 5210",
-      "Debit 5110 - Credit 9540"
+      "Debit 9540 - Credit 5200",
+      "Debit 5200 - Credit 9540",
+      "Debit 9640 - Credit 5200",
+      "Debit 5100 - Credit 9540"
     ],
     "correct_index": 1,
     "correct_letter": "B",
     "hint": "💡 Maslahat: Valyuta oshsa — moliyaviy faoliyat daromadi (9540).",
-    "why_right": "To'g'ri javob: «Debet 5210 - Kredit 9540 (Valyuta kurs farqlaridan daromadlar)». Ijobiy kurs farqi moliyaviy faoliyat daromadi hisoblanib, 9540 schyotining Kreditida aks ettiriladi.",
-    "why_right_en": "Correct answer: «Debit 5210 - Credit 9540».",
+    "why_right": "To'g'ri javob: «Debet 5200 - Kredit 9500 (Valyuta kurs farqlaridan daromadlar)». Ijobiy kurs farqi moliyaviy faoliyat daromadi hisoblanib, 9500 schyotining Kreditida aks ettiriladi.",
+    "why_right_en": "Correct answer: «Debit 5200 - Credit 9540».",
     "why_wrongs": [
       {
         "letter": "A",
-        "text": "Debet 9540 - Kredit 5210",
+        "text": "Debet 9500 - Kredit 5200",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "C",
-        "text": "Debet 9640 - Kredit 5210",
+        "text": "Debet 9600 - Kredit 5200",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "D",
-        "text": "Debet 5110 - Kredit 9540",
+        "text": "Debet 5100 - Kredit 9500",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -7658,36 +7658,36 @@
     "question_uz": "Aksincha, salbiy kurs farqi (kurs pasayishi natijasidagi zarar) qaysi schyotga yoziladi?",
     "question_en": "Where is negative exchange loss debited when currency depreciates against firm?",
     "options_uz": [
-      "Debet 5210 - Kredit 9640",
-      "Debet 9540 - Kredit 5210",
-      "Debet 9640 (Valyuta kurs farqlaridan zararlar) - Kredit 5210 (Valyuta schyoti)",
-      "Debet 9420 - Kredit 5210"
+      "Debet 5200 - Kredit 9600",
+      "Debet 9500 - Kredit 5200",
+      "Debet 9600 (Valyuta kurs farqlaridan zararlar) - Kredit 5200 (Valyuta schyoti)",
+      "Debet 9400 - Kredit 5200"
     ],
     "options_en": [
-      "Debit 5210 - Credit 9640",
-      "Debit 9540 - Credit 5210",
-      "Debit 9640 - Credit 5210",
-      "Debit 9420 - Credit 5210"
+      "Debit 5200 - Credit 9640",
+      "Debit 9540 - Credit 5200",
+      "Debit 9640 - Credit 5200",
+      "Debit 9400 - Credit 5200"
     ],
     "correct_index": 2,
     "correct_letter": "C",
     "hint": "💡 Maslahat: Valyuta tushib ketsa — moliyaviy faoliyat xarajati (9640).",
-    "why_right": "To'g'ri javob: «Debet 9640 (Valyuta kurs farqlaridan zararlar) - Kredit 5210 (Valyuta schyoti)». Salbiy kurs farqi moliyaviy faoliyat xarajatlari tarkibida 9640 'Valyuta kurs farqlaridan zararlar' schyotining Debetida qayd qilinadi.",
-    "why_right_en": "Correct answer: «Debit 9640 - Credit 5210».",
+    "why_right": "To'g'ri javob: «Debet 9600 (Valyuta kurs farqlaridan zararlar) - Kredit 5200 (Valyuta schyoti)». Salbiy kurs farqi moliyaviy faoliyat xarajatlari tarkibida 9600 'Valyuta kurs farqlaridan zararlar' schyotining Debetida qayd qilinadi.",
+    "why_right_en": "Correct answer: «Debit 9640 - Credit 5200».",
     "why_wrongs": [
       {
         "letter": "A",
-        "text": "Debet 5210 - Kredit 9640",
+        "text": "Debet 5200 - Kredit 9600",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "B",
-        "text": "Debet 9540 - Kredit 5210",
+        "text": "Debet 9500 - Kredit 5200",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "D",
-        "text": "Debet 9420 - Kredit 5210",
+        "text": "Debet 9400 - Kredit 5200",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -7703,36 +7703,36 @@
     "question_uz": "Bankka qo'yilgan depozit hisobvarag'i bo'yicha foiz daromadlari hisoblanganda qaysi provodka beriladi?",
     "question_en": "Which entry records interest income accrued on bank term deposits?",
     "options_uz": [
-      "Debet 9530 - Kredit 4830",
-      "Debet 9630 - Kredit 5110",
-      "Debet 5110 - Kredit 6810",
-      "Debet 4830 (Olinadigan foizlar) - Kredit 9530 (Foizlar ko'rinishidagi daromadlar)"
+      "Debet 9500 - Kredit 4800",
+      "Debet 9600 - Kredit 5100",
+      "Debet 5100 - Kredit 6800",
+      "Debet 4800 (Olinadigan foizlar) - Kredit 9500 (Foizlar ko'rinishidagi daromadlar)"
     ],
     "options_en": [
-      "Debit 9530 - Credit 4830",
-      "Debit 9630 - Credit 5110",
-      "Debit 5110 - Credit 6810",
-      "Debit 4830 - Credit 9530"
+      "Debit 9500 - Credit 4800",
+      "Debit 9600 - Credit 5100",
+      "Debit 5100 - Credit 6800",
+      "Debit 4800 - Credit 9500"
     ],
     "correct_index": 3,
     "correct_letter": "D",
-    "hint": "💡 Maslahat: Olinadigan foiz aktiv (4830 Debet), foiz daromadi Kredit 9530.",
-    "why_right": "To'g'ri javob: «Debet 4830 (Olinadigan foizlar) - Kredit 9530 (Foizlar ko'rinishidagi daromadlar)». Depozit foizlari moliyaviy daromad bo'lib, 9530 'Foizlar ko'rinishidagi daromadlar' Kreditida va 4830 Debetida aks etadi.",
-    "why_right_en": "Correct answer: «Debit 4830 - Credit 9530».",
+    "hint": "💡 Maslahat: Olinadigan foiz aktiv (4800 Debet), foiz daromadi Kredit 9500.",
+    "why_right": "To'g'ri javob: «Debet 4800 (Olinadigan foizlar) - Kredit 9500 (Foizlar ko'rinishidagi daromadlar)». Depozit foizlari moliyaviy daromad bo'lib, 9500 'Foizlar ko'rinishidagi daromadlar' Kreditida va 4800 Debetida aks etadi.",
+    "why_right_en": "Correct answer: «Debit 4800 - Credit 9500».",
     "why_wrongs": [
       {
         "letter": "A",
-        "text": "Debet 9530 - Kredit 4830",
+        "text": "Debet 9500 - Kredit 4830",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "B",
-        "text": "Debet 9630 - Kredit 5110",
+        "text": "Debet 9630 - Kredit 5100",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "C",
-        "text": "Debet 5110 - Kredit 6810",
+        "text": "Debet 5100 - Kredit 6800",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -7748,36 +7748,36 @@
     "question_uz": "Olingan bank krediti bo'yicha to'lanadigan foiz xarajatlari qaysi schyotda aks etadi?",
     "question_en": "Which account tracks interest expenses payable on bank loans?",
     "options_uz": [
-      "9610 'Foizlar ko'rinishidagi xarajatlar'",
-      "9530 'Foiz daromadlari'",
-      "2010 'Asosiy ishlab chiqarish'",
-      "8330 'Ustav kapitali'"
+      "9600 'Foizlar ko'rinishidagi xarajatlar'",
+      "9500 'Foiz daromadlari'",
+      "2000 'Asosiy ishlab chiqarish'",
+      "8300 'Ustav kapitali'"
     ],
     "options_en": [
-      "9610 'Interest expenses'",
-      "9530 'Interest income'",
-      "2010 'Main production'",
-      "8330 'Charter capital'"
+      "9600 'Interest expenses'",
+      "9500 'Interest income'",
+      "2000 'Main production'",
+      "8300 'Charter capital'"
     ],
     "correct_index": 0,
     "correct_letter": "A",
-    "hint": "💡 Maslahat: Kredit foizi moliyaviy faoliyat xarajatlari (9610) ga tegishli.",
-    "why_right": "To'g'ri javob: «9610 'Foizlar ko'rinishidagi xarajatlar'». Kreditlar bo'yicha to'lanadigan foizlar ishlab chiqarish tannarxiga kirmaydi, ular moliyaviy faoliyat xarajati sifatida 9610 schyotida aks etadi.",
-    "why_right_en": "Correct answer: «9610 'Interest expenses'».",
+    "hint": "💡 Maslahat: Kredit foizi moliyaviy faoliyat xarajatlari (9600) ga tegishli.",
+    "why_right": "To'g'ri javob: «9600 'Foizlar ko'rinishidagi xarajatlar'». Kreditlar bo'yicha to'lanadigan foizlar ishlab chiqarish tannarxiga kirmaydi, ular moliyaviy faoliyat xarajati sifatida 9600 schyotida aks etadi.",
+    "why_right_en": "Correct answer: «9600 'Interest expenses'».",
     "why_wrongs": [
       {
         "letter": "B",
-        "text": "9530 'Foiz daromadlari'",
+        "text": "9500 'Foiz daromadlari'",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "C",
-        "text": "2010 'Asosiy ishlab chiqarish'",
+        "text": "2000 'Asosiy ishlab chiqarish'",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "D",
-        "text": "8330 'Ustav kapitali'",
+        "text": "8300 'Ustav kapitali'",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -7793,36 +7793,36 @@
     "question_uz": "Muddati o'tib da'vo qilish muddati (3 yil) tugagan kreditorlik qarzi hisobdan chiqarilganda qanday provodka beriladi?",
     "question_en": "When statute-barred accounts payable (3 years past due) are written off, which entry is made?",
     "options_uz": [
-      "Debet 9360 - Kredit 6010",
-      "Debet 6010 - Kredit 9360 (Da'vo muddati o'tgan kreditorlik qarzini hisobdan chiqarishdan daromad)",
-      "Debet 9430 - Kredit 6010",
-      "Debet 5110 - Kredit 6010"
+      "Debet 9300 - Kredit 6000",
+      "Debet 6000 - Kredit 9300 (Da'vo muddati o'tgan kreditorlik qarzini hisobdan chiqarishdan daromad)",
+      "Debet 9400 - Kredit 6000",
+      "Debet 5100 - Kredit 6000"
     ],
     "options_en": [
-      "Debit 9360 - Credit 6010",
-      "Debit 6010 - Credit 9360",
-      "Debit 9430 - Credit 6010",
-      "Debit 5110 - Credit 6010"
+      "Debit 9300 - Credit 6000",
+      "Debit 6000 - Credit 9300",
+      "Debit 9400 - Credit 6000",
+      "Debit 5100 - Credit 6000"
     ],
     "correct_index": 1,
     "correct_letter": "B",
-    "hint": "💡 Maslahat: Qarz majburiyati bekor bo'ldi (6010 Debet), korxona uchun tekin daromad (9360 Kredit).",
-    "why_right": "To'g'ri javob: «Debet 6010 - Kredit 9360 (Da'vo muddati o'tgan kreditorlik qarzini hisobdan chiqarishdan daromad)». Da'vo muddati o'tgan to'lanmagan qarzlar qonun bo'yicha korxonaning boshqa operatsion daromadiga o'tkaziladi (Debet 6010 - Kredit 9360).",
-    "why_right_en": "Correct answer: «Debit 6010 - Credit 9360».",
+    "hint": "💡 Maslahat: Qarz majburiyati bekor bo'ldi (6000 Debet), korxona uchun tekin daromad (9300 Kredit).",
+    "why_right": "To'g'ri javob: «Debet 6000 - Kredit 9300 (Da'vo muddati o'tgan kreditorlik qarzini hisobdan chiqarishdan daromad)». Da'vo muddati o'tgan to'lanmagan qarzlar qonun bo'yicha korxonaning boshqa operatsion daromadiga o'tkaziladi (Debet 6000 - Kredit 9300).",
+    "why_right_en": "Correct answer: «Debit 6000 - Credit 9300».",
     "why_wrongs": [
       {
         "letter": "A",
-        "text": "Debet 9360 - Kredit 6010",
+        "text": "Debet 9360 - Kredit 6000",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "C",
-        "text": "Debet 9430 - Kredit 6010",
+        "text": "Debet 9400 - Kredit 6000",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "D",
-        "text": "Debet 5110 - Kredit 6010",
+        "text": "Debet 5100 - Kredit 6000",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -7838,36 +7838,36 @@
     "question_uz": "Xaridorlarga mahsulot sotilganda hisoblangan QQS (Qo'shilgan qiymat solig'i) qaysi provodka bilan aks ettiriladi?",
     "question_en": "Which entry records output VAT charged to customers on sales invoices?",
     "options_uz": [
-      "Debet 6410 - Kredit 4010",
-      "Debet 9010 - Kredit 6410",
-      "Debet 4010 - Kredit 6410 (Byudjetga to'lanadigan QQS qarzi)",
-      "Debet 5110 - Kredit 9010"
+      "Debet 6400 - Kredit 4000",
+      "Debet 9000 - Kredit 6400",
+      "Debet 4000 - Kredit 6400 (Byudjetga to'lanadigan QQS qarzi)",
+      "Debet 5100 - Kredit 9000"
     ],
     "options_en": [
-      "Debit 6410 - Credit 4010",
-      "Debit 9010 - Credit 6410",
-      "Debit 4010 - Credit 6410",
-      "Debit 5110 - Credit 9010"
+      "Debit 6400 - Credit 4000",
+      "Debit 9000 - Credit 6400",
+      "Debit 4000 - Credit 6400",
+      "Debit 5100 - Credit 9000"
     ],
     "correct_index": 2,
     "correct_letter": "C",
-    "hint": "💡 Maslahat: Mijozdan olinadigan umumiy summa ichida QQS byudjetga to'lanishi shart bo'lgan majburiyatdir (6410 Kredit).",
-    "why_right": "To'g'ri javob: «Debet 4010 - Kredit 6410 (Byudjetga to'lanadigan QQS qarzi)». Sotishda QQS hisoblanganda: xaridordan undiriladigan qarz ko'payadi (Debet 4010) va byudjet oldidagi soliq majburiyati oshadi (Kredit 6410).",
-    "why_right_en": "Correct answer: «Debit 4010 - Credit 6410».",
+    "hint": "💡 Maslahat: Mijozdan olinadigan umumiy summa ichida QQS byudjetga to'lanishi shart bo'lgan majburiyatdir (6400 Kredit).",
+    "why_right": "To'g'ri javob: «Debet 4000 - Kredit 6400 (Byudjetga to'lanadigan QQS qarzi)». Sotishda QQS hisoblanganda: xaridordan undiriladigan qarz ko'payadi (Debet 4000) va byudjet oldidagi soliq majburiyati oshadi (Kredit 6400).",
+    "why_right_en": "Correct answer: «Debit 4000 - Credit 6400».",
     "why_wrongs": [
       {
         "letter": "A",
-        "text": "Debet 6410 - Kredit 4010",
+        "text": "Debet 6400 - Kredit 4000",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "B",
-        "text": "Debet 9010 - Kredit 6410",
+        "text": "Debet 9000 - Kredit 6400",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "D",
-        "text": "Debet 5110 - Kredit 9010",
+        "text": "Debet 5100 - Kredit 9000",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
@@ -7897,7 +7897,7 @@
     "correct_index": 3,
     "correct_letter": "D",
     "hint": "💡 Maslahat: Sof tushum = Jami hisob-faktura qiymati - QQS.",
-    "why_right": "To'g'ri javob: «100 mln so'm». QQS korxonaning daromadi emas, davlat solig'i hisoblanadi. Shuning uchun sof tushum = 112 - 12 = 100 mln so'm (9010 ga faqat 100 mln yoziladi).",
+    "why_right": "To'g'ri javob: «100 mln so'm». QQS korxonaning daromadi emas, davlat solig'i hisoblanadi. Shuning uchun sof tushum = 112 - 12 = 100 mln so'm (9000 ga faqat 100 mln yoziladi).",
     "why_right_en": "Correct answer: «100 million UZS».",
     "why_wrongs": [
       {
@@ -7928,36 +7928,36 @@
     "question_uz": "Korxona hisobot davrida dividend to'lash to'g'risida qaror qabul qildi (20 mln so'm). Taqsimlanmagan foydadan dividend hisoblash provodkasi qaysi?",
     "question_en": "Declared 20m dividends to shareholders from retained earnings. Journal entry:",
     "options_uz": [
-      "Debet 8710 (Taqsimlanmagan foyda) - Kredit 6610 (Ta'sischilarga to'lanadigan dividendlar)",
-      "Debet 6610 - Kredit 8710",
-      "Debet 5110 - Kredit 6610",
-      "Debet 8330 - Kredit 6610"
+      "Debet 8700 (Taqsimlanmagan foyda) - Kredit 6600 (Ta'sischilarga to'lanadigan dividendlar)",
+      "Debet 6600 - Kredit 8700",
+      "Debet 5100 - Kredit 6600",
+      "Debet 8300 - Kredit 6600"
     ],
     "options_en": [
-      "Debit 8710 - Credit 6610",
-      "Debit 6610 - Credit 8710",
-      "Debit 5110 - Credit 6610",
-      "Debit 8330 - Credit 6610"
+      "Debit 8700 - Credit 6600",
+      "Debit 6600 - Credit 8700",
+      "Debit 5100 - Credit 6600",
+      "Debit 8300 - Credit 6600"
     ],
     "correct_index": 0,
     "correct_letter": "A",
-    "hint": "💡 Maslahat: Taqsimlanmagan foyda kamayadi (8710 Debet), ta'sischilar oldidagi qarz oshadi (6610 Kredit).",
-    "why_right": "To'g'ri javob: «Debet 8710 (Taqsimlanmagan foyda) - Kredit 6610 (Ta'sischilarga to'lanadigan dividendlar)». Foydadan dividend ajratilganda: xususiy kapital kamayadi (Debet 8710) va ta'sischilarga to'lanadigan qisqa muddatli majburiyat tan olinadi (Kredit 6610).",
-    "why_right_en": "Correct answer: «Debit 8710 - Credit 6610».",
+    "hint": "💡 Maslahat: Taqsimlanmagan foyda kamayadi (8700 Debet), ta'sischilar oldidagi qarz oshadi (6600 Kredit).",
+    "why_right": "To'g'ri javob: «Debet 8700 (Taqsimlanmagan foyda) - Kredit 6600 (Ta'sischilarga to'lanadigan dividendlar)». Foydadan dividend ajratilganda: xususiy kapital kamayadi (Debet 8700) va ta'sischilarga to'lanadigan qisqa muddatli majburiyat tan olinadi (Kredit 6600).",
+    "why_right_en": "Correct answer: «Debit 8700 - Credit 6600».",
     "why_wrongs": [
       {
         "letter": "B",
-        "text": "Debet 6610 - Kredit 8710",
+        "text": "Debet 6600 - Kredit 8700",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "C",
-        "text": "Debet 5110 - Kredit 6610",
+        "text": "Debet 5100 - Kredit 6600",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       },
       {
         "letter": "D",
-        "text": "Debet 8330 - Kredit 6610",
+        "text": "Debet 8300 - Kredit 6600",
         "reason": "Ushbu variant 8-mavzuning hisob qoidalariga mos kelmaydi yoki boshqa schyot/tamoyilga tegishli chalg'ituvchi javobdir."
       }
     ],
