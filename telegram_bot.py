@@ -410,18 +410,17 @@ async def cb_get_pdf(callback: CallbackQuery):
 @dp.message(Command("jadval"))
 async def cmd_jadval(message: Message):
     text = (
-        "📅 <b>CYBER UNIVERSITY · MNG25-102 ORALIQ NAZORAT JADVALI</b>\n\n"
-        "📍 <b>Auditoriya:</b> 321-xona\n\n"
-        "• <b>16-noyabr (Dushanba):</b>\n"
-        "  09:00 — 📊 Statistika (STAT-201)\n"
-        "  16:30 — 🎯 Marketing (MNG)\n\n"
+        "📅 <b>CYBER UNIVERSITY · MNG25-102 ORALIQ NAZORAT RASMIY JADVALI</b>\n\n"
+        "• <b>16-noyabr (Bugun, Dushanba):</b>\n"
+        "  🕒 <b>14:00</b> — 📊 <b>Statistika</b> (📍 <b>215-xona</b>)\n"
+        "  🕒 <b>16:30</b> — 🎯 <b>Marketing</b> (📍 <b>321-xona</b>)\n\n"
         "• <b>17-noyabr (Seshanba):</b>\n"
-        "  09:00 — 📑 Buxgalteriya hisobi (ACC-201)\n"
-        "  16:30 — 🏛️ O'zbekiston tarixi (HIS-201)\n\n"
+        "  🕒 <b>15:15</b> — 🏛️ O'zbekiston tarixi (📍 215-xona)\n"
+        "  🕒 <b>16:30</b> — 📑 Buxgalteriya hisobi va audit (📍 215-xona)\n\n"
         "• <b>18-noyabr (Chorshanba):</b>\n"
-        "  16:30 — 📈 Mikroiqtisodiyot (ECO-201)\n\n"
+        "  🕒 <b>15:15</b> — 📈 Mikroiqtisodiyot (📍 321-xona)\n\n"
         "• <b>19-noyabr (Payshanba):</b>\n"
-        "  16:30 — 🔒 Kiberxavfsizlik asoslari (CYB-201)\n\n"
+        "  🕒 <b>14:00</b> — 🔒 Kiberxavfsizlik asoslari (📍 218-xona)\n\n"
         "⚠️ <i>Imtihon 25 ta testdan iborat, vaqt 60 daqiqa.</i>"
     )
     await message.answer(text, parse_mode="HTML")
